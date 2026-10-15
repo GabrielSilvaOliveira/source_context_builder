@@ -1,0 +1,7 @@
+comparacao,familia,n_queries,diff,p_raw,p_holm,ci_low,ci_high,significativo_holm
+bge-m3: v3_doc_norm vs v4norm,ablacao_catalogo,80,0.04916625,0.2642,0.7926,-0.037502499999999994,0.1370825625,False
+bm25: v3_doc_norm vs v4norm,ablacao_catalogo,80,0.1382775,0.0184,0.092,0.022023593749999997,0.25597553124999994,False
+e5-base: v3_doc_norm vs v4norm,ablacao_catalogo,80,0.03807625,0.2936,0.7926,-0.03150918750000001,0.11167012499999997,False
+minilm: v3_doc_norm vs v4norm,ablacao_catalogo,80,-0.09208374999999999,0.0366,0.1464,-0.183335,-0.004997468749999994,False
+ollama_llama3.2_latest_compressed: v3_doc_norm vs v4norm,ablacao_catalogo,80,0.010210000000000007,0.8264,0.8264,-0.077915,0.09834137499999994,False
+ollama_llama3.2_latest_full: v3_doc_norm vs v4norm,ablacao_catalogo,80,-0.2918775,0.0,0.0,-0.40774493749999996,-0.1762467812500001,True

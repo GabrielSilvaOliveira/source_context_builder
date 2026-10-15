@@ -1,0 +1,16 @@
+comparacao,familia,n_queries,diff,p_raw,p_holm,ci_low,ci_high,significativo_holm
+bge-m3 vs bm25,ranking:results_catalog_v4norm,80,0.25639124999999996,0.0,0.0,0.1341060625,0.37717746874999997,True
+bge-m3 vs e5-base,ranking:results_catalog_v4norm,80,-0.03833375,0.3312,1.0,-0.1187525,0.037498750000000004,False
+bge-m3 vs minilm,ranking:results_catalog_v4norm,80,-0.012083750000000006,0.8052,1.0,-0.11876531249999997,0.09208253125,False
+bge-m3 vs ollama_llama3.2_latest_compressed,ranking:results_catalog_v4norm,80,-0.07333125,0.113,1.0,-0.16791375,0.01875128125000001,False
+bge-m3 vs ollama_llama3.2_latest_full,ranking:results_catalog_v4norm,80,-0.05294375,0.2498,1.0,-0.14627874999999999,0.0352100625,False
+bm25 vs e5-base,ranking:results_catalog_v4norm,80,-0.294725,0.0,0.0,-0.395779,-0.1958324375,True
+bm25 vs minilm,ranking:results_catalog_v4norm,80,-0.268475,0.0,0.0,-0.378774,-0.15480325,True
+bm25 vs ollama_llama3.2_latest_compressed,ranking:results_catalog_v4norm,80,-0.32972250000000003,0.0,0.0,-0.450278875,-0.21012856250000014,True
+bm25 vs ollama_llama3.2_latest_full,ranking:results_catalog_v4norm,80,-0.309335,0.0,0.0,-0.43541753124999993,-0.18058396875000005,True
+e5-base vs minilm,ranking:results_catalog_v4norm,80,0.026250000000000002,0.5808,1.0,-0.06501399999999999,0.12083374999999999,False
+e5-base vs ollama_llama3.2_latest_compressed,ranking:results_catalog_v4norm,80,-0.0349975,0.509,1.0,-0.13916499999999998,0.06792000000000001,False
+e5-base vs ollama_llama3.2_latest_full,ranking:results_catalog_v4norm,80,-0.014609999999999998,0.7508,1.0,-0.10607562499999999,0.07762453124999998,False
+minilm vs ollama_llama3.2_latest_compressed,ranking:results_catalog_v4norm,80,-0.06124750000000001,0.267,1.0,-0.16876028125,0.047501249999999995,False
+minilm vs ollama_llama3.2_latest_full,ranking:results_catalog_v4norm,80,-0.040859999999999994,0.4732,1.0,-0.15234628125,0.07229771874999993,False
+ollama_llama3.2_latest_compressed vs ollama_llama3.2_latest_full,ranking:results_catalog_v4norm,80,0.020387500000000003,0.607,1.0,-0.05795146874999999,0.09806575,False

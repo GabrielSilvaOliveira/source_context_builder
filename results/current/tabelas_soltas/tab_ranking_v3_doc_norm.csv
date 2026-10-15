@@ -1,0 +1,16 @@
+comparacao,familia,n_queries,diff,p_raw,p_holm,ci_low,ci_high,significativo_holm
+bge-m3 vs bm25,ranking:results_catalog_v3doc_norm,80,0.16728,0.0,0.0,0.07747259375000001,0.2606185937499999,True
+bge-m3 vs e5-base,ranking:results_catalog_v3doc_norm,80,-0.02724374999999999,0.4272,1.0,-0.09557378124999999,0.03650878125,False
+bge-m3 vs minilm,ranking:results_catalog_v3doc_norm,80,0.12916625,0.0042,0.0294,0.04208375,0.219165,True
+bge-m3 vs ollama_llama3.2_latest_compressed,ranking:results_catalog_v3doc_norm,80,-0.03437500000000001,0.445,1.0,-0.12125,0.05374634375000001,False
+bge-m3 vs ollama_llama3.2_latest_full,ranking:results_catalog_v3doc_norm,80,0.2881,0.0,0.0,0.18499896875000002,0.39768378125,True
+bm25 vs e5-base,ranking:results_catalog_v3doc_norm,80,-0.19452375,0.0,0.0,-0.29367153125,-0.09876331250000006,True
+bm25 vs minilm,ranking:results_catalog_v3doc_norm,80,-0.038113749999999995,0.3822,1.0,-0.12561378125000003,0.05000003124999999,False
+bm25 vs ollama_llama3.2_latest_compressed,ranking:results_catalog_v3doc_norm,80,-0.201655,0.0,0.0,-0.3093515,-0.09624996874999998,True
+bm25 vs ollama_llama3.2_latest_full,ranking:results_catalog_v3doc_norm,80,0.12082000000000001,0.071,0.355,-0.011485218749999991,0.24881990624999997,False
+e5-base vs minilm,ranking:results_catalog_v3doc_norm,80,0.15641,0.0,0.0,0.080969,0.23613303125,True
+e5-base vs ollama_llama3.2_latest_compressed,ranking:results_catalog_v3doc_norm,80,-0.0071312500000000004,0.8874,1.0,-0.10163337499999998,0.08926612499999988,False
+e5-base vs ollama_llama3.2_latest_full,ranking:results_catalog_v3doc_norm,80,0.31534375,0.0,0.0,0.20833875000000002,0.42090003125000003,True
+minilm vs ollama_llama3.2_latest_compressed,ranking:results_catalog_v3doc_norm,80,-0.16354125000000003,0.0032,0.0256,-0.26937900000000004,-0.058744781250000086,True
+minilm vs ollama_llama3.2_latest_full,ranking:results_catalog_v3doc_norm,80,0.15893375,0.0074,0.0444,0.04243487500000001,0.27352437499999993,True
+ollama_llama3.2_latest_compressed vs ollama_llama3.2_latest_full,ranking:results_catalog_v3doc_norm,80,0.322475,0.0,0.0,0.20155021874999998,0.43825215624999997,True

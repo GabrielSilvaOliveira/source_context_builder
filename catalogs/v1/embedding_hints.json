@@ -1,0 +1,54 @@
+{
+    "_doc": "Arquivo JSON para embedding_hints de meu catalog.json",
+    "embedding_hints": {
+        "sql.materiais":{
+            "embedding_hint": "equipamentos de uma organização, número de série (SN), estado físico, situação patrimonial, disponibilidade, quantidade por unidade, quantidade por tipo de equipamento, quantidade por fabricante"
+        },
+        "sql.unidades":{
+            "embedding_hint": "informações detalhadas das unidades de uma organização, código da unidade, localização, região, divisão, área, unidade superior, cidade e estado."
+        },
+        "sql.catalogo":{
+            "embedding_hint": "informações detalhadas sobre os tipos de equipamentos de uma organização, incluindo código do equipamento, número de estoque, nome, tipo, modelo, fabricante, entre outros detalhes relevantes para o gerenciamento do inventário."
+        },
+        "sql.regra":{
+            "embedding_hint": "previsão de equipamentos, planejamento logístico, alocação de recursos, tipos de unidades, níveis de completamento, tipos de equipamentos por unidade, quantidade prevista, regras de alocação"
+        },
+        "sql.vw_comparativo_previsto_existente":{
+            "embedding_hint": "comparação entre quantidade prevista e existente de equipamentos por unidade, diferença de inventário, déficit e excesso por tipo de equipamento, apoio ao ajuste de alocação logística"
+        },
+        "sql.vw_materiais_catalogo_unidade":{
+            "embedding_hint": "detalhamento de materiais por unidade, quantidade de equipamentos por unidade, por modelo e por fabricante, situação patrimonial e disponibilidade de equipamentos"
+        },
+        "sql.vw_tipoeqp_previsto_unidades":{
+            "embedding_hint": "quantidade prevista por tipo de equipamento para unidades, planejamento logístico, distribuição planejada por unidade, alocação eficiente de recursos"
+        },
+        "api.distribuicao_list":{
+            "embedding_hint": "distribuição de equipamentos para unidades, recebimento no depósito, rastreamento de entregas, status de distribuição, itens pendentes a serem distribuídos"
+        },
+        "api.manutencao_ap_direto_list":{
+            "embedding_hint": "manutenção via apoio direto, registro de manutenção, diagnóstico e solução de problemas, suprimentos empregados, status final do material, tipo de manutenção"
+        },
+        "api.monitoramento_starlink_list":{
+            "embedding_hint": "monitoramento de terminais Starlink, localização dos terminais, status operacional, uso de dados, capacidade e conectividade"
+        },
+        "api.monitoramento_sites_sistema_radio_list":{
+            "embedding_hint": "monitoramento de sites do sistema de rádio, localização de sites, características técnicas, status operacional, desempenho e conectividade"
+        },
+        "api.monitoramento_sistema_satelital_list":{
+            "embedding_hint": "monitoramento de equipamentos do sistema satelital, localização, status e disponibilidade, desempenho e conectividade"
+        },
+        "api.monitoramento_sistema_hf_list":{
+            "embedding_hint": "monitoramento de terminais do sistema HF, localização, status e disponibilidade, desempenho e conectividade"
+        },
+        "spreadsheets.contratos":{
+            "embedding_hint": "relação de contratos de aquisição, equipamentos adquiridos, ano e número do contrato, empresa contratada, vigência, aditivos, fonte de fundos, item e quantidade adquirida"
+        },
+        "spreadsheets.fornecimento":{
+            "embedding_hint": "fornecimento de equipamentos, documento de fornecimento, data, material fornecido, quantidade, origem, destino, status e acompanhamento de entrega"
+        },
+        "spreadsheets.quadro_importacao":{
+            "embedding_hint": "quadro de importação, solicitação de material, ata de registro de preço, valor e quantidade do material, número do item, descrição e planejamento de aquisição"
+        }
+    }
+
+}

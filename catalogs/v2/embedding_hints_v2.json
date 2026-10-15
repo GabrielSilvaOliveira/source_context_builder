@@ -1,0 +1,65 @@
+{
+  "_doc": "Embedding hints revisados — v2. Estratégia: cada hint é discriminativo, menciona explicitamente o que o diferencia de fontes semanticamente próximas.",
+  "_changes": [
+    "sql.regra: adicionado 'não contém equipamentos reais nem comparativos'",
+    "sql.vw_comparativo_previsto_existente: enfatizado 'PREVISTO vs EXISTENTE', 'déficit', 'única fonte que cruza'",
+    "sql.vw_tipoeqp_previsto_unidades: adicionado 'sem incluir dados de existência real'",
+    "sql.vw_materiais_catalogo_unidade: adicionado 'INTEGRADA', 'sem JOIN manual'",
+    "sql.materiais: adicionado 'Não contém nome do modelo nem fabricante'",
+    "sql.catalogo: adicionado 'Não contém equipamentos individuais nem situação'",
+    "api.monitoramento_sistema_hf_list: adicionado tecnologia HF, 'distinto de satélite e rádio VHF/UHF'",
+    "api.monitoramento_sistema_satelital_list: adicionado VSAT, 'Exclui Starlink (LEO)'",
+    "api.monitoramento_starlink_list: adicionado LEO, 'distinto de VSAT geoestacionário'",
+    "api.monitoramento_sites_sistema_radio_list: adicionado VHF/UHF, 'distinto de HF e satelital'"
+  ],
+  "embedding_hints": {
+    "sql.regra": {
+      "embedding_hint": "Regras normativas de dotação: define QUANTOS equipamentos de cada tipo cada TIPO de unidade DEVE ter como mínimo, ampliado e completo. Não contém equipamentos reais nem comparativos — apenas tabela de referência para calcular previsão. Usar para saber a norma, não o que existe."
+    },
+    "sql.vw_comparativo_previsto_existente": {
+      "embedding_hint": "Comparativo PREVISTO vs EXISTENTE por unidade real: mostra déficit ou excesso de cada tipo de equipamento em cada unidade específica. Calcula diferença, completamento percentual e lacunas de inventário. Única fonte que cruza quantidade real com quantidade normativa por unidade."
+    },
+    "sql.vw_tipoeqp_previsto_unidades": {
+      "embedding_hint": "Tabela de quantidade PREVISTA de cada tipo de equipamento por unidade, sem incluir dados de existência real. Útil para ver o planejamento de distribuição futura ou verificar dotação por tipo de equipamento e unidade antes de comparar com o inventário atual."
+    },
+    "sql.vw_materiais_catalogo_unidade": {
+      "embedding_hint": "Visão INTEGRADA e consolidada de materiais: une em uma única consulta situação patrimonial, disponibilidade, número de série, fabricante, modelo e unidade de lotação. Usar quando se precisa de dados técnicos E patrimoniais juntos, sem necessidade de JOIN manual entre materiais e catálogo."
+    },
+    "sql.materiais": {
+      "embedding_hint": "Tabela de equipamentos individuais: número de série, situação física, disponibilidade, cautela, desfazimento e localização patrimonial por item. Usar para consultar estado e situação de cada equipamento individualmente. Não contém nome do modelo nem fabricante — para dados técnicos usar catálogo."
+    },
+    "sql.catalogo": {
+      "embedding_hint": "Catálogo normativo de tipos de equipamentos: nome, modelo, fabricante, código NSN e especificações técnicas por tipo. Não contém equipamentos individuais nem situação — apenas a referência técnica de cada tipo. Usar para identificar fabricante ou especificação, não para inventário."
+    },
+    "api.monitoramento_sistema_hf_list": {
+      "embedding_hint": "Monitoramento de terminais de comunicação HF (High Frequency / onda curta): rádios de longa distância terrestres, situação operacional, localidade, disponibilidade e nível de sinal. HF é comunicação terrestre de longa distância, distinto de satélite e de rádio VHF/UHF."
+    },
+    "api.monitoramento_sistema_satelital_list": {
+      "embedding_hint": "Monitoramento de sistemas de comunicação via satélite geoestacionário (VSAT): terminais satelitais fixos, situação, localidade e disponibilidade. Exclui Starlink (LEO). Usar para satélites convencionais geoestacionários, não para comunicação HF terrestre nem para rádio."
+    },
+    "api.monitoramento_starlink_list": {
+      "embedding_hint": "Monitoramento exclusivo de terminais Starlink LEO (Low Earth Orbit): status, localização, uso de dados e conectividade dos terminais Starlink. Starlink é sistema satelital de órbita baixa, distinto de VSAT geoestacionário e de comunicação HF terrestre."
+    },
+    "api.monitoramento_sites_sistema_radio_list": {
+      "embedding_hint": "Monitoramento de sites físicos do sistema de rádio VHF/UHF: estações de comunicação rádio táticas, localização geográfica dos sites, características técnicas, status e desempenho. Rádio de curto/médio alcance, distinto de HF e de comunicação satelital."
+    },
+    "sql.unidades": {
+      "embedding_hint": "informações detalhadas das unidades de uma organização, código da unidade, localização, região, divisão, área, unidade superior, cidade e estado."
+    },
+    "api.distribuicao_list": {
+      "embedding_hint": "distribuição de equipamentos para unidades, recebimento no depósito, rastreamento de entregas, status de distribuição, itens pendentes a serem distribuídos"
+    },
+    "api.manutencao_ap_direto_list": {
+      "embedding_hint": "manutenção via apoio direto, registro de manutenção, diagnóstico e solução de problemas, suprimentos empregados, status final do material, tipo de manutenção"
+    },
+    "spreadsheets.contratos": {
+      "embedding_hint": "relação de contratos de aquisição, equipamentos adquiridos, ano e número do contrato, empresa contratada, vigência, aditivos, fonte de fundos, item e quantidade adquirida"
+    },
+    "spreadsheets.fornecimento": {
+      "embedding_hint": "fornecimento de equipamentos, documento de fornecimento, data, material fornecido, quantidade, origem, destino, status e acompanhamento de entrega"
+    },
+    "spreadsheets.quadro_importacao": {
+      "embedding_hint": "quadro de importação, solicitação de material, ata de registro de preço, valor e quantidade do material, número do item, descrição e planejamento de aquisição"
+    }
+  }
+}

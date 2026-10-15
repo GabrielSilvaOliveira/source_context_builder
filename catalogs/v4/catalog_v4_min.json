@@ -1,0 +1,6455 @@
+{
+  "_schema_version": "1.0",
+  "metadata": {
+    "catalog_version": "4.0.0-min",
+    "generated_at": "2026-08-28T18:47:28.971008Z",
+    "generator": "build_catalog_v4.py :: render-min",
+    "descriptor_recipe": "nome_da_fonte + nomes_das_colunas",
+    "provenance": "determinístico; sem LLM; sem texto humano; sem contato com o benchmark",
+    "descriptor_len": {
+      "n": 16,
+      "mean": 244.1,
+      "min": 86,
+      "max": 524
+    }
+  },
+  "sources": {
+    "sql": {
+      "connection": {
+        "dialect": "mysql",
+        "host": "localhost",
+        "port": 3306,
+        "database": "agentic_logistics_mask",
+        "charset": "utf8mb4"
+      },
+      "tables": {
+        "materiais": {
+          "row_count": 46487,
+          "column_count": 37,
+          "columns": {
+            "CODIGO": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": true,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 46487
+            },
+            "CODIGO_UNIDADE": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 477
+            },
+            "CODIGO_CATALOGO": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 922
+            },
+            "SN": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 39253
+            },
+            "SITUACAOPARTIM": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4
+            },
+            "MOTIVOPATRIMONIAL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14
+            },
+            "SITUACAOFISIC": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "MOTIVOINDISP": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 33
+            },
+            "HOMOLOGAR": {
+              "type": "VARCHAR(30) COLLATE \"utf8mb3_general_ci\"",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "ACAUTELADO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "MOTIVOCAUTELADO": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1
+            },
+            "UNIDADE_CAUTELADO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 133
+            },
+            "OBS": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4137
+            },
+            "STATUSDESCARGA": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1
+            },
+            "DOCREFERENCIA": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1
+            },
+            "DATADESCARGA": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1
+            },
+            "DATAINCLUSAOCARGA": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1181
+            },
+            "CONFERIDO": {
+              "type": "VARCHAR(30)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "CONFERIDOEM": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 284
+            },
+            "DEPENDENCIA": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11
+            },
+            "PT": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8
+            },
+            "TEAM": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7
+            },
+            "ESTADOMATERIAL": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11
+            },
+            "PARECER": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "DESTINOMATERIAL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4
+            },
+            "BOLETIMREGIONAL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7
+            },
+            "EXCLUIRMATERIAL": {
+              "type": "VARCHAR(10)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "JUSTIFICMATERIAL": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 644
+            },
+            "AUTORIZADO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5
+            },
+            "DATAAUTORIZADO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5
+            },
+            "HOMOLOGADO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1
+            },
+            "ULTIMAATUALIZACAO": {
+              "type": "DATETIME",
+              "nullable": true,
+              "is_pk": false,
+              "default": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
+              "null_rate": 0.0,
+              "cardinality": 34695
+            },
+            "MOTIVOEXCLUIR": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1
+            },
+            "motivoreprovacao": {
+              "type": "LONGTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1
+            },
+            "nec_mnt": {
+              "type": "VARCHAR(3)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "prioridade": {
+              "type": "VARCHAR(3)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "usuario_decisao_id": {
+              "type": "VARCHAR(11)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1
+            }
+          },
+          "foreign_keys": [
+            {
+              "columns": [
+                "CODIGO_CATALOGO"
+              ],
+              "references_table": "catalogo",
+              "references_columns": [
+                "IDEQP"
+              ]
+            },
+            {
+              "columns": [
+                "CODIGO_UNIDADE"
+              ],
+              "references_table": "unidades",
+              "references_columns": [
+                "CODIGO"
+              ]
+            }
+          ],
+          "sample_rows": [
+            {
+              "CODIGO": 67786,
+              "CODIGO_UNIDADE": 203,
+              "CODIGO_CATALOGO": 1026,
+              "SN": "SN00001",
+              "SITUACAOPARTIM": "Em Carga",
+              "MOTIVOPATRIMONIAL": "",
+              "SITUACAOFISIC": "Indisponível",
+              "MOTIVOINDISP": "Bateria não segura carga",
+              "HOMOLOGAR": "",
+              "ACAUTELADO": "",
+              "MOTIVOCAUTELADO": "",
+              "UNIDADE_CAUTELADO": "",
+              "OBS": "TXT_D5F1531D",
+              "STATUSDESCARGA": "",
+              "DOCREFERENCIA": "",
+              "DATADESCARGA": "",
+              "DATAINCLUSAOCARGA": "2014-04-28",
+              "CONFERIDO": "Y",
+              "CONFERIDOEM": "2025-05-07",
+              "DEPENDENCIA": "1",
+              "PT": "",
+              "TEAM": "",
+              "ESTADOMATERIAL": "",
+              "PARECER": "",
+              "DESTINOMATERIAL": "",
+              "BOLETIMREGIONAL": "",
+              "EXCLUIRMATERIAL": "",
+              "JUSTIFICMATERIAL": "",
+              "AUTORIZADO": "0",
+              "DATAAUTORIZADO": "",
+              "HOMOLOGADO": "",
+              "ULTIMAATUALIZACAO": 1682677758000,
+              "MOTIVOEXCLUIR": "",
+              "motivoreprovacao": "",
+              "nec_mnt": "NAO",
+              "prioridade": "NAO",
+              "usuario_decisao_id": "0"
+            },
+            {
+              "CODIGO": 67787,
+              "CODIGO_UNIDADE": 203,
+              "CODIGO_CATALOGO": 1026,
+              "SN": "SN00002",
+              "SITUACAOPARTIM": "Em Carga",
+              "MOTIVOPATRIMONIAL": "",
+              "SITUACAOFISIC": "Indisponível",
+              "MOTIVOINDISP": "Bateria não segura carga",
+              "HOMOLOGAR": "",
+              "ACAUTELADO": "",
+              "MOTIVOCAUTELADO": "",
+              "UNIDADE_CAUTELADO": "",
+              "OBS": "TXT_D5F1531D",
+              "STATUSDESCARGA": "",
+              "DOCREFERENCIA": "",
+              "DATADESCARGA": "",
+              "DATAINCLUSAOCARGA": "2014-04-28",
+              "CONFERIDO": "Y",
+              "CONFERIDOEM": "2025-05-07",
+              "DEPENDENCIA": "1",
+              "PT": "",
+              "TEAM": "",
+              "ESTADOMATERIAL": "",
+              "PARECER": "",
+              "DESTINOMATERIAL": "",
+              "BOLETIMREGIONAL": "",
+              "EXCLUIRMATERIAL": "",
+              "JUSTIFICMATERIAL": "",
+              "AUTORIZADO": "0",
+              "DATAAUTORIZADO": "",
+              "HOMOLOGADO": "",
+              "ULTIMAATUALIZACAO": 1682677638000,
+              "MOTIVOEXCLUIR": "",
+              "motivoreprovacao": "",
+              "nec_mnt": "NAO",
+              "prioridade": "NAO",
+              "usuario_decisao_id": "0"
+            },
+            {
+              "CODIGO": 67788,
+              "CODIGO_UNIDADE": 203,
+              "CODIGO_CATALOGO": 1026,
+              "SN": "SN00003",
+              "SITUACAOPARTIM": "Em Carga",
+              "MOTIVOPATRIMONIAL": "",
+              "SITUACAOFISIC": "Indisponível",
+              "MOTIVOINDISP": "Bateria não segura carga",
+              "HOMOLOGAR": "",
+              "ACAUTELADO": "",
+              "MOTIVOCAUTELADO": "",
+              "UNIDADE_CAUTELADO": "",
+              "OBS": "TXT_D5F1531D",
+              "STATUSDESCARGA": "",
+              "DOCREFERENCIA": "",
+              "DATADESCARGA": "",
+              "DATAINCLUSAOCARGA": "2014-04-28",
+              "CONFERIDO": "Y",
+              "CONFERIDOEM": "2025-05-07",
+              "DEPENDENCIA": "1",
+              "PT": "",
+              "TEAM": "",
+              "ESTADOMATERIAL": "",
+              "PARECER": "",
+              "DESTINOMATERIAL": "",
+              "BOLETIMREGIONAL": "",
+              "EXCLUIRMATERIAL": "",
+              "JUSTIFICMATERIAL": "",
+              "AUTORIZADO": "0",
+              "DATAAUTORIZADO": "",
+              "HOMOLOGADO": "",
+              "ULTIMAATUALIZACAO": 1682677887000,
+              "MOTIVOEXCLUIR": "",
+              "motivoreprovacao": "",
+              "nec_mnt": "NAO",
+              "prioridade": "NAO",
+              "usuario_decisao_id": "0"
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "CODIGO": 0.0,
+              "CODIGO_UNIDADE": 0.0,
+              "CODIGO_CATALOGO": 0.0,
+              "SN": 0.0,
+              "SITUACAOPARTIM": 0.0,
+              "MOTIVOPATRIMONIAL": 0.0,
+              "SITUACAOFISIC": 0.0,
+              "MOTIVOINDISP": 0.0,
+              "HOMOLOGAR": 0.0,
+              "ACAUTELADO": 0.0,
+              "MOTIVOCAUTELADO": 0.0,
+              "UNIDADE_CAUTELADO": 0.0,
+              "OBS": 0.0,
+              "STATUSDESCARGA": 0.0,
+              "DOCREFERENCIA": 0.0,
+              "DATADESCARGA": 0.0,
+              "DATAINCLUSAOCARGA": 0.0,
+              "CONFERIDO": 0.0,
+              "CONFERIDOEM": 0.0,
+              "DEPENDENCIA": 0.0,
+              "PT": 0.0,
+              "TEAM": 0.0,
+              "ESTADOMATERIAL": 0.0,
+              "PARECER": 0.0,
+              "DESTINOMATERIAL": 0.0,
+              "BOLETIMREGIONAL": 0.0,
+              "EXCLUIRMATERIAL": 0.0,
+              "JUSTIFICMATERIAL": 0.0,
+              "AUTORIZADO": 0.0,
+              "DATAAUTORIZADO": 0.0,
+              "HOMOLOGADO": 0.0,
+              "ULTIMAATUALIZACAO": 0.0,
+              "MOTIVOEXCLUIR": 0.0,
+              "motivoreprovacao": 0.0,
+              "nec_mnt": 0.0,
+              "prioridade": 0.0,
+              "usuario_decisao_id": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:49.710072Z"
+          },
+          "value_profile": {
+            "CODIGO": {
+              "type": "INTEGER",
+              "kind": "identifier"
+            },
+            "CODIGO_UNIDADE": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "9",
+                "748"
+              ]
+            },
+            "CODIGO_CATALOGO": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "1",
+                "8596"
+              ]
+            },
+            "SN": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "SITUACAOPARTIM": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "Em Carga",
+                "Fora de Carga",
+                "Em processo de descarga",
+                "Autorizada descarga"
+              ]
+            },
+            "MOTIVOPATRIMONIAL": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "Descarregado e Recolhido para central lo…",
+                "Alteração no trem",
+                "Em Processo de Transferência",
+                "Número de Série Não Identificado",
+                "Descarregado e permanece na unidade",
+                "Outro motivo ou mais de um item acima",
+                "Descrição Incorreta no SISCOFIS",
+                "Em Processo de Recebimento",
+                "Material Pertencente a Outra OM",
+                "Falta Valor Patrimonial",
+                "Material Obsoleto",
+                "Falta Guia de Fornecimento",
+                "Aguardando Inclusão Em Carga"
+              ]
+            },
+            "SITUACAOFISIC": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "Indisponível",
+                "Disponível"
+              ]
+            },
+            "MOTIVOINDISP": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "HOMOLOGAR": {
+              "type": "VARCHAR(30) COLLATE \"utf8mb3_general_ci\"",
+              "kind": "categorical",
+              "values": [
+                "",
+                "Sim",
+                "Não"
+              ]
+            },
+            "ACAUTELADO": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "Sim"
+              ]
+            },
+            "MOTIVOCAUTELADO": {
+              "type": "MEDIUMTEXT",
+              "kind": "empty"
+            },
+            "UNIDADE_CAUTELADO": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "OBS": {
+              "type": "MEDIUMTEXT",
+              "kind": "text"
+            },
+            "STATUSDESCARGA": {
+              "type": "VARCHAR(100)",
+              "kind": "empty"
+            },
+            "DOCREFERENCIA": {
+              "type": "VARCHAR(100)",
+              "kind": "empty"
+            },
+            "DATADESCARGA": {
+              "type": "VARCHAR(30)",
+              "kind": "empty"
+            },
+            "DATAINCLUSAOCARGA": {
+              "type": "VARCHAR(30)",
+              "kind": "text"
+            },
+            "CONFERIDO": {
+              "type": "VARCHAR(30)",
+              "kind": "categorical",
+              "values": [
+                "Y",
+                "N"
+              ]
+            },
+            "CONFERIDOEM": {
+              "type": "VARCHAR(30)",
+              "kind": "text"
+            },
+            "DEPENDENCIA": {
+              "type": "VARCHAR(30)",
+              "kind": "categorical",
+              "values": [
+                "1",
+                "0",
+                "5",
+                "2",
+                "4",
+                "7",
+                "3",
+                "10",
+                "6",
+                "8",
+                "9"
+              ]
+            },
+            "PT": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "0",
+                "PT_001",
+                "PT_002",
+                "PT_003",
+                "PT_004",
+                "PT_005",
+                "PT_006"
+              ]
+            },
+            "TEAM": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "0",
+                "TEAM_001",
+                "TEAM_002",
+                "TEAM_003",
+                "TEAM_004",
+                "TEAM_005"
+              ]
+            },
+            "ESTADOMATERIAL": {
+              "type": "MEDIUMTEXT",
+              "kind": "categorical_blocked",
+              "note": "valores não listados: coluna na BLOCKLIST_VALUE_PROFILE (aguardando mascaramento completo)"
+            },
+            "PARECER": {
+              "type": "VARCHAR(30)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "Não autorizar descarga",
+                "Autorizar descarga"
+              ]
+            },
+            "DESTINOMATERIAL": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical_blocked",
+              "note": "valores não listados: coluna na BLOCKLIST_VALUE_PROFILE (aguardando mascaramento completo)"
+            },
+            "BOLETIMREGIONAL": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "BOLETIM_001",
+                "BOLETIM_002",
+                "BOLETIM_003",
+                "BOLETIM_004",
+                "BOLETIM_005",
+                "0"
+              ]
+            },
+            "EXCLUIRMATERIAL": {
+              "type": "VARCHAR(10)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "Não",
+                "Sim"
+              ]
+            },
+            "JUSTIFICMATERIAL": {
+              "type": "MEDIUMTEXT",
+              "kind": "text"
+            },
+            "AUTORIZADO": {
+              "type": "VARCHAR(30)",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "Não",
+                "Sim",
+                "",
+                "0.0"
+              ]
+            },
+            "DATAAUTORIZADO": {
+              "type": "VARCHAR(30)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "2024-11-21",
+                "2023-05-19",
+                "2025-07-24",
+                "2025-05-23"
+              ]
+            },
+            "HOMOLOGADO": {
+              "type": "VARCHAR(30)",
+              "kind": "empty"
+            },
+            "ULTIMAATUALIZACAO": {
+              "type": "DATETIME",
+              "kind": "numeric",
+              "range": [
+                "2021-12-31 08:00:00",
+                "2026-08-14 10:31:58"
+              ]
+            },
+            "MOTIVOEXCLUIR": {
+              "type": "VARCHAR(100)",
+              "kind": "empty"
+            },
+            "motivoreprovacao": {
+              "type": "LONGTEXT",
+              "kind": "empty"
+            },
+            "nec_mnt": {
+              "type": "VARCHAR(3)",
+              "kind": "categorical",
+              "values": [
+                "NAO",
+                "SIM"
+              ]
+            },
+            "prioridade": {
+              "type": "VARCHAR(3)",
+              "kind": "categorical",
+              "values": [
+                "NAO",
+                "SIM"
+              ]
+            },
+            "usuario_decisao_id": {
+              "type": "VARCHAR(11)",
+              "kind": "empty"
+            }
+          },
+          "embedding_hint": "sql.materiais: CODIGO, CODIGO_UNIDADE, CODIGO_CATALOGO, SN, SITUACAOPARTIM, MOTIVOPATRIMONIAL, SITUACAOFISIC, MOTIVOINDISP, HOMOLOGAR, ACAUTELADO, MOTIVOCAUTELADO, UNIDADE_CAUTELADO, OBS, STATUSDESCARGA, DOCREFERENCIA, DATADESCARGA, DATAINCLUSAOCARGA, CONFERIDO, CONFERIDOEM, DEPENDENCIA, PT, TEAM, ESTADOMATERIAL, PARECER, DESTINOMATERIAL, BOLETIMREGIONAL, EXCLUIRMATERIAL, JUSTIFICMATERIAL, AUTORIZADO, DATAAUTORIZADO, HOMOLOGADO, ULTIMAATUALIZACAO, MOTIVOEXCLUIR, motivoreprovacao, nec_mnt, prioridade, usuario_decisao_id"
+        },
+        "unidades": {
+          "row_count": 725,
+          "column_count": 19,
+          "columns": {
+            "CODIGO": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": true,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 725
+            },
+            "CODLOC": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 705
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 724
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14
+            },
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 17
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11
+            },
+            "CIDADEESTADO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 169
+            },
+            "CNPJ": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 401
+            },
+            "Tipo": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 33
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 42
+            },
+            "ENDERECO": {
+              "type": "VARCHAR(150)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7
+            },
+            "CEP": {
+              "type": "VARCHAR(15)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7
+            },
+            "NIVEL": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5
+            },
+            "ID": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 32
+            },
+            "CODREGRA": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 40
+            },
+            "CIDADE": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 163
+            },
+            "ESTADO": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 28
+            },
+            "LATITUDE": {
+              "type": "FLOAT",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 565
+            },
+            "LONGITUDE": {
+              "type": "FLOAT",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 588
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "CODIGO": 2,
+              "CODLOC": "39875",
+              "SIGLA": "SIG001",
+              "REGIAO": "REG001",
+              "AREA": "AREA001",
+              "DIVISAO": "DIV001",
+              "CIDADEESTADO": "Rio de Janeiro/RJ",
+              "CNPJ": "00.394.452/0270-52",
+              "Tipo": "ODS",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "ENDERECO": "",
+              "CEP": "",
+              "NIVEL": 1,
+              "ID": 99,
+              "CODREGRA": 102,
+              "CIDADE": "Rio de Janeiro",
+              "ESTADO": "RJ",
+              "LATITUDE": -23.22,
+              "LONGITUDE": -45.35
+            },
+            {
+              "CODIGO": 3,
+              "CODLOC": "45732",
+              "SIGLA": "SIG002",
+              "REGIAO": "REG001",
+              "AREA": "AREA001",
+              "DIVISAO": "DIV001",
+              "CIDADEESTADO": "Rio de Janeiro/RJ",
+              "CNPJ": "",
+              "Tipo": "Administrativa",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "ENDERECO": "",
+              "CEP": "",
+              "NIVEL": 1,
+              "ID": 99,
+              "CODREGRA": 102,
+              "CIDADE": "Rio de Janeiro",
+              "ESTADO": "RJ",
+              "LATITUDE": -21.82,
+              "LONGITUDE": -43.93
+            },
+            {
+              "CODIGO": 4,
+              "CODLOC": "45740",
+              "SIGLA": "SIG003",
+              "REGIAO": "REG001",
+              "AREA": "AREA001",
+              "DIVISAO": "DIV001",
+              "CIDADEESTADO": "Rio de Janeiro/RJ",
+              "CNPJ": "",
+              "Tipo": "Administrativa",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "ENDERECO": "",
+              "CEP": "",
+              "NIVEL": 1,
+              "ID": 99,
+              "CODREGRA": 102,
+              "CIDADE": "Rio de Janeiro",
+              "ESTADO": "RJ",
+              "LATITUDE": -22.39,
+              "LONGITUDE": -42.19
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "CODIGO": 0.0,
+              "CODLOC": 0.0,
+              "SIGLA": 0.0,
+              "REGIAO": 0.0,
+              "AREA": 0.0,
+              "DIVISAO": 0.0,
+              "CIDADEESTADO": 0.0,
+              "CNPJ": 0.0,
+              "Tipo": 0.0,
+              "UNIDADE_SUPERIOR": 0.0,
+              "ENDERECO": 0.0,
+              "CEP": 0.0,
+              "NIVEL": 0.0,
+              "ID": 0.0,
+              "CODREGRA": 0.0,
+              "CIDADE": 0.0,
+              "ESTADO": 0.0,
+              "LATITUDE": 0.0,
+              "LONGITUDE": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:49.738193Z"
+          },
+          "value_profile": {
+            "CODIGO": {
+              "type": "INTEGER",
+              "kind": "identifier"
+            },
+            "CODLOC": {
+              "type": "VARCHAR(255)",
+              "kind": "identifier"
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "kind": "identifier"
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "kind": "categorical",
+              "values": [
+                "REG001",
+                "REG002",
+                "REG003",
+                "REG004",
+                "REG005",
+                "REG006",
+                "REG007",
+                "REG008",
+                "REG009",
+                "REG010",
+                "REG011",
+                "REG012",
+                "REG013",
+                ""
+              ]
+            },
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "kind": "categorical",
+              "values": [
+                "AREA001",
+                "AREA002",
+                "AREA003",
+                "AREA004",
+                "AREA005",
+                "AREA006",
+                "AREA007",
+                "AREA008",
+                "AREA009",
+                "AREA010",
+                "AREA011",
+                "AREA012",
+                "AREA013",
+                "AREA014",
+                "AREA015",
+                "",
+                "AREA016"
+              ]
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "DIV001",
+                "DIV002",
+                "DIV003",
+                "DIV004",
+                "DIV005",
+                "DIV006",
+                "",
+                "DIV007",
+                "DIV008",
+                "DIV009",
+                "DIV010"
+              ]
+            },
+            "CIDADEESTADO": {
+              "type": "VARCHAR(255)",
+              "kind": "text"
+            },
+            "CNPJ": {
+              "type": "VARCHAR(255)",
+              "kind": "text"
+            },
+            "Tipo": {
+              "type": "VARCHAR(255)",
+              "kind": "text"
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "ENDERECO": {
+              "type": "VARCHAR(150)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "END0001",
+                "END0002",
+                "END0003",
+                "END0004",
+                "END0005",
+                "END0006"
+              ]
+            },
+            "CEP": {
+              "type": "VARCHAR(15)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "CEP00001",
+                "CEP00002",
+                "CEP00003",
+                "CEP00004",
+                "CEP00005",
+                "CEP00006"
+              ]
+            },
+            "NIVEL": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "1",
+                "2",
+                "0",
+                "3",
+                "4"
+              ]
+            },
+            "ID": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "1",
+                "99"
+              ]
+            },
+            "CODREGRA": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "2",
+                "102"
+              ]
+            },
+            "CIDADE": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "ESTADO": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "LATITUDE": {
+              "type": "FLOAT",
+              "kind": "numeric",
+              "range": [
+                "-32.87",
+                "2.93"
+              ]
+            },
+            "LONGITUDE": {
+              "type": "FLOAT",
+              "kind": "numeric",
+              "range": [
+                "-75.23",
+                "0.0"
+              ]
+            }
+          },
+          "embedding_hint": "sql.unidades: CODIGO, CODLOC, SIGLA, REGIAO, AREA, DIVISAO, CIDADEESTADO, CNPJ, Tipo, UNIDADE_SUPERIOR, ENDERECO, CEP, NIVEL, ID, CODREGRA, CIDADE, ESTADO, LATITUDE, LONGITUDE"
+        },
+        "catalogo": {
+          "row_count": 8606,
+          "column_count": 12,
+          "columns": {
+            "IDEQP": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": true,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8606
+            },
+            "ID_SISTEMA_IDENTIFICACAO": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8582
+            },
+            "NUMERO_DE_ESTOQUE": {
+              "type": "VARCHAR(20) COLLATE \"utf8mb3_general_ci\"",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7301
+            },
+            "NOME": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 713
+            },
+            "TIPO": {
+              "type": "VARCHAR(12)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "MODELO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7049
+            },
+            "FABRICANTE": {
+              "type": "VARCHAR(200)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 439
+            },
+            "RADIO": {
+              "type": "VARCHAR(3)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "PN": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 6967
+            },
+            "SUBSISTEMA": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5
+            },
+            "GRUPO": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 33
+            },
+            "TIPOEQP": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 39
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "IDEQP": 1,
+              "ID_SISTEMA_IDENTIFICACAO": 10045,
+              "NUMERO_DE_ESTOQUE": "EST00001",
+              "NOME": "EQP001",
+              "TIPO": "COMUNICAÇÕES",
+              "MODELO": "MDL0001",
+              "FABRICANTE": "FAB001",
+              "RADIO": "Sim",
+              "PN": "PN00001",
+              "SUBSISTEMA": "SUB01",
+              "GRUPO": "GRP01",
+              "TIPOEQP": "TEQ001"
+            },
+            {
+              "IDEQP": 2,
+              "ID_SISTEMA_IDENTIFICACAO": 10064,
+              "NUMERO_DE_ESTOQUE": "EST00002",
+              "NOME": "EQP002",
+              "TIPO": "COMUNICAÇÕES",
+              "MODELO": "MDL0002",
+              "FABRICANTE": "FAB001",
+              "RADIO": "Não",
+              "PN": "PN00002",
+              "SUBSISTEMA": "SUB02",
+              "GRUPO": "GRP02",
+              "TIPOEQP": "TEQ002"
+            },
+            {
+              "IDEQP": 3,
+              "ID_SISTEMA_IDENTIFICACAO": 10065,
+              "NUMERO_DE_ESTOQUE": "EST00003",
+              "NOME": "EQP003",
+              "TIPO": "COMUNICAÇÕES",
+              "MODELO": "MDL0003",
+              "FABRICANTE": "FAB002",
+              "RADIO": "Sim",
+              "PN": "PN00003",
+              "SUBSISTEMA": "",
+              "GRUPO": "",
+              "TIPOEQP": ""
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "IDEQP": 0.0,
+              "ID_SISTEMA_IDENTIFICACAO": 0.0,
+              "NUMERO_DE_ESTOQUE": 0.0,
+              "NOME": 0.0,
+              "TIPO": 0.0,
+              "MODELO": 0.0,
+              "FABRICANTE": 0.0,
+              "RADIO": 0.0,
+              "PN": 0.0,
+              "SUBSISTEMA": 0.0,
+              "GRUPO": 0.0,
+              "TIPOEQP": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:49.814805Z"
+          },
+          "value_profile": {
+            "IDEQP": {
+              "type": "INTEGER",
+              "kind": "identifier"
+            },
+            "ID_SISTEMA_IDENTIFICACAO": {
+              "type": "INTEGER",
+              "kind": "identifier"
+            },
+            "NUMERO_DE_ESTOQUE": {
+              "type": "VARCHAR(20) COLLATE \"utf8mb3_general_ci\"",
+              "kind": "text"
+            },
+            "NOME": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "TIPO": {
+              "type": "VARCHAR(12)",
+              "kind": "categorical",
+              "values": [
+                "COMUNICAÇÕES",
+                "ELETRÔNICA",
+                "INFORMÁTICA"
+              ]
+            },
+            "MODELO": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "FABRICANTE": {
+              "type": "VARCHAR(200)",
+              "kind": "text"
+            },
+            "RADIO": {
+              "type": "VARCHAR(3)",
+              "kind": "categorical",
+              "values": [
+                "Sim",
+                "Não",
+                ""
+              ]
+            },
+            "PN": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "SUBSISTEMA": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "SUB01",
+                "SUB02",
+                "",
+                "SUB03",
+                "SUB04"
+              ]
+            },
+            "GRUPO": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "TIPOEQP": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            }
+          },
+          "embedding_hint": "sql.catalogo: IDEQP, ID_SISTEMA_IDENTIFICACAO, NUMERO_DE_ESTOQUE, NOME, TIPO, MODELO, FABRICANTE, RADIO, PN, SUBSISTEMA, GRUPO, TIPOEQP"
+        },
+        "regra": {
+          "row_count": 102,
+          "column_count": 41,
+          "columns": {
+            "CODIGO": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 102
+            },
+            "ID": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 34
+            },
+            "TIPO_UNIDADE": {
+              "type": "TEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 34
+            },
+            "NIVEL_COMPLETAMENTO": {
+              "type": "TEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "TEQ024": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 16
+            },
+            "TEQ021": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "TEQ009": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 40
+            },
+            "TEQ012": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 24
+            },
+            "TEQ045": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5
+            },
+            "TEQ017": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14
+            },
+            "TEQ020": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 9
+            },
+            "TEQ018": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5
+            },
+            "TEQ015": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 10
+            },
+            "TEQ019": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8
+            },
+            "TEQ026": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 10
+            },
+            "TEQ025": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 10
+            },
+            "TEQ016": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "TEQ011": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 25
+            },
+            "TEQ022": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 13
+            },
+            "TEQ032": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 6
+            },
+            "TEQ034": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7
+            },
+            "TEQ046": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 18
+            },
+            "TEQ003": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5
+            },
+            "TEQ035": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 21
+            },
+            "TEQ036": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "TEQ047": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "TEQ027": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4
+            },
+            "TEQ006": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 36
+            },
+            "TEQ028": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 9
+            },
+            "TEQ013": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8
+            },
+            "TEQ031": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 6
+            },
+            "TEQ048": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "TEQ049": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "TEQ050": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "TEQ051": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 20
+            },
+            "TEQ052": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 9
+            },
+            "TEQ053": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "TEQ054": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4
+            },
+            "TEQ055": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7
+            },
+            "TEQ056": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "TEQ057": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "CODIGO": 1,
+              "ID": 1,
+              "TIPO_UNIDADE": "TIPOUNI001",
+              "NIVEL_COMPLETAMENTO": "COMPLETO",
+              "TEQ024": 0,
+              "TEQ021": 0,
+              "TEQ009": 83,
+              "TEQ012": 16,
+              "TEQ045": 0,
+              "TEQ017": 1,
+              "TEQ020": 1,
+              "TEQ018": 0,
+              "TEQ015": 2,
+              "TEQ019": 0,
+              "TEQ026": 0,
+              "TEQ025": 0,
+              "TEQ016": 0,
+              "TEQ011": 50,
+              "TEQ022": 4,
+              "TEQ032": 0,
+              "TEQ034": 1,
+              "TEQ046": 174,
+              "TEQ003": 0,
+              "TEQ035": 87,
+              "TEQ036": 0,
+              "TEQ047": 0,
+              "TEQ027": 0,
+              "TEQ006": 122,
+              "TEQ028": 0,
+              "TEQ013": 0,
+              "TEQ031": 0,
+              "TEQ048": 1,
+              "TEQ049": 0,
+              "TEQ050": 0,
+              "TEQ051": 14,
+              "TEQ052": 1,
+              "TEQ053": 1,
+              "TEQ054": 0,
+              "TEQ055": 0,
+              "TEQ056": 0,
+              "TEQ057": 0
+            },
+            {
+              "CODIGO": 2,
+              "ID": 1,
+              "TIPO_UNIDADE": "TIPOUNI001",
+              "NIVEL_COMPLETAMENTO": "AMPLIADO",
+              "TEQ024": 0,
+              "TEQ021": 0,
+              "TEQ009": 28,
+              "TEQ012": 6,
+              "TEQ045": 0,
+              "TEQ017": 1,
+              "TEQ020": 1,
+              "TEQ018": 0,
+              "TEQ015": 1,
+              "TEQ019": 0,
+              "TEQ026": 0,
+              "TEQ025": 0,
+              "TEQ016": 0,
+              "TEQ011": 30,
+              "TEQ022": 2,
+              "TEQ032": 0,
+              "TEQ034": 1,
+              "TEQ046": 58,
+              "TEQ003": 0,
+              "TEQ035": 29,
+              "TEQ036": 0,
+              "TEQ047": 0,
+              "TEQ027": 0,
+              "TEQ006": 41,
+              "TEQ028": 0,
+              "TEQ013": 0,
+              "TEQ031": 0,
+              "TEQ048": 1,
+              "TEQ049": 0,
+              "TEQ050": 0,
+              "TEQ051": 4,
+              "TEQ052": 1,
+              "TEQ053": 1,
+              "TEQ054": 0,
+              "TEQ055": 0,
+              "TEQ056": 0,
+              "TEQ057": 0
+            },
+            {
+              "CODIGO": 3,
+              "ID": 1,
+              "TIPO_UNIDADE": "TIPOUNI001",
+              "NIVEL_COMPLETAMENTO": "MINIMO",
+              "TEQ024": 0,
+              "TEQ021": 0,
+              "TEQ009": 17,
+              "TEQ012": 2,
+              "TEQ045": 0,
+              "TEQ017": 0,
+              "TEQ020": 0,
+              "TEQ018": 0,
+              "TEQ015": 0,
+              "TEQ019": 0,
+              "TEQ026": 0,
+              "TEQ025": 0,
+              "TEQ016": 0,
+              "TEQ011": 30,
+              "TEQ022": 2,
+              "TEQ032": 0,
+              "TEQ034": 0,
+              "TEQ046": 42,
+              "TEQ003": 0,
+              "TEQ035": 21,
+              "TEQ036": 0,
+              "TEQ047": 0,
+              "TEQ027": 0,
+              "TEQ006": 24,
+              "TEQ028": 0,
+              "TEQ013": 0,
+              "TEQ031": 0,
+              "TEQ048": 0,
+              "TEQ049": 0,
+              "TEQ050": 0,
+              "TEQ051": 2,
+              "TEQ052": 0,
+              "TEQ053": 0,
+              "TEQ054": 0,
+              "TEQ055": 0,
+              "TEQ056": 0,
+              "TEQ057": 0
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "CODIGO": 0.0,
+              "ID": 0.0,
+              "TIPO_UNIDADE": 0.0,
+              "NIVEL_COMPLETAMENTO": 0.0,
+              "TEQ024": 0.0,
+              "TEQ021": 0.0,
+              "TEQ009": 0.0,
+              "TEQ012": 0.0,
+              "TEQ045": 0.0,
+              "TEQ017": 0.0,
+              "TEQ020": 0.0,
+              "TEQ018": 0.0,
+              "TEQ015": 0.0,
+              "TEQ019": 0.0,
+              "TEQ026": 0.0,
+              "TEQ025": 0.0,
+              "TEQ016": 0.0,
+              "TEQ011": 0.0,
+              "TEQ022": 0.0,
+              "TEQ032": 0.0,
+              "TEQ034": 0.0,
+              "TEQ046": 0.0,
+              "TEQ003": 0.0,
+              "TEQ035": 0.0,
+              "TEQ036": 0.0,
+              "TEQ047": 0.0,
+              "TEQ027": 0.0,
+              "TEQ006": 0.0,
+              "TEQ028": 0.0,
+              "TEQ013": 0.0,
+              "TEQ031": 0.0,
+              "TEQ048": 0.0,
+              "TEQ049": 0.0,
+              "TEQ050": 0.0,
+              "TEQ051": 0.0,
+              "TEQ052": 0.0,
+              "TEQ053": 0.0,
+              "TEQ054": 0.0,
+              "TEQ055": 0.0,
+              "TEQ056": 0.0,
+              "TEQ057": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:49.858883Z"
+          },
+          "value_profile": {
+            "CODIGO": {
+              "type": "INTEGER",
+              "kind": "identifier"
+            },
+            "ID": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "1",
+                "99"
+              ]
+            },
+            "TIPO_UNIDADE": {
+              "type": "TEXT",
+              "kind": "text"
+            },
+            "NIVEL_COMPLETAMENTO": {
+              "type": "TEXT",
+              "kind": "categorical",
+              "values": [
+                "COMPLETO",
+                "AMPLIADO",
+                "MINIMO"
+              ]
+            },
+            "TEQ024": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "45",
+                "15",
+                "12",
+                "4",
+                "36",
+                "5",
+                "48",
+                "24",
+                "10",
+                "196",
+                "88",
+                "72",
+                "96",
+                "62",
+                "8"
+              ]
+            },
+            "TEQ021": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "20",
+                "7"
+              ]
+            },
+            "TEQ009": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "0",
+                "142"
+              ]
+            },
+            "TEQ012": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "16",
+                "6",
+                "2",
+                "0",
+                "14",
+                "5",
+                "3",
+                "18",
+                "35",
+                "12",
+                "8",
+                "10",
+                "32",
+                "28",
+                "23",
+                "4",
+                "1",
+                "43",
+                "15",
+                "22",
+                "13",
+                "9",
+                "7",
+                "11"
+              ]
+            },
+            "TEQ045": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "4",
+                "2",
+                "3",
+                "1"
+              ]
+            },
+            "TEQ017": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "1",
+                "0",
+                "7",
+                "3",
+                "2",
+                "13",
+                "5",
+                "4",
+                "18",
+                "6",
+                "8",
+                "9",
+                "23",
+                "11"
+              ]
+            },
+            "TEQ020": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "1",
+                "0",
+                "13",
+                "5",
+                "4",
+                "2",
+                "8",
+                "3",
+                "7"
+              ]
+            },
+            "TEQ018": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "2",
+                "1",
+                "7",
+                "3"
+              ]
+            },
+            "TEQ015": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "2",
+                "1",
+                "0",
+                "8",
+                "3",
+                "4",
+                "6",
+                "12",
+                "5",
+                "9"
+              ]
+            },
+            "TEQ019": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "2",
+                "20",
+                "10",
+                "4",
+                "1",
+                "6",
+                "8"
+              ]
+            },
+            "TEQ026": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "14",
+                "10",
+                "5",
+                "12",
+                "8",
+                "4",
+                "32",
+                "16",
+                "2"
+              ]
+            },
+            "TEQ025": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "40",
+                "24",
+                "12",
+                "64",
+                "32",
+                "16",
+                "8",
+                "20",
+                "10"
+              ]
+            },
+            "TEQ016": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "TEQ011": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "50",
+                "30",
+                "60",
+                "40",
+                "150",
+                "300",
+                "12",
+                "85",
+                "71",
+                "20",
+                "36",
+                "18",
+                "16",
+                "14",
+                "202",
+                "172",
+                "156",
+                "88",
+                "17",
+                "31",
+                "21",
+                "8",
+                "51",
+                "41",
+                "0"
+              ]
+            },
+            "TEQ022": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "4",
+                "2",
+                "5",
+                "3",
+                "10",
+                "20",
+                "0",
+                "1",
+                "8",
+                "6",
+                "60",
+                "29",
+                "13"
+              ]
+            },
+            "TEQ032": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "4",
+                "2",
+                "1",
+                "8",
+                "3"
+              ]
+            },
+            "TEQ034": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "1",
+                "0",
+                "2",
+                "3",
+                "4",
+                "10",
+                "5"
+              ]
+            },
+            "TEQ046": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "174",
+                "58",
+                "42",
+                "216",
+                "100",
+                "0",
+                "44",
+                "15",
+                "10",
+                "158",
+                "53",
+                "46",
+                "190",
+                "89",
+                "38",
+                "150",
+                "69",
+                "56"
+              ]
+            },
+            "TEQ003": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "8",
+                "4",
+                "2",
+                "16"
+              ]
+            },
+            "TEQ035": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "87",
+                "29",
+                "21",
+                "108",
+                "50",
+                "0",
+                "22",
+                "8",
+                "5",
+                "79",
+                "27",
+                "23",
+                "95",
+                "45",
+                "19",
+                "75",
+                "35",
+                "28",
+                "24",
+                "4",
+                "2"
+              ]
+            },
+            "TEQ036": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "TEQ047": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "TEQ027": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "2",
+                "1",
+                "4"
+              ]
+            },
+            "TEQ006": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "0",
+                "122"
+              ]
+            },
+            "TEQ028": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "27",
+                "9",
+                "6",
+                "2",
+                "18",
+                "3",
+                "1",
+                "7"
+              ]
+            },
+            "TEQ013": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "12",
+                "6",
+                "24",
+                "4",
+                "51",
+                "25",
+                "11"
+              ]
+            },
+            "TEQ031": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "3",
+                "6",
+                "4",
+                "2",
+                "1"
+              ]
+            },
+            "TEQ048": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "1",
+                "0"
+              ]
+            },
+            "TEQ049": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "1"
+              ]
+            },
+            "TEQ050": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "TEQ051": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "14",
+                "4",
+                "2",
+                "0",
+                "12",
+                "3",
+                "16",
+                "6",
+                "33",
+                "10",
+                "1",
+                "8",
+                "26",
+                "21",
+                "5",
+                "41",
+                "13",
+                "20",
+                "11",
+                "9"
+              ]
+            },
+            "TEQ052": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "1",
+                "0",
+                "13",
+                "5",
+                "4",
+                "2",
+                "8",
+                "3",
+                "7"
+              ]
+            },
+            "TEQ053": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "1",
+                "0"
+              ]
+            },
+            "TEQ054": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "2",
+                "1",
+                "3"
+              ]
+            },
+            "TEQ055": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "6",
+                "3",
+                "4",
+                "2",
+                "16",
+                "8"
+              ]
+            },
+            "TEQ056": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "TEQ057": {
+              "type": "INTEGER",
+              "kind": "categorical",
+              "values": [
+                "0",
+                "8",
+                "4",
+                "2",
+                "16"
+              ]
+            }
+          },
+          "embedding_hint": "sql.regra: CODIGO, ID, TIPO_UNIDADE, NIVEL_COMPLETAMENTO, TEQ024, TEQ021, TEQ009, TEQ012, TEQ045, TEQ017, TEQ020, TEQ018, TEQ015, TEQ019, TEQ026, TEQ025, TEQ016, TEQ011, TEQ022, TEQ032, TEQ034, TEQ046, TEQ003, TEQ035, TEQ036, TEQ047, TEQ027, TEQ006, TEQ028, TEQ013, TEQ031, TEQ048, TEQ049, TEQ050, TEQ051, TEQ052, TEQ053, TEQ054, TEQ055, TEQ056, TEQ057"
+        },
+        "vw_comparativo_previsto_existente": {
+          "row_count": 26825,
+          "column_count": 10,
+          "columns": {
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 17
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 42
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 724
+            },
+            "NIVEL_COMPLETAMENTO": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "TIPO_EQP": {
+              "type": "VARCHAR(6)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 37
+            },
+            "QNT_PREVISTA": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 57
+            },
+            "QNT_EXISTENTE": {
+              "type": "BIGINT",
+              "nullable": true,
+              "is_pk": false,
+              "default": "'0'",
+              "null_rate": 0.0,
+              "cardinality": 127
+            },
+            "DIFERENCA": {
+              "type": "BIGINT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 174
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "AREA": "AREA002",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV001",
+              "UNIDADE_SUPERIOR": "UNI002",
+              "SIGLA": "SIG009",
+              "NIVEL_COMPLETAMENTO": "AMPLIADO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0,
+              "QNT_EXISTENTE": 53,
+              "DIFERENCA": 53
+            },
+            {
+              "AREA": "AREA002",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV002",
+              "UNIDADE_SUPERIOR": "UNI005",
+              "SIGLA": "SIG020",
+              "NIVEL_COMPLETAMENTO": "AMPLIADO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 5,
+              "QNT_EXISTENTE": 1,
+              "DIFERENCA": -4
+            },
+            {
+              "AREA": "AREA002",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV002",
+              "UNIDADE_SUPERIOR": "UNI003",
+              "SIGLA": "SIG026",
+              "NIVEL_COMPLETAMENTO": "AMPLIADO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0,
+              "QNT_EXISTENTE": 32,
+              "DIFERENCA": 32
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "AREA": 0.0,
+              "REGIAO": 0.0,
+              "DIVISAO": 0.0,
+              "UNIDADE_SUPERIOR": 0.0,
+              "SIGLA": 0.0,
+              "NIVEL_COMPLETAMENTO": 0.0,
+              "TIPO_EQP": 0.0,
+              "QNT_PREVISTA": 0.0,
+              "QNT_EXISTENTE": 0.0,
+              "DIFERENCA": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:53.253982Z"
+          },
+          "value_profile": {
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "kind": "categorical",
+              "values": [
+                "AREA002",
+                "AREA007",
+                "AREA008",
+                "AREA010",
+                "AREA001",
+                "AREA006",
+                "AREA009",
+                "AREA004",
+                "AREA003",
+                "AREA005",
+                "AREA011",
+                "AREA014",
+                "AREA012",
+                "AREA013",
+                "AREA015",
+                "",
+                "AREA016"
+              ]
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "kind": "categorical",
+              "values": [
+                "REG001",
+                "REG003",
+                "REG007",
+                "REG009",
+                "REG002",
+                "REG005",
+                "REG008",
+                "REG006",
+                "REG004",
+                "REG011",
+                "REG012",
+                "REG010",
+                "REG013",
+                ""
+              ]
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "DIV001",
+                "DIV002",
+                "DIV004",
+                "DIV003",
+                "DIV006",
+                "DIV005",
+                "",
+                "DIV007",
+                "DIV008",
+                "DIV009",
+                "DIV010"
+              ]
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "kind": "text"
+            },
+            "NIVEL_COMPLETAMENTO": {
+              "type": "MEDIUMTEXT",
+              "kind": "categorical",
+              "values": [
+                "AMPLIADO",
+                "MINIMO",
+                "COMPLETO"
+              ]
+            },
+            "TIPO_EQP": {
+              "type": "VARCHAR(6)",
+              "kind": "text"
+            },
+            "QNT_PREVISTA": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "0",
+                "300"
+              ]
+            },
+            "QNT_EXISTENTE": {
+              "type": "BIGINT",
+              "kind": "numeric",
+              "range": [
+                "0",
+                "3281"
+              ]
+            },
+            "DIFERENCA": {
+              "type": "BIGINT",
+              "kind": "numeric",
+              "range": [
+                "-150",
+                "3131"
+              ]
+            }
+          },
+          "embedding_hint": "sql.vw_comparativo_previsto_existente: AREA, REGIAO, DIVISAO, UNIDADE_SUPERIOR, SIGLA, NIVEL_COMPLETAMENTO, TIPO_EQP, QNT_PREVISTA, QNT_EXISTENTE, DIFERENCA"
+        },
+        "vw_materiais_catalogo_unidade": {
+          "row_count": 46487,
+          "column_count": 25,
+          "columns": {
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 12
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 12
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 6
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 38
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 477
+            },
+            "IDEQP": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 922
+            },
+            "NOME": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 281
+            },
+            "MODELO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 859
+            },
+            "FABRICANTE": {
+              "type": "VARCHAR(200)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 97
+            },
+            "PN": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 839
+            },
+            "SUBSISTEMA": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5
+            },
+            "GRUPO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 31
+            },
+            "TIPOEQP": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 38
+            },
+            "CODIGO": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": "'0'",
+              "null_rate": 0.0,
+              "cardinality": 46487
+            },
+            "SN": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 39253
+            },
+            "DISPONIBILIDADE": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "MOTIVO_INDISPONIVEL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 33
+            },
+            "SITUACAO_PATRIMONIAL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4
+            },
+            "MOTIVO_FORA_DE_CARGA": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14
+            },
+            "CONFERIDO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "DATA_CONFERIDO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 284
+            },
+            "ULTIMAATUALIZACAO": {
+              "type": "DATETIME",
+              "nullable": true,
+              "is_pk": false,
+              "default": "'CURRENT_TIMESTAMP'",
+              "null_rate": 0.0,
+              "cardinality": 34695
+            },
+            "EXCLUIR_MATERIAL": {
+              "type": "VARCHAR(10)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "NECESSITA_MANUTENCAO": {
+              "type": "VARCHAR(3)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            },
+            "PRIORIDADE_MANUTENCAO": {
+              "type": "VARCHAR(3)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "AREA": "AREA007",
+              "REGIAO": "REG003",
+              "DIVISAO": "DIV004",
+              "UNIDADE_SUPERIOR": "UNI018",
+              "SIGLA": "SIG200",
+              "IDEQP": 1026,
+              "NOME": "EQP277",
+              "MODELO": "MDL0873",
+              "FABRICANTE": "FAB008",
+              "PN": "PN00827",
+              "SUBSISTEMA": "SUB02",
+              "GRUPO": "GRP08",
+              "TIPOEQP": "TEQ012",
+              "CODIGO": 67786,
+              "SN": "SN00001",
+              "DISPONIBILIDADE": "Indisponível",
+              "MOTIVO_INDISPONIVEL": "Bateria não segura carga",
+              "SITUACAO_PATRIMONIAL": "Em Carga",
+              "MOTIVO_FORA_DE_CARGA": "",
+              "CONFERIDO": "Y",
+              "DATA_CONFERIDO": "2025-05-07",
+              "ULTIMAATUALIZACAO": 1682677758000,
+              "EXCLUIR_MATERIAL": "",
+              "NECESSITA_MANUTENCAO": "NAO",
+              "PRIORIDADE_MANUTENCAO": "NAO"
+            },
+            {
+              "AREA": "AREA007",
+              "REGIAO": "REG003",
+              "DIVISAO": "DIV004",
+              "UNIDADE_SUPERIOR": "UNI018",
+              "SIGLA": "SIG200",
+              "IDEQP": 1026,
+              "NOME": "EQP277",
+              "MODELO": "MDL0873",
+              "FABRICANTE": "FAB008",
+              "PN": "PN00827",
+              "SUBSISTEMA": "SUB02",
+              "GRUPO": "GRP08",
+              "TIPOEQP": "TEQ012",
+              "CODIGO": 67787,
+              "SN": "SN00002",
+              "DISPONIBILIDADE": "Indisponível",
+              "MOTIVO_INDISPONIVEL": "Bateria não segura carga",
+              "SITUACAO_PATRIMONIAL": "Em Carga",
+              "MOTIVO_FORA_DE_CARGA": "",
+              "CONFERIDO": "Y",
+              "DATA_CONFERIDO": "2025-05-07",
+              "ULTIMAATUALIZACAO": 1682677638000,
+              "EXCLUIR_MATERIAL": "",
+              "NECESSITA_MANUTENCAO": "NAO",
+              "PRIORIDADE_MANUTENCAO": "NAO"
+            },
+            {
+              "AREA": "AREA007",
+              "REGIAO": "REG003",
+              "DIVISAO": "DIV004",
+              "UNIDADE_SUPERIOR": "UNI018",
+              "SIGLA": "SIG200",
+              "IDEQP": 1026,
+              "NOME": "EQP277",
+              "MODELO": "MDL0873",
+              "FABRICANTE": "FAB008",
+              "PN": "PN00827",
+              "SUBSISTEMA": "SUB02",
+              "GRUPO": "GRP08",
+              "TIPOEQP": "TEQ012",
+              "CODIGO": 67788,
+              "SN": "SN00003",
+              "DISPONIBILIDADE": "Indisponível",
+              "MOTIVO_INDISPONIVEL": "Bateria não segura carga",
+              "SITUACAO_PATRIMONIAL": "Em Carga",
+              "MOTIVO_FORA_DE_CARGA": "",
+              "CONFERIDO": "Y",
+              "DATA_CONFERIDO": "2025-05-07",
+              "ULTIMAATUALIZACAO": 1682677887000,
+              "EXCLUIR_MATERIAL": "",
+              "NECESSITA_MANUTENCAO": "NAO",
+              "PRIORIDADE_MANUTENCAO": "NAO"
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "AREA": 0.0,
+              "REGIAO": 0.0,
+              "DIVISAO": 0.0,
+              "UNIDADE_SUPERIOR": 0.0,
+              "SIGLA": 0.0,
+              "IDEQP": 0.0,
+              "NOME": 0.0,
+              "MODELO": 0.0,
+              "FABRICANTE": 0.0,
+              "PN": 0.0,
+              "SUBSISTEMA": 0.0,
+              "GRUPO": 0.0,
+              "TIPOEQP": 0.0,
+              "CODIGO": 0.0,
+              "SN": 0.0,
+              "DISPONIBILIDADE": 0.0,
+              "MOTIVO_INDISPONIVEL": 0.0,
+              "SITUACAO_PATRIMONIAL": 0.0,
+              "MOTIVO_FORA_DE_CARGA": 0.0,
+              "CONFERIDO": 0.0,
+              "DATA_CONFERIDO": 0.0,
+              "ULTIMAATUALIZACAO": 0.0,
+              "EXCLUIR_MATERIAL": 0.0,
+              "NECESSITA_MANUTENCAO": 0.0,
+              "PRIORIDADE_MANUTENCAO": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:54.721804Z"
+          },
+          "value_profile": {
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "kind": "categorical",
+              "values": [
+                "AREA007",
+                "AREA009",
+                "AREA001",
+                "AREA003",
+                "AREA005",
+                "AREA008",
+                "AREA010",
+                "AREA002",
+                "AREA006",
+                "AREA004",
+                "AREA014",
+                "AREA011"
+              ]
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "kind": "categorical",
+              "values": [
+                "REG003",
+                "REG008",
+                "REG005",
+                "REG006",
+                "REG009",
+                "REG004",
+                "REG002",
+                "REG001",
+                "REG007",
+                "REG012",
+                "REG011",
+                "REG010"
+              ]
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "DIV004",
+                "DIV001",
+                "DIV006",
+                "DIV002",
+                "DIV003",
+                "DIV005"
+              ]
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "kind": "text"
+            },
+            "IDEQP": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "1",
+                "8596"
+              ]
+            },
+            "NOME": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "MODELO": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "FABRICANTE": {
+              "type": "VARCHAR(200)",
+              "kind": "text"
+            },
+            "PN": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "SUBSISTEMA": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "SUB02",
+                "SUB01",
+                "SUB03",
+                "SUB04",
+                ""
+              ]
+            },
+            "GRUPO": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "TIPOEQP": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "CODIGO": {
+              "type": "INTEGER",
+              "kind": "identifier"
+            },
+            "SN": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "DISPONIBILIDADE": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "Indisponível",
+                "Disponível"
+              ]
+            },
+            "MOTIVO_INDISPONIVEL": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "SITUACAO_PATRIMONIAL": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "Em Carga",
+                "Fora de Carga",
+                "Em processo de descarga",
+                "Autorizada descarga"
+              ]
+            },
+            "MOTIVO_FORA_DE_CARGA": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "Descarregado e Recolhido para central lo…",
+                "Alteração no trem",
+                "Em Processo de Transferência",
+                "Número de Série Não Identificado",
+                "Descarregado e permanece na unidade",
+                "Outro motivo ou mais de um item acima",
+                "Descrição Incorreta no SISCOFIS",
+                "Em Processo de Recebimento",
+                "Material Pertencente a Outra OM",
+                "Falta Valor Patrimonial",
+                "Material Obsoleto",
+                "Falta Guia de Fornecimento",
+                "Aguardando Inclusão Em Carga"
+              ]
+            },
+            "CONFERIDO": {
+              "type": "VARCHAR(30)",
+              "kind": "categorical",
+              "values": [
+                "Y",
+                "N"
+              ]
+            },
+            "DATA_CONFERIDO": {
+              "type": "VARCHAR(30)",
+              "kind": "text"
+            },
+            "ULTIMAATUALIZACAO": {
+              "type": "DATETIME",
+              "kind": "numeric",
+              "range": [
+                "2021-12-31 08:00:00",
+                "2026-08-14 10:31:58"
+              ]
+            },
+            "EXCLUIR_MATERIAL": {
+              "type": "VARCHAR(10)",
+              "kind": "categorical",
+              "values": [
+                "",
+                "Não",
+                "Sim"
+              ]
+            },
+            "NECESSITA_MANUTENCAO": {
+              "type": "VARCHAR(3)",
+              "kind": "categorical",
+              "values": [
+                "NAO",
+                "SIM"
+              ]
+            },
+            "PRIORIDADE_MANUTENCAO": {
+              "type": "VARCHAR(3)",
+              "kind": "categorical",
+              "values": [
+                "NAO",
+                "SIM"
+              ]
+            }
+          },
+          "embedding_hint": "sql.vw_materiais_catalogo_unidade: AREA, REGIAO, DIVISAO, UNIDADE_SUPERIOR, SIGLA, IDEQP, NOME, MODELO, FABRICANTE, PN, SUBSISTEMA, GRUPO, TIPOEQP, CODIGO, SN, DISPONIBILIDADE, MOTIVO_INDISPONIVEL, SITUACAO_PATRIMONIAL, MOTIVO_FORA_DE_CARGA, CONFERIDO, DATA_CONFERIDO, ULTIMAATUALIZACAO, EXCLUIR_MATERIAL, NECESSITA_MANUTENCAO, PRIORIDADE_MANUTENCAO"
+        },
+        "vw_tipoeqp_previsto_unidades": {
+          "row_count": 26825,
+          "column_count": 8,
+          "columns": {
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 17
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 42
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 724
+            },
+            "NIVEL_COMPLETAMENTO": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3
+            },
+            "TIPO_EQP": {
+              "type": "VARCHAR(6)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 37
+            },
+            "QNT_PREVISTA": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 57
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "AREA": "AREA001",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV001",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "SIGLA": "SIG001",
+              "NIVEL_COMPLETAMENTO": "MINIMO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0
+            },
+            {
+              "AREA": "AREA001",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV001",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "SIGLA": "SIG002",
+              "NIVEL_COMPLETAMENTO": "MINIMO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0
+            },
+            {
+              "AREA": "AREA001",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV001",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "SIGLA": "SIG003",
+              "NIVEL_COMPLETAMENTO": "MINIMO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "AREA": 0.0,
+              "REGIAO": 0.0,
+              "DIVISAO": 0.0,
+              "UNIDADE_SUPERIOR": 0.0,
+              "SIGLA": 0.0,
+              "NIVEL_COMPLETAMENTO": 0.0,
+              "TIPO_EQP": 0.0,
+              "QNT_PREVISTA": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:55.170229Z"
+          },
+          "value_profile": {
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "kind": "categorical",
+              "values": [
+                "AREA001",
+                "AREA002",
+                "AREA003",
+                "AREA004",
+                "AREA005",
+                "AREA006",
+                "AREA007",
+                "AREA008",
+                "AREA009",
+                "AREA010",
+                "AREA011",
+                "AREA012",
+                "AREA013",
+                "AREA014",
+                "AREA015",
+                "",
+                "AREA016"
+              ]
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "kind": "categorical",
+              "values": [
+                "REG001",
+                "REG002",
+                "REG003",
+                "REG004",
+                "REG005",
+                "REG006",
+                "REG007",
+                "REG008",
+                "REG009",
+                "REG010",
+                "REG011",
+                "REG012",
+                "REG013",
+                ""
+              ]
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "kind": "categorical",
+              "values": [
+                "DIV001",
+                "DIV002",
+                "DIV003",
+                "DIV004",
+                "DIV005",
+                "DIV006",
+                "",
+                "DIV007",
+                "DIV008",
+                "DIV009",
+                "DIV010"
+              ]
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "kind": "text"
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "kind": "text"
+            },
+            "NIVEL_COMPLETAMENTO": {
+              "type": "MEDIUMTEXT",
+              "kind": "categorical",
+              "values": [
+                "MINIMO",
+                "AMPLIADO",
+                "COMPLETO"
+              ]
+            },
+            "TIPO_EQP": {
+              "type": "VARCHAR(6)",
+              "kind": "text"
+            },
+            "QNT_PREVISTA": {
+              "type": "INTEGER",
+              "kind": "numeric",
+              "range": [
+                "0",
+                "300"
+              ]
+            }
+          },
+          "embedding_hint": "sql.vw_tipoeqp_previsto_unidades: AREA, REGIAO, DIVISAO, UNIDADE_SUPERIOR, SIGLA, NIVEL_COMPLETAMENTO, TIPO_EQP, QNT_PREVISTA"
+        }
+      }
+    },
+    "api": {
+      "base_url": "http://localhost:8000",
+      "auth": {
+        "type": "none",
+        "_options": [
+          "none",
+          "bearer_token",
+          "api_key",
+          "basic"
+        ]
+      },
+      "endpoints": {
+        "distribuicao_list": {
+          "path": "/api/distribuicao/deposito/",
+          "method": "GET",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "paginated_object_with_metadata",
+            "total_count_available": 1179,
+            "structure": {
+              "count": "integer",
+              "next": "url_string",
+              "previous": "null|unknown",
+              "results": "array[object] — 25 item(s) nesta página"
+            },
+            "result_object_fields": {
+              "id": {
+                "type": "integer",
+                "example": 1
+              },
+              "funds": {
+                "type": "string",
+                "example": ""
+              },
+              "doc_recebimento": {
+                "type": "code_identifier",
+                "example": "41/25"
+              },
+              "invoice": {
+                "type": "code_identifier",
+                "example": "INV035"
+              },
+              "contrato": {
+                "type": "code_identifier",
+                "example": "CTR026-24"
+              },
+              "numero_item_contrato": {
+                "type": "string",
+                "example": ""
+              },
+              "pn": {
+                "type": "code_identifier",
+                "example": "PN01666"
+              },
+              "id_sistema_catalogo": {
+                "type": "string",
+                "example": ""
+              },
+              "item": {
+                "type": "string",
+                "example": ""
+              },
+              "qtd": {
+                "type": "code_identifier",
+                "example": "19"
+              },
+              "descricao": {
+                "type": "string",
+                "example": ""
+              },
+              "chegada_deposito": {
+                "type": "string",
+                "example": ""
+              },
+              "doc_distribuicao": {
+                "type": "string",
+                "example": ""
+              },
+              "unidade_destino": {
+                "type": "string",
+                "example": ""
+              },
+              "regiao_de_destino": {
+                "type": "string",
+                "example": ""
+              },
+              "qtd_enviada_unidade": {
+                "type": "integer",
+                "example": 0
+              },
+              "status": {
+                "type": "string",
+                "example": "Nao fornecido e nao planejado"
+              },
+              "ano": {
+                "type": "integer",
+                "example": 2026
+              },
+              "deposito": {
+                "type": "code_identifier",
+                "example": "SIG090"
+              },
+              "subsistema": {
+                "type": "null|unknown",
+                "example": null
+              },
+              "tipoeqp": {
+                "type": "null|unknown",
+                "example": null
+              }
+            },
+            "example_response": {
+              "count": 1179,
+              "next": "http://localhost:8000/api/distribuicao/deposito/?limit=1&page=2",
+              "previous": null,
+              "results": [
+                {
+                  "id": 1,
+                  "funds": "",
+                  "doc_recebimento": "41/25",
+                  "invoice": "INV035",
+                  "contrato": "CTR026-24",
+                  "numero_item_contrato": "",
+                  "pn": "PN01666",
+                  "id_sistema_catalogo": "",
+                  "item": "",
+                  "qtd": "19",
+                  "descricao": "",
+                  "chegada_deposito": "",
+                  "doc_distribuicao": "",
+                  "unidade_destino": "",
+                  "regiao_de_destino": "",
+                  "qtd_enviada_unidade": 0,
+                  "status": "Nao fornecido e nao planejado",
+                  "ano": 2026,
+                  "deposito": "SIG090",
+                  "subsistema": null,
+                  "tipoeqp": null
+                }
+              ]
+            },
+            "_probed_at": "2026-08-14T13:42:57.223232Z",
+            "_probe_url": "http://localhost:8000/api/distribuicao/deposito/"
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "value_profile": {
+            "deposito": {
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "SIG090"
+              ]
+            },
+            "id": {
+              "cardinality": 1000,
+              "kind": "numeric",
+              "range": [
+                "1",
+                "1000"
+              ]
+            },
+            "contrato": {
+              "cardinality": 63,
+              "kind": "text"
+            },
+            "id_sistema_catalogo": {
+              "cardinality": 179,
+              "kind": "text"
+            },
+            "numero_item_contrato": {
+              "cardinality": 29,
+              "kind": "text"
+            },
+            "pn": {
+              "cardinality": 177,
+              "kind": "text"
+            },
+            "qtd": {
+              "cardinality": 92,
+              "kind": "text"
+            },
+            "tipoeqp": {
+              "cardinality": 24,
+              "kind": "categorical",
+              "values": [
+                "TEQ002",
+                "TEQ006",
+                "TEQ009",
+                "TEQ011",
+                "TEQ012",
+                "TEQ013",
+                "TEQ015",
+                "TEQ017",
+                "TEQ019",
+                "TEQ024",
+                "TEQ025",
+                "TEQ026",
+                "TEQ031",
+                "TEQ032",
+                "TEQ034",
+                "TEQ035",
+                "TEQ036",
+                "TEQ038",
+                "TEQ039",
+                "TEQ040",
+                "TEQ041",
+                "TEQ042",
+                "TEQ043",
+                "TEQ044"
+              ]
+            },
+            "doc_distribuicao": {
+              "cardinality": 344,
+              "kind": "text"
+            },
+            "subsistema": {
+              "cardinality": 4,
+              "kind": "categorical",
+              "values": [
+                "SUB01",
+                "SUB02",
+                "SUB04",
+                "SUB05"
+              ]
+            },
+            "descricao": {
+              "cardinality": 17,
+              "kind": "categorical",
+              "values": [
+                "",
+                "DESC_001",
+                "DESC_002",
+                "DESC_003",
+                "DESC_004",
+                "DESC_005",
+                "DESC_006",
+                "DESC_007",
+                "DESC_008",
+                "DESC_009",
+                "DESC_010",
+                "DESC_011",
+                "DESC_012",
+                "DESC_013",
+                "DESC_014",
+                "DESC_015"
+              ]
+            },
+            "doc_recebimento": {
+              "cardinality": 100,
+              "kind": "text"
+            },
+            "funds": {
+              "cardinality": 21,
+              "kind": "categorical",
+              "values": [
+                "",
+                "FND001",
+                "FND002",
+                "FND003",
+                "FND004",
+                "FND005",
+                "FND006",
+                "FND008",
+                "FND010",
+                "FND014",
+                "FND015",
+                "FND016",
+                "FND017",
+                "FND019",
+                "FND020",
+                "FND021",
+                "FND022",
+                "FND023",
+                "FND024",
+                "FND025",
+                "FND026"
+              ]
+            },
+            "regiao_de_destino": {
+              "cardinality": 13,
+              "kind": "categorical",
+              "values": [
+                "",
+                "REG001",
+                "REG002",
+                "REG003",
+                "REG004",
+                "REG005",
+                "REG006",
+                "REG007",
+                "REG008",
+                "REG009",
+                "REG010",
+                "REG011",
+                "REG012"
+              ]
+            },
+            "chegada_deposito": {
+              "cardinality": 10,
+              "kind": "categorical",
+              "values": [
+                "",
+                "2024-07-01 00:00:00",
+                "2024-10-01 00:00:00",
+                "2024-10-21 00:00:00",
+                "2024-11-07 00:00:00",
+                "2024-11-26 00:00:00",
+                "2025-05-20 00:00:00",
+                "2025-06-12 00:00:00",
+                "2025-08-08 00:00:00",
+                "45820"
+              ]
+            },
+            "status": {
+              "cardinality": 6,
+              "kind": "categorical",
+              "values": [
+                "Apanha",
+                "Com alteracao",
+                "Fornecido",
+                "Nao fornecido e nao planejado",
+                "Nao fornecido e planejado",
+                "Parcialmente Fornecido"
+              ]
+            },
+            "invoice": {
+              "cardinality": 40,
+              "kind": "text"
+            },
+            "unidade_destino": {
+              "cardinality": 163,
+              "kind": "text"
+            },
+            "qtd_enviada_unidade": {
+              "cardinality": 90,
+              "kind": "numeric",
+              "range": [
+                "0",
+                "1000"
+              ]
+            },
+            "ano": {
+              "cardinality": 3,
+              "kind": "categorical",
+              "values": [
+                "2024",
+                "2025",
+                "2026"
+              ]
+            },
+            "item": {
+              "cardinality": 244,
+              "kind": "text"
+            }
+          },
+          "sample_size": 1000,
+          "embedding_hint": "api.distribuicao_list: deposito, id, contrato, id_sistema_catalogo, numero_item_contrato, pn, qtd, tipoeqp, doc_distribuicao, subsistema, descricao, doc_recebimento, funds, regiao_de_destino, chegada_deposito, status, invoice, unidade_destino, qtd_enviada_unidade, ano, item"
+        },
+        "manutencao_ap_direto_list": {
+          "path": "/api/manutencao/manutencao-apoio-direto/",
+          "method": "GET",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 985,
+            "result_object_fields": {
+              "CODIGO": {
+                "type": "integer",
+                "example": 1
+              },
+              "UNIDADE": {
+                "type": "code_identifier",
+                "example": "SIG024"
+              },
+              "REGIAO": {
+                "type": "code_identifier",
+                "example": "REG001"
+              },
+              "CIDADE": {
+                "type": "string",
+                "example": "CID_001"
+              },
+              "ESTADO": {
+                "type": "code_identifier",
+                "example": "RJ"
+              },
+              "PN": {
+                "type": "string",
+                "example": ""
+              },
+              "MATERIAL": {
+                "type": "code_identifier",
+                "example": "EQP648"
+              },
+              "SN": {
+                "type": "code_identifier",
+                "example": "SN16478"
+              },
+              "FABRICANTE": {
+                "type": "code_identifier",
+                "example": "FAB008"
+              },
+              "DIAGNOSTICO": {
+                "type": "string",
+                "example": "NÃO LIGA"
+              },
+              "SOLUCAO": {
+                "type": "string",
+                "example": "TROCA DA PLACA A5/A11 E TRAVA DA BATERIA"
+              },
+              "SUPRIMENTO_EMPREGADO": {
+                "type": "string",
+                "example": "1 PLACA A5; 1 PLACA A11 E 1 TRAVA DA BATERIA"
+              },
+              "NEC_CONFIGURACAO": {
+                "type": "string",
+                "example": "NÃO"
+              },
+              "STATUS_FINAL": {
+                "type": "string",
+                "example": "DISPONÍVEL"
+              },
+              "TIPO_MANUTENCAO": {
+                "type": "string",
+                "example": "4º Escalão"
+              },
+              "NEC_DESCARGA": {
+                "type": "string",
+                "example": "NÃO"
+              },
+              "OBS": {
+                "type": "string",
+                "example": "NÃO HÁ."
+              },
+              "IDMATERIAL": {
+                "type": "integer",
+                "example": 25653
+              }
+            },
+            "structure": {
+              "root": "array — lista de 985 objeto(s)"
+            },
+            "example_response": [
+              {
+                "CODIGO": 1,
+                "UNIDADE": "SIG024",
+                "REGIAO": "REG001",
+                "CIDADE": "CID_001",
+                "ESTADO": "RJ",
+                "PN": "",
+                "MATERIAL": "EQP648",
+                "SN": "SN16478",
+                "FABRICANTE": "FAB008",
+                "DIAGNOSTICO": "NÃO LIGA",
+                "SOLUCAO": "TROCA DA PLACA A5/A11 E TRAVA DA BATERIA",
+                "SUPRIMENTO_EMPREGADO": "1 PLACA A5; 1 PLACA A11 E 1 TRAVA DA BATERIA",
+                "NEC_CONFIGURACAO": "NÃO",
+                "STATUS_FINAL": "DISPONÍVEL",
+                "TIPO_MANUTENCAO": "4º Escalão",
+                "NEC_DESCARGA": "NÃO",
+                "OBS": "NÃO HÁ.",
+                "IDMATERIAL": 25653
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.275382Z",
+            "_probe_url": "http://localhost:8000/api/manutencao/manutencao-apoio-direto/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "value_profile": {
+            "OBS": {
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "",
+                "NÃO HÁ."
+              ]
+            },
+            "CIDADE": {
+              "cardinality": 44,
+              "kind": "text"
+            },
+            "NEC_CONFIGURACAO": {
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "NÃO",
+                "SIM"
+              ]
+            },
+            "UNIDADE": {
+              "cardinality": 92,
+              "kind": "text"
+            },
+            "TIPO_MANUTENCAO": {
+              "cardinality": 4,
+              "kind": "categorical",
+              "values": [
+                "1º Escalão",
+                "2º Escalão",
+                "3º Escalão",
+                "4º Escalão"
+              ]
+            },
+            "PN": {
+              "cardinality": 15,
+              "kind": "categorical",
+              "values": [
+                "",
+                "(NÃO RELACIONADO)",
+                "PN_001",
+                "PN_002",
+                "PN_003",
+                "PN_004",
+                "PN_005",
+                "PN_006",
+                "PN_007",
+                "PN_008",
+                "PN_009",
+                "PN_010",
+                "PN_011",
+                "PN_012",
+                "PN_013"
+              ]
+            },
+            "MATERIAL": {
+              "cardinality": 16,
+              "kind": "categorical",
+              "values": [
+                "EQP081",
+                "EQP082",
+                "EQP086",
+                "EQP176",
+                "EQP185",
+                "EQP187",
+                "EQP190",
+                "EQP211",
+                "EQP240",
+                "EQP241",
+                "EQP246",
+                "EQP291",
+                "EQP292",
+                "EQP301",
+                "EQP366",
+                "EQP648"
+              ]
+            },
+            "CODIGO": {
+              "cardinality": 984,
+              "kind": "numeric",
+              "range": [
+                "1",
+                "988"
+              ]
+            },
+            "SOLUCAO": {
+              "cardinality": 240,
+              "kind": "text"
+            },
+            "ESTADO": {
+              "cardinality": 12,
+              "kind": "categorical",
+              "values": [
+                "AL",
+                "AP",
+                "GO",
+                "MA",
+                "MS",
+                "MT",
+                "PA",
+                "PB",
+                "PE",
+                "RJ",
+                "RN",
+                "RS"
+              ]
+            },
+            "NEC_DESCARGA": {
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "NÃO",
+                "SIM"
+              ]
+            },
+            "DIAGNOSTICO": {
+              "cardinality": 234,
+              "kind": "text"
+            },
+            "STATUS_FINAL": {
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "DISPONÍVEL",
+                "INDISPONÍVEL"
+              ]
+            },
+            "FABRICANTE": {
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "FAB001",
+                "FAB008"
+              ]
+            },
+            "SUPRIMENTO_EMPREGADO": {
+              "cardinality": 155,
+              "kind": "text"
+            },
+            "REGIAO": {
+              "cardinality": 5,
+              "kind": "categorical",
+              "values": [
+                "REG001",
+                "REG003",
+                "REG007",
+                "REG008",
+                "REG009"
+              ]
+            },
+            "IDMATERIAL": {
+              "cardinality": 747,
+              "kind": "numeric",
+              "range": [
+                "0",
+                "57981"
+              ]
+            },
+            "SN": {
+              "cardinality": 931,
+              "kind": "text"
+            }
+          },
+          "sample_size": 1000,
+          "embedding_hint": "api.manutencao_ap_direto_list: OBS, CIDADE, NEC_CONFIGURACAO, UNIDADE, TIPO_MANUTENCAO, PN, MATERIAL, CODIGO, SOLUCAO, ESTADO, NEC_DESCARGA, DIAGNOSTICO, STATUS_FINAL, FABRICANTE, SUPRIMENTO_EMPREGADO, REGIAO, IDMATERIAL, SN"
+        },
+        "monitoramento_starlink_list": {
+          "path": "/api/monitoramento/terminal-starlink/",
+          "method": "GET",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 5277,
+            "result_object_fields": {
+              "id": {
+                "type": "integer",
+                "example": 84418
+              },
+              "unidade": {
+                "type": "string",
+                "example": "UNI_001"
+              },
+              "cidade": {
+                "type": "string",
+                "example": "CID_002"
+              },
+              "estado": {
+                "type": "code_identifier",
+                "example": "SP"
+              },
+              "site_type": {
+                "type": "string",
+                "example": "Enterprise Land Mobility"
+              },
+              "vessel_type": {
+                "type": "null|unknown",
+                "example": null
+              },
+              "imo": {
+                "type": "null|unknown",
+                "example": null
+              },
+              "mmsi": {
+                "type": "null|unknown",
+                "example": null
+              },
+              "service_count": {
+                "type": "float",
+                "example": 1.0
+              },
+              "site_capacity_mb": {
+                "type": "float",
+                "example": 512000.0
+              },
+              "usage_today_mb": {
+                "type": "float",
+                "example": 317.45
+              },
+              "mtd_usage_mb": {
+                "type": "float",
+                "example": 662589.0
+              },
+              "usage_previous_month_mb": {
+                "type": "float",
+                "example": 228168.0
+              },
+              "latitude": {
+                "type": "float",
+                "example": null
+              },
+              "longitude": {
+                "type": "float",
+                "example": null
+              },
+              "status": {
+                "type": "string",
+                "example": "Data is Delayed"
+              },
+              "import_timestamp": {
+                "type": "date_string (ISO 8601)",
+                "example": "2025-10-24T05:00:50Z"
+              }
+            },
+            "structure": {
+              "root": "array — lista de 5277 objeto(s)"
+            },
+            "example_response": [
+              {
+                "id": 84418,
+                "unidade": "UNI_001",
+                "cidade": "CID_002",
+                "estado": "SP",
+                "site_type": "Enterprise Land Mobility",
+                "vessel_type": null,
+                "imo": null,
+                "mmsi": null,
+                "service_count": 1.0,
+                "site_capacity_mb": 512000.0,
+                "usage_today_mb": 317.45,
+                "mtd_usage_mb": 662589.0,
+                "usage_previous_month_mb": 228168.0,
+                "latitude": null,
+                "longitude": null,
+                "status": "Data is Delayed",
+                "import_timestamp": "2025-10-24T05:00:50Z"
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.518147Z",
+            "_probe_url": "http://localhost:8000/api/monitoramento/terminal-starlink/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "value_profile": {
+            "import_timestamp": {
+              "cardinality": 31,
+              "kind": "text"
+            },
+            "service_count": {
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "1.0"
+              ]
+            },
+            "mmsi": {
+              "cardinality": 1,
+              "kind": "empty"
+            },
+            "id": {
+              "cardinality": 1000,
+              "kind": "numeric",
+              "range": [
+                "84418",
+                "85417"
+              ]
+            },
+            "site_type": {
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "Enterprise Building",
+                "Enterprise Land Mobility"
+              ]
+            },
+            "unidade": {
+              "cardinality": 33,
+              "kind": "text"
+            },
+            "estado": {
+              "cardinality": 12,
+              "kind": "categorical",
+              "values": [
+                "AP",
+                "DF",
+                "GO",
+                "MG",
+                "MS",
+                "MT",
+                "PA",
+                "PE",
+                "PR",
+                "RJ",
+                "RS",
+                "SP"
+              ]
+            },
+            "mtd_usage_mb": {
+              "cardinality": 225,
+              "kind": "numeric",
+              "range": [
+                "686.09",
+                "683704.0"
+              ]
+            },
+            "usage_previous_month_mb": {
+              "cardinality": 32,
+              "kind": "numeric",
+              "range": [
+                "0.0",
+                "738908.0"
+              ]
+            },
+            "vessel_type": {
+              "cardinality": 0,
+              "kind": "text"
+            },
+            "usage_today_mb": {
+              "cardinality": 124,
+              "kind": "numeric",
+              "range": [
+                "0.0",
+                "34048.0"
+              ]
+            },
+            "site_capacity_mb": {
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "512000.0"
+              ]
+            },
+            "latitude": {
+              "cardinality": 29,
+              "kind": "numeric",
+              "range": [
+                "-30",
+                "0"
+              ]
+            },
+            "cidade": {
+              "cardinality": 27,
+              "kind": "text"
+            },
+            "longitude": {
+              "cardinality": 29,
+              "kind": "numeric",
+              "range": [
+                "-58",
+                "-35"
+              ]
+            },
+            "status": {
+              "cardinality": 5,
+              "kind": "categorical",
+              "values": [
+                "Data is Delayed",
+                "Localização não encontrada",
+                "Never Online",
+                "Offline",
+                "Online"
+              ]
+            },
+            "imo": {
+              "cardinality": 0,
+              "kind": "text"
+            }
+          },
+          "sample_size": 1000,
+          "embedding_hint": "api.monitoramento_starlink_list: import_timestamp, service_count, mmsi, id, site_type, unidade, estado, mtd_usage_mb, usage_previous_month_mb, vessel_type, usage_today_mb, site_capacity_mb, latitude, cidade, longitude, status, imo"
+        },
+        "monitoramento_sites_sistema_radio_list": {
+          "path": "/api/monitoramento/sites-sistema-radio/",
+          "method": "GET",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 105,
+            "result_object_fields": {
+              "id": {
+                "type": "integer",
+                "example": 1
+              },
+              "localization": {
+                "type": "string",
+                "example": "LOC_004"
+              },
+              "site": {
+                "type": "string",
+                "example": "SITE_001"
+              },
+              "modelo": {
+                "type": "string",
+                "example": "MOD_001"
+              },
+              "release": {
+                "type": "string",
+                "example": "SYS_002"
+              },
+              "sysid": {
+                "type": "string",
+                "example": "SYS_001"
+              },
+              "system": {
+                "type": "code_identifier",
+                "example": "SYS_003"
+              },
+              "type": {
+                "type": "string",
+                "example": "TYP_001"
+              },
+              "endereco": {
+                "type": "string",
+                "example": "LOC_002"
+              },
+              "latitude": {
+                "type": "string",
+                "example": null
+              },
+              "longitude": {
+                "type": "string",
+                "example": null
+              },
+              "tipo_torre": {
+                "type": "string",
+                "example": ""
+              },
+              "altura_antena_tx_m": {
+                "type": "string",
+                "example": ""
+              },
+              "altura_antena_rx_m": {
+                "type": "string",
+                "example": ""
+              },
+              "link": {
+                "type": "string",
+                "example": ""
+              },
+              "master_site_l1": {
+                "type": "code_identifier",
+                "example": "X"
+              },
+              "qty_ch": {
+                "type": "string",
+                "example": ""
+              },
+              "ch_fdma": {
+                "type": "string",
+                "example": ""
+              },
+              "ch_tdma": {
+                "type": "string",
+                "example": ""
+              },
+              "grupo_freq": {
+                "type": "string",
+                "example": ""
+              },
+              "latitude_decimal": {
+                "type": "string",
+                "example": null
+              },
+              "longitude_decimal": {
+                "type": "string",
+                "example": null
+              }
+            },
+            "structure": {
+              "root": "array — lista de 105 objeto(s)"
+            },
+            "example_response": [
+              {
+                "id": 1,
+                "localization": "LOC_004",
+                "site": "SITE_001",
+                "modelo": "MOD_001",
+                "release": "SYS_002",
+                "sysid": "SYS_001",
+                "system": "SYS_003",
+                "type": "TYP_001",
+                "endereco": "LOC_002",
+                "latitude": null,
+                "longitude": null,
+                "tipo_torre": "",
+                "altura_antena_tx_m": "",
+                "altura_antena_rx_m": "",
+                "link": "",
+                "master_site_l1": "X",
+                "qty_ch": "",
+                "ch_fdma": "",
+                "ch_tdma": "",
+                "grupo_freq": "",
+                "latitude_decimal": null,
+                "longitude_decimal": null
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.547234Z",
+            "_probe_url": "http://localhost:8000/api/monitoramento/sites-sistema-radio/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "value_profile": {
+            "id": {
+              "cardinality": 105,
+              "kind": "numeric",
+              "range": [
+                "1",
+                "105"
+              ]
+            },
+            "type": {
+              "cardinality": 3,
+              "kind": "categorical",
+              "values": [
+                "TYP_001",
+                "TYP_003",
+                "TYP_004"
+              ]
+            },
+            "system": {
+              "cardinality": 105,
+              "kind": "text"
+            },
+            "link": {
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "",
+                "LNK_001"
+              ]
+            },
+            "localization": {
+              "cardinality": 48,
+              "kind": "text"
+            },
+            "sysid": {
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "SYS_001"
+              ]
+            },
+            "qty_ch": {
+              "cardinality": 8,
+              "kind": "categorical",
+              "values": [
+                "",
+                "1.0",
+                "11.0",
+                "12.0",
+                "3.0",
+                "4.0",
+                "5.0",
+                "6.0"
+              ]
+            },
+            "release": {
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "SYS_002"
+              ]
+            },
+            "site": {
+              "cardinality": 105,
+              "kind": "text"
+            },
+            "latitude": {
+              "cardinality": 78,
+              "kind": "text"
+            },
+            "latitude_decimal": {
+              "cardinality": 80,
+              "kind": "text"
+            },
+            "ch_fdma": {
+              "cardinality": 6,
+              "kind": "categorical",
+              "values": [
+                "",
+                "1.0",
+                "3.0",
+                "4.0",
+                "5.0",
+                "6.0"
+              ]
+            },
+            "master_site_l1": {
+              "cardinality": 3,
+              "kind": "categorical",
+              "values": [
+                "",
+                "X",
+                "SITE_003"
+              ]
+            },
+            "longitude_decimal": {
+              "cardinality": 80,
+              "kind": "text"
+            },
+            "endereco": {
+              "cardinality": 82,
+              "kind": "text"
+            },
+            "ch_tdma": {
+              "cardinality": 5,
+              "kind": "categorical",
+              "values": [
+                "",
+                "10.0",
+                "11.0",
+                "2.0",
+                "5.0"
+              ]
+            },
+            "altura_antena_tx_m": {
+              "cardinality": 45,
+              "kind": "text"
+            },
+            "altura_antena_rx_m": {
+              "cardinality": 43,
+              "kind": "text"
+            },
+            "tipo_torre": {
+              "cardinality": 17,
+              "kind": "categorical",
+              "values": [
+                "",
+                "TWR_001",
+                "TWR_002",
+                "TWR_003",
+                "TWR_004",
+                "TWR_005",
+                "TWR_006",
+                "TWR_007",
+                "TWR_008",
+                "TWR_009",
+                "TWR_010",
+                "TWR_011",
+                "TWR_012",
+                "TWR_013",
+                "TWR_014",
+                "TWR_015",
+                "TWR_016"
+              ]
+            },
+            "modelo": {
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "MOD_001"
+              ]
+            },
+            "longitude": {
+              "cardinality": 78,
+              "kind": "text"
+            },
+            "grupo_freq": {
+              "cardinality": 18,
+              "kind": "categorical",
+              "values": [
+                "",
+                "GRP_001",
+                "GRP_002",
+                "GRP_003",
+                "GRP_004",
+                "GRP_005",
+                "GRP_006",
+                "GRP_007",
+                "GRP_008",
+                "GRP_009",
+                "GRP_010",
+                "GRP_011",
+                "GRP_012",
+                "GRP_013",
+                "GRP_014",
+                "GRP_015",
+                "GRP_016",
+                "GRP_017"
+              ]
+            }
+          },
+          "sample_size": 105,
+          "sample_note": "amostra menor que o teto: endpoint sinalizou fim dos dados (sem `next`) ou não respondeu paginação",
+          "embedding_hint": "api.monitoramento_sites_sistema_radio_list: id, type, system, link, localization, sysid, qty_ch, release, site, latitude, latitude_decimal, ch_fdma, master_site_l1, longitude_decimal, endereco, ch_tdma, altura_antena_tx_m, altura_antena_rx_m, tipo_torre, modelo, longitude, grupo_freq"
+        },
+        "monitoramento_sistema_satelital_list": {
+          "path": "/api/monitoramento/sistema-satelital/",
+          "method": "GET",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 48,
+            "result_object_fields": {
+              "CODIGO": {
+                "type": "integer",
+                "example": 1
+              },
+              "IDU_NMS": {
+                "type": "code_identifier",
+                "example": "IDU_001"
+              },
+              "NUMERO_DO_TL": {
+                "type": "string",
+                "example": "TL_001"
+              },
+              "SN": {
+                "type": "code_identifier",
+                "example": "A4538"
+              },
+              "LOCALIDADE_DA_ENTREGA": {
+                "type": "string",
+                "example": "LOC_006"
+              },
+              "LOCAL_HOJE": {
+                "type": "code_identifier",
+                "example": "LOC_005"
+              },
+              "CODIGO_UNIDADE": {
+                "type": "integer",
+                "example": 496
+              },
+              "SITUACAO": {
+                "type": "string",
+                "example": "BUC Inoperante"
+              },
+              "DISPONIBILIDADE": {
+                "type": "string",
+                "example": "Indisponível"
+              }
+            },
+            "structure": {
+              "root": "array — lista de 48 objeto(s)"
+            },
+            "example_response": [
+              {
+                "CODIGO": 1,
+                "IDU_NMS": "IDU_001",
+                "NUMERO_DO_TL": "TL_001",
+                "SN": "A4538",
+                "LOCALIDADE_DA_ENTREGA": "LOC_006",
+                "LOCAL_HOJE": "LOC_005",
+                "CODIGO_UNIDADE": 496,
+                "SITUACAO": "BUC Inoperante",
+                "DISPONIBILIDADE": "Indisponível"
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.566357Z",
+            "_probe_url": "http://localhost:8000/api/monitoramento/sistema-satelital/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "value_profile": {
+            "SITUACAO": {
+              "cardinality": 9,
+              "kind": "categorical",
+              "values": [
+                "ACU Inoperante",
+                "BUC Inoperante",
+                "Bússola da antena com cabo quebrado",
+                "Cabo RF mal contato",
+                "Conector RF IN do BUC quebrado ",
+                "Modem Inoperante",
+                "OK",
+                "Problema no motor",
+                "UPS com defeito"
+              ]
+            },
+            "LOCAL_HOJE": {
+              "cardinality": 22,
+              "kind": "categorical_blocked",
+              "note": "valores não listados: coluna na BLOCKLIST_VALUE_PROFILE (nomes de unidade militar; correção pós-auditoria 14/08/2026)"
+            },
+            "NUMERO_DO_TL": {
+              "cardinality": 38,
+              "kind": "text"
+            },
+            "CODIGO": {
+              "cardinality": 48,
+              "kind": "numeric",
+              "range": [
+                "1",
+                "48"
+              ]
+            },
+            "DISPONIBILIDADE": {
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "Disponível",
+                "Indisponível"
+              ]
+            },
+            "LOCALIDADE_DA_ENTREGA": {
+              "cardinality": 9,
+              "kind": "categorical_blocked",
+              "note": "valores não listados: coluna na BLOCKLIST_VALUE_PROFILE (nomes de unidade militar; correção pós-auditoria 14/08/2026)"
+            },
+            "IDU_NMS": {
+              "cardinality": 38,
+              "kind": "text"
+            },
+            "CODIGO_UNIDADE": {
+              "cardinality": 19,
+              "kind": "categorical",
+              "values": [
+                "120",
+                "213",
+                "322",
+                "470",
+                "475",
+                "487",
+                "496",
+                "600",
+                "602",
+                "627",
+                "648",
+                "654",
+                "655",
+                "662",
+                "669",
+                "696",
+                "756",
+                "759",
+                "92"
+              ]
+            },
+            "SN": {
+              "cardinality": 37,
+              "kind": "text"
+            }
+          },
+          "sample_size": 48,
+          "sample_note": "amostra menor que o teto: endpoint sinalizou fim dos dados (sem `next`) ou não respondeu paginação",
+          "embedding_hint": "api.monitoramento_sistema_satelital_list: SITUACAO, LOCAL_HOJE, NUMERO_DO_TL, CODIGO, DISPONIBILIDADE, LOCALIDADE_DA_ENTREGA, IDU_NMS, CODIGO_UNIDADE, SN"
+        },
+        "monitoramento_sistema_hf_list": {
+          "path": "/api/monitoramento/sistema-hf/",
+          "method": "GET",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 14,
+            "result_object_fields": {
+              "ip": {
+                "type": "string",
+                "example": "IP_001"
+              },
+              "nome": {
+                "type": "string",
+                "example": "PONTO_009"
+              },
+              "status": {
+                "type": "string",
+                "example": "down"
+              },
+              "last_checked": {
+                "type": "date_string (ISO 8601)",
+                "example": "2025-07-22T15:00:02Z"
+              },
+              "latitude": {
+                "type": "float",
+                "example": null
+              },
+              "longitude": {
+                "type": "float",
+                "example": null
+              }
+            },
+            "structure": {
+              "root": "array — lista de 14 objeto(s)"
+            },
+            "example_response": [
+              {
+                "ip": "IP_001",
+                "nome": "PONTO_009",
+                "status": "down",
+                "last_checked": "2025-07-22T15:00:02Z",
+                "latitude": null,
+                "longitude": null
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.585921Z",
+            "_probe_url": "http://localhost:8000/api/monitoramento/sistema-hf/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "value_profile": {
+            "last_checked": {
+              "cardinality": 7,
+              "kind": "categorical",
+              "values": [
+                "2025-07-22T15:00:01Z",
+                "2025-07-22T15:00:02Z",
+                "2025-07-22T15:00:03Z",
+                "2025-07-22T15:00:04Z",
+                "2025-07-22T15:00:05Z",
+                "2025-07-22T15:00:06Z",
+                "2025-07-22T15:00:07Z"
+              ]
+            },
+            "latitude": {
+              "cardinality": 5,
+              "kind": "categorical",
+              "values": []
+            },
+            "ip": {
+              "cardinality": 14,
+              "kind": "categorical",
+              "values": [
+                "IP_001",
+                "IP_002",
+                "IP_003",
+                "IP_004",
+                "IP_005",
+                "IP_006",
+                "IP_007",
+                "IP_008",
+                "IP_009",
+                "IP_010",
+                "IP_011",
+                "IP_012",
+                "IP_013",
+                "IP_014"
+              ]
+            },
+            "nome": {
+              "cardinality": 14,
+              "kind": "categorical",
+              "values": [
+                "PONTO_001",
+                "PONTO_002",
+                "PONTO_003",
+                "PONTO_004",
+                "PONTO_005",
+                "PONTO_006",
+                "PONTO_007",
+                "PONTO_008",
+                "PONTO_009",
+                "PONTO_010",
+                "PONTO_011",
+                "PONTO_012",
+                "PONTO_013",
+                "PONTO_014"
+              ]
+            },
+            "longitude": {
+              "cardinality": 5,
+              "kind": "categorical",
+              "values": []
+            },
+            "status": {
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "down",
+                "up"
+              ]
+            }
+          },
+          "sample_size": 14,
+          "sample_note": "amostra menor que o teto: endpoint sinalizou fim dos dados (sem `next`) ou não respondeu paginação",
+          "embedding_hint": "api.monitoramento_sistema_hf_list: last_checked, latitude, ip, nome, longitude, status"
+        }
+      }
+    },
+    "spreadsheets": {
+      "base_path": "[MANUAL] Caminho absoluto ou relativo para a pasta com planilhas. Ex: ./data/spreadsheets/",
+      "files": {
+        "contratos": {
+          "filename": "contratos.xlsx",
+          "sheets": {
+            "Sheet1": {
+              "row_count": 972,
+              "column_count": 34,
+              "columns": {
+                "ID_CONTRATO_ANO": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 151,
+                  "is_unique_key": false
+                },
+                "ANO": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 6,
+                  "is_unique_key": false,
+                  "stats": {
+                    "min": 2020,
+                    "max": 2025,
+                    "mean": null
+                  }
+                },
+                "CONTRATO": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 107,
+                  "is_unique_key": false
+                },
+                "EMPRESA": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 26,
+                  "is_unique_key": false
+                },
+                "ASS DO CTR": {
+                  "type": "date_string",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 109,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "1970-01-01T00:00:00.000000003",
+                    "max": "2025-12-29T00:00:00"
+                  }
+                },
+                "VIGÊNCIA": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 104,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2021-11-30T00:00:00",
+                    "max": "2027-12-29T00:00:00"
+                  }
+                },
+                "ADT": {
+                  "type": "float",
+                  "nullable": true,
+                  "null_rate": 0.0442,
+                  "cardinality": 6,
+                  "is_unique_key": false,
+                  "stats": {
+                    "min": 0.0,
+                    "max": 5.0,
+                    "mean": 1.64
+                  }
+                },
+                "Aditivação": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.2634,
+                  "cardinality": 61,
+                  "is_unique_key": false
+                },
+                "FUNDS-1": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.0144,
+                  "cardinality": 14,
+                  "is_unique_key": false
+                },
+                "FUNDS-2": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.5669,
+                  "cardinality": 13,
+                  "is_unique_key": false
+                },
+                "FUNDS-3": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.787,
+                  "cardinality": 7,
+                  "is_unique_key": false
+                },
+                "FUNDS-4": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.9198,
+                  "cardinality": 4,
+                  "is_unique_key": false
+                },
+                "FUNDS-5": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.9403,
+                  "cardinality": 2,
+                  "is_unique_key": false
+                },
+                "VALOR USD (contrato)": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 963,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "1970-01-01T00:00:00.000000210",
+                    "max": "1970-01-01T00:00:00.013221473"
+                  }
+                },
+                "ENTREGA 1": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 114,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2020-11-30T00:00:00",
+                    "max": "2027-06-20T00:00:00"
+                  }
+                },
+                "ENTREGA 2": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.4002,
+                  "cardinality": 49,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2021-02-07T00:00:00",
+                    "max": "2027-04-02T00:00:00"
+                  }
+                },
+                "ENTREGA 3": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.8076,
+                  "cardinality": 18,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2021-03-22T00:00:00",
+                    "max": "2027-04-15T00:00:00"
+                  }
+                },
+                "ENTREGA 4": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.9228,
+                  "cardinality": 5,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2021-03-29T00:00:00",
+                    "max": "2025-10-30T00:00:00"
+                  }
+                },
+                "ENTREGA 5": {
+                  "type": "datetime",
+                  "nullable": true,
+                  "null_rate": 0.9702,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2021-05-31T00:00:00",
+                    "max": "2021-05-31T00:00:00"
+                  }
+                },
+                "ENTREGA 6": {
+                  "type": "datetime",
+                  "nullable": true,
+                  "null_rate": 0.9702,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2023-09-30T00:00:00",
+                    "max": "2023-09-30T00:00:00"
+                  }
+                },
+                "FORMA_DE_ENVIO": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.001,
+                  "cardinality": 33,
+                  "is_unique_key": false
+                },
+                "UNIDADE_ESTOQUE": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.0041,
+                  "cardinality": 6,
+                  "is_unique_key": false
+                },
+                "QI": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 70,
+                  "is_unique_key": false
+                },
+                "ITEM QI": {
+                  "type": "float",
+                  "nullable": true,
+                  "null_rate": 0.0082,
+                  "cardinality": 108,
+                  "is_unique_key": false,
+                  "stats": {
+                    "min": 1.0,
+                    "max": 133.0,
+                    "mean": 30.12
+                  }
+                },
+                "ITEM PC": {
+                  "type": "float",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 60,
+                  "is_unique_key": false,
+                  "stats": {
+                    "min": 1.0,
+                    "max": 60.0,
+                    "mean": 8.3
+                  }
+                },
+                "MATERIAL": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 656,
+                  "is_unique_key": false
+                },
+                "Quantidade": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.001,
+                  "cardinality": 153,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "1970-01-01T00:00:00.000000001",
+                    "max": "1970-01-01T00:00:00.000320"
+                  }
+                },
+                "Invoice": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.1245,
+                  "cardinality": 228,
+                  "is_unique_key": false
+                },
+                "Andamento": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.1245,
+                  "cardinality": 21,
+                  "is_unique_key": false
+                },
+                "Guarantia": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.0288,
+                  "cardinality": 4,
+                  "is_unique_key": false
+                },
+                "Chegada no BR": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.3971,
+                  "cardinality": 93,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2021-03-18T00:00:00",
+                    "max": "2025-10-16T00:00:00"
+                  }
+                },
+                "Inicio da Garantia": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.43,
+                  "cardinality": 82,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2021-10-27T00:00:00",
+                    "max": "2026-09-08T00:00:00"
+                  }
+                },
+                "Fim da Garantia": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.43,
+                  "cardinality": 86,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2024-03-01T00:00:00",
+                    "max": "2027-10-31T00:00:00"
+                  }
+                },
+                "DOC_RECEBIMENTO": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.1358,
+                  "cardinality": 213,
+                  "is_unique_key": false
+                }
+              },
+              "sample_rows": [
+                {
+                  "ID_CONTRATO_ANO": "CTR001-25",
+                  "ANO": 2025,
+                  "CONTRATO": "CTR001",
+                  "EMPRESA": "FAB008",
+                  "ASS DO CTR": "2025-12-29T00:00:00.000",
+                  "VIGÊNCIA": "2027-08-29T00:00:00.000",
+                  "ADT": null,
+                  "Aditivação": null,
+                  "FUNDS-1": null,
+                  "FUNDS-2": null,
+                  "FUNDS-3": null,
+                  "FUNDS-4": null,
+                  "FUNDS-5": null,
+                  "VALOR USD (contrato)": 472781.58,
+                  "ENTREGA 1": "2026-10-30T00:00:00.000",
+                  "ENTREGA 2": null,
+                  "ENTREGA 3": null,
+                  "ENTREGA 4": null,
+                  "ENTREGA 5": null,
+                  "ENTREGA 6": null,
+                  "FORMA_DE_ENVIO": "CIP (RJ/BR)",
+                  "UNIDADE_ESTOQUE": "SIG090",
+                  "QI": "10/2025",
+                  "ITEM QI": 1.0,
+                  "ITEM PC": 1.0,
+                  "MATERIAL": "MAT001",
+                  "Quantidade": 9,
+                  "Invoice": null,
+                  "Andamento": null,
+                  "Guarantia": "12 meses",
+                  "Chegada no BR": null,
+                  "Inicio da Garantia": null,
+                  "Fim da Garantia": null,
+                  "DOC_RECEBIMENTO": null
+                },
+                {
+                  "ID_CONTRATO_ANO": "CTR001-25",
+                  "ANO": 2025,
+                  "CONTRATO": "CTR001",
+                  "EMPRESA": "FAB008",
+                  "ASS DO CTR": "2025-12-29T00:00:00.000",
+                  "VIGÊNCIA": "2027-08-29T00:00:00.000",
+                  "ADT": null,
+                  "Aditivação": null,
+                  "FUNDS-1": null,
+                  "FUNDS-2": null,
+                  "FUNDS-3": null,
+                  "FUNDS-4": null,
+                  "FUNDS-5": null,
+                  "VALOR USD (contrato)": 444132.56,
+                  "ENTREGA 1": "2026-10-30T00:00:00.000",
+                  "ENTREGA 2": null,
+                  "ENTREGA 3": null,
+                  "ENTREGA 4": null,
+                  "ENTREGA 5": null,
+                  "ENTREGA 6": null,
+                  "FORMA_DE_ENVIO": "CIP (RJ/BR)",
+                  "UNIDADE_ESTOQUE": "SIG090",
+                  "QI": "10/2025",
+                  "ITEM QI": 2.0,
+                  "ITEM PC": 2.0,
+                  "MATERIAL": "MAT002",
+                  "Quantidade": 9,
+                  "Invoice": null,
+                  "Andamento": null,
+                  "Guarantia": "12 meses",
+                  "Chegada no BR": null,
+                  "Inicio da Garantia": null,
+                  "Fim da Garantia": null,
+                  "DOC_RECEBIMENTO": null
+                },
+                {
+                  "ID_CONTRATO_ANO": "CTR002-25",
+                  "ANO": 2025,
+                  "CONTRATO": "CTR002",
+                  "EMPRESA": "FAB008",
+                  "ASS DO CTR": "2025-12-29T00:00:00.000",
+                  "VIGÊNCIA": "2027-12-29T00:00:00.000",
+                  "ADT": null,
+                  "Aditivação": null,
+                  "FUNDS-1": null,
+                  "FUNDS-2": null,
+                  "FUNDS-3": null,
+                  "FUNDS-4": null,
+                  "FUNDS-5": null,
+                  "VALOR USD (contrato)": 227350.81,
+                  "ENTREGA 1": "2027-03-30T00:00:00.000",
+                  "ENTREGA 2": "2027-04-02T00:00:00.000",
+                  "ENTREGA 3": "2027-04-15T00:00:00.000",
+                  "ENTREGA 4": null,
+                  "ENTREGA 5": null,
+                  "ENTREGA 6": null,
+                  "FORMA_DE_ENVIO": "CIP e CIF (RJ/BR)",
+                  "UNIDADE_ESTOQUE": "SIG090",
+                  "QI": "09/2025",
+                  "ITEM QI": 1.0,
+                  "ITEM PC": 1.0,
+                  "MATERIAL": "MAT003",
+                  "Quantidade": 2,
+                  "Invoice": null,
+                  "Andamento": null,
+                  "Guarantia": "12 meses",
+                  "Chegada no BR": null,
+                  "Inicio da Garantia": null,
+                  "Fim da Garantia": null,
+                  "DOC_RECEBIMENTO": null
+                }
+              ]
+            }
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Mensal / Semanal / Sob demanda",
+            "responsible": "[MANUAL] Ex: Seção de Contratos",
+            "reliability": "[MANUAL] Ex: Média — atualização manual",
+            "confidence_base": 0.75,
+            "last_analyzed": "2026-08-14T13:42:58.011571Z"
+          },
+          "value_profile": {
+            "ID_CONTRATO_ANO": {
+              "type": "object",
+              "cardinality": 151,
+              "kind": "text"
+            },
+            "ANO": {
+              "type": "int64",
+              "cardinality": 6,
+              "kind": "categorical",
+              "values": [
+                "2025",
+                "2024",
+                "2023",
+                "2022",
+                "2021",
+                "2020"
+              ]
+            },
+            "CONTRATO": {
+              "type": "object",
+              "cardinality": 107,
+              "kind": "text"
+            },
+            "EMPRESA": {
+              "type": "object",
+              "cardinality": 26,
+              "kind": "text"
+            },
+            "ASS DO CTR": {
+              "type": "object",
+              "cardinality": 109,
+              "kind": "text"
+            },
+            "VIGÊNCIA": {
+              "type": "object",
+              "cardinality": 104,
+              "kind": "text"
+            },
+            "ADT": {
+              "type": "float64",
+              "cardinality": 6,
+              "kind": "categorical",
+              "values": [
+                "1.0",
+                "0.0",
+                "2.0",
+                "3.0",
+                "4.0",
+                "5.0"
+              ]
+            },
+            "Aditivação": {
+              "type": "object",
+              "cardinality": 61,
+              "kind": "text"
+            },
+            "FUNDS-1": {
+              "type": "object",
+              "cardinality": 14,
+              "kind": "categorical",
+              "values": [
+                "FND001",
+                "FND002",
+                "FND003",
+                "FND004",
+                "FND005",
+                "FND006",
+                "FND007",
+                "FND008",
+                "FND009",
+                "FND010",
+                "FND011",
+                "FND012",
+                "FND013",
+                "FND014"
+              ]
+            },
+            "FUNDS-2": {
+              "type": "object",
+              "cardinality": 13,
+              "kind": "categorical",
+              "values": [
+                "FND004",
+                "FND002",
+                "FND001",
+                "FND015",
+                "FND003",
+                "FND016",
+                "FND017",
+                "FND010",
+                "FND018",
+                "FND011",
+                "FND013",
+                "FND019",
+                "FND014"
+              ]
+            },
+            "FUNDS-3": {
+              "type": "object",
+              "cardinality": 7,
+              "kind": "categorical",
+              "values": [
+                "FND002",
+                "FND004",
+                "FND001",
+                "FND017",
+                "FND013",
+                "FND010",
+                "FND019"
+              ]
+            },
+            "FUNDS-4": {
+              "type": "object",
+              "cardinality": 4,
+              "kind": "categorical",
+              "values": [
+                "FND003",
+                "FND014",
+                "FND010",
+                "FND001"
+              ]
+            },
+            "FUNDS-5": {
+              "type": "object",
+              "cardinality": 2,
+              "kind": "categorical",
+              "values": [
+                "FND008",
+                "FND013"
+              ]
+            },
+            "VALOR USD (contrato)": {
+              "type": "object",
+              "cardinality": 963,
+              "kind": "identifier"
+            },
+            "ENTREGA 1": {
+              "type": "object",
+              "cardinality": 114,
+              "kind": "text"
+            },
+            "ENTREGA 2": {
+              "type": "object",
+              "cardinality": 49,
+              "kind": "text"
+            },
+            "ENTREGA 3": {
+              "type": "object",
+              "cardinality": 18,
+              "kind": "categorical",
+              "values": [
+                "2027-04-15 00:00:00",
+                "2025-03-17 00:00:00",
+                "2025-12-19 00:00:00",
+                "2025-09-03 00:00:00",
+                "2025-10-10 00:00:00",
+                "2024-06-30 00:00:00",
+                "2024-05-31 00:00:00",
+                "2024-07-10 00:00:00",
+                "2024-09-06 00:00:00",
+                "19/dez/25",
+                "2024-11-30 00:00:00",
+                "2023-02-28 00:00:00",
+                "2023-11-30 00:00:00",
+                "2024-06-10 00:00:00",
+                "2024-04-30 00:00:00",
+                "30/nov/22",
+                "30/abr/21",
+                "2021-03-22 00:00:00"
+              ]
+            },
+            "ENTREGA 4": {
+              "type": "object",
+              "cardinality": 5,
+              "kind": "categorical",
+              "values": [
+                "2025-10-30 00:00:00",
+                "2025-07-30 00:00:00",
+                "2024-06-10 00:00:00",
+                "31/jul/24",
+                "2021-03-29 00:00:00"
+              ]
+            },
+            "ENTREGA 5": {
+              "type": "datetime64[ns]",
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "2021-05-31 00:00:00"
+              ]
+            },
+            "ENTREGA 6": {
+              "type": "datetime64[ns]",
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "2023-09-30 00:00:00"
+              ]
+            },
+            "FORMA_DE_ENVIO": {
+              "type": "object",
+              "cardinality": 33,
+              "kind": "text"
+            },
+            "UNIDADE_ESTOQUE": {
+              "type": "object",
+              "cardinality": 6,
+              "kind": "categorical",
+              "values": [
+                "SIG090",
+                "SIG580",
+                "SIG608",
+                "SIG112",
+                "SIG610",
+                "SIG655"
+              ]
+            },
+            "QI": {
+              "type": "object",
+              "cardinality": 70,
+              "kind": "text"
+            },
+            "ITEM QI": {
+              "type": "float64",
+              "cardinality": 108,
+              "kind": "numeric",
+              "range": [
+                "1.0",
+                "133.0"
+              ]
+            },
+            "ITEM PC": {
+              "type": "float64",
+              "cardinality": 60,
+              "kind": "numeric",
+              "range": [
+                "1.0",
+                "60.0"
+              ]
+            },
+            "MATERIAL": {
+              "type": "object",
+              "cardinality": 656,
+              "kind": "text"
+            },
+            "Quantidade": {
+              "type": "object",
+              "cardinality": 153,
+              "kind": "text"
+            },
+            "Invoice": {
+              "type": "object",
+              "cardinality": 228,
+              "kind": "text"
+            },
+            "Andamento": {
+              "type": "object",
+              "cardinality": 21,
+              "kind": "categorical",
+              "values": [
+                "Recebimento concluído.",
+                "Aguardando REC_UNIDADE",
+                "Verificar TREM ",
+                "Instalação concluida",
+                "Em proceso de envio",
+                "Aguardando entrega pela Fornecedora",
+                "DRC emitido.",
+                "REC_UNIDADE concluido.",
+                "REC_UNIDADE concluido",
+                "Serviço realizado",
+                "Trainamento concluído.",
+                "Conferir Ten Rios ",
+                "Aguaradando fornecimento pela contratada",
+                "REC_UNIDADE concluido ",
+                "item excluido",
+                "Recebimento concluído. ",
+                "Treinamento concluído",
+                "RESCINDIDO",
+                "Serviço concluido. ",
+                "CCS emitido.",
+                "Concluido"
+              ]
+            },
+            "Guarantia": {
+              "type": "object",
+              "cardinality": 4,
+              "kind": "categorical",
+              "values": [
+                "12 meses",
+                "24 meses",
+                "36 meses",
+                "36 meses "
+              ]
+            },
+            "Chegada no BR": {
+              "type": "object",
+              "cardinality": 93,
+              "kind": "text"
+            },
+            "Inicio da Garantia": {
+              "type": "object",
+              "cardinality": 82,
+              "kind": "text"
+            },
+            "Fim da Garantia": {
+              "type": "object",
+              "cardinality": 86,
+              "kind": "text"
+            },
+            "DOC_RECEBIMENTO": {
+              "type": "object",
+              "cardinality": 213,
+              "kind": "text"
+            }
+          },
+          "row_count": 972,
+          "embedding_hint": "spreadsheets.contratos: ID_CONTRATO_ANO, ANO, CONTRATO, EMPRESA, ASS DO CTR, VIGÊNCIA, ADT, Aditivação, FUNDS-1, FUNDS-2, FUNDS-3, FUNDS-4, FUNDS-5, VALOR USD (contrato), ENTREGA 1, ENTREGA 2, ENTREGA 3, ENTREGA 4, ENTREGA 5, ENTREGA 6, FORMA_DE_ENVIO, UNIDADE_ESTOQUE, QI, ITEM QI, ITEM PC, MATERIAL, Quantidade, Invoice, Andamento, Guarantia, Chegada no BR, Inicio da Garantia, Fim da Garantia, DOC_RECEBIMENTO"
+        },
+        "fornecimento": {
+          "filename": "fornecimento.xlsx",
+          "sheets": {
+            "Sheet1": {
+              "row_count": 813,
+              "column_count": 15,
+              "columns": {
+                "numero_documento_fornecimento": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 326,
+                  "is_unique_key": false
+                },
+                "Data": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 100,
+                  "is_unique_key": false,
+                  "stats": {
+                    "min": 45296,
+                    "max": 45653,
+                    "mean": null
+                  }
+                },
+                "Contrato": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 68,
+                  "is_unique_key": false
+                },
+                "Documento_Recebimento": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 74,
+                  "is_unique_key": false
+                },
+                "PN / NEE": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 299,
+                  "is_unique_key": false
+                },
+                "ID_SISTEMA_IDENTIFICACAO": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 263,
+                  "is_unique_key": false
+                },
+                "Nomenclatura": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 310,
+                  "is_unique_key": false
+                },
+                "QNT": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 95,
+                  "is_unique_key": false,
+                  "stats": {
+                    "min": 1,
+                    "max": 2796,
+                    "mean": null
+                  }
+                },
+                "Unidade de Origem": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 7,
+                  "is_unique_key": false
+                },
+                "Regiao de Origem": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 6,
+                  "is_unique_key": false
+                },
+                "Unidade de Destino": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 141,
+                  "is_unique_key": false
+                },
+                "Regiao de Destino": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 11,
+                  "is_unique_key": false
+                },
+                "Ação Orçamentaria": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.5105,
+                  "cardinality": 10,
+                  "is_unique_key": false
+                },
+                "Retifica o DF": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 34,
+                  "is_unique_key": false
+                },
+                "Documento autoriza a Distribuição": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 55,
+                  "is_unique_key": false
+                }
+              },
+              "sample_rows": [
+                {
+                  "numero_do_fornecimento": "001/24",
+                  "Data": 45296,
+                  "Contrato": "CTR108",
+                  "Documento_Recebimento": "-",
+                  "PN / NEE": "PN07031",
+                  "ID_SISTEMA_IDENTIFICACAO": "-",
+                  "Nomenclatura": "EQPODF001",
+                  "QNT": 1,
+                  "Unidade de Origem": "SIG450",
+                  "Regiao de Origem": "REG009",
+                  "Unidade de Destino": "SIG450",
+                  "Regiao de Destino": "REG009",
+                  "Ação Orçamentaria": "FND002",
+                  "Retifica o DF": "-",
+                  "Documento autoriza a Distribuição": "DOC001"
+                },
+                {
+                  "numero_do_fornecimento": "001/24",
+                  "Data": 45296,
+                  "Contrato": "CTR108",
+                  "Documento_Recebimento": "-",
+                  "PN / NEE": "PN07032",
+                  "ID_SISTEMA_IDENTIFICACAO": "-",
+                  "Nomenclatura": "EQPODF002",
+                  "QNT": 1,
+                  "Unidade de Origem": "SIG450",
+                  "Regiao de Origem": "REG009",
+                  "Unidade de Destino": "SIG450",
+                  "Regiao de Destino": "REG009",
+                  "Ação Orçamentaria": "FND002",
+                  "Retifica o DF": "-",
+                  "Documento autoriza a Distribuição": "DOC001"
+                },
+                {
+                  "numero_do_fornecimento": "001/24",
+                  "Data": 45296,
+                  "Contrato": "CTR108",
+                  "Documento_Recebimento": "-",
+                  "PN / NEE": "PN07032",
+                  "ID_SISTEMA_IDENTIFICACAO": "-",
+                  "Nomenclatura": "EQPODF002",
+                  "QNT": 1,
+                  "Unidade de Origem": "SIG450",
+                  "Regiao de Origem": "REG009",
+                  "Unidade de Destino": "SIG450",
+                  "Regiao de Destino": "REG009",
+                  "Ação Orçamentaria": "FND002",
+                  "Retifica o DF": "-",
+                  "Documento autoriza a Distribuição": "DOC001"
+                }
+              ]
+            }
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Mensal / Semanal / Sob demanda",
+            "responsible": "[MANUAL] Ex: Seção de Contratos",
+            "reliability": "[MANUAL] Ex: Média — atualização manual",
+            "confidence_base": 0.75,
+            "last_analyzed": "2026-08-14T13:42:58.112704Z"
+          },
+          "value_profile": {
+            "numero_do_fornecimento": {
+              "type": "object",
+              "cardinality": 326,
+              "kind": "text"
+            },
+            "Data": {
+              "type": "int64",
+              "cardinality": 100,
+              "kind": "numeric",
+              "range": [
+                "45296",
+                "45653"
+              ]
+            },
+            "Contrato": {
+              "type": "object",
+              "cardinality": 68,
+              "kind": "text"
+            },
+            "Documento_Recebimento": {
+              "type": "object",
+              "cardinality": 74,
+              "kind": "text"
+            },
+            "PN / NEE": {
+              "type": "object",
+              "cardinality": 299,
+              "kind": "text"
+            },
+            "ID_SISTEMA_IDENTIFICACAO": {
+              "type": "object",
+              "cardinality": 263,
+              "kind": "text"
+            },
+            "Nomenclatura": {
+              "type": "object",
+              "cardinality": 310,
+              "kind": "text"
+            },
+            "QNT": {
+              "type": "int64",
+              "cardinality": 95,
+              "kind": "numeric",
+              "range": [
+                "1",
+                "2796"
+              ]
+            },
+            "Unidade de Origem": {
+              "type": "object",
+              "cardinality": 7,
+              "kind": "categorical",
+              "values": [
+                "SIG450",
+                "SIG112",
+                "SIG580",
+                "SIG293",
+                "SIG090",
+                "SIG171",
+                "SIG425"
+              ]
+            },
+            "Regiao de Origem": {
+              "type": "object",
+              "cardinality": 6,
+              "kind": "categorical",
+              "values": [
+                "REG009",
+                "REG001",
+                "REG011",
+                "REG004",
+                "REG002",
+                "REG008"
+              ]
+            },
+            "Unidade de Destino": {
+              "type": "object",
+              "cardinality": 141,
+              "kind": "text"
+            },
+            "Regiao de Destino": {
+              "type": "object",
+              "cardinality": 11,
+              "kind": "categorical",
+              "values": [
+                "REG009",
+                "REG001",
+                "REG003",
+                "REG005",
+                "REG011",
+                "REG002",
+                "REG012",
+                "REG004",
+                "REG008",
+                "REG007",
+                "REG010"
+              ]
+            },
+            "Ação Orçamentaria": {
+              "type": "object",
+              "cardinality": 10,
+              "kind": "categorical",
+              "values": [
+                "FND002",
+                "FND004",
+                "FND003",
+                "FND013",
+                "FND001",
+                "FND010",
+                "FND009",
+                "FND011",
+                "FND028",
+                "FND008"
+              ]
+            },
+            "Retifica O DF": {
+              "type": "object",
+              "cardinality": 34,
+              "kind": "text"
+            },
+            "Documento autoriza a Distribuição": {
+              "type": "object",
+              "cardinality": 55,
+              "kind": "text"
+            }
+          },
+          "row_count": 813,
+          "embedding_hint": "spreadsheets.fornecimento: numero_do_fornecimento, Data, Contrato, Documento_Recebimento, PN / NEE, ID_SISTEMA_IDENTIFICACAO, Nomenclatura, QNT, Unidade de Origem, Regiao de Origem, Unidade de Destino, Regiao de Destino, Ação Orçamentaria, Retifica O DF, Documento autoriza a Distribuição"
+        },
+        "quadro_importacao": {
+          "filename": "quadro_importacao.xlsx",
+          "sheets": {
+            "informações gerais": {
+              "row_count": 8,
+              "column_count": 11,
+              "columns": {
+                "QI": {
+                  "type": "date_string",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2023-01-01T00:00:00",
+                    "max": "2023-01-01T00:00:00"
+                  }
+                },
+                "Empresa": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 1,
+                  "is_unique_key": false
+                },
+                "Ata": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 1,
+                  "is_unique_key": false
+                },
+                "Validade": {
+                  "type": "datetime",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "date_range": {
+                    "min": "2024-12-25T00:00:00",
+                    "max": "2024-12-25T00:00:00"
+                  }
+                },
+                "Item": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "stats": {
+                    "min": 1,
+                    "max": 8,
+                    "mean": null
+                  }
+                },
+                "Item da Ata": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "stats": {
+                    "min": 1,
+                    "max": 86,
+                    "mean": null
+                  }
+                },
+                "PN": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true
+                },
+                "Nomenclatura": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true
+                },
+                "Qtde": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 7,
+                  "is_unique_key": false,
+                  "stats": {
+                    "min": 2,
+                    "max": 17,
+                    "mean": null
+                  }
+                },
+                "Valor unit (USD)": {
+                  "type": "float",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "stats": {
+                    "min": 770.0,
+                    "max": 70100.0,
+                    "mean": 28234.43
+                  }
+                },
+                "Valor Total (USD)": {
+                  "type": "float",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "stats": {
+                    "min": 1540.0,
+                    "max": 1051500.0,
+                    "mean": 314108.7
+                  }
+                }
+              },
+              "sample_rows": [
+                {
+                  "QI": "01/2023",
+                  "Empresa": "FAB001",
+                  "Ata": "0001/2023",
+                  "Validade": "2024-12-25T00:00:00.000",
+                  "Item": 1,
+                  "Item da Ata": 1,
+                  "PN": "PN001",
+                  "Nomenclatura": "EQP001",
+                  "Qtde": 17,
+                  "Valor unit (USD)": 10739.0,
+                  "Valor Total (USD)": 182563.0
+                },
+                {
+                  "QI": "01/2023",
+                  "Empresa": "FAB001",
+                  "Ata": "0001/2023",
+                  "Validade": "2024-12-25T00:00:00.000",
+                  "Item": 2,
+                  "Item da Ata": 42,
+                  "PN": "PN002",
+                  "Nomenclatura": "EQP002",
+                  "Qtde": 8,
+                  "Valor unit (USD)": 1905.5,
+                  "Valor Total (USD)": 15244.0
+                },
+                {
+                  "QI": "01/2023",
+                  "Empresa": "FAB001",
+                  "Ata": "0001/2023",
+                  "Validade": "2024-12-25T00:00:00.000",
+                  "Item": 3,
+                  "Item da Ata": 81,
+                  "PN": "PN003",
+                  "Nomenclatura": "EQP003",
+                  "Qtde": 16,
+                  "Valor unit (USD)": 34251.44,
+                  "Valor Total (USD)": 548023.04
+                }
+              ]
+            }
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Mensal / Semanal / Sob demanda",
+            "responsible": "[MANUAL] Ex: Seção de Contratos",
+            "reliability": "[MANUAL] Ex: Média — atualização manual",
+            "confidence_base": 0.75,
+            "last_analyzed": "2026-08-14T13:42:58.138801Z"
+          },
+          "value_profile": {
+            "QI": {
+              "type": "object",
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "01/2023"
+              ]
+            },
+            "Empresa": {
+              "type": "object",
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "FAB001"
+              ]
+            },
+            "Ata": {
+              "type": "object",
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "0001/2023"
+              ]
+            },
+            "Validade": {
+              "type": "datetime64[ns]",
+              "cardinality": 1,
+              "kind": "categorical",
+              "values": [
+                "2024-12-25 00:00:00"
+              ]
+            },
+            "Item": {
+              "type": "int64",
+              "cardinality": 8,
+              "kind": "categorical",
+              "values": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ]
+            },
+            "Item da Ata": {
+              "type": "int64",
+              "cardinality": 8,
+              "kind": "categorical",
+              "values": [
+                "1",
+                "42",
+                "81",
+                "20",
+                "34",
+                "24",
+                "30",
+                "86"
+              ]
+            },
+            "PN": {
+              "type": "object",
+              "cardinality": 8,
+              "kind": "categorical",
+              "values": [
+                "PN001",
+                "PN002",
+                "PN003",
+                "PN004",
+                "PN005",
+                "PN006",
+                "PN007",
+                "PN008"
+              ]
+            },
+            "Nomenclatura": {
+              "type": "object",
+              "cardinality": 8,
+              "kind": "categorical",
+              "values": [
+                "EQP001",
+                "EQP002",
+                "EQP003",
+                "EQP004",
+                "EQP005",
+                "EQP006",
+                "EQP007",
+                "EQP008"
+              ]
+            },
+            "Qtde": {
+              "type": "int64",
+              "cardinality": 7,
+              "kind": "categorical",
+              "values": [
+                "17",
+                "8",
+                "16",
+                "5",
+                "12",
+                "15",
+                "2"
+              ]
+            },
+            "Valor unit (USD)": {
+              "type": "float64",
+              "cardinality": 8,
+              "kind": "categorical",
+              "values": [
+                "10739.0",
+                "1905.5",
+                "34251.44",
+                "62873.51",
+                "30916.0",
+                "70100.0",
+                "14320.0",
+                "770.0"
+              ]
+            },
+            "Valor Total (USD)": {
+              "type": "float64",
+              "cardinality": 8,
+              "kind": "categorical",
+              "values": [
+                "182563.0",
+                "15244.0",
+                "548023.04",
+                "314367.55",
+                "370992.0",
+                "1051500.0",
+                "28640.0",
+                "1540.0"
+              ]
+            }
+          },
+          "row_count": 8,
+          "embedding_hint": "spreadsheets.quadro_importacao: QI, Empresa, Ata, Validade, Item, Item da Ata, PN, Nomenclatura, Qtde, Valor unit (USD), Valor Total (USD)"
+        }
+      }
+    }
+  }
+}

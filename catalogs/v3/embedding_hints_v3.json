@@ -1,0 +1,71 @@
+{
+  "_doc": "Embedding hints v3 — base v2 (discriminativa) + refinamento do cluster planejamento_comparativo. Apenas 4 fontes alteradas em relação ao v2.",
+  "_changes": [
+    "sql.regra: adicionado 'não contém equipamentos reais nem comparativos'",
+    "sql.vw_comparativo_previsto_existente: enfatizado 'PREVISTO vs EXISTENTE', 'déficit', 'única fonte que cruza'",
+    "sql.vw_tipoeqp_previsto_unidades: adicionado 'sem incluir dados de existência real'",
+    "sql.vw_materiais_catalogo_unidade: adicionado 'INTEGRADA', 'sem JOIN manual'",
+    "sql.materiais: adicionado 'Não contém nome do modelo nem fabricante'",
+    "sql.catalogo: adicionado 'Não contém equipamentos individuais nem situação'",
+    "api.monitoramento_sistema_hf_list: adicionado tecnologia HF, 'distinto de satélite e rádio VHF/UHF'",
+    "api.monitoramento_sistema_satelital_list: adicionado VSAT, 'Exclui Starlink (LEO)'",
+    "api.monitoramento_starlink_list: adicionado LEO, 'distinto de VSAT geoestacionário'",
+    "api.monitoramento_sites_sistema_radio_list: adicionado VHF/UHF, 'distinto de HF e satelital'"
+  ],
+  "embedding_hints": {
+    "sql.regra": {
+      "embedding_hint": "Tabela normativa de dotação: define a regra de quantos equipamentos de cada tipo cada TIPO de unidade deve ter nos níveis mínimo, ampliado e completo. É a norma de referência — não contém dados de unidades reais nem equipamentos existentes. Usar para saber qual é o nível mínimo exigido por norma, a regra de alocação ou a dotação teórica por tipo de unidade."
+    },
+    "sql.vw_comparativo_previsto_existente": {
+      "embedding_hint": "Comparativo entre quantidade PREVISTA e EXISTENTE de equipamentos por unidade: responde se a organização está completamente equipada, quantos equipamentos existem vs quantos deveriam ter, déficit e excesso por tipo de equipamento em cada unidade. Calcula diferença, completamento percentual, nível mínimo atingido e lacunas de inventário. Usar quando a query perguntar sobre completamento, déficit, existentes vs previstos, ou quantos equipamentos faltam para atingir a dotação. Única fonte que cruza dados reais com normativos."
+    },
+    "sql.vw_tipoeqp_previsto_unidades": {
+      "embedding_hint": "Tabela de quantidade PREVISTA por tipo de equipamento por unidade — sem dados de existência real. Mostra apenas o planejamento: quantos equipamentos de cada tipo cada unidade deveria ter. NÃO contém dados reais nem diferenças — apenas o previsto. Usar quando a query perguntar somente pelo previsto ou planejado, sem comparar com o que existe atualmente."
+    },
+    "sql.vw_materiais_catalogo_unidade": {
+      "embedding_hint": "Visão INTEGRADA de materiais individuais com dados técnicos do catálogo: une situação patrimonial, disponibilidade, número de série, fabricante, modelo e unidade de lotação de cada item. Usar quando se precisa de dados técnicos E patrimoniais de equipamentos individuais juntos. NÃO contém comparativos previsto vs existente nem completamento — para isso usar vw_comparativo_previsto_existente."
+    },
+    "sql.materiais": {
+      "embedding_hint": "Tabela de equipamentos individuais: número de série, situação física, disponibilidade, cautela, desfazimento e localização patrimonial por item. Usar para consultar estado e situação de cada equipamento individualmente. Não contém nome do modelo nem fabricante — para dados técnicos usar catálogo."
+    },
+    "sql.catalogo": {
+      "embedding_hint": "Catálogo normativo de tipos de equipamentos: nome, modelo, fabricante, código NSN e especificações técnicas por tipo. Não contém equipamentos individuais nem situação — apenas a referência técnica de cada tipo. Usar para identificar fabricante ou especificação, não para inventário."
+    },
+    "api.monitoramento_sistema_hf_list": {
+      "embedding_hint": "Monitoramento de terminais de comunicação HF (High Frequency / onda curta): rádios de longa distância terrestres, situação operacional, localidade, disponibilidade e nível de sinal. HF é comunicação terrestre de longa distância, distinto de satélite e de rádio VHF/UHF."
+    },
+    "api.monitoramento_sistema_satelital_list": {
+      "embedding_hint": "Monitoramento de sistemas de comunicação via satélite geoestacionário (VSAT): terminais satelitais fixos, situação, localidade e disponibilidade. Exclui Starlink (LEO). Usar para satélites convencionais geoestacionários, não para comunicação HF terrestre nem para rádio."
+    },
+    "api.monitoramento_starlink_list": {
+      "embedding_hint": "Monitoramento exclusivo de terminais Starlink LEO (Low Earth Orbit): status, localização, uso de dados e conectividade dos terminais Starlink. Starlink é sistema satelital de órbita baixa, distinto de VSAT geoestacionário e de comunicação HF terrestre."
+    },
+    "api.monitoramento_sites_sistema_radio_list": {
+      "embedding_hint": "Monitoramento de sites físicos do sistema de rádio VHF/UHF: estações de comunicação rádio táticas, localização geográfica dos sites, características técnicas, status e desempenho. Rádio de curto/médio alcance, distinto de HF e de comunicação satelital."
+    },
+    "sql.unidades": {
+      "embedding_hint": "informações detalhadas das unidades de uma organização, código da unidade, localização, região, divisão, área, unidade superior, cidade e estado."
+    },
+    "api.distribuicao_list": {
+      "embedding_hint": "distribuição de equipamentos para unidades, recebimento no depósito, rastreamento de entregas, status de distribuição, itens pendentes a serem distribuídos"
+    },
+    "api.manutencao_ap_direto_list": {
+      "embedding_hint": "manutenção via apoio direto, registro de manutenção, diagnóstico e solução de problemas, suprimentos empregados, status final do material, tipo de manutenção"
+    },
+    "spreadsheets.contratos": {
+      "embedding_hint": "relação de contratos de aquisição, equipamentos adquiridos, ano e número do contrato, empresa contratada, vigência, aditivos, fonte de fundos, item e quantidade adquirida"
+    },
+    "spreadsheets.fornecimento": {
+      "embedding_hint": "fornecimento de equipamentos, documento de fornecimento, data, material fornecido, quantidade, origem, destino, status e acompanhamento de entrega"
+    },
+    "spreadsheets.quadro_importacao": {
+      "embedding_hint": "quadro de importação, solicitação de material, ata de registro de preço, valor e quantidade do material, número do item, descrição e planejamento de aquisição"
+    }
+  },
+  "_changes_v3": [
+    "sql.vw_comparativo_previsto_existente: adicionado vocabulário das queries problemáticas ('completamente equipada', 'existem vs deveriam ter', 'nível mínimo atingido', 'faltam para atingir a dotação')",
+    "sql.vw_tipoeqp_previsto_unidades: adicionado 'NÃO contém dados reais nem diferenças — apenas o previsto', 'sem comparar com o que existe'",
+    "sql.regra: adicionado 'nível mínimo exigido por norma', 'dotação teórica', 'não contém dados de unidades reais'",
+    "sql.vw_materiais_catalogo_unidade: adicionado negação cruzada 'NÃO contém comparativos previsto vs existente nem completamento'"
+  ]
+}

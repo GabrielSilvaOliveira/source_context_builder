@@ -1,0 +1,219 @@
+{
+  "redacao": {
+    "data": "2026-10-12",
+    "campos_redigidos": {
+      "api.monitoramento_sistema_hf_list": [
+        "ip",
+        "latitude",
+        "longitude",
+        "nome"
+      ],
+      "api.monitoramento_sites_sistema_radio_list": [
+        "endereco",
+        "grupo_freq",
+        "latitude*",
+        "link",
+        "localization",
+        "longitude*",
+        "master_site_l1",
+        "modelo",
+        "release",
+        "site",
+        "sysid",
+        "system",
+        "tipo_torre",
+        "type"
+      ],
+      "api.monitoramento_starlink_list": [
+        "cidade",
+        "latitude",
+        "longitude",
+        "unidade"
+      ],
+      "api.monitoramento_sistema_satelital_list": [
+        "IDU_NMS",
+        "LOCALIDADE_DA_ENTREGA",
+        "LOCAL_HOJE",
+        "NUMERO_DO_TL"
+      ],
+      "api.manutencao_ap_direto_list": [
+        "CIDADE",
+        "PN"
+      ],
+      "api.distribuicao_list": [
+        "descricao"
+      ]
+    },
+    "aviso": "o descritor salvo foi gerado sobre os valores originais",
+    "nota": "prompt_user redigido com pseudonimos; raw_output e descriptor_final nao foram alterados"
+  },
+  "prompt_sistema": "Você é um gerador de descritores técnicos e objetivos para um catálogo de\nfontes de dados. Sua tarefa é escrever UM parágrafo curto (250 a 350\ncaracteres) descrevendo o conteúdo de UMA fonte de dados, com base\nESTRITAMENTE nos metadados estruturais fornecidos.\n\nREGRAS OBRIGATÓRIAS:\n1. Use apenas as informações fornecidas (nome, colunas, tipos, valores de\n   exemplo). Não invente informação que não esteja nos metadados.\n2. Você não tem acesso a nenhuma outra fonte de dados além desta. Não\n   mencione nem pressuponha relação com outras fontes.\n3. Escreva em português, registro técnico, direto ao conteúdo. Não comece\n   com frases de preenchimento como \"esta fonte contém\" ou \"este catálogo\n   apresenta\".\n4. Responda APENAS com o parágrafo descritivo. Sem explicações, sem aspas,\n   sem markdown, sem título.\n5. Alvo de comprimento: aproximadamente 300 caracteres. Não ultrapasse 400.\n\nEXEMPLO (domínio diferente, só para ilustrar o formato esperado):\n\nEntrada:\n  TIPO: sql\n  NOME: livros\n  COLUNAS:\n    titulo (varchar) [texto]\n    autor (varchar) [texto]\n    genero (varchar) [categórico]: Ficção, Não-Ficção, Poesia, Biografia\n    ano_publicacao (int) [numérico]: faixa 1950–2024\n    isbn (varchar) [identificador]\n\nSaída esperada:\n  Registro do acervo com título, autor e gênero (ficção, não-ficção, poesia,\n  biografia) de cada obra, incluindo ano de publicação entre 1950 e 2024.\n  Permite consultas por autor, gênero ou período de publicação.",
+  "por_fonte": [
+    {
+      "source": "sql.materiais",
+      "prompt_user": "TIPO: sql\nNOME: materiais\nCOLUNAS:\n  CODIGO (INTEGER) [identificador]\n  CODIGO_UNIDADE (INTEGER) [numérico]: faixa 9–748\n  CODIGO_CATALOGO (INTEGER) [numérico]: faixa 1–8596\n  SN (VARCHAR(100)) [texto]\n  SITUACAOPARTIM (VARCHAR(100)) [categórico]: Em Carga, Fora de Carga, Em processo de descarga, Autorizada descarga\n  MOTIVOPATRIMONIAL (VARCHAR(100)) [categórico]: Descarregado e Recolhido para central lo…, Alteração no trem, Em Processo de Transferência, Número de Série Não Identificado, Descarregado e permanece na unidade, Outro motivo ou mais de um item acima, Descrição Incorreta no SISCOFIS, Em Processo de Recebimento, Material Pertencente a Outra OM, Falta Valor Patrimonial, Material Obsoleto, Falta Guia de Fornecimento, Aguardando Inclusão Em Carga\n  SITUACAOFISIC (VARCHAR(100)) [categórico]: Indisponível, Disponível\n  MOTIVOINDISP (VARCHAR(100)) [texto]\n  HOMOLOGAR (VARCHAR(30) COLLATE \"utf8mb3_general_ci\") [categórico]: Sim, Não\n  ACAUTELADO (VARCHAR(100)) [categórico]: Sim\n  MOTIVOCAUTELADO (MEDIUMTEXT) [vazio]\n  UNIDADE_CAUTELADO (VARCHAR(100)) [texto]\n  OBS (MEDIUMTEXT) [texto]\n  STATUSDESCARGA (VARCHAR(100)) [vazio]\n  DOCREFERENCIA (VARCHAR(100)) [vazio]\n  DATADESCARGA (VARCHAR(30)) [vazio]\n  DATAINCLUSAOCARGA (VARCHAR(30)) [texto]\n  CONFERIDO (VARCHAR(30)) [categórico]: Y, N\n  CONFERIDOEM (VARCHAR(30)) [texto]\n  DEPENDENCIA (VARCHAR(30)) [categórico]: 1, 5, 2, 4, 7, 3, 10, 6, 8, 9\n  PT (VARCHAR(100)) [categórico]: PT_001, PT_002, PT_003, PT_004, PT_005, PT_006\n  TEAM (VARCHAR(100)) [categórico]: TEAM_001, TEAM_002, TEAM_003, TEAM_004, TEAM_005\n  ESTADOMATERIAL (MEDIUMTEXT) [bloqueado]\n  PARECER (VARCHAR(30)) [categórico]: Não autorizar descarga, Autorizar descarga\n  DESTINOMATERIAL (VARCHAR(100)) [bloqueado]\n  BOLETIMREGIONAL (VARCHAR(100)) [categórico]: BOLETIM_001, BOLETIM_002, BOLETIM_003, BOLETIM_004, BOLETIM_005\n  EXCLUIRMATERIAL (VARCHAR(10)) [categórico]: Não, Sim\n  JUSTIFICMATERIAL (MEDIUMTEXT) [texto]\n  AUTORIZADO (VARCHAR(30)) [categórico]: Não, Sim\n  DATAAUTORIZADO (VARCHAR(30)) [categórico]: 2024-11-21, 2023-05-19, 2025-07-24, 2025-05-23\n  HOMOLOGADO (VARCHAR(30)) [vazio]\n  ULTIMAATUALIZACAO (DATETIME) [numérico]: faixa 2021-12-31 08:00:00–2026-08-14 10:31:58\n  MOTIVOEXCLUIR (VARCHAR(100)) [vazio]\n  motivoreprovacao (LONGTEXT) [vazio]\n  nec_mnt (VARCHAR(3)) [categórico]: NAO, SIM\n  prioridade (VARCHAR(3)) [categórico]: NAO, SIM\n  usuario_decisao_id (VARCHAR(11)) [vazio]",
+      "raw_output": "Registro de materiais com identificadores únicos, situação patrimonial, situação física, motivo de indisponibilidade, status de descarga, dependência, estado do material, autorização e homologação. Inclui dados sobre a unidade cautelada, boletim regional, justificativa de exclusão e última atualização.",
+      "descriptor_final": "Registro de materiais com identificadores únicos, situação patrimonial, situação física, motivo de indisponibilidade, status de descarga, dependência, estado do material, autorização e homologação. Inclui dados sobre a unidade cautelada, boletim regional, justificativa de exclusão e última atualização.",
+      "len_chars": 303,
+      "truncated": false,
+      "latency_ms": 53187.0,
+      "warnings": []
+    },
+    {
+      "source": "sql.unidades",
+      "prompt_user": "TIPO: sql\nNOME: unidades\nCOLUNAS:\n  CODIGO (INTEGER) [identificador]\n  CODLOC (VARCHAR(255)) [identificador]\n  SIGLA (VARCHAR(255)) [identificador]\n  REGIAO (VARCHAR(255)) [categórico]: REG001, REG002, REG003, REG004, REG005, REG006, REG007, REG008, REG009, REG010, REG011, REG012, REG013\n  AREA (VARCHAR(255)) [categórico]: AREA001, AREA002, AREA003, AREA004, AREA005, AREA006, AREA007, AREA008, AREA009, AREA010, AREA011, AREA012, AREA013, AREA014, AREA015, +1 outros\n  DIVISAO (VARCHAR(100)) [categórico]: DIV001, DIV002, DIV003, DIV004, DIV005, DIV006, DIV007, DIV008, DIV009, DIV010\n  CIDADEESTADO (VARCHAR(255)) [texto]\n  CNPJ (VARCHAR(255)) [texto]\n  Tipo (VARCHAR(255)) [texto]\n  UNIDADE_SUPERIOR (VARCHAR(100)) [texto]\n  ENDERECO (VARCHAR(150)) [categórico]: END0001, END0002, END0003, END0004, END0005, END0006\n  CEP (VARCHAR(15)) [categórico]: CEP00001, CEP00002, CEP00003, CEP00004, CEP00005, CEP00006\n  NIVEL (INTEGER) [categórico]: 1, 2, 3, 4\n  ID (INTEGER) [numérico]: faixa 1–99\n  CODREGRA (INTEGER) [numérico]: faixa 2–102\n  CIDADE (VARCHAR(100)) [texto]\n  ESTADO (VARCHAR(100)) [texto]\n  LATITUDE (FLOAT) [numérico]: faixa -32.87–2.93\n  LONGITUDE (FLOAT) [numérico]: faixa -75.23–0.0",
+      "raw_output": "Registro de unidades com identificadores únicos, localização geográfica e informações administrativas, incluindo região, divisão, cidade e estado. Contém detalhes sobre o tipo de unidade, unidade superior, endereço e coordenadas geográficas, com classificação por nível e código de regra.",
+      "descriptor_final": "Registro de unidades com identificadores únicos, localização geográfica e informações administrativas, incluindo região, divisão, cidade e estado. Contém detalhes sobre o tipo de unidade, unidade superior, endereço e coordenadas geográficas, com classificação por nível e código de regra.",
+      "len_chars": 288,
+      "truncated": false,
+      "latency_ms": 17563.0,
+      "warnings": [
+        "menção possível a outra fonte (isolamento pode ter vazado): ['sql.regra']"
+      ]
+    },
+    {
+      "source": "sql.catalogo",
+      "prompt_user": "TIPO: sql\nNOME: catalogo\nCOLUNAS:\n  IDEQP (INTEGER) [identificador]\n  ID_SISTEMA_IDENTIFICACAO (INTEGER) [identificador]\n  NUMERO_DE_ESTOQUE (VARCHAR(20) COLLATE \"utf8mb3_general_ci\") [texto]\n  NOME (VARCHAR(100)) [texto]\n  TIPO (VARCHAR(12)) [categórico]: COMUNICAÇÕES, ELETRÔNICA, INFORMÁTICA\n  MODELO (VARCHAR(100)) [texto]\n  FABRICANTE (VARCHAR(200)) [texto]\n  RADIO (VARCHAR(3)) [categórico]: Sim, Não\n  PN (VARCHAR(100)) [texto]\n  SUBSISTEMA (VARCHAR(100)) [categórico]: SUB01, SUB02, SUB03, SUB04\n  GRUPO (VARCHAR(100)) [texto]\n  TIPOEQP (VARCHAR(100)) [texto]",
+      "raw_output": "Registro do catálogo com identificadores, nome, tipo (comunicações, eletrônica, informática), modelo, fabricante, rádio (sim/não), número de série, subsistema (SUB01, SUB02, SUB03, SUB04), grupo e tipo de equipamento.",
+      "descriptor_final": "Registro do catálogo com identificadores, nome, tipo (comunicações, eletrônica, informática), modelo, fabricante, rádio (sim/não), número de série, subsistema (SUB01, SUB02, SUB03, SUB04), grupo e tipo de equipamento.",
+      "len_chars": 217,
+      "truncated": false,
+      "latency_ms": 13328.0,
+      "warnings": []
+    },
+    {
+      "source": "sql.regra",
+      "prompt_user": "TIPO: sql\nNOME: regra\nCOLUNAS:\n  CODIGO (INTEGER) [identificador]\n  ID (INTEGER) [numérico]: faixa 1–99\n  TIPO_UNIDADE (TEXT) [texto]\n  NIVEL_COMPLETAMENTO (TEXT) [categórico]: COMPLETO, AMPLIADO, MINIMO\n  TEQ024 (INTEGER) [categórico]: 45, 15, 12, 4, 36, 5, 48, 24, 10, 196, 88, 72, 96, 62, 8\n  TEQ021 (INTEGER) [categórico]: 20, 7\n  TEQ009 (INTEGER) [numérico]: faixa 0–142\n  TEQ012 (INTEGER) [categórico]: 16, 6, 2, 14, 5, 3, 18, 35, 12, 8, 10, 32, 28, 23, 4, +8 outros\n  TEQ045 (INTEGER) [categórico]: 4, 2, 3, 1\n  TEQ017 (INTEGER) [categórico]: 1, 7, 3, 2, 13, 5, 4, 18, 6, 8, 9, 23, 11\n  TEQ020 (INTEGER) [categórico]: 1, 13, 5, 4, 2, 8, 3, 7\n  TEQ018 (INTEGER) [categórico]: 2, 1, 7, 3\n  TEQ015 (INTEGER) [categórico]: 2, 1, 8, 3, 4, 6, 12, 5, 9\n  TEQ019 (INTEGER) [categórico]: 2, 20, 10, 4, 1, 6, 8\n  TEQ026 (INTEGER) [categórico]: 14, 10, 5, 12, 8, 4, 32, 16, 2\n  TEQ025 (INTEGER) [categórico]: 40, 24, 12, 64, 32, 16, 8, 20, 10\n  TEQ016 (INTEGER) [categórico]: 1, 2\n  TEQ011 (INTEGER) [categórico]: 50, 30, 60, 40, 150, 300, 12, 85, 71, 20, 36, 18, 16, 14, 202, +9 outros\n  TEQ022 (INTEGER) [categórico]: 4, 2, 5, 3, 10, 20, 1, 8, 6, 60, 29, 13\n  TEQ032 (INTEGER) [categórico]: 4, 2, 1, 8, 3\n  TEQ034 (INTEGER) [categórico]: 1, 2, 3, 4, 10, 5\n  TEQ046 (INTEGER) [categórico]: 174, 58, 42, 216, 100, 44, 15, 10, 158, 53, 46, 190, 89, 38, 150, +2 outros\n  TEQ003 (INTEGER) [categórico]: 8, 4, 2, 16\n  TEQ035 (INTEGER) [categórico]: 87, 29, 21, 108, 50, 22, 8, 5, 79, 27, 23, 95, 45, 19, 75, +5 outros\n  TEQ036 (INTEGER) [categórico]: 1, 2\n  TEQ047 (INTEGER) [categórico]: 1, 2\n  TEQ027 (INTEGER) [categórico]: 2, 1, 4\n  TEQ006 (INTEGER) [numérico]: faixa 0–122\n  TEQ028 (INTEGER) [categórico]: 27, 9, 6, 2, 18, 3, 1, 7\n  TEQ013 (INTEGER) [categórico]: 12, 6, 24, 4, 51, 25, 11\n  TEQ031 (INTEGER) [categórico]: 3, 6, 4, 2, 1\n  TEQ048 (INTEGER) [categórico]: 1\n  TEQ049 (INTEGER) [categórico]: 1\n  TEQ050 (INTEGER) [categórico]: 1, 2\n  TEQ051 (INTEGER) [categórico]: 14, 4, 2, 12, 3, 16, 6, 33, 10, 1, 8, 26, 21, 5, 41, +4 outros\n  TEQ052 (INTEGER) [categórico]: 1, 13, 5, 4, 2, 8, 3, 7\n  TEQ053 (INTEGER) [categórico]: 1\n  TEQ054 (INTEGER) [categórico]: 2, 1, 3\n  TEQ055 (INTEGER) [categórico]: 6, 3, 4, 2, 16, 8\n  TEQ056 (INTEGER) [categórico]: 1, 2\n  TEQ057 (INTEGER) [categórico]: 8, 4, 2, 16",
+      "raw_output": "Registro de regras com identificador, nível de completamento (completo, ampliado, mínimo) e múltiplos valores categóricos (TEQ003 a TEQ057) numerados de 0 a 142. Permite análise detalhada por tipo de unidade e nível de completamento.",
+      "descriptor_final": "Registro de regras com identificador, nível de completamento (completo, ampliado, mínimo) e múltiplos valores categóricos (TEQ003 a TEQ057) numerados de 0 a 142. Permite análise detalhada por tipo de unidade e nível de completamento.",
+      "len_chars": 233,
+      "truncated": false,
+      "latency_ms": 29360.0,
+      "warnings": []
+    },
+    {
+      "source": "sql.vw_comparativo_previsto_existente",
+      "prompt_user": "TIPO: sql\nNOME: vw_comparativo_previsto_existente\nCOLUNAS:\n  AREA (VARCHAR(255)) [categórico]: AREA002, AREA007, AREA008, AREA010, AREA001, AREA006, AREA009, AREA004, AREA003, AREA005, AREA011, AREA014, AREA012, AREA013, AREA015, +1 outros\n  REGIAO (VARCHAR(255)) [categórico]: REG001, REG003, REG007, REG009, REG002, REG005, REG008, REG006, REG004, REG011, REG012, REG010, REG013\n  DIVISAO (VARCHAR(100)) [categórico]: DIV001, DIV002, DIV004, DIV003, DIV006, DIV005, DIV007, DIV008, DIV009, DIV010\n  UNIDADE_SUPERIOR (VARCHAR(100)) [texto]\n  SIGLA (VARCHAR(255)) [texto]\n  NIVEL_COMPLETAMENTO (MEDIUMTEXT) [categórico]: AMPLIADO, MINIMO, COMPLETO\n  TIPO_EQP (VARCHAR(6)) [texto]\n  QNT_PREVISTA (INTEGER) [numérico]: faixa 0–300\n  QNT_EXISTENTE (BIGINT) [numérico]: faixa 0–3281\n  DIFERENCA (BIGINT) [numérico]: faixa -150–3131",
+      "raw_output": "Registro comparativo entre a quantidade prevista e existente de equipamentos, agrupados por área, região e divisão. Inclui informações sobre a unidade superior, sigla, nível de completamento e tipo de equipamento, com valores numéricos para quantidade prevista e existente, e a diferença entre elas.",
+      "descriptor_final": "Registro comparativo entre a quantidade prevista e existente de equipamentos, agrupados por área, região e divisão. Inclui informações sobre a unidade superior, sigla, nível de completamento e tipo de equipamento, com valores numéricos para quantidade prevista e existente, e a diferença entre elas.",
+      "len_chars": 299,
+      "truncated": false,
+      "latency_ms": 15297.0,
+      "warnings": []
+    },
+    {
+      "source": "sql.vw_materiais_catalogo_unidade",
+      "prompt_user": "TIPO: sql\nNOME: vw_materiais_catalogo_unidade\nCOLUNAS:\n  AREA (VARCHAR(255)) [categórico]: AREA007, AREA009, AREA001, AREA003, AREA005, AREA008, AREA010, AREA002, AREA006, AREA004, AREA014, AREA011\n  REGIAO (VARCHAR(255)) [categórico]: REG003, REG008, REG005, REG006, REG009, REG004, REG002, REG001, REG007, REG012, REG011, REG010\n  DIVISAO (VARCHAR(100)) [categórico]: DIV004, DIV001, DIV006, DIV002, DIV003, DIV005\n  UNIDADE_SUPERIOR (VARCHAR(100)) [texto]\n  SIGLA (VARCHAR(255)) [texto]\n  IDEQP (INTEGER) [numérico]: faixa 1–8596\n  NOME (VARCHAR(100)) [texto]\n  MODELO (VARCHAR(100)) [texto]\n  FABRICANTE (VARCHAR(200)) [texto]\n  PN (VARCHAR(100)) [texto]\n  SUBSISTEMA (VARCHAR(100)) [categórico]: SUB02, SUB01, SUB03, SUB04\n  GRUPO (VARCHAR(100)) [texto]\n  TIPOEQP (VARCHAR(100)) [texto]\n  CODIGO (INTEGER) [identificador]\n  SN (VARCHAR(100)) [texto]\n  DISPONIBILIDADE (VARCHAR(100)) [categórico]: Indisponível, Disponível\n  MOTIVO_INDISPONIVEL (VARCHAR(100)) [texto]\n  SITUACAO_PATRIMONIAL (VARCHAR(100)) [categórico]: Em Carga, Fora de Carga, Em processo de descarga, Autorizada descarga\n  MOTIVO_FORA_DE_CARGA (VARCHAR(100)) [categórico]: Descarregado e Recolhido para central lo…, Alteração no trem, Em Processo de Transferência, Número de Série Não Identificado, Descarregado e permanece na unidade, Outro motivo ou mais de um item acima, Descrição Incorreta no SISCOFIS, Em Processo de Recebimento, Material Pertencente a Outra OM, Falta Valor Patrimonial, Material Obsoleto, Falta Guia de Fornecimento, Aguardando Inclusão Em Carga\n  CONFERIDO (VARCHAR(30)) [categórico]: Y, N\n  DATA_CONFERIDO (VARCHAR(30)) [texto]\n  ULTIMAATUALIZACAO (DATETIME) [numérico]: faixa 2021-12-31 08:00:00–2026-08-14 10:31:58\n  EXCLUIR_MATERIAL (VARCHAR(10)) [categórico]: Não, Sim\n  NECESSITA_MANUTENCAO (VARCHAR(3)) [categórico]: NAO, SIM\n  PRIORIDADE_MANUTENCAO (VARCHAR(3)) [categórico]: NAO, SIM",
+      "raw_output": "Registro de materiais em unidades, incluindo área, região, divisão e unidade superior, com detalhes sobre equipamentos como nome, modelo, fabricante e número de série. Fornece informações sobre disponibilidade, situação patrimonial e necessidade de manutenção, atualizadas até agosto de 2026.",
+      "descriptor_final": "Registro de materiais em unidades, incluindo área, região, divisão e unidade superior, com detalhes sobre equipamentos como nome, modelo, fabricante e número de série. Fornece informações sobre disponibilidade, situação patrimonial e necessidade de manutenção, atualizadas até agosto de 2026.",
+      "len_chars": 292,
+      "truncated": false,
+      "latency_ms": 21093.0,
+      "warnings": [
+        "menção possível a outra fonte (isolamento pode ter vazado): ['sql.materiais', 'sql.unidades']"
+      ]
+    },
+    {
+      "source": "sql.vw_tipoeqp_previsto_unidades",
+      "prompt_user": "TIPO: sql\nNOME: vw_tipoeqp_previsto_unidades\nCOLUNAS:\n  AREA (VARCHAR(255)) [categórico]: AREA001, AREA002, AREA003, AREA004, AREA005, AREA006, AREA007, AREA008, AREA009, AREA010, AREA011, AREA012, AREA013, AREA014, AREA015, +1 outros\n  REGIAO (VARCHAR(255)) [categórico]: REG001, REG002, REG003, REG004, REG005, REG006, REG007, REG008, REG009, REG010, REG011, REG012, REG013\n  DIVISAO (VARCHAR(100)) [categórico]: DIV001, DIV002, DIV003, DIV004, DIV005, DIV006, DIV007, DIV008, DIV009, DIV010\n  UNIDADE_SUPERIOR (VARCHAR(100)) [texto]\n  SIGLA (VARCHAR(255)) [texto]\n  NIVEL_COMPLETAMENTO (MEDIUMTEXT) [categórico]: MINIMO, AMPLIADO, COMPLETO\n  TIPO_EQP (VARCHAR(6)) [texto]\n  QNT_PREVISTA (INTEGER) [numérico]: faixa 0–300",
+      "raw_output": "Registro de equipamentos previstos por área, região e divisão, incluindo a unidade superior, sigla, nível de completamento (mínimo, ampliado, completo), tipo de equipamento e quantidade prevista (faixa 0–300).",
+      "descriptor_final": "Registro de equipamentos previstos por área, região e divisão, incluindo a unidade superior, sigla, nível de completamento (mínimo, ampliado, completo), tipo de equipamento e quantidade prevista (faixa 0–300).",
+      "len_chars": 209,
+      "truncated": false,
+      "latency_ms": 15625.0,
+      "warnings": []
+    },
+    {
+      "source": "api.distribuicao_list",
+      "prompt_user": "TIPO: api\nNOME: distribuicao_list\nCOLUNAS:\n  deposito (?) [categórico]: SIG090\n  id (?) [numérico]: faixa 1–1000\n  contrato (?) [texto]\n  id_sistema_catalogo (?) [texto]\n  numero_item_contrato (?) [texto]\n  pn (?) [texto]\n  qtd (?) [texto]\n  tipoeqp (?) [categórico]: TEQ002, TEQ006, TEQ009, TEQ011, TEQ012, TEQ013, TEQ015, TEQ017, TEQ019, TEQ024, TEQ025, TEQ026, TEQ031, TEQ032, TEQ034, +9 outros\n  doc_distribuicao (?) [texto]\n  subsistema (?) [categórico]: SUB01, SUB02, SUB04, SUB05\n  descricao (?) [categórico]: DESC_001, DESC_002, DESC_003, DESC_004, DESC_005, DESC_006, DESC_007, DESC_008, DESC_009, DESC_010, DESC_011, DESC_012, DESC_013, DESC_014, DESC_015\n  doc_recebimento (?) [texto]\n  funds (?) [categórico]: FND001, FND002, FND003, FND004, FND005, FND006, FND008, FND010, FND014, FND015, FND016, FND017, FND019, FND020, FND021, +5 outros\n  regiao_de_destino (?) [categórico]: REG001, REG002, REG003, REG004, REG005, REG006, REG007, REG008, REG009, REG010, REG011, REG012\n  chegada_deposito (?) [categórico]: 2024-07-01 00:00:00, 2024-10-01 00:00:00, 2024-10-21 00:00:00, 2024-11-07 00:00:00, 2024-11-26 00:00:00, 2025-05-20 00:00:00, 2025-06-12 00:00:00, 2025-08-08 00:00:00, 45820\n  status (?) [categórico]: Apanha, Com alteracao, Fornecido, Nao fornecido e nao planejado, Nao fornecido e planejado, Parcialmente Fornecido\n  invoice (?) [texto]\n  unidade_destino (?) [texto]\n  qtd_enviada_unidade (?) [numérico]: faixa 0–1000\n  ano (?) [categórico]: 2024, 2025, 2026\n  item (?) [texto]",
+      "raw_output": "Registro de distribuição de equipamentos, incluindo informações sobre depósitos, identificadores, contratos, quantidades, tipos de equipamento e detalhes de chegada. Fornece dados sobre a distribuição e status de itens em diferentes regiões e unidades de destino, com previsão para anos 2024, 2025 e 2026.",
+      "descriptor_final": "Registro de distribuição de equipamentos, incluindo informações sobre depósitos, identificadores, contratos, quantidades, tipos de equipamento e detalhes de chegada. Fornece dados sobre a distribuição e status de itens em diferentes regiões e unidades de destino, com previsão para anos 2024, 2025 e 2026.",
+      "len_chars": 305,
+      "truncated": false,
+      "latency_ms": 24891.0,
+      "warnings": [
+        "menção possível a outra fonte (isolamento pode ter vazado): ['sql.unidades', 'spreadsheets.contratos']"
+      ]
+    },
+    {
+      "source": "api.manutencao_ap_direto_list",
+      "prompt_user": "TIPO: api\nNOME: manutencao_ap_direto_list\nCOLUNAS:\n  OBS (?) [categórico]: NÃO HÁ.\n  CIDADE (?) [texto]\n  NEC_CONFIGURACAO (?) [categórico]: NÃO, SIM\n  UNIDADE (?) [texto]\n  TIPO_MANUTENCAO (?) [categórico]: 1º Escalão, 2º Escalão, 3º Escalão, 4º Escalão\n  PN (?) [categórico]: (NÃO RELACIONADO), PN_001, PN_002, PN_003, PN_004, PN_005, PN_006, PN_007, PN_008, PN_009, PN_010, PN_011, PN_012, PN_013\n  MATERIAL (?) [categórico]: EQP081, EQP082, EQP086, EQP176, EQP185, EQP187, EQP190, EQP211, EQP240, EQP241, EQP246, EQP291, EQP292, EQP301, EQP366, +1 outros\n  CODIGO (?) [numérico]: faixa 1–988\n  SOLUCAO (?) [texto]\n  ESTADO (?) [categórico]: AL, AP, GO, MA, MS, MT, PA, PB, PE, RJ, RN, RS\n  NEC_DESCARGA (?) [categórico]: NÃO, SIM\n  DIAGNOSTICO (?) [texto]\n  STATUS_FINAL (?) [categórico]: DISPONÍVEL, INDISPONÍVEL\n  FABRICANTE (?) [categórico]: FAB001, FAB008\n  SUPRIMENTO_EMPREGADO (?) [texto]\n  REGIAO (?) [categórico]: REG001, REG003, REG007, REG008, REG009\n  IDMATERIAL (?) [numérico]: faixa 0–57981\n  SN (?) [texto]",
+      "raw_output": "Registro de manutenção de equipamentos direto, incluindo informações sobre a cidade, unidade, tipo de manutenção, PN, material, código, solução, estado, nec_descarga, diagnóstico, status final, fabricante, suprimento empregado, região e idmaterial, com opções categóricas e valores numéricos específicos.",
+      "descriptor_final": "Registro de manutenção de equipamentos direto, incluindo informações sobre a cidade, unidade, tipo de manutenção, PN, material, código, solução, estado, nec_descarga, diagnóstico, status final, fabricante, suprimento empregado, região e idmaterial, com opções categóricas e valores numéricos específicos.",
+      "len_chars": 304,
+      "truncated": false,
+      "latency_ms": 19172.0,
+      "warnings": []
+    },
+    {
+      "source": "api.monitoramento_starlink_list",
+      "prompt_user": "TIPO: api\nNOME: monitoramento_starlink_list\nCOLUNAS:\n  import_timestamp (?) [texto]\n  service_count (?) [categórico]: 1.0\n  mmsi (?) [vazio]\n  id (?) [numérico]: faixa 84418–85417\n  site_type (?) [categórico]: Enterprise Building, Enterprise Land Mobility\n  unidade (?) [texto]\n  estado (?) [categórico]: AP, DF, GO, MG, MS, MT, PA, PE, PR, RJ, RS, SP\n  mtd_usage_mb (?) [numérico]: faixa 686.09–683704.0\n  usage_previous_month_mb (?) [numérico]: faixa 0.0–738908.0\n  vessel_type (?) [texto]\n  usage_today_mb (?) [numérico]: faixa 0.0–34048.0\n  site_capacity_mb (?) [categórico]: 512000.0\n  latitude (?) [numérico]: faixa -30–0\n  cidade (?) [texto]\n  longitude (?) [numérico]: faixa -58–-35\n  status (?) [categórico]: Data is Delayed, Localização não encontrada, Never Online, Offline, Online\n  imo (?) [texto]",
+      "raw_output": "Registro de monitoramento do Starlink com informações sobre a utilização de capacidade de dados (MB) por site, incluindo timestamp de importação, identificador único, tipo de serviço, tipo de unidade, estado, cidade, latitude e longitude, tipo de embarcação, capacidade máxima de dados, status do site e uso de dados em diferentes períodos.",
+      "descriptor_final": "Registro de monitoramento do Starlink com informações sobre a utilização de capacidade de dados (MB) por site, incluindo timestamp de importação, identificador único, tipo de serviço, tipo de unidade, estado, cidade, latitude e longitude, tipo de embarcação, capacidade máxima de dados, status do site e uso de dados em diferentes períodos.",
+      "len_chars": 340,
+      "truncated": false,
+      "latency_ms": 15125.0,
+      "warnings": []
+    },
+    {
+      "source": "api.monitoramento_sites_sistema_radio_list",
+      "prompt_user": "TIPO: api\nNOME: monitoramento_sites_sistema_radio_list\nCOLUNAS:\n  id (?) [numérico]: faixa 1–105\n  type (?) [categórico]: TYP_001, TYP_003, TYP_004\n  system (?) [texto]\n  link (?) [categórico]: LNK_001\n  localization (?) [texto]\n  sysid (?) [categórico]: 005C7\r\nExt: 0002\n  qty_ch (?) [categórico]: 1.0, 11.0, 12.0, 3.0, 4.0, 5.0, 6.0\n  release (?) [categórico]: SYS_002\n  site (?) [texto]\n  latitude (?) [texto]\n  latitude_decimal (?) [texto]\n  ch_fdma (?) [categórico]: 1.0, 3.0, 4.0, 5.0, 6.0\n  master_site_l1 (?) [categórico]: X, SITE_003\n  longitude_decimal (?) [texto]\n  endereco (?) [texto]\n  ch_tdma (?) [categórico]: 10.0, 11.0, 2.0, 5.0\n  altura_antena_tx_m (?) [texto]\n  altura_antena_rx_m (?) [texto]\n  tipo_torre (?) [categórico]: TWR_001, TWR_002, TWR_003, TWR_004, TWR_005, TWR_006, TWR_007, TWR_008, TWR_009, TWR_010, TWR_011, TWR_012, TWR_013, TWR_014, TWR_015, +1 outros\n  modelo (?) [categórico]: MOD_001\n  longitude (?) [texto]\n  grupo_freq (?) [categórico]: GRP_001, GRP_002, GRP_003, GRP_004, GRP_005, GRP_006, GRP_007, GRP_008, GRP_009, GRP_010, GRP_011, GRP_012, GRP_013, GRP_014, GRP_015, +2 outros",
+      "raw_output": "Registro de monitoramento de sites de sistema radioelétrico, incluindo identificador, tipo de site, sistema, link, localização, quantidade de canais, versão de lançamento, endereço, latitude, longitude, configuração de canais, informações sobre a antena, tipo de torre, modelo do sistema e grupos de frequência.",
+      "descriptor_final": "Registro de monitoramento de sites de sistema radioelétrico, incluindo identificador, tipo de site, sistema, link, localização, quantidade de canais, versão de lançamento, endereço, latitude, longitude, configuração de canais, informações sobre a antena, tipo de torre, modelo do sistema e grupos de frequência.",
+      "len_chars": 311,
+      "truncated": false,
+      "latency_ms": 17609.0,
+      "warnings": []
+    },
+    {
+      "source": "api.monitoramento_sistema_satelital_list",
+      "prompt_user": "TIPO: api\nNOME: monitoramento_sistema_satelital_list\nCOLUNAS:\n  SITUACAO (?) [categórico]: ACU Inoperante, BUC Inoperante, Bússola da antena com cabo quebrado, Cabo RF mal contato, Conector RF IN do BUC quebrado , Modem Inoperante, OK, Problema no motor, UPS com defeito\n  LOCAL_HOJE (?) [bloqueado]\n  NUMERO_DO_TL (?) [texto]\n  CODIGO (?) [numérico]: faixa 1–48\n  DISPONIBILIDADE (?) [categórico]: Disponível, Indisponível\n  LOCALIDADE_DA_ENTREGA (?) [bloqueado]\n  IDU_NMS (?) [texto]\n  CODIGO_UNIDADE (?) [categórico]: 120, 213, 322, 470, 475, 487, 496, 600, 602, 627, 648, 654, 655, 662, 669, +4 outros\n  SN (?) [texto]",
+      "raw_output": "Registro de monitoramento do sistema satelital, incluindo situação (inoperância variada, OK, etc.), disponibilidade (disponível ou indisponível), código (faixa 1–48), código da unidade (120, 213, 322, etc.), e identificador IDU_NMS.",
+      "descriptor_final": "Registro de monitoramento do sistema satelital, incluindo situação (inoperância variada, OK, etc.), disponibilidade (disponível ou indisponível), código (faixa 1–48), código da unidade (120, 213, 322, etc.), e identificador IDU_NMS.",
+      "len_chars": 232,
+      "truncated": false,
+      "latency_ms": 15250.0,
+      "warnings": []
+    },
+    {
+      "source": "api.monitoramento_sistema_hf_list",
+      "prompt_user": "TIPO: api\nNOME: monitoramento_sistema_hf_list\nCOLUNAS:\n  last_checked (?) [categórico]: 2025-07-22T15:00:01Z, 2025-07-22T15:00:02Z, 2025-07-22T15:00:03Z, 2025-07-22T15:00:04Z, 2025-07-22T15:00:05Z, 2025-07-22T15:00:06Z, 2025-07-22T15:00:07Z\n  latitude (?) [categórico]: null\n  ip (?) [categórico]: IP_001, IP_002, IP_003, IP_004, IP_005, IP_006, IP_007, IP_008, IP_009, IP_010, IP_011, IP_012, IP_013, IP_014\n  nome (?) [categórico]: PONTO_001, PONTO_002, PONTO_003, PONTO_004, PONTO_005, PONTO_006, PONTO_007, PONTO_008, PONTO_009, PONTO_010, PONTO_011, PONTO_012, PONTO_013, PONTO_014\n  longitude (?) [categórico]: null\n  status (?) [categórico]: down, up",
+      "raw_output": "Registros de monitoramento de sistemas com informações sobre a última verificação, localização geográfica (latitude e longitude) e nome dos pontos de verificação, incluindo status (down, up) dos sistemas monitorados.",
+      "descriptor_final": "Registros de monitoramento de sistemas com informações sobre a última verificação, localização geográfica (latitude e longitude) e nome dos pontos de verificação, incluindo status (down, up) dos sistemas monitorados.",
+      "len_chars": 216,
+      "truncated": false,
+      "latency_ms": 13282.0,
+      "warnings": []
+    },
+    {
+      "source": "spreadsheets.contratos",
+      "prompt_user": "TIPO: spreadsheets\nNOME: contratos\nCOLUNAS:\n  ID_CONTRATO_ANO (object) [texto]\n  ANO (int64) [categórico]: 2025, 2024, 2023, 2022, 2021, 2020\n  CONTRATO (object) [texto]\n  EMPRESA (object) [texto]\n  ASS DO CTR (object) [texto]\n  VIGÊNCIA (object) [texto]\n  ADT (float64) [categórico]: 1.0, 2.0, 3.0, 4.0, 5.0\n  Aditivação (object) [texto]\n  FUNDS-1 (object) [categórico]: FND001, FND002, FND003, FND004, FND005, FND006, FND007, FND008, FND009, FND010, FND011, FND012, FND013, FND014\n  FUNDS-2 (object) [categórico]: FND004, FND002, FND001, FND015, FND003, FND016, FND017, FND010, FND018, FND011, FND013, FND019, FND014\n  FUNDS-3 (object) [categórico]: FND002, FND004, FND001, FND017, FND013, FND010, FND019\n  FUNDS-4 (object) [categórico]: FND003, FND014, FND010, FND001\n  FUNDS-5 (object) [categórico]: FND008, FND013\n  VALOR USD (contrato) (object) [identificador]\n  ENTREGA 1 (object) [texto]\n  ENTREGA 2 (object) [texto]\n  ENTREGA 3 (object) [categórico]: 2027-04-15 00:00:00, 2025-03-17 00:00:00, 2025-12-19 00:00:00, 2025-09-03 00:00:00, 2025-10-10 00:00:00, 2024-06-30 00:00:00, 2024-05-31 00:00:00, 2024-07-10 00:00:00, 2024-09-06 00:00:00, 19/dez/25, 2024-11-30 00:00:00, 2023-02-28 00:00:00, 2023-11-30 00:00:00, 2024-06-10 00:00:00, 2024-04-30 00:00:00, +3 outros\n  ENTREGA 4 (object) [categórico]: 2025-10-30 00:00:00, 2025-07-30 00:00:00, 2024-06-10 00:00:00, 31/jul/24, 2021-03-29 00:00:00\n  ENTREGA 5 (datetime64[ns]) [categórico]: 2021-05-31 00:00:00\n  ENTREGA 6 (datetime64[ns]) [categórico]: 2023-09-30 00:00:00\n  FORMA_DE_ENVIO (object) [texto]\n  UNIDADE_ESTOQUE (object) [categórico]: SIG090, SIG580, SIG608, SIG112, SIG610, SIG655\n  QI (object) [texto]\n  ITEM QI (float64) [numérico]: faixa 1.0–133.0\n  ITEM PC (float64) [numérico]: faixa 1.0–60.0\n  MATERIAL (object) [texto]\n  Quantidade (object) [texto]\n  Invoice (object) [texto]\n  Andamento (object) [categórico]: Recebimento concluído., Aguardando REC_UNIDADE, Verificar TREM , Instalação concluida, Em proceso de envio, Aguardando entrega pela Fornecedora, DRC emitido., REC_UNIDADE concluido., REC_UNIDADE concluido, Serviço realizado, Trainamento concluído., Conferir Ten Rios , Aguaradando fornecimento pela contratada, REC_UNIDADE concluido , item excluido, +6 outros\n  Guarantia (object) [categórico]: 12 meses, 24 meses, 36 meses, 36 meses \n  Chegada no BR (object) [texto]\n  Inicio da Garantia (object) [texto]\n  Fim da Garantia (object) [texto]\n  DOC_RECEBIMENTO (object) [texto]",
+      "raw_output": "Registro de contratos com detalhes sobre o ano, empresa, vigência, aditivação, fundos envolvidos e entregas previstas. Inclui informações sobre a forma de envio, unidade de estoque, quantidade, status do andamento, garantia e data de chegada no Brasil.",
+      "descriptor_final": "Registro de contratos com detalhes sobre o ano, empresa, vigência, aditivação, fundos envolvidos e entregas previstas. Inclui informações sobre a forma de envio, unidade de estoque, quantidade, status do andamento, garantia e data de chegada no Brasil.",
+      "len_chars": 252,
+      "truncated": false,
+      "latency_ms": 25093.0,
+      "warnings": []
+    },
+    {
+      "source": "spreadsheets.fornecimento",
+      "prompt_user": "TIPO: spreadsheets\nNOME: fornecimento\nCOLUNAS:\n  numero_do_fornecimento (object) [texto]\n  Data (int64) [numérico]: faixa 45296–45653\n  Contrato (object) [texto]\n  Documento_Recebimento (object) [texto]\n  PN / NEE (object) [texto]\n  ID_SISTEMA_IDENTIFICACAO (object) [texto]\n  Nomenclatura (object) [texto]\n  QNT (int64) [numérico]: faixa 1–2796\n  Unidade de Origem (object) [categórico]: SIG450, SIG112, SIG580, SIG293, SIG090, SIG171, SIG425\n  Regiao de Origem (object) [categórico]: REG009, REG001, REG011, REG004, REG002, REG008\n  Unidade de Destino (object) [texto]\n  Regiao de Destino (object) [categórico]: REG009, REG001, REG003, REG005, REG011, REG002, REG012, REG004, REG008, REG007, REG010\n  Ação Orçamentaria (object) [categórico]: FND002, FND004, FND003, FND013, FND001, FND010, FND009, FND011, FND028, FND008\n  Retifica O DF (object) [texto]\n  Documento autoriza a Distribuição (object) [texto]",
+      "raw_output": "Registro do fornecimento com número, data entre 2020 e 2024, contrato, documento de recebimento, PN/NEE, identificação do sistema, nomenclatura, quantidade entre 1 e 2796, unidade e região de origem, unidade e região de destino, ação orçamentária e documentos relacionados.",
+      "descriptor_final": "Registro do fornecimento com número, data entre 2020 e 2024, contrato, documento de recebimento, PN/NEE, identificação do sistema, nomenclatura, quantidade entre 1 e 2796, unidade e região de origem, unidade e região de destino, ação orçamentária e documentos relacionados.",
+      "len_chars": 273,
+      "truncated": false,
+      "latency_ms": 17079.0,
+      "warnings": []
+    },
+    {
+      "source": "spreadsheets.quadro_importacao",
+      "prompt_user": "TIPO: spreadsheets\nNOME: quadro_importacao\nCOLUNAS:\n  QI (object) [categórico]: 01/2023\n  Empresa (object) [categórico]: FAB001\n  Ata (object) [categórico]: 0001/2023\n  Validade (datetime64[ns]) [categórico]: 2024-12-25 00:00:00\n  Item (int64) [categórico]: 1, 2, 3, 4, 5, 6, 7, 8\n  Item da Ata (int64) [categórico]: 1, 42, 81, 20, 34, 24, 30, 86\n  PN (object) [categórico]: PN001, PN002, PN003, PN004, PN005, PN006, PN007, PN008\n  Nomenclatura (object) [categórico]: EQP001, EQP002, EQP003, EQP004, EQP005, EQP006, EQP007, EQP008\n  Qtde (int64) [categórico]: 17, 8, 16, 5, 12, 15, 2\n  Valor unit (USD) (float64) [categórico]: 10739.0, 1905.5, 34251.44, 62873.51, 30916.0, 70100.0, 14320.0, 770.0\n  Valor Total (USD) (float64) [categórico]: 182563.0, 15244.0, 548023.04, 314367.55, 370992.0, 1051500.0, 28640.0, 1540.0",
+      "raw_output": "Registro de importações com detalhes sobre a validade, itens, quantidades e valores unitários e totais para cada item da ata, associados a empresas e números de peça, permitindo a análise e acompanhamento financeiro e quantitativo das importações.",
+      "descriptor_final": "Registro de importações com detalhes sobre a validade, itens, quantidades e valores unitários e totais para cada item da ata, associados a empresas e números de peça, permitindo a análise e acompanhamento financeiro e quantitativo das importações.",
+      "len_chars": 247,
+      "truncated": false,
+      "latency_ms": 14265.0,
+      "warnings": []
+    }
+  ]
+}

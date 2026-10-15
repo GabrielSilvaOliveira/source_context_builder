@@ -1,0 +1,59 @@
+{
+  "sql": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "your_database",
+    "user": "your_user",
+    "password": "your_password",
+    "tables": ["materiais", "unidades", "catalogo", "regra", "vw_comparativo_previsto_existente", "vw_materiais_catalogo_unidade", "vw_tipoeqp_previsto_unidades"],
+    "sample_rows": 3
+  },
+  "api": {
+    "base_url": "http://localhost:8000",
+    "endpoints": [
+      {
+        "path": "/api/distribuicao/deposito/",
+        "key": "distribuicao_list"
+      },
+      {
+        "path": "/api/manutencao/manutencao-apoio-direto/",
+        "key": "manutencao_ap_direto_list"
+      },
+      {
+        "path": "/api/monitoramento/terminal-starlink/",
+        "key": "monitoramento_starlink_list"
+      },
+      {
+        "path": "/api/monitoramento/sites-sistema-radio/",
+        "key": "monitoramento_sites_sistema_radio_list"
+      },
+      {
+        "path": "/api/monitoramento/sistema-satelital/",
+        "key": "monitoramento_sistema_satelital_list"
+      },
+      {
+        "path": "/api/monitoramento/sistema-hf/",
+        "key": "monitoramento_sistema_hf_list"
+      }
+    ]
+  },
+  "spreadsheets": [
+    {
+      "file": "../data/contratos.xlsx",
+      "key": "contratos",
+      "sample_rows": 3
+    },
+    {
+      "file": "../data/fornecimento.xlsx",
+      "key": "fornecimento",
+      "sample_rows": 3
+    },
+    {
+      "file": "../data/quadro_importacao.xlsx",
+      "key": "quadro_importacao",
+      "sample_rows": 3
+    }
+  ],
+  "output": "../catalogs/v1/catalog.json",
+  "template": "./catalog_schema_template.json"
+}

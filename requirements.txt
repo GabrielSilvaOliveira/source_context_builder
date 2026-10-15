@@ -1,0 +1,26 @@
+# Core
+numpy
+pandas
+
+# Statistical analysis (analysis/stat_compare.py, analysis/lexical_overlap.py)
+statsmodels
+
+# Semantic + lexical source selection (src/)
+sentence-transformers
+rank_bm25
+
+# Catalog generation from live sources (catalog_generation/extractors/)
+sqlalchemy
+pymysql
+requests
+openpyxl
+
+# LLM/SLM benchmark runner (benchmark/runners/run_llm_benchmark.py)
+openai
+python-dotenv
+
+# Local LLM/SLM generation and evaluation (build_catalog_v4_gen.py, build_catalog_v3_doc.py,
+# run_llm_benchmark.py --provider ollama) additionally requires a running Ollama instance
+# (https://ollama.com) with the target model pulled, e.g.:
+#   ollama pull qwen2.5:7b
+#   ollama pull llama3.2:3b

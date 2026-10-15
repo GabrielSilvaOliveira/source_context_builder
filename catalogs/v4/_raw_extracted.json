@@ -1,0 +1,4010 @@
+{
+  "_schema_version": "1.0",
+  "_doc": "Data Catalog do Framework Agentic — preenchimento misto: SQL auto-extraído, API e Planilha manual. Campos marcados com [MANUAL] devem ser preenchidos por você.",
+  "metadata": {
+    "catalog_version": "1.0.0",
+    "created_at": "2026-08-14T13:42:48.248338Z",
+    "updated_at": "2026-08-14T13:42:58.146700Z",
+    "author": "Gabriel Silva de Oliveira",
+    "project": "Framework Agentic AI — Apoio à Decisão Logística",
+    "description": "Esse catálogo é focado em dados logísticos, e inclui 3 tabelas SQL (materiais, unidades, catálogo) - banco de dados MySQL, 1 endpoint de API (distribuição) e 1 planilha (contratos).",
+    "llm_context_note": "Este catálogo é injetado no contexto do LLM para guiar o planejamento de consultas. Mantenha descrições objetivas e orientadas ao domínio logístico."
+  },
+  "sources": {
+    "sql": {
+      "_doc": "Preenchido automaticamente pelo extrator SQL. Revise as descrições geradas.",
+      "connection": {
+        "dialect": "mysql",
+        "host": "localhost",
+        "port": 3306,
+        "database": "agentic_logistics_mask",
+        "charset": "utf8mb4"
+      },
+      "tables": {
+        "materiais": {
+          "description": "[AUTO+MANUAL] Descreva o que esta tabela representa no negócio logístico",
+          "business_role": "[MANUAL] Ex: O que esta tabela representa operacionalmente?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta tabela?",
+          "row_count": 46487,
+          "column_count": 37,
+          "columns": {
+            "CODIGO": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": true,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 46487,
+              "description": "[MANUAL] Descreva o significado de 'CODIGO' no contexto logístico"
+            },
+            "CODIGO_UNIDADE": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 477,
+              "description": "[MANUAL] Descreva o significado de 'CODIGO_UNIDADE' no contexto logístico"
+            },
+            "CODIGO_CATALOGO": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 922,
+              "description": "[MANUAL] Descreva o significado de 'CODIGO_CATALOGO' no contexto logístico"
+            },
+            "SN": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 39253,
+              "description": "[MANUAL] Descreva o significado de 'SN' no contexto logístico"
+            },
+            "SITUACAOPARTIM": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4,
+              "description": "[MANUAL] Descreva o significado de 'SITUACAOPARTIM' no contexto logístico"
+            },
+            "MOTIVOPATRIMONIAL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14,
+              "description": "[MANUAL] Descreva o significado de 'MOTIVOPATRIMONIAL' no contexto logístico"
+            },
+            "SITUACAOFISIC": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'SITUACAOFISIC' no contexto logístico"
+            },
+            "MOTIVOINDISP": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 33,
+              "description": "[MANUAL] Descreva o significado de 'MOTIVOINDISP' no contexto logístico"
+            },
+            "HOMOLOGAR": {
+              "type": "VARCHAR(30) COLLATE \"utf8mb3_general_ci\"",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'HOMOLOGAR' no contexto logístico"
+            },
+            "ACAUTELADO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'ACAUTELADO' no contexto logístico"
+            },
+            "MOTIVOCAUTELADO": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1,
+              "description": "[MANUAL] Descreva o significado de 'MOTIVOCAUTELADO' no contexto logístico"
+            },
+            "UNIDADE_CAUTELADO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 133,
+              "description": "[MANUAL] Descreva o significado de 'UNIDADE_CAUTELADO' no contexto logístico"
+            },
+            "OBS": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4137,
+              "description": "[MANUAL] Descreva o significado de 'OBS' no contexto logístico"
+            },
+            "STATUSDESCARGA": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1,
+              "description": "[MANUAL] Descreva o significado de 'STATUSDESCARGA' no contexto logístico"
+            },
+            "DOCREFERENCIA": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1,
+              "description": "[MANUAL] Descreva o significado de 'DOCREFERENCIA' no contexto logístico"
+            },
+            "DATADESCARGA": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1,
+              "description": "[MANUAL] Descreva o significado de 'DATADESCARGA' no contexto logístico"
+            },
+            "DATAINCLUSAOCARGA": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1181,
+              "description": "[MANUAL] Descreva o significado de 'DATAINCLUSAOCARGA' no contexto logístico"
+            },
+            "CONFERIDO": {
+              "type": "VARCHAR(30)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'CONFERIDO' no contexto logístico"
+            },
+            "CONFERIDOEM": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 284,
+              "description": "[MANUAL] Descreva o significado de 'CONFERIDOEM' no contexto logístico"
+            },
+            "DEPENDENCIA": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11,
+              "description": "[MANUAL] Descreva o significado de 'DEPENDENCIA' no contexto logístico"
+            },
+            "PT": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8,
+              "description": "[MANUAL] Descreva o significado de 'PT' no contexto logístico"
+            },
+            "TEAM": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7,
+              "description": "[MANUAL] Descreva o significado de 'TEAM' no contexto logístico"
+            },
+            "ESTADOMATERIAL": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11,
+              "description": "[MANUAL] Descreva o significado de 'ESTADOMATERIAL' no contexto logístico"
+            },
+            "PARECER": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'PARECER' no contexto logístico"
+            },
+            "DESTINOMATERIAL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4,
+              "description": "[MANUAL] Descreva o significado de 'DESTINOMATERIAL' no contexto logístico"
+            },
+            "BOLETIMREGIONAL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7,
+              "description": "[MANUAL] Descreva o significado de 'BOLETIMREGIONAL' no contexto logístico"
+            },
+            "EXCLUIRMATERIAL": {
+              "type": "VARCHAR(10)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'EXCLUIRMATERIAL' no contexto logístico"
+            },
+            "JUSTIFICMATERIAL": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 644,
+              "description": "[MANUAL] Descreva o significado de 'JUSTIFICMATERIAL' no contexto logístico"
+            },
+            "AUTORIZADO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5,
+              "description": "[MANUAL] Descreva o significado de 'AUTORIZADO' no contexto logístico"
+            },
+            "DATAAUTORIZADO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5,
+              "description": "[MANUAL] Descreva o significado de 'DATAAUTORIZADO' no contexto logístico"
+            },
+            "HOMOLOGADO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1,
+              "description": "[MANUAL] Descreva o significado de 'HOMOLOGADO' no contexto logístico"
+            },
+            "ULTIMAATUALIZACAO": {
+              "type": "DATETIME",
+              "nullable": true,
+              "is_pk": false,
+              "default": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
+              "null_rate": 0.0,
+              "cardinality": 34695,
+              "description": "[MANUAL] Descreva o significado de 'ULTIMAATUALIZACAO' no contexto logístico"
+            },
+            "MOTIVOEXCLUIR": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1,
+              "description": "[MANUAL] Descreva o significado de 'MOTIVOEXCLUIR' no contexto logístico"
+            },
+            "motivoreprovacao": {
+              "type": "LONGTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1,
+              "description": "[MANUAL] Descreva o significado de 'motivoreprovacao' no contexto logístico"
+            },
+            "nec_mnt": {
+              "type": "VARCHAR(3)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'nec_mnt' no contexto logístico"
+            },
+            "prioridade": {
+              "type": "VARCHAR(3)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'prioridade' no contexto logístico"
+            },
+            "usuario_decisao_id": {
+              "type": "VARCHAR(11)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 1,
+              "description": "[MANUAL] Descreva o significado de 'usuario_decisao_id' no contexto logístico"
+            }
+          },
+          "foreign_keys": [
+            {
+              "columns": [
+                "CODIGO_CATALOGO"
+              ],
+              "references_table": "catalogo",
+              "references_columns": [
+                "IDEQP"
+              ]
+            },
+            {
+              "columns": [
+                "CODIGO_UNIDADE"
+              ],
+              "references_table": "unidades",
+              "references_columns": [
+                "CODIGO"
+              ]
+            }
+          ],
+          "sample_rows": [
+            {
+              "CODIGO": 67786,
+              "CODIGO_UNIDADE": 203,
+              "CODIGO_CATALOGO": 1026,
+              "SN": "SN00001",
+              "SITUACAOPARTIM": "Em Carga",
+              "MOTIVOPATRIMONIAL": "",
+              "SITUACAOFISIC": "Indisponível",
+              "MOTIVOINDISP": "Bateria não segura carga",
+              "HOMOLOGAR": "",
+              "ACAUTELADO": "",
+              "MOTIVOCAUTELADO": "",
+              "UNIDADE_CAUTELADO": "",
+              "OBS": "TXT_D5F1531D",
+              "STATUSDESCARGA": "",
+              "DOCREFERENCIA": "",
+              "DATADESCARGA": "",
+              "DATAINCLUSAOCARGA": "2014-04-28",
+              "CONFERIDO": "Y",
+              "CONFERIDOEM": "2025-05-07",
+              "DEPENDENCIA": "1",
+              "PT": "",
+              "TEAM": "",
+              "ESTADOMATERIAL": "",
+              "PARECER": "",
+              "DESTINOMATERIAL": "",
+              "BOLETIMREGIONAL": "",
+              "EXCLUIRMATERIAL": "",
+              "JUSTIFICMATERIAL": "",
+              "AUTORIZADO": "0",
+              "DATAAUTORIZADO": "",
+              "HOMOLOGADO": "",
+              "ULTIMAATUALIZACAO": 1682677758000,
+              "MOTIVOEXCLUIR": "",
+              "motivoreprovacao": "",
+              "nec_mnt": "NAO",
+              "prioridade": "NAO",
+              "usuario_decisao_id": "0"
+            },
+            {
+              "CODIGO": 67787,
+              "CODIGO_UNIDADE": 203,
+              "CODIGO_CATALOGO": 1026,
+              "SN": "SN00002",
+              "SITUACAOPARTIM": "Em Carga",
+              "MOTIVOPATRIMONIAL": "",
+              "SITUACAOFISIC": "Indisponível",
+              "MOTIVOINDISP": "Bateria não segura carga",
+              "HOMOLOGAR": "",
+              "ACAUTELADO": "",
+              "MOTIVOCAUTELADO": "",
+              "UNIDADE_CAUTELADO": "",
+              "OBS": "TXT_D5F1531D",
+              "STATUSDESCARGA": "",
+              "DOCREFERENCIA": "",
+              "DATADESCARGA": "",
+              "DATAINCLUSAOCARGA": "2014-04-28",
+              "CONFERIDO": "Y",
+              "CONFERIDOEM": "2025-05-07",
+              "DEPENDENCIA": "1",
+              "PT": "",
+              "TEAM": "",
+              "ESTADOMATERIAL": "",
+              "PARECER": "",
+              "DESTINOMATERIAL": "",
+              "BOLETIMREGIONAL": "",
+              "EXCLUIRMATERIAL": "",
+              "JUSTIFICMATERIAL": "",
+              "AUTORIZADO": "0",
+              "DATAAUTORIZADO": "",
+              "HOMOLOGADO": "",
+              "ULTIMAATUALIZACAO": 1682677638000,
+              "MOTIVOEXCLUIR": "",
+              "motivoreprovacao": "",
+              "nec_mnt": "NAO",
+              "prioridade": "NAO",
+              "usuario_decisao_id": "0"
+            },
+            {
+              "CODIGO": 67788,
+              "CODIGO_UNIDADE": 203,
+              "CODIGO_CATALOGO": 1026,
+              "SN": "SN00003",
+              "SITUACAOPARTIM": "Em Carga",
+              "MOTIVOPATRIMONIAL": "",
+              "SITUACAOFISIC": "Indisponível",
+              "MOTIVOINDISP": "Bateria não segura carga",
+              "HOMOLOGAR": "",
+              "ACAUTELADO": "",
+              "MOTIVOCAUTELADO": "",
+              "UNIDADE_CAUTELADO": "",
+              "OBS": "TXT_D5F1531D",
+              "STATUSDESCARGA": "",
+              "DOCREFERENCIA": "",
+              "DATADESCARGA": "",
+              "DATAINCLUSAOCARGA": "2014-04-28",
+              "CONFERIDO": "Y",
+              "CONFERIDOEM": "2025-05-07",
+              "DEPENDENCIA": "1",
+              "PT": "",
+              "TEAM": "",
+              "ESTADOMATERIAL": "",
+              "PARECER": "",
+              "DESTINOMATERIAL": "",
+              "BOLETIMREGIONAL": "",
+              "EXCLUIRMATERIAL": "",
+              "JUSTIFICMATERIAL": "",
+              "AUTORIZADO": "0",
+              "DATAAUTORIZADO": "",
+              "HOMOLOGADO": "",
+              "ULTIMAATUALIZACAO": 1682677887000,
+              "MOTIVOEXCLUIR": "",
+              "motivoreprovacao": "",
+              "nec_mnt": "NAO",
+              "prioridade": "NAO",
+              "usuario_decisao_id": "0"
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "CODIGO": 0.0,
+              "CODIGO_UNIDADE": 0.0,
+              "CODIGO_CATALOGO": 0.0,
+              "SN": 0.0,
+              "SITUACAOPARTIM": 0.0,
+              "MOTIVOPATRIMONIAL": 0.0,
+              "SITUACAOFISIC": 0.0,
+              "MOTIVOINDISP": 0.0,
+              "HOMOLOGAR": 0.0,
+              "ACAUTELADO": 0.0,
+              "MOTIVOCAUTELADO": 0.0,
+              "UNIDADE_CAUTELADO": 0.0,
+              "OBS": 0.0,
+              "STATUSDESCARGA": 0.0,
+              "DOCREFERENCIA": 0.0,
+              "DATADESCARGA": 0.0,
+              "DATAINCLUSAOCARGA": 0.0,
+              "CONFERIDO": 0.0,
+              "CONFERIDOEM": 0.0,
+              "DEPENDENCIA": 0.0,
+              "PT": 0.0,
+              "TEAM": 0.0,
+              "ESTADOMATERIAL": 0.0,
+              "PARECER": 0.0,
+              "DESTINOMATERIAL": 0.0,
+              "BOLETIMREGIONAL": 0.0,
+              "EXCLUIRMATERIAL": 0.0,
+              "JUSTIFICMATERIAL": 0.0,
+              "AUTORIZADO": 0.0,
+              "DATAAUTORIZADO": 0.0,
+              "HOMOLOGADO": 0.0,
+              "ULTIMAATUALIZACAO": 0.0,
+              "MOTIVOEXCLUIR": 0.0,
+              "motivoreprovacao": 0.0,
+              "nec_mnt": 0.0,
+              "prioridade": 0.0,
+              "usuario_decisao_id": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:49.710072Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "unidades": {
+          "description": "[AUTO+MANUAL]",
+          "business_role": "[MANUAL] Ex: O que esta tabela representa operacionalmente?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta tabela?",
+          "row_count": 725,
+          "column_count": 19,
+          "columns": {
+            "CODIGO": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": true,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 725,
+              "description": "[MANUAL] Descreva o significado de 'CODIGO' no contexto logístico"
+            },
+            "CODLOC": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 705,
+              "description": "[MANUAL] Descreva o significado de 'CODLOC' no contexto logístico"
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 724,
+              "description": "[MANUAL] Descreva o significado de 'SIGLA' no contexto logístico"
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14,
+              "description": "[MANUAL] Descreva o significado de 'REGIAO' no contexto logístico"
+            },
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 17,
+              "description": "[MANUAL] Descreva o significado de 'AREA' no contexto logístico"
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11,
+              "description": "[MANUAL] Descreva o significado de 'DIVISAO' no contexto logístico"
+            },
+            "CIDADEESTADO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 169,
+              "description": "[MANUAL] Descreva o significado de 'CIDADEESTADO' no contexto logístico"
+            },
+            "CNPJ": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 401,
+              "description": "[MANUAL] Descreva o significado de 'CNPJ' no contexto logístico"
+            },
+            "Tipo": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 33,
+              "description": "[MANUAL] Descreva o significado de 'Tipo' no contexto logístico"
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 42,
+              "description": "[MANUAL] Descreva o significado de 'UNIDADE_SUPERIOR' no contexto logístico"
+            },
+            "ENDERECO": {
+              "type": "VARCHAR(150)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7,
+              "description": "[MANUAL] Descreva o significado de 'ENDERECO' no contexto logístico"
+            },
+            "CEP": {
+              "type": "VARCHAR(15)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7,
+              "description": "[MANUAL] Descreva o significado de 'CEP' no contexto logístico"
+            },
+            "NIVEL": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5,
+              "description": "[MANUAL] Descreva o significado de 'NIVEL' no contexto logístico"
+            },
+            "ID": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 32,
+              "description": "[MANUAL] Descreva o significado de 'ID' no contexto logístico"
+            },
+            "CODREGRA": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 40,
+              "description": "[MANUAL] Descreva o significado de 'CODREGRA' no contexto logístico"
+            },
+            "CIDADE": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 163,
+              "description": "[MANUAL] Descreva o significado de 'CIDADE' no contexto logístico"
+            },
+            "ESTADO": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 28,
+              "description": "[MANUAL] Descreva o significado de 'ESTADO' no contexto logístico"
+            },
+            "LATITUDE": {
+              "type": "FLOAT",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 565,
+              "description": "[MANUAL] Descreva o significado de 'LATITUDE' no contexto logístico"
+            },
+            "LONGITUDE": {
+              "type": "FLOAT",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 588,
+              "description": "[MANUAL] Descreva o significado de 'LONGITUDE' no contexto logístico"
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "CODIGO": 2,
+              "CODLOC": "39875",
+              "SIGLA": "SIG001",
+              "REGIAO": "REG001",
+              "AREA": "AREA001",
+              "DIVISAO": "DIV001",
+              "CIDADEESTADO": "Rio de Janeiro/RJ",
+              "CNPJ": "00.394.452/0270-52",
+              "Tipo": "ODS",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "ENDERECO": "",
+              "CEP": "",
+              "NIVEL": 1,
+              "ID": 99,
+              "CODREGRA": 102,
+              "CIDADE": "Rio de Janeiro",
+              "ESTADO": "RJ",
+              "LATITUDE": -23.22,
+              "LONGITUDE": -45.35
+            },
+            {
+              "CODIGO": 3,
+              "CODLOC": "45732",
+              "SIGLA": "SIG002",
+              "REGIAO": "REG001",
+              "AREA": "AREA001",
+              "DIVISAO": "DIV001",
+              "CIDADEESTADO": "Rio de Janeiro/RJ",
+              "CNPJ": "",
+              "Tipo": "Administrativa",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "ENDERECO": "",
+              "CEP": "",
+              "NIVEL": 1,
+              "ID": 99,
+              "CODREGRA": 102,
+              "CIDADE": "Rio de Janeiro",
+              "ESTADO": "RJ",
+              "LATITUDE": -21.82,
+              "LONGITUDE": -43.93
+            },
+            {
+              "CODIGO": 4,
+              "CODLOC": "45740",
+              "SIGLA": "SIG003",
+              "REGIAO": "REG001",
+              "AREA": "AREA001",
+              "DIVISAO": "DIV001",
+              "CIDADEESTADO": "Rio de Janeiro/RJ",
+              "CNPJ": "",
+              "Tipo": "Administrativa",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "ENDERECO": "",
+              "CEP": "",
+              "NIVEL": 1,
+              "ID": 99,
+              "CODREGRA": 102,
+              "CIDADE": "Rio de Janeiro",
+              "ESTADO": "RJ",
+              "LATITUDE": -22.39,
+              "LONGITUDE": -42.19
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "CODIGO": 0.0,
+              "CODLOC": 0.0,
+              "SIGLA": 0.0,
+              "REGIAO": 0.0,
+              "AREA": 0.0,
+              "DIVISAO": 0.0,
+              "CIDADEESTADO": 0.0,
+              "CNPJ": 0.0,
+              "Tipo": 0.0,
+              "UNIDADE_SUPERIOR": 0.0,
+              "ENDERECO": 0.0,
+              "CEP": 0.0,
+              "NIVEL": 0.0,
+              "ID": 0.0,
+              "CODREGRA": 0.0,
+              "CIDADE": 0.0,
+              "ESTADO": 0.0,
+              "LATITUDE": 0.0,
+              "LONGITUDE": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:49.738193Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "catalogo": {
+          "description": "[AUTO+MANUAL]",
+          "business_role": "[MANUAL] Ex: O que esta tabela representa operacionalmente?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta tabela?",
+          "row_count": 8606,
+          "column_count": 12,
+          "columns": {
+            "IDEQP": {
+              "type": "INTEGER",
+              "nullable": false,
+              "is_pk": true,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8606,
+              "description": "[MANUAL] Descreva o significado de 'IDEQP' no contexto logístico"
+            },
+            "ID_SISTEMA_IDENTIFICACAO": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8582,
+              "description": "[MANUAL] Descreva o significado de 'ID_SISTEMA_IDENTIFICACAO' no contexto logístico"
+            },
+            "NUMERO_DE_ESTOQUE": {
+              "type": "VARCHAR(20) COLLATE \"utf8mb3_general_ci\"",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7301,
+              "description": "[MANUAL] Descreva o significado de 'NUMERO_DE_ESTOQUE' no contexto logístico"
+            },
+            "NOME": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 713,
+              "description": "[MANUAL] Descreva o significado de 'NOME' no contexto logístico"
+            },
+            "TIPO": {
+              "type": "VARCHAR(12)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'TIPO' no contexto logístico"
+            },
+            "MODELO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7049,
+              "description": "[MANUAL] Descreva o significado de 'MODELO' no contexto logístico"
+            },
+            "FABRICANTE": {
+              "type": "VARCHAR(200)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 439,
+              "description": "[MANUAL] Descreva o significado de 'FABRICANTE' no contexto logístico"
+            },
+            "RADIO": {
+              "type": "VARCHAR(3)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'RADIO' no contexto logístico"
+            },
+            "PN": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 6967,
+              "description": "[MANUAL] Descreva o significado de 'PN' no contexto logístico"
+            },
+            "SUBSISTEMA": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5,
+              "description": "[MANUAL] Descreva o significado de 'SUBSISTEMA' no contexto logístico"
+            },
+            "GRUPO": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 33,
+              "description": "[MANUAL] Descreva o significado de 'GRUPO' no contexto logístico"
+            },
+            "TIPOEQP": {
+              "type": "VARCHAR(100)",
+              "nullable": false,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 39,
+              "description": "[MANUAL] Descreva o significado de 'TIPOEQP' no contexto logístico"
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "IDEQP": 1,
+              "ID_SISTEMA_IDENTIFICACAO": 10045,
+              "NUMERO_DE_ESTOQUE": "EST00001",
+              "NOME": "EQP001",
+              "TIPO": "COMUNICAÇÕES",
+              "MODELO": "MDL0001",
+              "FABRICANTE": "FAB001",
+              "RADIO": "Sim",
+              "PN": "PN00001",
+              "SUBSISTEMA": "SUB01",
+              "GRUPO": "GRP01",
+              "TIPOEQP": "TEQ001"
+            },
+            {
+              "IDEQP": 2,
+              "ID_SISTEMA_IDENTIFICACAO": 10064,
+              "NUMERO_DE_ESTOQUE": "EST00002",
+              "NOME": "EQP002",
+              "TIPO": "COMUNICAÇÕES",
+              "MODELO": "MDL0002",
+              "FABRICANTE": "FAB001",
+              "RADIO": "Não",
+              "PN": "PN00002",
+              "SUBSISTEMA": "SUB02",
+              "GRUPO": "GRP02",
+              "TIPOEQP": "TEQ002"
+            },
+            {
+              "IDEQP": 3,
+              "ID_SISTEMA_IDENTIFICACAO": 10065,
+              "NUMERO_DE_ESTOQUE": "EST00003",
+              "NOME": "EQP003",
+              "TIPO": "COMUNICAÇÕES",
+              "MODELO": "MDL0003",
+              "FABRICANTE": "FAB002",
+              "RADIO": "Sim",
+              "PN": "PN00003",
+              "SUBSISTEMA": "",
+              "GRUPO": "",
+              "TIPOEQP": ""
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "IDEQP": 0.0,
+              "ID_SISTEMA_IDENTIFICACAO": 0.0,
+              "NUMERO_DE_ESTOQUE": 0.0,
+              "NOME": 0.0,
+              "TIPO": 0.0,
+              "MODELO": 0.0,
+              "FABRICANTE": 0.0,
+              "RADIO": 0.0,
+              "PN": 0.0,
+              "SUBSISTEMA": 0.0,
+              "GRUPO": 0.0,
+              "TIPOEQP": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:49.814805Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "regra": {
+          "description": "[MANUAL] Descreva o papel da tabela 'regra' no negócio logístico",
+          "business_role": "[MANUAL] Ex: O que esta tabela representa operacionalmente?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta tabela?",
+          "row_count": 102,
+          "column_count": 41,
+          "columns": {
+            "CODIGO": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 102,
+              "description": "[MANUAL] Descreva o significado de 'CODIGO' no contexto logístico"
+            },
+            "ID": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 34,
+              "description": "[MANUAL] Descreva o significado de 'ID' no contexto logístico"
+            },
+            "TIPO_UNIDADE": {
+              "type": "TEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 34,
+              "description": "[MANUAL] Descreva o significado de 'TIPO_UNIDADE' no contexto logístico"
+            },
+            "NIVEL_COMPLETAMENTO": {
+              "type": "TEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'NIVEL_COMPLETAMENTO' no contexto logístico"
+            },
+            "TEQ024": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 16,
+              "description": "[MANUAL] Descreva o significado de 'TEQ024' no contexto logístico"
+            },
+            "TEQ021": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'TEQ021' no contexto logístico"
+            },
+            "TEQ009": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 40,
+              "description": "[MANUAL] Descreva o significado de 'TEQ009' no contexto logístico"
+            },
+            "TEQ012": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 24,
+              "description": "[MANUAL] Descreva o significado de 'TEQ012' no contexto logístico"
+            },
+            "TEQ045": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5,
+              "description": "[MANUAL] Descreva o significado de 'TEQ045' no contexto logístico"
+            },
+            "TEQ017": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14,
+              "description": "[MANUAL] Descreva o significado de 'TEQ017' no contexto logístico"
+            },
+            "TEQ020": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 9,
+              "description": "[MANUAL] Descreva o significado de 'TEQ020' no contexto logístico"
+            },
+            "TEQ018": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5,
+              "description": "[MANUAL] Descreva o significado de 'TEQ018' no contexto logístico"
+            },
+            "TEQ015": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 10,
+              "description": "[MANUAL] Descreva o significado de 'TEQ015' no contexto logístico"
+            },
+            "TEQ019": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8,
+              "description": "[MANUAL] Descreva o significado de 'TEQ019' no contexto logístico"
+            },
+            "TEQ026": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 10,
+              "description": "[MANUAL] Descreva o significado de 'TEQ026' no contexto logístico"
+            },
+            "TEQ025": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 10,
+              "description": "[MANUAL] Descreva o significado de 'TEQ025' no contexto logístico"
+            },
+            "TEQ016": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'TEQ016' no contexto logístico"
+            },
+            "TEQ011": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 25,
+              "description": "[MANUAL] Descreva o significado de 'TEQ011' no contexto logístico"
+            },
+            "TEQ022": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 13,
+              "description": "[MANUAL] Descreva o significado de 'TEQ022' no contexto logístico"
+            },
+            "TEQ032": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 6,
+              "description": "[MANUAL] Descreva o significado de 'TEQ032' no contexto logístico"
+            },
+            "TEQ034": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7,
+              "description": "[MANUAL] Descreva o significado de 'TEQ034' no contexto logístico"
+            },
+            "TEQ046": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 18,
+              "description": "[MANUAL] Descreva o significado de 'TEQ046' no contexto logístico"
+            },
+            "TEQ003": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5,
+              "description": "[MANUAL] Descreva o significado de 'TEQ003' no contexto logístico"
+            },
+            "TEQ035": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 21,
+              "description": "[MANUAL] Descreva o significado de 'TEQ035' no contexto logístico"
+            },
+            "TEQ036": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'TEQ036' no contexto logístico"
+            },
+            "TEQ047": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'TEQ047' no contexto logístico"
+            },
+            "TEQ027": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4,
+              "description": "[MANUAL] Descreva o significado de 'TEQ027' no contexto logístico"
+            },
+            "TEQ006": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 36,
+              "description": "[MANUAL] Descreva o significado de 'TEQ006' no contexto logístico"
+            },
+            "TEQ028": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 9,
+              "description": "[MANUAL] Descreva o significado de 'TEQ028' no contexto logístico"
+            },
+            "TEQ013": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 8,
+              "description": "[MANUAL] Descreva o significado de 'TEQ013' no contexto logístico"
+            },
+            "TEQ031": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 6,
+              "description": "[MANUAL] Descreva o significado de 'TEQ031' no contexto logístico"
+            },
+            "TEQ048": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'TEQ048' no contexto logístico"
+            },
+            "TEQ049": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'TEQ049' no contexto logístico"
+            },
+            "TEQ050": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'TEQ050' no contexto logístico"
+            },
+            "TEQ051": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 20,
+              "description": "[MANUAL] Descreva o significado de 'TEQ051' no contexto logístico"
+            },
+            "TEQ052": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 9,
+              "description": "[MANUAL] Descreva o significado de 'TEQ052' no contexto logístico"
+            },
+            "TEQ053": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'TEQ053' no contexto logístico"
+            },
+            "TEQ054": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4,
+              "description": "[MANUAL] Descreva o significado de 'TEQ054' no contexto logístico"
+            },
+            "TEQ055": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 7,
+              "description": "[MANUAL] Descreva o significado de 'TEQ055' no contexto logístico"
+            },
+            "TEQ056": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'TEQ056' no contexto logístico"
+            },
+            "TEQ057": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5,
+              "description": "[MANUAL] Descreva o significado de 'TEQ057' no contexto logístico"
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "CODIGO": 1,
+              "ID": 1,
+              "TIPO_UNIDADE": "TIPOUNI001",
+              "NIVEL_COMPLETAMENTO": "COMPLETO",
+              "TEQ024": 0,
+              "TEQ021": 0,
+              "TEQ009": 83,
+              "TEQ012": 16,
+              "TEQ045": 0,
+              "TEQ017": 1,
+              "TEQ020": 1,
+              "TEQ018": 0,
+              "TEQ015": 2,
+              "TEQ019": 0,
+              "TEQ026": 0,
+              "TEQ025": 0,
+              "TEQ016": 0,
+              "TEQ011": 50,
+              "TEQ022": 4,
+              "TEQ032": 0,
+              "TEQ034": 1,
+              "TEQ046": 174,
+              "TEQ003": 0,
+              "TEQ035": 87,
+              "TEQ036": 0,
+              "TEQ047": 0,
+              "TEQ027": 0,
+              "TEQ006": 122,
+              "TEQ028": 0,
+              "TEQ013": 0,
+              "TEQ031": 0,
+              "TEQ048": 1,
+              "TEQ049": 0,
+              "TEQ050": 0,
+              "TEQ051": 14,
+              "TEQ052": 1,
+              "TEQ053": 1,
+              "TEQ054": 0,
+              "TEQ055": 0,
+              "TEQ056": 0,
+              "TEQ057": 0
+            },
+            {
+              "CODIGO": 2,
+              "ID": 1,
+              "TIPO_UNIDADE": "TIPOUNI001",
+              "NIVEL_COMPLETAMENTO": "AMPLIADO",
+              "TEQ024": 0,
+              "TEQ021": 0,
+              "TEQ009": 28,
+              "TEQ012": 6,
+              "TEQ045": 0,
+              "TEQ017": 1,
+              "TEQ020": 1,
+              "TEQ018": 0,
+              "TEQ015": 1,
+              "TEQ019": 0,
+              "TEQ026": 0,
+              "TEQ025": 0,
+              "TEQ016": 0,
+              "TEQ011": 30,
+              "TEQ022": 2,
+              "TEQ032": 0,
+              "TEQ034": 1,
+              "TEQ046": 58,
+              "TEQ003": 0,
+              "TEQ035": 29,
+              "TEQ036": 0,
+              "TEQ047": 0,
+              "TEQ027": 0,
+              "TEQ006": 41,
+              "TEQ028": 0,
+              "TEQ013": 0,
+              "TEQ031": 0,
+              "TEQ048": 1,
+              "TEQ049": 0,
+              "TEQ050": 0,
+              "TEQ051": 4,
+              "TEQ052": 1,
+              "TEQ053": 1,
+              "TEQ054": 0,
+              "TEQ055": 0,
+              "TEQ056": 0,
+              "TEQ057": 0
+            },
+            {
+              "CODIGO": 3,
+              "ID": 1,
+              "TIPO_UNIDADE": "TIPOUNI001",
+              "NIVEL_COMPLETAMENTO": "MINIMO",
+              "TEQ024": 0,
+              "TEQ021": 0,
+              "TEQ009": 17,
+              "TEQ012": 2,
+              "TEQ045": 0,
+              "TEQ017": 0,
+              "TEQ020": 0,
+              "TEQ018": 0,
+              "TEQ015": 0,
+              "TEQ019": 0,
+              "TEQ026": 0,
+              "TEQ025": 0,
+              "TEQ016": 0,
+              "TEQ011": 30,
+              "TEQ022": 2,
+              "TEQ032": 0,
+              "TEQ034": 0,
+              "TEQ046": 42,
+              "TEQ003": 0,
+              "TEQ035": 21,
+              "TEQ036": 0,
+              "TEQ047": 0,
+              "TEQ027": 0,
+              "TEQ006": 24,
+              "TEQ028": 0,
+              "TEQ013": 0,
+              "TEQ031": 0,
+              "TEQ048": 0,
+              "TEQ049": 0,
+              "TEQ050": 0,
+              "TEQ051": 2,
+              "TEQ052": 0,
+              "TEQ053": 0,
+              "TEQ054": 0,
+              "TEQ055": 0,
+              "TEQ056": 0,
+              "TEQ057": 0
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "CODIGO": 0.0,
+              "ID": 0.0,
+              "TIPO_UNIDADE": 0.0,
+              "NIVEL_COMPLETAMENTO": 0.0,
+              "TEQ024": 0.0,
+              "TEQ021": 0.0,
+              "TEQ009": 0.0,
+              "TEQ012": 0.0,
+              "TEQ045": 0.0,
+              "TEQ017": 0.0,
+              "TEQ020": 0.0,
+              "TEQ018": 0.0,
+              "TEQ015": 0.0,
+              "TEQ019": 0.0,
+              "TEQ026": 0.0,
+              "TEQ025": 0.0,
+              "TEQ016": 0.0,
+              "TEQ011": 0.0,
+              "TEQ022": 0.0,
+              "TEQ032": 0.0,
+              "TEQ034": 0.0,
+              "TEQ046": 0.0,
+              "TEQ003": 0.0,
+              "TEQ035": 0.0,
+              "TEQ036": 0.0,
+              "TEQ047": 0.0,
+              "TEQ027": 0.0,
+              "TEQ006": 0.0,
+              "TEQ028": 0.0,
+              "TEQ013": 0.0,
+              "TEQ031": 0.0,
+              "TEQ048": 0.0,
+              "TEQ049": 0.0,
+              "TEQ050": 0.0,
+              "TEQ051": 0.0,
+              "TEQ052": 0.0,
+              "TEQ053": 0.0,
+              "TEQ054": 0.0,
+              "TEQ055": 0.0,
+              "TEQ056": 0.0,
+              "TEQ057": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:49.858883Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "vw_comparativo_previsto_existente": {
+          "description": "[MANUAL] Descreva o papel da tabela 'vw_comparativo_previsto_existente' no negócio logístico",
+          "business_role": "[MANUAL] Ex: O que esta tabela representa operacionalmente?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta tabela?",
+          "row_count": 26825,
+          "column_count": 10,
+          "columns": {
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 17,
+              "description": "[MANUAL] Descreva o significado de 'AREA' no contexto logístico"
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14,
+              "description": "[MANUAL] Descreva o significado de 'REGIAO' no contexto logístico"
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11,
+              "description": "[MANUAL] Descreva o significado de 'DIVISAO' no contexto logístico"
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 42,
+              "description": "[MANUAL] Descreva o significado de 'UNIDADE_SUPERIOR' no contexto logístico"
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 724,
+              "description": "[MANUAL] Descreva o significado de 'SIGLA' no contexto logístico"
+            },
+            "NIVEL_COMPLETAMENTO": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'NIVEL_COMPLETAMENTO' no contexto logístico"
+            },
+            "TIPO_EQP": {
+              "type": "VARCHAR(6)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 37,
+              "description": "[MANUAL] Descreva o significado de 'TIPO_EQP' no contexto logístico"
+            },
+            "QNT_PREVISTA": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 57,
+              "description": "[MANUAL] Descreva o significado de 'QNT_PREVISTA' no contexto logístico"
+            },
+            "QNT_EXISTENTE": {
+              "type": "BIGINT",
+              "nullable": true,
+              "is_pk": false,
+              "default": "'0'",
+              "null_rate": 0.0,
+              "cardinality": 127,
+              "description": "[MANUAL] Descreva o significado de 'QNT_EXISTENTE' no contexto logístico"
+            },
+            "DIFERENCA": {
+              "type": "BIGINT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 174,
+              "description": "[MANUAL] Descreva o significado de 'DIFERENCA' no contexto logístico"
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "AREA": "AREA002",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV001",
+              "UNIDADE_SUPERIOR": "UNI002",
+              "SIGLA": "SIG009",
+              "NIVEL_COMPLETAMENTO": "AMPLIADO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0,
+              "QNT_EXISTENTE": 53,
+              "DIFERENCA": 53
+            },
+            {
+              "AREA": "AREA002",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV002",
+              "UNIDADE_SUPERIOR": "UNI005",
+              "SIGLA": "SIG020",
+              "NIVEL_COMPLETAMENTO": "AMPLIADO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 5,
+              "QNT_EXISTENTE": 1,
+              "DIFERENCA": -4
+            },
+            {
+              "AREA": "AREA002",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV002",
+              "UNIDADE_SUPERIOR": "UNI003",
+              "SIGLA": "SIG026",
+              "NIVEL_COMPLETAMENTO": "AMPLIADO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0,
+              "QNT_EXISTENTE": 32,
+              "DIFERENCA": 32
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "AREA": 0.0,
+              "REGIAO": 0.0,
+              "DIVISAO": 0.0,
+              "UNIDADE_SUPERIOR": 0.0,
+              "SIGLA": 0.0,
+              "NIVEL_COMPLETAMENTO": 0.0,
+              "TIPO_EQP": 0.0,
+              "QNT_PREVISTA": 0.0,
+              "QNT_EXISTENTE": 0.0,
+              "DIFERENCA": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:53.253982Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "vw_materiais_catalogo_unidade": {
+          "description": "[MANUAL] Descreva o papel da tabela 'vw_materiais_catalogo_unidade' no negócio logístico",
+          "business_role": "[MANUAL] Ex: O que esta tabela representa operacionalmente?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta tabela?",
+          "row_count": 46487,
+          "column_count": 25,
+          "columns": {
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 12,
+              "description": "[MANUAL] Descreva o significado de 'AREA' no contexto logístico"
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 12,
+              "description": "[MANUAL] Descreva o significado de 'REGIAO' no contexto logístico"
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 6,
+              "description": "[MANUAL] Descreva o significado de 'DIVISAO' no contexto logístico"
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 38,
+              "description": "[MANUAL] Descreva o significado de 'UNIDADE_SUPERIOR' no contexto logístico"
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 477,
+              "description": "[MANUAL] Descreva o significado de 'SIGLA' no contexto logístico"
+            },
+            "IDEQP": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 922,
+              "description": "[MANUAL] Descreva o significado de 'IDEQP' no contexto logístico"
+            },
+            "NOME": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 281,
+              "description": "[MANUAL] Descreva o significado de 'NOME' no contexto logístico"
+            },
+            "MODELO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 859,
+              "description": "[MANUAL] Descreva o significado de 'MODELO' no contexto logístico"
+            },
+            "FABRICANTE": {
+              "type": "VARCHAR(200)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 97,
+              "description": "[MANUAL] Descreva o significado de 'FABRICANTE' no contexto logístico"
+            },
+            "PN": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 839,
+              "description": "[MANUAL] Descreva o significado de 'PN' no contexto logístico"
+            },
+            "SUBSISTEMA": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 5,
+              "description": "[MANUAL] Descreva o significado de 'SUBSISTEMA' no contexto logístico"
+            },
+            "GRUPO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 31,
+              "description": "[MANUAL] Descreva o significado de 'GRUPO' no contexto logístico"
+            },
+            "TIPOEQP": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 38,
+              "description": "[MANUAL] Descreva o significado de 'TIPOEQP' no contexto logístico"
+            },
+            "CODIGO": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": "'0'",
+              "null_rate": 0.0,
+              "cardinality": 46487,
+              "description": "[MANUAL] Descreva o significado de 'CODIGO' no contexto logístico"
+            },
+            "SN": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 39253,
+              "description": "[MANUAL] Descreva o significado de 'SN' no contexto logístico"
+            },
+            "DISPONIBILIDADE": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'DISPONIBILIDADE' no contexto logístico"
+            },
+            "MOTIVO_INDISPONIVEL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 33,
+              "description": "[MANUAL] Descreva o significado de 'MOTIVO_INDISPONIVEL' no contexto logístico"
+            },
+            "SITUACAO_PATRIMONIAL": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 4,
+              "description": "[MANUAL] Descreva o significado de 'SITUACAO_PATRIMONIAL' no contexto logístico"
+            },
+            "MOTIVO_FORA_DE_CARGA": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14,
+              "description": "[MANUAL] Descreva o significado de 'MOTIVO_FORA_DE_CARGA' no contexto logístico"
+            },
+            "CONFERIDO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'CONFERIDO' no contexto logístico"
+            },
+            "DATA_CONFERIDO": {
+              "type": "VARCHAR(30)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 284,
+              "description": "[MANUAL] Descreva o significado de 'DATA_CONFERIDO' no contexto logístico"
+            },
+            "ULTIMAATUALIZACAO": {
+              "type": "DATETIME",
+              "nullable": true,
+              "is_pk": false,
+              "default": "'CURRENT_TIMESTAMP'",
+              "null_rate": 0.0,
+              "cardinality": 34695,
+              "description": "[MANUAL] Descreva o significado de 'ULTIMAATUALIZACAO' no contexto logístico"
+            },
+            "EXCLUIR_MATERIAL": {
+              "type": "VARCHAR(10)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'EXCLUIR_MATERIAL' no contexto logístico"
+            },
+            "NECESSITA_MANUTENCAO": {
+              "type": "VARCHAR(3)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'NECESSITA_MANUTENCAO' no contexto logístico"
+            },
+            "PRIORIDADE_MANUTENCAO": {
+              "type": "VARCHAR(3)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 2,
+              "description": "[MANUAL] Descreva o significado de 'PRIORIDADE_MANUTENCAO' no contexto logístico"
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "AREA": "AREA007",
+              "REGIAO": "REG003",
+              "DIVISAO": "DIV004",
+              "UNIDADE_SUPERIOR": "UNI018",
+              "SIGLA": "SIG200",
+              "IDEQP": 1026,
+              "NOME": "EQP277",
+              "MODELO": "MDL0873",
+              "FABRICANTE": "FAB008",
+              "PN": "PN00827",
+              "SUBSISTEMA": "SUB02",
+              "GRUPO": "GRP08",
+              "TIPOEQP": "TEQ012",
+              "CODIGO": 67786,
+              "SN": "SN00001",
+              "DISPONIBILIDADE": "Indisponível",
+              "MOTIVO_INDISPONIVEL": "Bateria não segura carga",
+              "SITUACAO_PATRIMONIAL": "Em Carga",
+              "MOTIVO_FORA_DE_CARGA": "",
+              "CONFERIDO": "Y",
+              "DATA_CONFERIDO": "2025-05-07",
+              "ULTIMAATUALIZACAO": 1682677758000,
+              "EXCLUIR_MATERIAL": "",
+              "NECESSITA_MANUTENCAO": "NAO",
+              "PRIORIDADE_MANUTENCAO": "NAO"
+            },
+            {
+              "AREA": "AREA007",
+              "REGIAO": "REG003",
+              "DIVISAO": "DIV004",
+              "UNIDADE_SUPERIOR": "UNI018",
+              "SIGLA": "SIG200",
+              "IDEQP": 1026,
+              "NOME": "EQP277",
+              "MODELO": "MDL0873",
+              "FABRICANTE": "FAB008",
+              "PN": "PN00827",
+              "SUBSISTEMA": "SUB02",
+              "GRUPO": "GRP08",
+              "TIPOEQP": "TEQ012",
+              "CODIGO": 67787,
+              "SN": "SN00002",
+              "DISPONIBILIDADE": "Indisponível",
+              "MOTIVO_INDISPONIVEL": "Bateria não segura carga",
+              "SITUACAO_PATRIMONIAL": "Em Carga",
+              "MOTIVO_FORA_DE_CARGA": "",
+              "CONFERIDO": "Y",
+              "DATA_CONFERIDO": "2025-05-07",
+              "ULTIMAATUALIZACAO": 1682677638000,
+              "EXCLUIR_MATERIAL": "",
+              "NECESSITA_MANUTENCAO": "NAO",
+              "PRIORIDADE_MANUTENCAO": "NAO"
+            },
+            {
+              "AREA": "AREA007",
+              "REGIAO": "REG003",
+              "DIVISAO": "DIV004",
+              "UNIDADE_SUPERIOR": "UNI018",
+              "SIGLA": "SIG200",
+              "IDEQP": 1026,
+              "NOME": "EQP277",
+              "MODELO": "MDL0873",
+              "FABRICANTE": "FAB008",
+              "PN": "PN00827",
+              "SUBSISTEMA": "SUB02",
+              "GRUPO": "GRP08",
+              "TIPOEQP": "TEQ012",
+              "CODIGO": 67788,
+              "SN": "SN00003",
+              "DISPONIBILIDADE": "Indisponível",
+              "MOTIVO_INDISPONIVEL": "Bateria não segura carga",
+              "SITUACAO_PATRIMONIAL": "Em Carga",
+              "MOTIVO_FORA_DE_CARGA": "",
+              "CONFERIDO": "Y",
+              "DATA_CONFERIDO": "2025-05-07",
+              "ULTIMAATUALIZACAO": 1682677887000,
+              "EXCLUIR_MATERIAL": "",
+              "NECESSITA_MANUTENCAO": "NAO",
+              "PRIORIDADE_MANUTENCAO": "NAO"
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "AREA": 0.0,
+              "REGIAO": 0.0,
+              "DIVISAO": 0.0,
+              "UNIDADE_SUPERIOR": 0.0,
+              "SIGLA": 0.0,
+              "IDEQP": 0.0,
+              "NOME": 0.0,
+              "MODELO": 0.0,
+              "FABRICANTE": 0.0,
+              "PN": 0.0,
+              "SUBSISTEMA": 0.0,
+              "GRUPO": 0.0,
+              "TIPOEQP": 0.0,
+              "CODIGO": 0.0,
+              "SN": 0.0,
+              "DISPONIBILIDADE": 0.0,
+              "MOTIVO_INDISPONIVEL": 0.0,
+              "SITUACAO_PATRIMONIAL": 0.0,
+              "MOTIVO_FORA_DE_CARGA": 0.0,
+              "CONFERIDO": 0.0,
+              "DATA_CONFERIDO": 0.0,
+              "ULTIMAATUALIZACAO": 0.0,
+              "EXCLUIR_MATERIAL": 0.0,
+              "NECESSITA_MANUTENCAO": 0.0,
+              "PRIORIDADE_MANUTENCAO": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:54.721804Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "vw_tipoeqp_previsto_unidades": {
+          "description": "[MANUAL] Descreva o papel da tabela 'vw_tipoeqp_previsto_unidades' no negócio logístico",
+          "business_role": "[MANUAL] Ex: O que esta tabela representa operacionalmente?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta tabela?",
+          "row_count": 26825,
+          "column_count": 8,
+          "columns": {
+            "AREA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 17,
+              "description": "[MANUAL] Descreva o significado de 'AREA' no contexto logístico"
+            },
+            "REGIAO": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 14,
+              "description": "[MANUAL] Descreva o significado de 'REGIAO' no contexto logístico"
+            },
+            "DIVISAO": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 11,
+              "description": "[MANUAL] Descreva o significado de 'DIVISAO' no contexto logístico"
+            },
+            "UNIDADE_SUPERIOR": {
+              "type": "VARCHAR(100)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 42,
+              "description": "[MANUAL] Descreva o significado de 'UNIDADE_SUPERIOR' no contexto logístico"
+            },
+            "SIGLA": {
+              "type": "VARCHAR(255)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 724,
+              "description": "[MANUAL] Descreva o significado de 'SIGLA' no contexto logístico"
+            },
+            "NIVEL_COMPLETAMENTO": {
+              "type": "MEDIUMTEXT",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 3,
+              "description": "[MANUAL] Descreva o significado de 'NIVEL_COMPLETAMENTO' no contexto logístico"
+            },
+            "TIPO_EQP": {
+              "type": "VARCHAR(6)",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 37,
+              "description": "[MANUAL] Descreva o significado de 'TIPO_EQP' no contexto logístico"
+            },
+            "QNT_PREVISTA": {
+              "type": "INTEGER",
+              "nullable": true,
+              "is_pk": false,
+              "default": null,
+              "null_rate": 0.0,
+              "cardinality": 57,
+              "description": "[MANUAL] Descreva o significado de 'QNT_PREVISTA' no contexto logístico"
+            }
+          },
+          "foreign_keys": [],
+          "sample_rows": [
+            {
+              "AREA": "AREA001",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV001",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "SIGLA": "SIG001",
+              "NIVEL_COMPLETAMENTO": "MINIMO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0
+            },
+            {
+              "AREA": "AREA001",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV001",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "SIGLA": "SIG002",
+              "NIVEL_COMPLETAMENTO": "MINIMO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0
+            },
+            {
+              "AREA": "AREA001",
+              "REGIAO": "REG001",
+              "DIVISAO": "DIV001",
+              "UNIDADE_SUPERIOR": "UNI001",
+              "SIGLA": "SIG003",
+              "NIVEL_COMPLETAMENTO": "MINIMO",
+              "TIPO_EQP": "TEQ024",
+              "QNT_PREVISTA": 0
+            }
+          ],
+          "data_quality": {
+            "null_rates": {
+              "AREA": 0.0,
+              "REGIAO": 0.0,
+              "DIVISAO": 0.0,
+              "UNIDADE_SUPERIOR": 0.0,
+              "SIGLA": 0.0,
+              "NIVEL_COMPLETAMENTO": 0.0,
+              "TIPO_EQP": 0.0,
+              "QNT_PREVISTA": 0.0
+            },
+            "last_analyzed": "2026-08-14T13:42:55.170229Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        }
+      }
+    },
+    "api": {
+      "_doc": "Preenchimento MANUAL. Descreva cada endpoint com precisão — o LLM usa isso para decidir quando chamar a API vs SQL.",
+      "base_url": "http://localhost:8000",
+      "auth": {
+        "type": "none",
+        "_options": [
+          "none",
+          "bearer_token",
+          "api_key",
+          "basic"
+        ]
+      },
+      "endpoints": {
+        "distribuicao_list": {
+          "path": "/api/distribuicao/deposito/",
+          "method": "GET",
+          "description": "[MANUAL] Descreva em linguagem de negócio o que este endpoint retorna",
+          "business_role": "[MANUAL] Ex: Fonte primária para rastreamento de distribuições",
+          "when_to_use": "[MANUAL] Ex: Quando a pergunta envolver distribuição ou movimentação",
+          "when_NOT_to_use": "[MANUAL] Ex: Não usar para dados de estoque (usar SQL)",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100,
+                "description": "Número máximo de registros por página"
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0,
+                "description": "Índice inicial para paginação"
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false,
+                "description": "[MANUAL] Ex: Filtra por status da distribuição"
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "paginated_object_with_metadata",
+            "total_count_available": 1179,
+            "structure": {
+              "count": "integer",
+              "next": "url_string",
+              "previous": "null|unknown",
+              "results": "array[object] — 25 item(s) nesta página"
+            },
+            "result_object_fields": {
+              "id": {
+                "type": "integer",
+                "example": 1,
+                "description": "[MANUAL] Descreva o significado de 'id' no contexto logístico"
+              },
+              "funds": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'funds' no contexto logístico"
+              },
+              "doc_recebimento": {
+                "type": "code_identifier",
+                "example": "41/25",
+                "description": "[MANUAL] Descreva o significado de 'doc_recebimento' no contexto logístico"
+              },
+              "invoice": {
+                "type": "code_identifier",
+                "example": "INV035",
+                "description": "[MANUAL] Descreva o significado de 'invoice' no contexto logístico"
+              },
+              "contrato": {
+                "type": "code_identifier",
+                "example": "CTR026-24",
+                "description": "[MANUAL] Descreva o significado de 'contrato' no contexto logístico"
+              },
+              "numero_item_contrato": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'numero_item_contrato' no contexto logístico"
+              },
+              "pn": {
+                "type": "code_identifier",
+                "example": "PN01666",
+                "description": "[MANUAL] Descreva o significado de 'pn' no contexto logístico"
+              },
+              "id_sistema_catalogo": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'id_sistema_catalogo' no contexto logístico"
+              },
+              "item": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'item' no contexto logístico"
+              },
+              "qtd": {
+                "type": "code_identifier",
+                "example": "19",
+                "description": "[MANUAL] Descreva o significado de 'qtd' no contexto logístico"
+              },
+              "descricao": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'descricao' no contexto logístico"
+              },
+              "chegada_deposito": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'chegada_deposito' no contexto logístico"
+              },
+              "doc_distribuicao": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'doc_distribuicao' no contexto logístico"
+              },
+              "unidade_destino": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'unidade_destino' no contexto logístico"
+              },
+              "regiao_de_destino": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'regiao_de_destino' no contexto logístico"
+              },
+              "qtd_enviada_unidade": {
+                "type": "integer",
+                "example": 0,
+                "description": "[MANUAL] Descreva o significado de 'qtd_enviada_unidade' no contexto logístico"
+              },
+              "status": {
+                "type": "string",
+                "example": "Nao fornecido e nao planejado",
+                "description": "[MANUAL] Descreva o significado de 'status' no contexto logístico"
+              },
+              "ano": {
+                "type": "integer",
+                "example": 2026,
+                "description": "[MANUAL] Descreva o significado de 'ano' no contexto logístico"
+              },
+              "deposito": {
+                "type": "code_identifier",
+                "example": "SIG090",
+                "description": "[MANUAL] Descreva o significado de 'deposito' no contexto logístico"
+              },
+              "subsistema": {
+                "type": "null|unknown",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'subsistema' no contexto logístico"
+              },
+              "tipoeqp": {
+                "type": "null|unknown",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'tipoeqp' no contexto logístico"
+              }
+            },
+            "example_response": {
+              "count": 1179,
+              "next": "http://localhost:8000/api/distribuicao/deposito/?limit=1&page=2",
+              "previous": null,
+              "results": [
+                {
+                  "id": 1,
+                  "funds": "",
+                  "doc_recebimento": "41/25",
+                  "invoice": "INV035",
+                  "contrato": "CTR026-24",
+                  "numero_item_contrato": "",
+                  "pn": "PN01666",
+                  "id_sistema_catalogo": "",
+                  "item": "",
+                  "qtd": "19",
+                  "descricao": "",
+                  "chegada_deposito": "",
+                  "doc_distribuicao": "",
+                  "unidade_destino": "",
+                  "regiao_de_destino": "",
+                  "qtd_enviada_unidade": 0,
+                  "status": "Nao fornecido e nao planejado",
+                  "ano": 2026,
+                  "deposito": "SIG090",
+                  "subsistema": null,
+                  "tipoeqp": null
+                }
+              ]
+            },
+            "_probed_at": "2026-08-14T13:42:57.223232Z",
+            "_probe_url": "http://localhost:8000/api/distribuicao/deposito/"
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "manutencao_ap_direto_list": {
+          "path": "/api/manutencao/manutencao-apoio-direto/",
+          "method": "GET",
+          "description": "[MANUAL] Descreva em linguagem de negócio o que este endpoint retorna",
+          "business_role": "[MANUAL] Ex: Fonte primária para rastreamento de distribuições",
+          "when_to_use": "[MANUAL] Ex: Quando a pergunta envolver distribuição ou movimentação",
+          "when_NOT_to_use": "[MANUAL] Ex: Não usar para dados de estoque (usar SQL)",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100,
+                "description": "Número máximo de registros por página"
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0,
+                "description": "Índice inicial para paginação"
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false,
+                "description": "[MANUAL] Ex: Filtra por status da distribuição"
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 985,
+            "result_object_fields": {
+              "CODIGO": {
+                "type": "integer",
+                "example": 1,
+                "description": "[MANUAL] Descreva o significado de 'CODIGO' no contexto logístico"
+              },
+              "UNIDADE": {
+                "type": "code_identifier",
+                "example": "SIG024",
+                "description": "[MANUAL] Descreva o significado de 'UNIDADE' no contexto logístico"
+              },
+              "REGIAO": {
+                "type": "code_identifier",
+                "example": "REG001",
+                "description": "[MANUAL] Descreva o significado de 'REGIAO' no contexto logístico"
+              },
+              "CIDADE": {
+                "type": "string",
+                "example": "CID_001",
+                "description": "[MANUAL] Descreva o significado de 'CIDADE' no contexto logístico"
+              },
+              "ESTADO": {
+                "type": "code_identifier",
+                "example": "RJ",
+                "description": "[MANUAL] Descreva o significado de 'ESTADO' no contexto logístico"
+              },
+              "PN": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'PN' no contexto logístico"
+              },
+              "MATERIAL": {
+                "type": "code_identifier",
+                "example": "EQP648",
+                "description": "[MANUAL] Descreva o significado de 'MATERIAL' no contexto logístico"
+              },
+              "SN": {
+                "type": "code_identifier",
+                "example": "SN16478",
+                "description": "[MANUAL] Descreva o significado de 'SN' no contexto logístico"
+              },
+              "FABRICANTE": {
+                "type": "code_identifier",
+                "example": "FAB008",
+                "description": "[MANUAL] Descreva o significado de 'FABRICANTE' no contexto logístico"
+              },
+              "DIAGNOSTICO": {
+                "type": "string",
+                "example": "NÃO LIGA",
+                "description": "[MANUAL] Descreva o significado de 'DIAGNOSTICO' no contexto logístico"
+              },
+              "SOLUCAO": {
+                "type": "string",
+                "example": "TROCA DA PLACA A5/A11 E TRAVA DA BATERIA",
+                "description": "[MANUAL] Descreva o significado de 'SOLUCAO' no contexto logístico"
+              },
+              "SUPRIMENTO_EMPREGADO": {
+                "type": "string",
+                "example": "1 PLACA A5; 1 PLACA A11 E 1 TRAVA DA BATERIA",
+                "description": "[MANUAL] Descreva o significado de 'SUPRIMENTO_EMPREGADO' no contexto logístico"
+              },
+              "NEC_CONFIGURACAO": {
+                "type": "string",
+                "example": "NÃO",
+                "description": "[MANUAL] Descreva o significado de 'NEC_CONFIGURACAO' no contexto logístico"
+              },
+              "STATUS_FINAL": {
+                "type": "string",
+                "example": "DISPONÍVEL",
+                "description": "[MANUAL] Descreva o significado de 'STATUS_FINAL' no contexto logístico"
+              },
+              "TIPO_MANUTENCAO": {
+                "type": "string",
+                "example": "4º Escalão",
+                "description": "[MANUAL] Descreva o significado de 'TIPO_MANUTENCAO' no contexto logístico"
+              },
+              "NEC_DESCARGA": {
+                "type": "string",
+                "example": "NÃO",
+                "description": "[MANUAL] Descreva o significado de 'NEC_DESCARGA' no contexto logístico"
+              },
+              "OBS": {
+                "type": "string",
+                "example": "NÃO HÁ.",
+                "description": "[MANUAL] Descreva o significado de 'OBS' no contexto logístico"
+              },
+              "IDMATERIAL": {
+                "type": "integer",
+                "example": 25653,
+                "description": "[MANUAL] Descreva o significado de 'IDMATERIAL' no contexto logístico"
+              }
+            },
+            "structure": {
+              "root": "array — lista de 985 objeto(s)"
+            },
+            "example_response": [
+              {
+                "CODIGO": 1,
+                "UNIDADE": "SIG024",
+                "REGIAO": "REG001",
+                "CIDADE": "CID_001",
+                "ESTADO": "RJ",
+                "PN": "",
+                "MATERIAL": "EQP648",
+                "SN": "SN16478",
+                "FABRICANTE": "FAB008",
+                "DIAGNOSTICO": "NÃO LIGA",
+                "SOLUCAO": "TROCA DA PLACA A5/A11 E TRAVA DA BATERIA",
+                "SUPRIMENTO_EMPREGADO": "1 PLACA A5; 1 PLACA A11 E 1 TRAVA DA BATERIA",
+                "NEC_CONFIGURACAO": "NÃO",
+                "STATUS_FINAL": "DISPONÍVEL",
+                "TIPO_MANUTENCAO": "4º Escalão",
+                "NEC_DESCARGA": "NÃO",
+                "OBS": "NÃO HÁ.",
+                "IDMATERIAL": 25653
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.275382Z",
+            "_probe_url": "http://localhost:8000/api/manutencao/manutencao-apoio-direto/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "monitoramento_starlink_list": {
+          "path": "/api/monitoramento/terminal-starlink/",
+          "method": "GET",
+          "description": "[MANUAL] Descreva em linguagem de negócio o que este endpoint retorna",
+          "business_role": "[MANUAL] Ex: Fonte primária para rastreamento de distribuições",
+          "when_to_use": "[MANUAL] Ex: Quando a pergunta envolver distribuição ou movimentação",
+          "when_NOT_to_use": "[MANUAL] Ex: Não usar para dados de estoque (usar SQL)",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100,
+                "description": "Número máximo de registros por página"
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0,
+                "description": "Índice inicial para paginação"
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false,
+                "description": "[MANUAL] Ex: Filtra por status da distribuição"
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 5277,
+            "result_object_fields": {
+              "id": {
+                "type": "integer",
+                "example": 84418,
+                "description": "[MANUAL] Descreva o significado de 'id' no contexto logístico"
+              },
+              "unidade": {
+                "type": "string",
+                "example": "UNI_001",
+                "description": "[MANUAL] Descreva o significado de 'unidade' no contexto logístico"
+              },
+              "cidade": {
+                "type": "string",
+                "example": "CID_002",
+                "description": "[MANUAL] Descreva o significado de 'cidade' no contexto logístico"
+              },
+              "estado": {
+                "type": "code_identifier",
+                "example": "SP",
+                "description": "[MANUAL] Descreva o significado de 'estado' no contexto logístico"
+              },
+              "site_type": {
+                "type": "string",
+                "example": "Enterprise Land Mobility",
+                "description": "[MANUAL] Descreva o significado de 'site_type' no contexto logístico"
+              },
+              "vessel_type": {
+                "type": "null|unknown",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'vessel_type' no contexto logístico"
+              },
+              "imo": {
+                "type": "null|unknown",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'imo' no contexto logístico"
+              },
+              "mmsi": {
+                "type": "null|unknown",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'mmsi' no contexto logístico"
+              },
+              "service_count": {
+                "type": "float",
+                "example": 1.0,
+                "description": "[MANUAL] Descreva o significado de 'service_count' no contexto logístico"
+              },
+              "site_capacity_mb": {
+                "type": "float",
+                "example": 512000.0,
+                "description": "[MANUAL] Descreva o significado de 'site_capacity_mb' no contexto logístico"
+              },
+              "usage_today_mb": {
+                "type": "float",
+                "example": 317.45,
+                "description": "[MANUAL] Descreva o significado de 'usage_today_mb' no contexto logístico"
+              },
+              "mtd_usage_mb": {
+                "type": "float",
+                "example": 662589.0,
+                "description": "[MANUAL] Descreva o significado de 'mtd_usage_mb' no contexto logístico"
+              },
+              "usage_previous_month_mb": {
+                "type": "float",
+                "example": 228168.0,
+                "description": "[MANUAL] Descreva o significado de 'usage_previous_month_mb' no contexto logístico"
+              },
+              "latitude": {
+                "type": "float",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'latitude' no contexto logístico"
+              },
+              "longitude": {
+                "type": "float",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'longitude' no contexto logístico"
+              },
+              "status": {
+                "type": "string",
+                "example": "Data is Delayed",
+                "description": "[MANUAL] Descreva o significado de 'status' no contexto logístico"
+              },
+              "import_timestamp": {
+                "type": "date_string (ISO 8601)",
+                "example": "2025-10-24T05:00:50Z",
+                "description": "[MANUAL] Descreva o significado de 'import_timestamp' no contexto logístico"
+              }
+            },
+            "structure": {
+              "root": "array — lista de 5277 objeto(s)"
+            },
+            "example_response": [
+              {
+                "id": 84418,
+                "unidade": "UNI_001",
+                "cidade": "CID_002",
+                "estado": "SP",
+                "site_type": "Enterprise Land Mobility",
+                "vessel_type": null,
+                "imo": null,
+                "mmsi": null,
+                "service_count": 1.0,
+                "site_capacity_mb": 512000.0,
+                "usage_today_mb": 317.45,
+                "mtd_usage_mb": 662589.0,
+                "usage_previous_month_mb": 228168.0,
+                "latitude": null,
+                "longitude": null,
+                "status": "Data is Delayed",
+                "import_timestamp": "2025-10-24T05:00:50Z"
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.518147Z",
+            "_probe_url": "http://localhost:8000/api/monitoramento/terminal-starlink/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "monitoramento_sites_sistema_radio_list": {
+          "path": "/api/monitoramento/sites-sistema-radio/",
+          "method": "GET",
+          "description": "[MANUAL] Descreva em linguagem de negócio o que este endpoint retorna",
+          "business_role": "[MANUAL] Ex: Fonte primária para rastreamento de distribuições",
+          "when_to_use": "[MANUAL] Ex: Quando a pergunta envolver distribuição ou movimentação",
+          "when_NOT_to_use": "[MANUAL] Ex: Não usar para dados de estoque (usar SQL)",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100,
+                "description": "Número máximo de registros por página"
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0,
+                "description": "Índice inicial para paginação"
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false,
+                "description": "[MANUAL] Ex: Filtra por status da distribuição"
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 105,
+            "result_object_fields": {
+              "id": {
+                "type": "integer",
+                "example": 1,
+                "description": "[MANUAL] Descreva o significado de 'id' no contexto logístico"
+              },
+              "localization": {
+                "type": "string",
+                "example": "LOC_004",
+                "description": "[MANUAL] Descreva o significado de 'localization' no contexto logístico"
+              },
+              "site": {
+                "type": "string",
+                "example": "SITE_001",
+                "description": "[MANUAL] Descreva o significado de 'site' no contexto logístico"
+              },
+              "modelo": {
+                "type": "string",
+                "example": "MOD_001",
+                "description": "[MANUAL] Descreva o significado de 'modelo' no contexto logístico"
+              },
+              "release": {
+                "type": "string",
+                "example": "SYS_002",
+                "description": "[MANUAL] Descreva o significado de 'release' no contexto logístico"
+              },
+              "sysid": {
+                "type": "string",
+                "example": "SYS_001",
+                "description": "[MANUAL] Descreva o significado de 'sysid' no contexto logístico"
+              },
+              "system": {
+                "type": "code_identifier",
+                "example": "SYS_003",
+                "description": "[MANUAL] Descreva o significado de 'system' no contexto logístico"
+              },
+              "type": {
+                "type": "string",
+                "example": "TYP_001",
+                "description": "[MANUAL] Descreva o significado de 'type' no contexto logístico"
+              },
+              "endereco": {
+                "type": "string",
+                "example": "LOC_002",
+                "description": "[MANUAL] Descreva o significado de 'endereco' no contexto logístico"
+              },
+              "latitude": {
+                "type": "string",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'latitude' no contexto logístico"
+              },
+              "longitude": {
+                "type": "string",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'longitude' no contexto logístico"
+              },
+              "tipo_torre": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'tipo_torre' no contexto logístico"
+              },
+              "altura_antena_tx_m": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'altura_antena_tx_m' no contexto logístico"
+              },
+              "altura_antena_rx_m": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'altura_antena_rx_m' no contexto logístico"
+              },
+              "link": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'link' no contexto logístico"
+              },
+              "master_site_l1": {
+                "type": "code_identifier",
+                "example": "X",
+                "description": "[MANUAL] Descreva o significado de 'master_site_l1' no contexto logístico"
+              },
+              "qty_ch": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'qty_ch' no contexto logístico"
+              },
+              "ch_fdma": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'ch_fdma' no contexto logístico"
+              },
+              "ch_tdma": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'ch_tdma' no contexto logístico"
+              },
+              "grupo_freq": {
+                "type": "string",
+                "example": "",
+                "description": "[MANUAL] Descreva o significado de 'grupo_freq' no contexto logístico"
+              },
+              "latitude_decimal": {
+                "type": "string",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'latitude_decimal' no contexto logístico"
+              },
+              "longitude_decimal": {
+                "type": "string",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'longitude_decimal' no contexto logístico"
+              }
+            },
+            "structure": {
+              "root": "array — lista de 105 objeto(s)"
+            },
+            "example_response": [
+              {
+                "id": 1,
+                "localization": "LOC_004",
+                "site": "SITE_001",
+                "modelo": "MOD_001",
+                "release": "SYS_002",
+                "sysid": "SYS_001",
+                "system": "SYS_003",
+                "type": "TYP_001",
+                "endereco": "LOC_002",
+                "latitude": null,
+                "longitude": null,
+                "tipo_torre": "",
+                "altura_antena_tx_m": "",
+                "altura_antena_rx_m": "",
+                "link": "",
+                "master_site_l1": "X",
+                "qty_ch": "",
+                "ch_fdma": "",
+                "ch_tdma": "",
+                "grupo_freq": "",
+                "latitude_decimal": null,
+                "longitude_decimal": null
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.547234Z",
+            "_probe_url": "http://localhost:8000/api/monitoramento/sites-sistema-radio/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "monitoramento_sistema_satelital_list": {
+          "path": "/api/monitoramento/sistema-satelital/",
+          "method": "GET",
+          "description": "[MANUAL] Descreva em linguagem de negócio o que este endpoint retorna",
+          "business_role": "[MANUAL] Ex: Fonte primária para rastreamento de distribuições",
+          "when_to_use": "[MANUAL] Ex: Quando a pergunta envolver distribuição ou movimentação",
+          "when_NOT_to_use": "[MANUAL] Ex: Não usar para dados de estoque (usar SQL)",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100,
+                "description": "Número máximo de registros por página"
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0,
+                "description": "Índice inicial para paginação"
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false,
+                "description": "[MANUAL] Ex: Filtra por status da distribuição"
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 48,
+            "result_object_fields": {
+              "CODIGO": {
+                "type": "integer",
+                "example": 1,
+                "description": "[MANUAL] Descreva o significado de 'CODIGO' no contexto logístico"
+              },
+              "IDU_NMS": {
+                "type": "code_identifier",
+                "example": "IDU_001",
+                "description": "[MANUAL] Descreva o significado de 'IDU_NMS' no contexto logístico"
+              },
+              "NUMERO_DO_TL": {
+                "type": "string",
+                "example": "TL_001",
+                "description": "[MANUAL] Descreva o significado de 'NUMERO_DO_TL' no contexto logístico"
+              },
+              "SN": {
+                "type": "code_identifier",
+                "example": "A4538",
+                "description": "[MANUAL] Descreva o significado de 'SN' no contexto logístico"
+              },
+              "LOCALIDADE_DA_ENTREGA": {
+                "type": "string",
+                "example": "LOC_006",
+                "description": "[MANUAL] Descreva o significado de 'LOCALIDADE_DA_ENTREGA' no contexto logístico"
+              },
+              "LOCAL_HOJE": {
+                "type": "code_identifier",
+                "example": "LOC_005",
+                "description": "[MANUAL] Descreva o significado de 'LOCAL_HOJE' no contexto logístico"
+              },
+              "CODIGO_UNIDADE": {
+                "type": "integer",
+                "example": 496,
+                "description": "[MANUAL] Descreva o significado de 'CODIGO_UNIDADE' no contexto logístico"
+              },
+              "SITUACAO": {
+                "type": "string",
+                "example": "BUC Inoperante",
+                "description": "[MANUAL] Descreva o significado de 'SITUACAO' no contexto logístico"
+              },
+              "DISPONIBILIDADE": {
+                "type": "string",
+                "example": "Indisponível",
+                "description": "[MANUAL] Descreva o significado de 'DISPONIBILIDADE' no contexto logístico"
+              }
+            },
+            "structure": {
+              "root": "array — lista de 48 objeto(s)"
+            },
+            "example_response": [
+              {
+                "CODIGO": 1,
+                "IDU_NMS": "IDU_001",
+                "NUMERO_DO_TL": "TL_001",
+                "SN": "A4538",
+                "LOCALIDADE_DA_ENTREGA": "LOC_006",
+                "LOCAL_HOJE": "LOC_005",
+                "CODIGO_UNIDADE": 496,
+                "SITUACAO": "BUC Inoperante",
+                "DISPONIBILIDADE": "Indisponível"
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.566357Z",
+            "_probe_url": "http://localhost:8000/api/monitoramento/sistema-satelital/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "monitoramento_sistema_hf_list": {
+          "path": "/api/monitoramento/sistema-hf/",
+          "method": "GET",
+          "description": "[MANUAL] Descreva em linguagem de negócio o que este endpoint retorna",
+          "business_role": "[MANUAL] Ex: Fonte primária para rastreamento de distribuições",
+          "when_to_use": "[MANUAL] Ex: Quando a pergunta envolver distribuição ou movimentação",
+          "when_NOT_to_use": "[MANUAL] Ex: Não usar para dados de estoque (usar SQL)",
+          "parameters": {
+            "query_params": {
+              "limit": {
+                "type": "integer",
+                "required": false,
+                "default": 100,
+                "description": "Número máximo de registros por página"
+              },
+              "offset": {
+                "type": "integer",
+                "required": false,
+                "default": 0,
+                "description": "Índice inicial para paginação"
+              },
+              "[MANUAL] filtro_1": {
+                "type": "[MANUAL] Ex: string",
+                "required": false,
+                "description": "[MANUAL] Ex: Filtra por status da distribuição"
+              }
+            }
+          },
+          "response_schema": {
+            "response_format": "array",
+            "total_count": 14,
+            "result_object_fields": {
+              "ip": {
+                "type": "string",
+                "example": "IP_001",
+                "description": "[MANUAL] Descreva o significado de 'ip' no contexto logístico"
+              },
+              "nome": {
+                "type": "string",
+                "example": "PONTO_009",
+                "description": "[MANUAL] Descreva o significado de 'nome' no contexto logístico"
+              },
+              "status": {
+                "type": "string",
+                "example": "down",
+                "description": "[MANUAL] Descreva o significado de 'status' no contexto logístico"
+              },
+              "last_checked": {
+                "type": "date_string (ISO 8601)",
+                "example": "2025-07-22T15:00:02Z",
+                "description": "[MANUAL] Descreva o significado de 'last_checked' no contexto logístico"
+              },
+              "latitude": {
+                "type": "float",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'latitude' no contexto logístico"
+              },
+              "longitude": {
+                "type": "float",
+                "example": null,
+                "description": "[MANUAL] Descreva o significado de 'longitude' no contexto logístico"
+              }
+            },
+            "structure": {
+              "root": "array — lista de 14 objeto(s)"
+            },
+            "example_response": [
+              {
+                "ip": "IP_001",
+                "nome": "PONTO_009",
+                "status": "down",
+                "last_checked": "2025-07-22T15:00:02Z",
+                "latitude": null,
+                "longitude": null
+              }
+            ],
+            "_probed_at": "2026-08-14T13:42:57.585921Z",
+            "_probe_url": "http://localhost:8000/api/monitoramento/sistema-hf/",
+            "_http_status": 200
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Tempo real",
+            "reliability": "[MANUAL] Ex: Alta — fonte transacional",
+            "confidence_base": 0.9
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        }
+      }
+    },
+    "spreadsheets": {
+      "_doc": "Preenchimento MANUAL para descrições. Estrutura de colunas preenchida automaticamente pelo extrator.",
+      "base_path": "[MANUAL] Caminho absoluto ou relativo para a pasta com planilhas. Ex: ./data/spreadsheets/",
+      "files": {
+        "contratos": {
+          "filename": "contratos.xlsx",
+          "description": "[MANUAL] Descreva o propósito da planilha 'contratos.xlsx'",
+          "business_role": "[MANUAL] Ex: Qual o papel desta planilha no processo logístico?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta planilha?",
+          "when_NOT_to_use": "[MANUAL] Ex: Quando NÃO usar esta planilha?",
+          "sheets": {
+            "Sheet1": {
+              "description": "[MANUAL] Descreva o conteúdo da aba 'Sheet1'",
+              "row_count": 972,
+              "column_count": 34,
+              "columns": {
+                "ID_CONTRATO_ANO": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 151,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ID_CONTRATO_ANO'"
+                },
+                "ANO": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 6,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ANO'",
+                  "stats": {
+                    "min": 2020,
+                    "max": 2025,
+                    "mean": null
+                  }
+                },
+                "CONTRATO": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 107,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'CONTRATO'"
+                },
+                "EMPRESA": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 26,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'EMPRESA'"
+                },
+                "ASS DO CTR": {
+                  "type": "date_string",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 109,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ASS DO CTR'",
+                  "date_range": {
+                    "min": "1970-01-01T00:00:00.000000003",
+                    "max": "2025-12-29T00:00:00"
+                  }
+                },
+                "VIGÊNCIA": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 104,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'VIGÊNCIA'",
+                  "date_range": {
+                    "min": "2021-11-30T00:00:00",
+                    "max": "2027-12-29T00:00:00"
+                  }
+                },
+                "ADT": {
+                  "type": "float",
+                  "nullable": true,
+                  "null_rate": 0.0442,
+                  "cardinality": 6,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ADT'",
+                  "stats": {
+                    "min": 0.0,
+                    "max": 5.0,
+                    "mean": 1.64
+                  }
+                },
+                "Aditivação": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.2634,
+                  "cardinality": 61,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Aditivação'"
+                },
+                "FUNDS-1": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.0144,
+                  "cardinality": 14,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'FUNDS-1'"
+                },
+                "FUNDS-2": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.5669,
+                  "cardinality": 13,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'FUNDS-2'"
+                },
+                "FUNDS-3": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.787,
+                  "cardinality": 7,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'FUNDS-3'"
+                },
+                "FUNDS-4": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.9198,
+                  "cardinality": 4,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'FUNDS-4'"
+                },
+                "FUNDS-5": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.9403,
+                  "cardinality": 2,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'FUNDS-5'"
+                },
+                "VALOR USD (contrato)": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 963,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'VALOR USD (contrato)'",
+                  "date_range": {
+                    "min": "1970-01-01T00:00:00.000000210",
+                    "max": "1970-01-01T00:00:00.013221473"
+                  }
+                },
+                "ENTREGA 1": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 114,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ENTREGA 1'",
+                  "date_range": {
+                    "min": "2020-11-30T00:00:00",
+                    "max": "2027-06-20T00:00:00"
+                  }
+                },
+                "ENTREGA 2": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.4002,
+                  "cardinality": 49,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ENTREGA 2'",
+                  "date_range": {
+                    "min": "2021-02-07T00:00:00",
+                    "max": "2027-04-02T00:00:00"
+                  }
+                },
+                "ENTREGA 3": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.8076,
+                  "cardinality": 18,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ENTREGA 3'",
+                  "date_range": {
+                    "min": "2021-03-22T00:00:00",
+                    "max": "2027-04-15T00:00:00"
+                  }
+                },
+                "ENTREGA 4": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.9228,
+                  "cardinality": 5,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ENTREGA 4'",
+                  "date_range": {
+                    "min": "2021-03-29T00:00:00",
+                    "max": "2025-10-30T00:00:00"
+                  }
+                },
+                "ENTREGA 5": {
+                  "type": "datetime",
+                  "nullable": true,
+                  "null_rate": 0.9702,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ENTREGA 5'",
+                  "date_range": {
+                    "min": "2021-05-31T00:00:00",
+                    "max": "2021-05-31T00:00:00"
+                  }
+                },
+                "ENTREGA 6": {
+                  "type": "datetime",
+                  "nullable": true,
+                  "null_rate": 0.9702,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ENTREGA 6'",
+                  "date_range": {
+                    "min": "2023-09-30T00:00:00",
+                    "max": "2023-09-30T00:00:00"
+                  }
+                },
+                "FORMA_DE_ENVIO": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.001,
+                  "cardinality": 33,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'FORMA_DE_ENVIO'"
+                },
+                "UNIDADE_ESTOQUE": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.0041,
+                  "cardinality": 6,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'UNIDADE_ESTOQUE'"
+                },
+                "QI": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 70,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'QI'"
+                },
+                "ITEM QI": {
+                  "type": "float",
+                  "nullable": true,
+                  "null_rate": 0.0082,
+                  "cardinality": 108,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ITEM QI'",
+                  "stats": {
+                    "min": 1.0,
+                    "max": 133.0,
+                    "mean": 30.12
+                  }
+                },
+                "ITEM PC": {
+                  "type": "float",
+                  "nullable": true,
+                  "null_rate": 0.0021,
+                  "cardinality": 60,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ITEM PC'",
+                  "stats": {
+                    "min": 1.0,
+                    "max": 60.0,
+                    "mean": 8.3
+                  }
+                },
+                "MATERIAL": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 656,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'MATERIAL'"
+                },
+                "Quantidade": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.001,
+                  "cardinality": 153,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Quantidade'",
+                  "date_range": {
+                    "min": "1970-01-01T00:00:00.000000001",
+                    "max": "1970-01-01T00:00:00.000320"
+                  }
+                },
+                "Invoice": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.1245,
+                  "cardinality": 228,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Invoice'"
+                },
+                "Andamento": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.1245,
+                  "cardinality": 21,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Andamento'"
+                },
+                "Guarantia": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.0288,
+                  "cardinality": 4,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Guarantia'"
+                },
+                "Chegada no BR": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.3971,
+                  "cardinality": 93,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Chegada no BR'",
+                  "date_range": {
+                    "min": "2021-03-18T00:00:00",
+                    "max": "2025-10-16T00:00:00"
+                  }
+                },
+                "Inicio da Garantia": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.43,
+                  "cardinality": 82,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Inicio da Garantia'",
+                  "date_range": {
+                    "min": "2021-10-27T00:00:00",
+                    "max": "2026-09-08T00:00:00"
+                  }
+                },
+                "Fim da Garantia": {
+                  "type": "date_string",
+                  "nullable": true,
+                  "null_rate": 0.43,
+                  "cardinality": 86,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Fim da Garantia'",
+                  "date_range": {
+                    "min": "2024-03-01T00:00:00",
+                    "max": "2027-10-31T00:00:00"
+                  }
+                },
+                "DOC_RECEBIMENTO": {
+                  "type": "string",
+                  "nullable": true,
+                  "null_rate": 0.1358,
+                  "cardinality": 213,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'DOC_RECEBIMENTO'"
+                }
+              },
+              "sample_rows": [
+                {
+                  "ID_CONTRATO_ANO": "CTR001-25",
+                  "ANO": 2025,
+                  "CONTRATO": "CTR001",
+                  "EMPRESA": "FAB008",
+                  "ASS DO CTR": "2025-12-29T00:00:00.000",
+                  "VIGÊNCIA": "2027-08-29T00:00:00.000",
+                  "ADT": null,
+                  "Aditivação": null,
+                  "FUNDS-1": null,
+                  "FUNDS-2": null,
+                  "FUNDS-3": null,
+                  "FUNDS-4": null,
+                  "FUNDS-5": null,
+                  "VALOR USD (contrato)": 472781.58,
+                  "ENTREGA 1": "2026-10-30T00:00:00.000",
+                  "ENTREGA 2": null,
+                  "ENTREGA 3": null,
+                  "ENTREGA 4": null,
+                  "ENTREGA 5": null,
+                  "ENTREGA 6": null,
+                  "FORMA_DE_ENVIO": "CIP (RJ/BR)",
+                  "UNIDADE_ESTOQUE": "SIG090",
+                  "QI": "10/2025",
+                  "ITEM QI": 1.0,
+                  "ITEM PC": 1.0,
+                  "MATERIAL": "MAT001",
+                  "Quantidade": 9,
+                  "Invoice": null,
+                  "Andamento": null,
+                  "Guarantia": "12 meses",
+                  "Chegada no BR": null,
+                  "Inicio da Garantia": null,
+                  "Fim da Garantia": null,
+                  "DOC_RECEBIMENTO": null
+                },
+                {
+                  "ID_CONTRATO_ANO": "CTR001-25",
+                  "ANO": 2025,
+                  "CONTRATO": "CTR001",
+                  "EMPRESA": "FAB008",
+                  "ASS DO CTR": "2025-12-29T00:00:00.000",
+                  "VIGÊNCIA": "2027-08-29T00:00:00.000",
+                  "ADT": null,
+                  "Aditivação": null,
+                  "FUNDS-1": null,
+                  "FUNDS-2": null,
+                  "FUNDS-3": null,
+                  "FUNDS-4": null,
+                  "FUNDS-5": null,
+                  "VALOR USD (contrato)": 444132.56,
+                  "ENTREGA 1": "2026-10-30T00:00:00.000",
+                  "ENTREGA 2": null,
+                  "ENTREGA 3": null,
+                  "ENTREGA 4": null,
+                  "ENTREGA 5": null,
+                  "ENTREGA 6": null,
+                  "FORMA_DE_ENVIO": "CIP (RJ/BR)",
+                  "UNIDADE_ESTOQUE": "SIG090",
+                  "QI": "10/2025",
+                  "ITEM QI": 2.0,
+                  "ITEM PC": 2.0,
+                  "MATERIAL": "MAT002",
+                  "Quantidade": 9,
+                  "Invoice": null,
+                  "Andamento": null,
+                  "Guarantia": "12 meses",
+                  "Chegada no BR": null,
+                  "Inicio da Garantia": null,
+                  "Fim da Garantia": null,
+                  "DOC_RECEBIMENTO": null
+                },
+                {
+                  "ID_CONTRATO_ANO": "CTR002-25",
+                  "ANO": 2025,
+                  "CONTRATO": "CTR002",
+                  "EMPRESA": "FAB008",
+                  "ASS DO CTR": "2025-12-29T00:00:00.000",
+                  "VIGÊNCIA": "2027-12-29T00:00:00.000",
+                  "ADT": null,
+                  "Aditivação": null,
+                  "FUNDS-1": null,
+                  "FUNDS-2": null,
+                  "FUNDS-3": null,
+                  "FUNDS-4": null,
+                  "FUNDS-5": null,
+                  "VALOR USD (contrato)": 227350.81,
+                  "ENTREGA 1": "2027-03-30T00:00:00.000",
+                  "ENTREGA 2": "2027-04-02T00:00:00.000",
+                  "ENTREGA 3": "2027-04-15T00:00:00.000",
+                  "ENTREGA 4": null,
+                  "ENTREGA 5": null,
+                  "ENTREGA 6": null,
+                  "FORMA_DE_ENVIO": "CIP e CIF (RJ/BR)",
+                  "UNIDADE_ESTOQUE": "SIG090",
+                  "QI": "09/2025",
+                  "ITEM QI": 1.0,
+                  "ITEM PC": 1.0,
+                  "MATERIAL": "MAT003",
+                  "Quantidade": 2,
+                  "Invoice": null,
+                  "Andamento": null,
+                  "Guarantia": "12 meses",
+                  "Chegada no BR": null,
+                  "Inicio da Garantia": null,
+                  "Fim da Garantia": null,
+                  "DOC_RECEBIMENTO": null
+                }
+              ]
+            }
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Mensal / Semanal / Sob demanda",
+            "responsible": "[MANUAL] Ex: Seção de Contratos",
+            "reliability": "[MANUAL] Ex: Média — atualização manual",
+            "confidence_base": 0.75,
+            "last_analyzed": "2026-08-14T13:42:58.011571Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "fornecimento": {
+          "filename": "fornecimento.xlsx",
+          "description": "[MANUAL] Descreva o propósito da planilha 'fornecimento.xlsx'",
+          "business_role": "[MANUAL] Ex: Qual o papel desta planilha no processo logístico?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta planilha?",
+          "when_NOT_to_use": "[MANUAL] Ex: Quando NÃO usar esta planilha?",
+          "sheets": {
+            "Sheet1": {
+              "description": "[MANUAL] Descreva o conteúdo da aba 'Sheet1'",
+              "row_count": 813,
+              "column_count": 15,
+              "columns": {
+                "ODF": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 326,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ODF'"
+                },
+                "Data": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 100,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Data'",
+                  "stats": {
+                    "min": 45296,
+                    "max": 45653,
+                    "mean": null
+                  }
+                },
+                "Contrato": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 68,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Contrato'"
+                },
+                "TREM": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 74,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'TREM'"
+                },
+                "PN / NEE": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 299,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'PN / NEE'"
+                },
+                "ID SIGELOG": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 263,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'ID SIGELOG'"
+                },
+                "Nomenclatura": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 310,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Nomenclatura'"
+                },
+                "QNT": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 95,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'QNT'",
+                  "stats": {
+                    "min": 1,
+                    "max": 2796,
+                    "mean": null
+                  }
+                },
+                "OM de Origem": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 7,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'OM de Origem'"
+                },
+                "RM de Origem": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 6,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'RM de Origem'"
+                },
+                "OM de Destino": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 141,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'OM de Destino'"
+                },
+                "RM de Destino": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 11,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'RM de Destino'"
+                },
+                "Ação Orçamentaria": {
+                  "type": "code_identifier",
+                  "nullable": true,
+                  "null_rate": 0.5105,
+                  "cardinality": 10,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Ação Orçamentaria'"
+                },
+                "Retifica a OF": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 34,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Retifica a OF'"
+                },
+                "Diex da Distribuição": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 55,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Diex da Distribuição'"
+                }
+              },
+              "sample_rows": [
+                {
+                  "ODF": "001/24",
+                  "Data": 45296,
+                  "Contrato": "CTR108",
+                  "TREM": "-",
+                  "PN / NEE": "PN07031",
+                  "ID SIGELOG": "-",
+                  "Nomenclatura": "EQPODF001",
+                  "QNT": 1,
+                  "OM de Origem": "SIG450",
+                  "RM de Origem": "REG009",
+                  "OM de Destino": "SIG450",
+                  "RM de Destino": "REG009",
+                  "Ação Orçamentaria": "FND002",
+                  "Retifica a OF": "-",
+                  "Diex da Distribuição": "DOC001"
+                },
+                {
+                  "ODF": "001/24",
+                  "Data": 45296,
+                  "Contrato": "CTR108",
+                  "TREM": "-",
+                  "PN / NEE": "PN07032",
+                  "ID SIGELOG": "-",
+                  "Nomenclatura": "EQPODF002",
+                  "QNT": 1,
+                  "OM de Origem": "SIG450",
+                  "RM de Origem": "REG009",
+                  "OM de Destino": "SIG450",
+                  "RM de Destino": "REG009",
+                  "Ação Orçamentaria": "FND002",
+                  "Retifica a OF": "-",
+                  "Diex da Distribuição": "DOC001"
+                },
+                {
+                  "ODF": "001/24",
+                  "Data": 45296,
+                  "Contrato": "CTR108",
+                  "TREM": "-",
+                  "PN / NEE": "PN07032",
+                  "ID SIGELOG": "-",
+                  "Nomenclatura": "EQPODF002",
+                  "QNT": 1,
+                  "OM de Origem": "SIG450",
+                  "RM de Origem": "REG009",
+                  "OM de Destino": "SIG450",
+                  "RM de Destino": "REG009",
+                  "Ação Orçamentaria": "FND002",
+                  "Retifica a OF": "-",
+                  "Diex da Distribuição": "DOC001"
+                }
+              ]
+            }
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Mensal / Semanal / Sob demanda",
+            "responsible": "[MANUAL] Ex: Seção de Contratos",
+            "reliability": "[MANUAL] Ex: Média — atualização manual",
+            "confidence_base": 0.75,
+            "last_analyzed": "2026-08-14T13:42:58.112704Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        },
+        "quadro_importacao": {
+          "filename": "quadro_importacao.xlsx",
+          "description": "[MANUAL] Descreva o propósito da planilha 'quadro_importacao.xlsx'",
+          "business_role": "[MANUAL] Ex: Qual o papel desta planilha no processo logístico?",
+          "when_to_use": "[MANUAL] Ex: Quando o agente deve consultar esta planilha?",
+          "when_NOT_to_use": "[MANUAL] Ex: Quando NÃO usar esta planilha?",
+          "sheets": {
+            "informações gerais": {
+              "description": "[MANUAL] Descreva o conteúdo da aba 'informações gerais'",
+              "row_count": 8,
+              "column_count": 11,
+              "columns": {
+                "QI": {
+                  "type": "date_string",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'QI'",
+                  "date_range": {
+                    "min": "2023-01-01T00:00:00",
+                    "max": "2023-01-01T00:00:00"
+                  }
+                },
+                "Empresa": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Empresa'"
+                },
+                "Ata": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Ata'"
+                },
+                "Validade": {
+                  "type": "datetime",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 1,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Validade'",
+                  "date_range": {
+                    "min": "2024-12-25T00:00:00",
+                    "max": "2024-12-25T00:00:00"
+                  }
+                },
+                "Item": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "description": "[MANUAL] Descreva o significado de 'Item'",
+                  "stats": {
+                    "min": 1,
+                    "max": 8,
+                    "mean": null
+                  }
+                },
+                "Item da Ata": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "description": "[MANUAL] Descreva o significado de 'Item da Ata'",
+                  "stats": {
+                    "min": 1,
+                    "max": 86,
+                    "mean": null
+                  }
+                },
+                "PN": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "description": "[MANUAL] Descreva o significado de 'PN'"
+                },
+                "Nomenclatura": {
+                  "type": "code_identifier",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "description": "[MANUAL] Descreva o significado de 'Nomenclatura'"
+                },
+                "Qtde": {
+                  "type": "integer",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 7,
+                  "is_unique_key": false,
+                  "description": "[MANUAL] Descreva o significado de 'Qtde'",
+                  "stats": {
+                    "min": 2,
+                    "max": 17,
+                    "mean": null
+                  }
+                },
+                "Valor unit (USD)": {
+                  "type": "float",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "description": "[MANUAL] Descreva o significado de 'Valor unit (USD)'",
+                  "stats": {
+                    "min": 770.0,
+                    "max": 70100.0,
+                    "mean": 28234.43
+                  }
+                },
+                "Valor Total (USD)": {
+                  "type": "float",
+                  "nullable": false,
+                  "null_rate": 0.0,
+                  "cardinality": 8,
+                  "is_unique_key": true,
+                  "description": "[MANUAL] Descreva o significado de 'Valor Total (USD)'",
+                  "stats": {
+                    "min": 1540.0,
+                    "max": 1051500.0,
+                    "mean": 314108.7
+                  }
+                }
+              },
+              "sample_rows": [
+                {
+                  "QI": "01/2023",
+                  "Empresa": "FAB001",
+                  "Ata": "0001/2023",
+                  "Validade": "2024-12-25T00:00:00.000",
+                  "Item": 1,
+                  "Item da Ata": 1,
+                  "PN": "PN001",
+                  "Nomenclatura": "EQP001",
+                  "Qtde": 17,
+                  "Valor unit (USD)": 10739.0,
+                  "Valor Total (USD)": 182563.0
+                },
+                {
+                  "QI": "01/2023",
+                  "Empresa": "FAB001",
+                  "Ata": "0001/2023",
+                  "Validade": "2024-12-25T00:00:00.000",
+                  "Item": 2,
+                  "Item da Ata": 42,
+                  "PN": "PN002",
+                  "Nomenclatura": "EQP002",
+                  "Qtde": 8,
+                  "Valor unit (USD)": 1905.5,
+                  "Valor Total (USD)": 15244.0
+                },
+                {
+                  "QI": "01/2023",
+                  "Empresa": "FAB001",
+                  "Ata": "0001/2023",
+                  "Validade": "2024-12-25T00:00:00.000",
+                  "Item": 3,
+                  "Item da Ata": 81,
+                  "PN": "PN003",
+                  "Nomenclatura": "EQP003",
+                  "Qtde": 16,
+                  "Valor unit (USD)": 34251.44,
+                  "Valor Total (USD)": 548023.04
+                }
+              ]
+            }
+          },
+          "data_quality": {
+            "update_frequency": "[MANUAL] Ex: Mensal / Semanal / Sob demanda",
+            "responsible": "[MANUAL] Ex: Seção de Contratos",
+            "reliability": "[MANUAL] Ex: Média — atualização manual",
+            "confidence_base": 0.75,
+            "last_analyzed": "2026-08-14T13:42:58.138801Z"
+          },
+          "embedding_hint": "[MANUAL] Palavras-chave e frases curtas que descrevem esta fonte (20–40 palavras). Ex: 'distribuição entregas unidades depósito status pendente quantidade enviada por unidade de destino'."
+        }
+      }
+    }
+  },
+  "context_hints": {
+    "_doc": "Regras manuais de roteamento escritas por você. O Context Builder aplica estas regras ANTES da busca semântica. Use para capturar relações que o LLM não inferirá automaticamente.",
+    "rules": [
+      {
+        "id": "rule_001",
+        "trigger_keywords": [
+          "MANUAL — ex: distribuição",
+          "movimentação",
+          "entrega",
+          "transferência"
+        ],
+        "include_sources": [
+          "api.distribuicao_list"
+        ],
+        "complement_with": [
+          "sql.materiais",
+          "sql.unidades"
+        ],
+        "reasoning": "[MANUAL] Ex: Perguntas sobre distribuição precisam da API como fonte primária e das tabelas SQL para enriquecer com nomes de materiais e unidades"
+      },
+      {
+        "id": "rule_002",
+        "trigger_keywords": [
+          "MANUAL — ex: contrato",
+          "fornecedor",
+          "vigência",
+          "valor contratado"
+        ],
+        "include_sources": [
+          "spreadsheets.contratos"
+        ],
+        "complement_with": [
+          "sql.materiais"
+        ],
+        "reasoning": "[MANUAL] Ex: Dados contratuais estão na planilha; materiais do contrato podem ser enriquecidos via SQL"
+      },
+      {
+        "id": "rule_003",
+        "trigger_keywords": [
+          "MANUAL — ex: estoque",
+          "saldo",
+          "quantidade disponível",
+          "onde está"
+        ],
+        "include_sources": [
+          "sql.materiais",
+          "sql.unidades"
+        ],
+        "complement_with": [],
+        "reasoning": "[MANUAL] Ex: Estoque e localização são dados transacionais — SQL é a fonte authoritative"
+      }
+    ],
+    "fallback_rule": {
+      "description": "Quando nenhuma regra específica se aplica, incluir todas as fontes em modo comprimido",
+      "action": "include_all_compressed"
+    }
+  }
+}

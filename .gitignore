@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Caches de embeddings (regeneráveis a partir do código + catálogos)
+embeddings_cache/
+*.pkl
+
+# Logs soltos de execução
+*_dryrun.txt
+*.log
+
+# Ambientes / IDE
+.venv/
+venv/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Credenciais locais — nunca versionar. Use build_config.example.json como
+# modelo e mantenha a cópia real (com senha/host reais) fora do git.
+catalog_generation/build_config.json
+.env
+*.env
+
+# Redação local de valores (conteúdo sensível; nunca versionar)
+catalog_generation/value_redaction.local.json
