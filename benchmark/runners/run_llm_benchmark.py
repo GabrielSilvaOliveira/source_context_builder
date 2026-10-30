@@ -31,7 +31,7 @@ Uso:
       --catalog-format both --output results_slm/
 """
 
-import argparse, json, math, os, statistics, time, re
+import argparse, datetime, hashlib, json, math, os, statistics, subprocess, time, re
 from collections import defaultdict
 from pathlib import Path
 
@@ -99,7 +99,43 @@ def serialize_compressed(catalog):
     return "\n".join(lines)
 
 
-def build_system_prompt(catalog_text):
+def compressed_source_ids(catalog):
+    """IDs na mesma ordem e com o mesmo filtro de serialize_compressed."""
+    ids = []
+    src = catalog.get("sources", {})
+    for prefix, group, key in [("sql", "sql", "tables"), ("api", "api", "endpoints"),
+                               ("spreadsheets", "spreadsheets", "files")]:
+        for name, meta in src.get(group, {}).get(key, {}).items():
+            hint = meta.get("embedding_hint", meta.get("description", ""))
+            if "[MANUAL]" not in hint:
+                ids.append(f"{prefix}.{name}")
+    return ids
+
+
+PROMPT_VARIANTS = ("original", "no_examples", "no_examples_schema")
+
+
+def build_system_prompt(catalog_text, variant="original"):
+    prompt = _build_system_prompt_original(catalog_text)
+    if variant == "original":
+        return prompt
+    if variant in ("no_examples", "no_examples_schema"):
+        # Remove o bloco de "EXEMPLOS:" até a linha em branco que antecede
+        # "Responda APENAS com o JSON."; o resto fica byte a byte igual.
+        start = prompt.rindex("EXEMPLOS:\n")
+        end = prompt.rindex("Responda APENAS com o JSON.")
+        return prompt[:start] + prompt[end:]
+    raise ValueError(f"variante de prompt desconhecida: {variant}")
+
+
+def source_schema(source_ids):
+    return {"type": "object",
+            "properties": {"sources": {"type": "array",
+                                       "items": {"type": "string", "enum": list(source_ids)}}},
+            "required": ["sources"]}
+
+
+def _build_system_prompt_original(catalog_text):
     return f"""Você é um assistente especializado em seleção de fontes de dados logísticos.
 
 Fontes disponíveis:
@@ -203,15 +239,29 @@ class OllamaClient:
                 f"Inicie com: ollama serve\nErro: {e}"
             )
 
-    def query(self, user_msg, system_prompt):
+    def info(self):
+        """Versão do servidor e digest do modelo (para o bloco META)."""
         import urllib.request
-        payload = json.dumps({
+        def get(path):
+            with urllib.request.urlopen(f"{self.base_url}{path}", timeout=10) as r:
+                return json.loads(r.read().decode("utf-8"))
+        version = get("/api/version").get("version")
+        digest = next((m.get("digest") for m in get("/api/tags").get("models", [])
+                       if self.model in (m.get("name"), m.get("model"))), None)
+        return {"ollama_version": version, "model_digest": digest}
+
+    def query(self, user_msg, system_prompt, schema=None):
+        import urllib.request
+        body = {
             "model": self.model,
             "messages": [{"role":"system","content":system_prompt},
                          {"role":"user","content":user_msg}],
             "stream": False,
             "options": {"temperature": 0},
-        }).encode("utf-8")
+        }
+        if schema is not None:
+            body["format"] = schema
+        payload = json.dumps(body).encode("utf-8")
         t0 = time.monotonic()
         req = urllib.request.Request(
             f"{self.base_url}/api/chat", data=payload,
@@ -227,6 +277,9 @@ class OllamaClient:
             "completion_tokens": u.get("completion_tokens",0),
             "total_tokens":      u.get("prompt_tokens",0)+u.get("completion_tokens",0),
             "latency_ms":        round(ms,2),
+            # contadores que o Ollama de fato devolve (campos do topo da resposta)
+            "prompt_eval_count": result.get("prompt_eval_count"),
+            "eval_count":        result.get("eval_count"),
         }
         return content, usage
 
@@ -305,6 +358,14 @@ def stratified_folds(queries, n=5, seed=42):
     return folds
 
 
+def _git(*a):
+    try:
+        return subprocess.run(["git", *a], capture_output=True, text=True,
+                              cwd=Path(__file__).resolve().parent, timeout=10).stdout.strip()
+    except Exception:
+        return None
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -320,6 +381,9 @@ def main():
     parser.add_argument("--folds",           type=int, default=5)
     parser.add_argument("--seed",            type=int, default=42)
     parser.add_argument("--ollama-url",      default="http://localhost:11434")
+    parser.add_argument("--prompt-variant",  default="original", choices=list(PROMPT_VARIANTS),
+                        help="original (padrão) | no_examples (sem bloco EXEMPLOS:) | "
+                             "no_examples_schema (sem EXEMPLOS: + saída estruturada, só Ollama)")
     parser.add_argument("--test-connection", action="store_true")
     parser.add_argument("--max-queries",     type=int, default=None,
                         help="Limita queries para testes rápidos")
@@ -343,6 +407,9 @@ def main():
         client = OllamaClient(args.model, args.ollama_url)
         print(f"✅ Ollama local — modelo: {args.model}")
 
+    if args.prompt_variant == "no_examples_schema" and args.provider != "ollama":
+        raise SystemExit("--prompt-variant no_examples_schema só é suportada com --provider ollama")
+
     # Teste de conectividade
     if args.test_connection:
         cat_text = serialize_compressed(catalog)
@@ -360,9 +427,28 @@ def main():
 
     for fmt in formats:
         cat_text   = serialize_full(catalog) if fmt=="full" else serialize_compressed(catalog)
-        sys_prompt = build_system_prompt(cat_text)
+        sys_prompt = build_system_prompt(cat_text, args.prompt_variant)
         n_words    = len(cat_text.split())
-        slug = (f"{args.provider}_{args.model.replace('/','_').replace(':','_')}_{fmt}")
+        cond       = Path(args.catalog).stem
+        slug = (f"{args.provider}_{args.model.replace('/','_').replace(':','_')}_{fmt}"
+                f"_{cond}__{args.prompt_variant}")
+        schema = None
+        if args.prompt_variant == "no_examples_schema":
+            if fmt != "compressed":
+                raise SystemExit("no_examples_schema está definida só para o formato compressed")
+            schema = source_schema(compressed_source_ids(catalog))
+        meta = {
+            "prompt_variant": args.prompt_variant,
+            "catalog_path": str(args.catalog),
+            "catalog_sha256": hashlib.sha256(Path(args.catalog).read_bytes()).hexdigest(),
+            "system_prompt_sha256": hashlib.sha256(sys_prompt.encode("utf-8")).hexdigest(),
+            "system_prompt": sys_prompt,
+            "format_schema": schema,
+            "git_commit": _git("rev-parse", "HEAD"),
+            "git_dirty": bool(_git("status", "--porcelain", "--", "benchmark/runners")),
+            "datetime": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+            **(client.info() if args.provider == "ollama" else {}),
+        }
 
         print(f"\n{'='*65}")
         print(f"  {args.provider}/{args.model} | catálogo: {fmt} (~{n_words} palavras)")
@@ -376,11 +462,15 @@ def main():
             fold_res = []
             for idx in test_idx:
                 q = queries[idx]
+                error = None
                 try:
-                    content, usage = client.query(q["query"], sys_prompt)
+                    content, usage = (client.query(q["query"], sys_prompt, schema)
+                                      if schema is not None
+                                      else client.query(q["query"], sys_prompt))
                     selected = parse_sources(content)
                 except Exception as e:
                     print(f"  ⚠️  {q['id']} erro: {e}")
+                    content, error = None, str(e)
                     selected, usage = [], {"total_tokens":0,"latency_ms":0,
                                            "prompt_tokens":0,"completion_tokens":0}
 
@@ -397,6 +487,10 @@ def main():
                     "total_tokens":usage.get("total_tokens",0),
                     "prompt_tokens":usage.get("prompt_tokens",0),
                     "completion_tokens":usage.get("completion_tokens",0),
+                    "prompt_eval_count":usage.get("prompt_eval_count"),
+                    "eval_count":usage.get("eval_count"),
+                    "raw_output":content,
+                    "error":error,
                 }
                 fold_res.append(r)
                 all_results.append(r)
@@ -428,6 +522,7 @@ def main():
               f"Tokens/q≈{cv['total_tokens']:.0f}  Lat={cv['latency_ms']:.0f}ms")
 
         out_data = {
+            "META":meta,
             "provider":args.provider,"model":args.model,"catalog_format":fmt,
             "cv_metrics":cv,"fold_metrics":fold_metrics_all,
             "by_difficulty":by_diff,"by_cluster":by_cl,"all_results":all_results,
