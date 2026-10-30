@@ -1,0 +1,144 @@
+{
+ "schema_exato__Q01": {
+  "query": "Qual a situação física dos equipamentos da organização?",
+  "content": "{\"sources\": [\"sql.vw_comparativo_previsto_existente\", \"sql.vw_tipoeqp_previsto_unidades\", \"sql.regra\", \"sql.materiais\", \"sql.catalogo\", \"sql.vw_materiais_catalogo_unidade\", \"api.monitoramento_sistema_satelital_list\", \"api.monitoramento_sites_sistema_radio_list\", \"api.monitoramento_starlink_list\", \"api.monitoramento_sistema_hf_list\", \"spreadsheets.contratos\", \"spreadsheets.fornecimento\", \"spreadsheets.quadro_importacao\", \"api.distribuicao_list\", \"api.manutencao_ap_direto_list\", \"api.monitoramento_sites_sistema_radio_list\", \"api.monitoramento_sistema_satelital_list\", \"api.monitoramento_sites_sistema_radio_list\", \"api.monitoramento_starlink_list\", \"api.monitoramento_sistema_hf_list\", \"api.distribuicao_list\", \"api.manutencao_ap_direto_list\", \"api.monitoramento_sites_sistema_radio_list\", \"api.monitoramento_sistema_satelital_list\", \"api.monitoramento_sistema_hf_list\", \"spreadsheets.contratos\", \"spreadsheets.fornecimento\", \"spreadsheets.quadro_importacao\", \"api.distribuicao_list\", \"api.manutencao_ap_direto_list\", \"api.monitoramento_sites_sistema_radio_list\", \"api.monitoramento_sistema_satelital_list\", \"api.monitoramento_sistema_hf_list\", \"spreadsheets.contratos\", \"spreadsheets.fornecimento\", \"spreadsheets.quadro_importacao\", \"api.distribuicao_list\", \"api.manutencao_ap_direto_list\", \"api.monitoramento_sites_sistema_radio_list\", \"api.monitoramento_sistema_satelital_list\", \"api.monitoramento_sistema_hf_list\", \"spreadsheets.contratos\", \"spreadsheets.fornecimento\", \"spreadsheets.quadro_importacao\", \"api.distribuicao_list\", \"api.manutencao_ap_direto_list\", \"api.monitoramento_sites_sistema_radio_list\", \"api.monitoramento_sistema_satelital_list\", \"api.monitoramento_sistema_hf_list\", \"spreadsheets.contratos\", \"spreadsheets.fornecimento\", \"spreadsheets.quadro_importacao\", \"api.distribuicao_list\", \"api.manutencao_ap_direto_list\", \"",
+  "done_reason": "length",
+  "eval_count": 512,
+  "prompt_eval_count": 1136,
+  "s": 27.2,
+  "analise": {
+   "len_chars": 1845,
+   "n_ids": 54,
+   "n_distintos": 15,
+   "mais_repetido": [
+    [
+     "api.monitoramento_sites_sistema_radio_list",
+     7
+    ],
+    [
+     "api.monitoramento_sistema_satelital_list",
+     6
+    ]
+   ],
+   "frac_espaco": 0.03,
+   "termina_json_valido": false
+  }
+ },
+ "schema_exato__Q02": {
+  "query": "Quais equipamentos estão indisponíveis e qual o motivo?",
+  "content": "{\"sources\": [\"sql.materiais\", \"api.distribuicao_list\", \"api.monitoramento_sistema_satelital_list\", \"api.monitoramento_sistema_hf_list\", \"spreadsheets.contratos\", \"spreadsheets.fornecimento\", \"spreadsheets.quadro_importacao\", \"sql.regra\", \"sql.vw_comparativo_previsto_existente\", \"sql.vw_tipoeqp_previsto_unidades\", \"sql.catalogo\"]}",
+  "done_reason": "stop",
+  "eval_count": 100,
+  "prompt_eval_count": 1136,
+  "s": 2.6,
+  "analise": {
+   "len_chars": 331,
+   "n_ids": 11,
+   "n_distintos": 11,
+   "mais_repetido": [
+    [
+     "sql.materiais",
+     1
+    ],
+    [
+     "api.distribuicao_list",
+     1
+    ]
+   ],
+   "frac_espaco": 0.033,
+   "termina_json_valido": true
+  }
+ },
+ "teste_uniqueItems__enum2_minItems4": {
+  "content": "{\"sources\": [\"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"sql.materiais\", \"",
+  "done_reason": "length",
+  "eval_count": 256,
+  "prompt_eval_count": 1136,
+  "s": 6.1,
+  "analise": {
+   "len_chars": 728,
+   "n_ids": 42,
+   "n_distintos": 1,
+   "mais_repetido": [
+    [
+     "sql.materiais",
+     42
+    ]
+   ],
+   "frac_espaco": 0.059,
+   "termina_json_valido": false
+  }
+ },
+ "teste_maxItems2__Q02": {
+  "content": "{\"sources\": [\"sql.materiais\", \"api.distribuicao_list\"]}",
+  "done_reason": "stop",
+  "eval_count": 18,
+  "prompt_eval_count": 1136,
+  "s": 0.6,
+  "analise": {
+   "len_chars": 55,
+   "n_ids": 2,
+   "n_distintos": 2,
+   "mais_repetido": [
+    [
+     "sql.materiais",
+     1
+    ],
+    [
+     "api.distribuicao_list",
+     1
+    ]
+   ],
+   "frac_espaco": 0.036,
+   "termina_json_valido": true
+  }
+ },
+ "proposta_maxItems16_unique__Q01": {
+  "content": "{\"sources\": [\"sql.vw_comparativo_previsto_existente\", \"sql.vw_tipoeqp_previsto_unidades\", \"sql.regra\", \"sql.materiais\", \"sql.catalogo\", \"sql.vw_materiais_catalogo_unidade\", \"api.monitoramento_sistema_satelital_list\", \"api.monitoramento_sites_sistema_radio_list\", \"api.monitoramento_starlink_list\", \"api.monitoramento_sistema_hf_list\", \"spreadsheets.contratos\", \"spreadsheets.fornecimento\", \"spreadsheets.quadro_importacao\", \"api.distribuicao_list\", \"api.manutencao_ap_direto_list\", \"api.monitoramento_sites_sistema_radio_list\"]}",
+  "done_reason": "stop",
+  "eval_count": 151,
+  "prompt_eval_count": 1136,
+  "s": 3.8,
+  "analise": {
+   "len_chars": 528,
+   "n_ids": 16,
+   "n_distintos": 15,
+   "mais_repetido": [
+    [
+     "api.monitoramento_sites_sistema_radio_list",
+     2
+    ],
+    [
+     "sql.vw_comparativo_previsto_existente",
+     1
+    ]
+   ],
+   "frac_espaco": 0.03,
+   "termina_json_valido": true
+  }
+ },
+ "proposta_maxItems16_unique__Q02": {
+  "content": "{\"sources\": [\"sql.materiais\", \"api.distribuicao_list\", \"api.monitoramento_sistema_satelital_list\", \"api.monitoramento_sistema_hf_list\", \"spreadsheets.contratos\", \"spreadsheets.fornecimento\", \"spreadsheets.quadro_importacao\", \"sql.regra\", \"sql.vw_comparativo_previsto_existente\", \"sql.vw_tipoeqp_previsto_unidades\", \"sql.catalogo\"]}",
+  "done_reason": "stop",
+  "eval_count": 100,
+  "prompt_eval_count": 1136,
+  "s": 2.7,
+  "analise": {
+   "len_chars": 331,
+   "n_ids": 11,
+   "n_distintos": 11,
+   "mais_repetido": [
+    [
+     "sql.materiais",
+     1
+    ],
+    [
+     "api.distribuicao_list",
+     1
+    ]
+   ],
+   "frac_espaco": 0.033,
+   "termina_json_valido": true
+  }
+ }
+}

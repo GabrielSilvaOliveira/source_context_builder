@@ -112,14 +112,15 @@ def compressed_source_ids(catalog):
     return ids
 
 
-PROMPT_VARIANTS = ("original", "no_examples", "no_examples_schema")
+PROMPT_VARIANTS = ("original", "no_examples", "no_examples_schema", "no_examples_schema_cap3")
+SCHEMA_VARIANTS = ("no_examples_schema", "no_examples_schema_cap3")
 
 
 def build_system_prompt(catalog_text, variant="original"):
     prompt = _build_system_prompt_original(catalog_text)
     if variant == "original":
         return prompt
-    if variant in ("no_examples", "no_examples_schema"):
+    if variant == "no_examples" or variant in SCHEMA_VARIANTS:
         # Remove o bloco de "EXEMPLOS:" até a linha em branco que antecede
         # "Responda APENAS com o JSON."; o resto fica byte a byte igual.
         start = prompt.rindex("EXEMPLOS:\n")
@@ -128,11 +129,13 @@ def build_system_prompt(catalog_text, variant="original"):
     raise ValueError(f"variante de prompt desconhecida: {variant}")
 
 
-def source_schema(source_ids):
-    return {"type": "object",
-            "properties": {"sources": {"type": "array",
-                                       "items": {"type": "string", "enum": list(source_ids)}}},
-            "required": ["sources"]}
+def source_schema(source_ids, max_items=None, unique_items=False):
+    arr = {"type": "array", "items": {"type": "string", "enum": list(source_ids)}}
+    if max_items is not None:
+        arr["maxItems"] = max_items
+    if unique_items:
+        arr["uniqueItems"] = True  # declarado; o Ollama 0.32.11 não impõe (ver diagnostico_B)
+    return {"type": "object", "properties": {"sources": arr}, "required": ["sources"]}
 
 
 def _build_system_prompt_original(catalog_text):
@@ -407,8 +410,8 @@ def main():
         client = OllamaClient(args.model, args.ollama_url)
         print(f"✅ Ollama local — modelo: {args.model}")
 
-    if args.prompt_variant == "no_examples_schema" and args.provider != "ollama":
-        raise SystemExit("--prompt-variant no_examples_schema só é suportada com --provider ollama")
+    if args.prompt_variant in SCHEMA_VARIANTS and args.provider != "ollama":
+        raise SystemExit(f"--prompt-variant {args.prompt_variant} só é suportada com --provider ollama")
 
     # Teste de conectividade
     if args.test_connection:
@@ -433,10 +436,13 @@ def main():
         slug = (f"{args.provider}_{args.model.replace('/','_').replace(':','_')}_{fmt}"
                 f"_{cond}__{args.prompt_variant}")
         schema = None
-        if args.prompt_variant == "no_examples_schema":
+        if args.prompt_variant in SCHEMA_VARIANTS:
             if fmt != "compressed":
-                raise SystemExit("no_examples_schema está definida só para o formato compressed")
-            schema = source_schema(compressed_source_ids(catalog))
+                raise SystemExit(f"{args.prompt_variant} está definida só para o formato compressed")
+            ids = compressed_source_ids(catalog)
+            # Emenda 01: maxItems = nº de fontes do catálogo (16) na B; 3 na B2; uniqueItems nas duas
+            cap = 3 if args.prompt_variant == "no_examples_schema_cap3" else len(ids)
+            schema = source_schema(ids, max_items=cap, unique_items=True)
         meta = {
             "prompt_variant": args.prompt_variant,
             "catalog_path": str(args.catalog),
