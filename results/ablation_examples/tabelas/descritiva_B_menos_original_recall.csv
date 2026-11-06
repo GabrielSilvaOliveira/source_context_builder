@@ -1,0 +1,5 @@
+comparacao,familia,n_queries,diff,p_raw,p_holm,ci_low,ci_high,significativo_holm
+Curated: B - original,descritiva_B_menos_original,80,0.07916625,0.0002,0.0008,0.029166249999999998,0.1395825,True
+Curated-synth.: B - original,descritiva_B_menos_original,80,0.1625,0.0002,0.0008,0.075,0.25,True
+Generated: B - original,descritiva_B_menos_original,80,0.11458375000000001,0.0016,0.0032,0.03750125,0.19583375,True
+Floor: B - original,descritiva_B_menos_original,80,0.06354125,0.0746,0.0746,-0.004167500000000002,0.13749875,False

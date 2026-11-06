@@ -1,0 +1,5 @@
+comparacao,familia,n_queries,diff,p_raw,p_holm,ci_low,ci_high,significativo_holm
+Curated: B - A,secundaria_B_menos_A,80,0.0,1.0,1.0,0.0,0.0,False
+Curated-synth.: B - A,secundaria_B_menos_A,80,0.0,1.0,1.0,0.0,0.0,False
+Generated: B - A,secundaria_B_menos_A,80,0.003125,0.7354,1.0,0.0,0.009375,False
+Floor: B - A,secundaria_B_menos_A,80,0.015625,0.2726,1.0,0.0,0.04375,False

@@ -1,0 +1,5240 @@
+{
+ "primaria_A_menos_original": [
+  {
+   "comparacao": "Curated: A - original",
+   "n_queries": "80",
+   "diff": "-9.624999999999773e-05",
+   "ci_low": "-0.06095159375",
+   "ci_high": "0.06520278124999997",
+   "p_raw": "0.97",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: A - original",
+   "n_queries": "80",
+   "diff": "0.021656250000000002",
+   "ci_low": "-0.05355056250000001",
+   "ci_high": "0.09891340624999997",
+   "p_raw": "0.5708",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: A - original",
+   "n_queries": "80",
+   "diff": "-0.0031449999999999976",
+   "ci_low": "-0.0645226875",
+   "ci_high": "0.06232293749999998",
+   "p_raw": "0.905",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: A - original",
+   "n_queries": "80",
+   "diff": "-0.09714",
+   "ci_low": "-0.1655519375",
+   "ci_high": "-0.02732040625000002",
+   "p_raw": "0.0082",
+   "p_holm": "0.0328",
+   "significativo_holm": "True"
+  }
+ ],
+ "secundaria_B_menos_A": [
+  {
+   "comparacao": "Curated: B - A",
+   "n_queries": "80",
+   "diff": "-0.0013887499999999998",
+   "ci_low": "-0.004166249999999999",
+   "ci_high": "0.0",
+   "p_raw": "0.7328",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B - A",
+   "n_queries": "80",
+   "diff": "0.0",
+   "ci_low": "0.0",
+   "ci_high": "0.0",
+   "p_raw": "1.0",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B - A",
+   "n_queries": "80",
+   "diff": "0.00262125",
+   "ci_low": "-0.0011437500000000002",
+   "ci_high": "0.009375",
+   "p_raw": "0.7354",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B - A",
+   "n_queries": "80",
+   "diff": "0.012668749999999998",
+   "ci_low": "0.0",
+   "ci_high": "0.029847156249999927",
+   "p_raw": "0.092",
+   "p_holm": "0.368",
+   "significativo_holm": "False"
+  }
+ ],
+ "descritiva_B_menos_original": [
+  {
+   "comparacao": "Curated: B - original",
+   "n_queries": "80",
+   "diff": "-0.0014849999999999974",
+   "ci_low": "-0.0622050625",
+   "ci_high": "0.06365253125",
+   "p_raw": "0.9396",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B - original",
+   "n_queries": "80",
+   "diff": "0.021656250000000002",
+   "ci_low": "-0.05355056250000001",
+   "ci_high": "0.09891340624999997",
+   "p_raw": "0.5708",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B - original",
+   "n_queries": "80",
+   "diff": "-0.0005237500000000006",
+   "ci_low": "-0.061060125",
+   "ci_high": "0.06417474999999999",
+   "p_raw": "0.9778",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B - original",
+   "n_queries": "80",
+   "diff": "-0.08447125",
+   "ci_low": "-0.15247662499999998",
+   "ci_high": "-0.015598218750000002",
+   "p_raw": "0.0186",
+   "p_holm": "0.0744",
+   "significativo_holm": "False"
+  }
+ ],
+ "exploratoria_B2_menos_A": [
+  {
+   "comparacao": "Curated: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.013902500000000002",
+   "ci_low": "-0.0410725",
+   "ci_high": "0.00969503125",
+   "p_raw": "0.2728",
+   "p_holm": "0.3558",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.031985",
+   "ci_low": "-0.06627150000000001",
+   "ci_high": "-0.0024244062500000042",
+   "p_raw": "0.0328",
+   "p_holm": "0.1312",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B2 - A",
+   "n_queries": "80",
+   "diff": "0.017611250000000002",
+   "ci_low": "-0.005446687500000001",
+   "ci_high": "0.043525062499999975",
+   "p_raw": "0.147",
+   "p_holm": "0.3558",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B2 - A",
+   "n_queries": "80",
+   "diff": "0.025532500000000003",
+   "ci_low": "-0.006240968749999995",
+   "ci_high": "0.05724415624999998",
+   "p_raw": "0.1186",
+   "p_holm": "0.3558",
+   "significativo_holm": "False"
+  }
+ ],
+ "descritiva_B2_menos_original": [
+  {
+   "comparacao": "Curated: B2 - original",
+   "n_queries": "80",
+   "diff": "-0.013998749999999999",
+   "ci_low": "-0.07511053125",
+   "ci_high": "0.052941531249999986",
+   "p_raw": "0.6478",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B2 - original",
+   "n_queries": "80",
+   "diff": "-0.010328750000000003",
+   "ci_low": "-0.08824137500000002",
+   "ci_high": "0.07009293749999995",
+   "p_raw": "0.7886",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B2 - original",
+   "n_queries": "80",
+   "diff": "0.01446625",
+   "ci_low": "-0.04636875",
+   "ci_high": "0.08001112499999989",
+   "p_raw": "0.6556",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B2 - original",
+   "n_queries": "80",
+   "diff": "-0.07160749999999999",
+   "ci_low": "-0.13584124999999997",
+   "ci_high": "-0.006608687499999986",
+   "p_raw": "0.0318",
+   "p_holm": "0.1272",
+   "significativo_holm": "False"
+  }
+ ],
+ "descritiva_gpt4o_A_menos_original": [
+  {
+   "comparacao": "GPT-4o Curated: A - original",
+   "n_queries": "80",
+   "diff": "0.01083375",
+   "ci_low": "-0.02585449999999998",
+   "ci_high": "0.05499999999999999",
+   "p_raw": "0.6322",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "GPT-4o Floor: A - original",
+   "n_queries": "80",
+   "diff": "-0.002498750000000001",
+   "ci_low": "-0.044164999999999996",
+   "ci_high": "0.0391675",
+   "p_raw": "0.909",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  }
+ ],
+ "primaria_A_menos_original_precision": [
+  {
+   "comparacao": "Curated: A - original",
+   "n_queries": "80",
+   "diff": "-0.07027750000000002",
+   "ci_low": "-0.12809053125",
+   "ci_high": "-0.014337906250000015",
+   "p_raw": "0.0132",
+   "p_holm": "0.039599999999999996",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Curated-synth.: A - original",
+   "n_queries": "80",
+   "diff": "-0.09051625",
+   "ci_low": "-0.1639175",
+   "ci_high": "-0.017997468750000006",
+   "p_raw": "0.0136",
+   "p_holm": "0.039599999999999996",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Generated: A - original",
+   "n_queries": "80",
+   "diff": "-0.05119625000000001",
+   "ci_low": "-0.11340128124999999",
+   "ci_high": "0.011321656249999989",
+   "p_raw": "0.1072",
+   "p_holm": "0.1072",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: A - original",
+   "n_queries": "80",
+   "diff": "-0.16931500000000002",
+   "ci_low": "-0.24104225000000004",
+   "ci_high": "-0.10123368750000003",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  }
+ ],
+ "secundaria_B_menos_A_precision": [
+  {
+   "comparacao": "Curated: B - A",
+   "n_queries": "80",
+   "diff": "-0.0009375000000000002",
+   "ci_low": "-0.0028125000000000003",
+   "ci_high": "0.0",
+   "p_raw": "0.7328",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B - A",
+   "n_queries": "80",
+   "diff": "0.0",
+   "ci_low": "0.0",
+   "ci_high": "0.0",
+   "p_raw": "1.0",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B - A",
+   "n_queries": "80",
+   "diff": "0.00276125",
+   "ci_low": "-0.0008187500000000007",
+   "ci_high": "0.009375",
+   "p_raw": "0.7354",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B - A",
+   "n_queries": "80",
+   "diff": "0.01171875",
+   "ci_low": "0.0",
+   "ci_high": "0.0296875",
+   "p_raw": "0.092",
+   "p_holm": "0.368",
+   "significativo_holm": "False"
+  }
+ ],
+ "descritiva_B_menos_original_precision": [
+  {
+   "comparacao": "Curated: B - original",
+   "n_queries": "80",
+   "diff": "-0.071215",
+   "ci_low": "-0.12888965625",
+   "ci_high": "-0.014994875000000041",
+   "p_raw": "0.0126",
+   "p_holm": "0.0378",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Curated-synth.: B - original",
+   "n_queries": "80",
+   "diff": "-0.09051625",
+   "ci_low": "-0.1639175",
+   "ci_high": "-0.017997468750000006",
+   "p_raw": "0.0136",
+   "p_holm": "0.0378",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Generated: B - original",
+   "n_queries": "80",
+   "diff": "-0.048435",
+   "ci_low": "-0.11027846875",
+   "ci_high": "0.01304146874999997",
+   "p_raw": "0.1268",
+   "p_holm": "0.1268",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B - original",
+   "n_queries": "80",
+   "diff": "-0.15759625000000002",
+   "ci_low": "-0.22695340625000002",
+   "ci_high": "-0.09090221875000003",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  }
+ ],
+ "exploratoria_B2_menos_A_precision": [
+  {
+   "comparacao": "Curated: B2 - A",
+   "n_queries": "80",
+   "diff": "0.008192499999999997",
+   "ci_low": "-0.008232531250000003",
+   "ci_high": "0.02632003125",
+   "p_raw": "0.3456",
+   "p_holm": "0.6912",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.0020400000000000023",
+   "ci_low": "-0.018985031250000003",
+   "ci_high": "0.012447531249999996",
+   "p_raw": "0.8378",
+   "p_holm": "0.8378",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B2 - A",
+   "n_queries": "80",
+   "diff": "0.0247075",
+   "ci_low": "0.0049506874999999985",
+   "ci_high": "0.04876874999999999",
+   "p_raw": "0.0098",
+   "p_holm": "0.0294",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Floor: B2 - A",
+   "n_queries": "80",
+   "diff": "0.04565374999999999",
+   "ci_low": "0.019815562499999998",
+   "ci_high": "0.073430125",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  }
+ ],
+ "descritiva_B2_menos_original_precision": [
+  {
+   "comparacao": "Curated: B2 - original",
+   "n_queries": "80",
+   "diff": "-0.062085000000000015",
+   "ci_low": "-0.11917125000000002",
+   "ci_high": "-0.005626218750000011",
+   "p_raw": "0.0326",
+   "p_holm": "0.0652",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B2 - original",
+   "n_queries": "80",
+   "diff": "-0.09255625000000002",
+   "ci_low": "-0.16740140625",
+   "ci_high": "-0.017553718750000006",
+   "p_raw": "0.0142",
+   "p_holm": "0.0426",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Generated: B2 - original",
+   "n_queries": "80",
+   "diff": "-0.026488750000000005",
+   "ci_low": "-0.089585",
+   "ci_high": "0.03660499999999999",
+   "p_raw": "0.3964",
+   "p_holm": "0.3964",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B2 - original",
+   "n_queries": "80",
+   "diff": "-0.12366125000000001",
+   "ci_low": "-0.18917440625",
+   "ci_high": "-0.060716468750000044",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  }
+ ],
+ "descritiva_gpt4o_A_menos_original_precision": [
+  {
+   "comparacao": "GPT-4o Curated: A - original",
+   "n_queries": "80",
+   "diff": "-0.002083750000000001",
+   "ci_low": "-0.03333375",
+   "ci_high": "0.0333325",
+   "p_raw": "0.8916",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "GPT-4o Floor: A - original",
+   "n_queries": "80",
+   "diff": "-0.0031250000000000015",
+   "ci_low": "-0.038540031249999995",
+   "ci_high": "0.034375",
+   "p_raw": "0.8482",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  }
+ ],
+ "primaria_A_menos_original_recall": [
+  {
+   "comparacao": "Curated: A - original",
+   "n_queries": "80",
+   "diff": "0.07916625",
+   "ci_low": "0.029166249999999998",
+   "ci_high": "0.1395825",
+   "p_raw": "0.0002",
+   "p_holm": "0.0008",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Curated-synth.: A - original",
+   "n_queries": "80",
+   "diff": "0.1625",
+   "ci_low": "0.075",
+   "ci_high": "0.25",
+   "p_raw": "0.0002",
+   "p_holm": "0.0008",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Generated: A - original",
+   "n_queries": "80",
+   "diff": "0.11145875000000001",
+   "ci_low": "0.034375",
+   "ci_high": "0.19375",
+   "p_raw": "0.0032",
+   "p_holm": "0.0064",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Floor: A - original",
+   "n_queries": "80",
+   "diff": "0.04791625",
+   "ci_low": "-0.025",
+   "ci_high": "0.12291624999999999",
+   "p_raw": "0.2172",
+   "p_holm": "0.2172",
+   "significativo_holm": "False"
+  }
+ ],
+ "secundaria_B_menos_A_recall": [
+  {
+   "comparacao": "Curated: B - A",
+   "n_queries": "80",
+   "diff": "0.0",
+   "ci_low": "0.0",
+   "ci_high": "0.0",
+   "p_raw": "1.0",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B - A",
+   "n_queries": "80",
+   "diff": "0.0",
+   "ci_low": "0.0",
+   "ci_high": "0.0",
+   "p_raw": "1.0",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B - A",
+   "n_queries": "80",
+   "diff": "0.003125",
+   "ci_low": "0.0",
+   "ci_high": "0.009375",
+   "p_raw": "0.7354",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B - A",
+   "n_queries": "80",
+   "diff": "0.015625",
+   "ci_low": "0.0",
+   "ci_high": "0.04375",
+   "p_raw": "0.2726",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  }
+ ],
+ "descritiva_B_menos_original_recall": [
+  {
+   "comparacao": "Curated: B - original",
+   "n_queries": "80",
+   "diff": "0.07916625",
+   "ci_low": "0.029166249999999998",
+   "ci_high": "0.1395825",
+   "p_raw": "0.0002",
+   "p_holm": "0.0008",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Curated-synth.: B - original",
+   "n_queries": "80",
+   "diff": "0.1625",
+   "ci_low": "0.075",
+   "ci_high": "0.25",
+   "p_raw": "0.0002",
+   "p_holm": "0.0008",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Generated: B - original",
+   "n_queries": "80",
+   "diff": "0.11458375000000001",
+   "ci_low": "0.03750125",
+   "ci_high": "0.19583375",
+   "p_raw": "0.0016",
+   "p_holm": "0.0032",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Floor: B - original",
+   "n_queries": "80",
+   "diff": "0.06354125",
+   "ci_low": "-0.004167500000000002",
+   "ci_high": "0.13749875",
+   "p_raw": "0.0746",
+   "p_holm": "0.0746",
+   "significativo_holm": "False"
+  }
+ ],
+ "exploratoria_B2_menos_A_recall": [
+  {
+   "comparacao": "Curated: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.06145874999999999",
+   "ci_low": "-0.115625",
+   "ci_high": "-0.0166675",
+   "p_raw": "0.0014",
+   "p_holm": "0.0036",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Curated-synth.: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.07395875",
+   "ci_low": "-0.133335",
+   "ci_high": "-0.02395875",
+   "p_raw": "0.0012",
+   "p_holm": "0.0036",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Generated: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.029167500000000002",
+   "ci_low": "-0.0666675",
+   "ci_high": "0.0",
+   "p_raw": "0.0958",
+   "p_holm": "0.0958",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.0875",
+   "ci_low": "-0.15",
+   "ci_high": "-0.0375",
+   "p_raw": "0.0002",
+   "p_holm": "0.0008",
+   "significativo_holm": "True"
+  }
+ ],
+ "descritiva_B2_menos_original_recall": [
+  {
+   "comparacao": "Curated: B2 - original",
+   "n_queries": "80",
+   "diff": "0.017707499999999998",
+   "ci_low": "-0.051042500000000005",
+   "ci_high": "0.0875",
+   "p_raw": "0.621",
+   "p_holm": "0.7392",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B2 - original",
+   "n_queries": "80",
+   "diff": "0.08854124999999999",
+   "ci_low": "-0.002083750000000001",
+   "ci_high": "0.18125",
+   "p_raw": "0.0548",
+   "p_holm": "0.1644",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B2 - original",
+   "n_queries": "80",
+   "diff": "0.08229125",
+   "ci_low": "0.010414999999999997",
+   "ci_high": "0.159375",
+   "p_raw": "0.0266",
+   "p_holm": "0.1064",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B2 - original",
+   "n_queries": "80",
+   "diff": "-0.03958375",
+   "ci_low": "-0.125",
+   "ci_high": "0.04375",
+   "p_raw": "0.3696",
+   "p_holm": "0.7392",
+   "significativo_holm": "False"
+  }
+ ],
+ "descritiva_gpt4o_A_menos_original_recall": [
+  {
+   "comparacao": "GPT-4o Curated: A - original",
+   "n_queries": "80",
+   "diff": "0.0125",
+   "ci_low": "-0.025",
+   "ci_high": "0.0625",
+   "p_raw": "0.7876",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "GPT-4o Floor: A - original",
+   "n_queries": "80",
+   "diff": "0.0125",
+   "ci_low": "-0.025",
+   "ci_high": "0.05",
+   "p_raw": "0.7922",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  }
+ ],
+ "primaria_A_menos_original_error_rate": [
+  {
+   "comparacao": "Curated: A - original",
+   "n_queries": "80",
+   "diff": "0.1125",
+   "ci_low": "0.05",
+   "ci_high": "0.1875",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Curated-synth.: A - original",
+   "n_queries": "80",
+   "diff": "0.1375",
+   "ci_low": "0.0625",
+   "ci_high": "0.2125",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Generated: A - original",
+   "n_queries": "80",
+   "diff": "0.1375",
+   "ci_low": "0.0625",
+   "ci_high": "0.2125",
+   "p_raw": "0.0002",
+   "p_holm": "0.0002",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Floor: A - original",
+   "n_queries": "80",
+   "diff": "0.2875",
+   "ci_low": "0.1875",
+   "ci_high": "0.3875",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  }
+ ],
+ "secundaria_B_menos_A_error_rate": [
+  {
+   "comparacao": "Curated: B - A",
+   "n_queries": "80",
+   "diff": "0.0",
+   "ci_low": "0.0",
+   "ci_high": "0.0",
+   "p_raw": "1.0",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B - A",
+   "n_queries": "80",
+   "diff": "-0.0125",
+   "ci_low": "-0.0375",
+   "ci_high": "0.0",
+   "p_raw": "0.7204",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B - A",
+   "n_queries": "80",
+   "diff": "0.0",
+   "ci_low": "0.0",
+   "ci_high": "0.0",
+   "p_raw": "1.0",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B - A",
+   "n_queries": "80",
+   "diff": "0.0125",
+   "ci_low": "0.0",
+   "ci_high": "0.0375",
+   "p_raw": "0.735",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  }
+ ],
+ "descritiva_B_menos_original_error_rate": [
+  {
+   "comparacao": "Curated: B - original",
+   "n_queries": "80",
+   "diff": "0.1125",
+   "ci_low": "0.05",
+   "ci_high": "0.1875",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Curated-synth.: B - original",
+   "n_queries": "80",
+   "diff": "0.125",
+   "ci_low": "0.0625",
+   "ci_high": "0.2",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Generated: B - original",
+   "n_queries": "80",
+   "diff": "0.1375",
+   "ci_low": "0.0625",
+   "ci_high": "0.2125",
+   "p_raw": "0.0002",
+   "p_holm": "0.0002",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Floor: B - original",
+   "n_queries": "80",
+   "diff": "0.3",
+   "ci_low": "0.2",
+   "ci_high": "0.4",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  }
+ ],
+ "exploratoria_B2_menos_A_error_rate": [
+  {
+   "comparacao": "Curated: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.0375",
+   "ci_low": "-0.0875",
+   "ci_high": "0.0",
+   "p_raw": "0.0938",
+   "p_holm": "0.186",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.0375",
+   "ci_low": "-0.0875",
+   "ci_high": "0.0",
+   "p_raw": "0.093",
+   "p_holm": "0.186",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Generated: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.075",
+   "ci_low": "-0.1375",
+   "ci_high": "-0.025",
+   "p_raw": "0.0054",
+   "p_holm": "0.0162",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Floor: B2 - A",
+   "n_queries": "80",
+   "diff": "-0.125",
+   "ci_low": "-0.2",
+   "ci_high": "-0.0625",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  }
+ ],
+ "descritiva_B2_menos_original_error_rate": [
+  {
+   "comparacao": "Curated: B2 - original",
+   "n_queries": "80",
+   "diff": "0.075",
+   "ci_low": "0.0125",
+   "ci_high": "0.15",
+   "p_raw": "0.0334",
+   "p_holm": "0.0668",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Curated-synth.: B2 - original",
+   "n_queries": "80",
+   "diff": "0.1",
+   "ci_low": "0.0375",
+   "ci_high": "0.175",
+   "p_raw": "0.0004",
+   "p_holm": "0.0016",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Generated: B2 - original",
+   "n_queries": "80",
+   "diff": "0.0625",
+   "ci_low": "0.0",
+   "ci_high": "0.125",
+   "p_raw": "0.0702",
+   "p_holm": "0.0702",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Floor: B2 - original",
+   "n_queries": "80",
+   "diff": "0.1625",
+   "ci_low": "0.075",
+   "ci_high": "0.2625",
+   "p_raw": "0.0008",
+   "p_holm": "0.0024000000000000002",
+   "significativo_holm": "True"
+  }
+ ],
+ "descritiva_gpt4o_A_menos_original_error_rate": [
+  {
+   "comparacao": "GPT-4o Curated: A - original",
+   "n_queries": "80",
+   "diff": "0.0",
+   "ci_low": "-0.05",
+   "ci_high": "0.05",
+   "p_raw": "1.0",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "GPT-4o Floor: A - original",
+   "n_queries": "80",
+   "diff": "-0.0125",
+   "ci_low": "-0.0375",
+   "ci_high": "0.0",
+   "p_raw": "0.7302",
+   "p_holm": "1.0",
+   "significativo_holm": "False"
+  }
+ ],
+ "descritiva_Floor_A_menos_original_sem_Q01": [
+  {
+   "comparacao": "Floor sem Q01: A - original",
+   "n_queries": "79",
+   "diff": "-0.09330632911392404",
+   "ci_low": "-0.1624703164556962",
+   "ci_high": "-0.023074303797468398",
+   "p_raw": "0.009",
+   "p_holm": "0.009",
+   "significativo_holm": "True"
+  }
+ ],
+ "decomposicao_tabelaIV_original": [
+  {
+   "comparacao": "Llama original: forma (Curated - Curated-synth.)",
+   "n_queries": "80",
+   "diff": "0.10991875",
+   "ci_low": "0.045684937499999995",
+   "ci_high": "0.1793451875",
+   "p_raw": "0.0",
+   "p_holm": "0.0",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Llama original: procedencia (Curated-synth. - Generated)",
+   "n_queries": "80",
+   "diff": "0.003960000000000008",
+   "ci_low": "-0.08249631249999999",
+   "ci_high": "0.08895753125",
+   "p_raw": "0.9222",
+   "p_holm": "0.9222",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Llama original: total (Curated - Generated)",
+   "n_queries": "80",
+   "diff": "0.11387874999999999",
+   "ci_low": "0.03666578125",
+   "ci_high": "0.19443356249999996",
+   "p_raw": "0.0012",
+   "p_holm": "0.0024",
+   "significativo_holm": "True"
+  }
+ ],
+ "decomposicao_tabelaIV_A": [
+  {
+   "comparacao": "Llama A: forma (Curated - Curated-synth.)",
+   "n_queries": "80",
+   "diff": "0.08816625000000002",
+   "ci_low": "0.03566775000000001",
+   "ci_high": "0.146591375",
+   "p_raw": "0.0006",
+   "p_holm": "0.0018",
+   "significativo_holm": "True"
+  },
+  {
+   "comparacao": "Llama A: procedencia (Curated-synth. - Generated)",
+   "n_queries": "80",
+   "diff": "0.028761250000000006",
+   "ci_low": "-0.05410431249999998",
+   "ci_high": "0.11539787499999989",
+   "p_raw": "0.5144",
+   "p_holm": "0.5144",
+   "significativo_holm": "False"
+  },
+  {
+   "comparacao": "Llama A: total (Curated - Generated)",
+   "n_queries": "80",
+   "diff": "0.1169275",
+   "ci_low": "0.04107128125000001",
+   "ci_high": "0.19692009375",
+   "p_raw": "0.002",
+   "p_holm": "0.004",
+   "significativo_holm": "True"
+  }
+ ],
+ "descritivos_por_variante": [
+  {
+   "variante": "original",
+   "condicao": "Curated",
+   "n": 80,
+   "f1": 0.7605,
+   "precisao": 0.7704,
+   "recall_primarias": 0.8729,
+   "fontes_por_consulta": 1.95,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.15,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "original",
+   "condicao": "Curated-synth.",
+   "n": 80,
+   "f1": 0.6506,
+   "precisao": 0.705,
+   "recall_primarias": 0.7104,
+   "fontes_por_consulta": 1.712,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.1375,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "original",
+   "condicao": "Generated",
+   "n": 80,
+   "f1": 0.6467,
+   "precisao": 0.6682,
+   "recall_primarias": 0.7021,
+   "fontes_por_consulta": 1.562,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.1375,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "original",
+   "condicao": "Floor",
+   "n": 80,
+   "f1": 0.6452,
+   "precisao": 0.6299,
+   "recall_primarias": 0.8135,
+   "fontes_por_consulta": 2.4,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 1,
+   "must_NOT_include_taxa": 0.1875,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples",
+   "condicao": "Curated",
+   "n": 80,
+   "f1": 0.7605,
+   "precisao": 0.7001,
+   "recall_primarias": 0.9521,
+   "fontes_por_consulta": 2.562,
+   "vazias": 0,
+   "id_invalido_consultas": 1,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.2625,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples",
+   "condicao": "Curated-synth.",
+   "n": 80,
+   "f1": 0.6723,
+   "precisao": 0.6145,
+   "recall_primarias": 0.8729,
+   "fontes_por_consulta": 2.513,
+   "vazias": 0,
+   "id_invalido_consultas": 1,
+   "com_repetidas": 1,
+   "must_NOT_include_taxa": 0.275,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples",
+   "condicao": "Generated",
+   "n": 80,
+   "f1": 0.6435,
+   "precisao": 0.617,
+   "recall_primarias": 0.8135,
+   "fontes_por_consulta": 2.862,
+   "vazias": 0,
+   "id_invalido_consultas": 4,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.275,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples",
+   "condicao": "Floor",
+   "n": 80,
+   "f1": 0.5481,
+   "precisao": 0.4606,
+   "recall_primarias": 0.8615,
+   "fontes_por_consulta": 4.275,
+   "vazias": 1,
+   "id_invalido_consultas": 2,
+   "com_repetidas": 2,
+   "must_NOT_include_taxa": 0.475,
+   "erros_timeout": 1
+  },
+  {
+   "variante": "no_examples_schema",
+   "condicao": "Curated",
+   "n": 80,
+   "f1": 0.7591,
+   "precisao": 0.6992,
+   "recall_primarias": 0.9521,
+   "fontes_por_consulta": 2.638,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 1,
+   "must_NOT_include_taxa": 0.2625,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples_schema",
+   "condicao": "Curated-synth.",
+   "n": 80,
+   "f1": 0.6723,
+   "precisao": 0.6145,
+   "recall_primarias": 0.8729,
+   "fontes_por_consulta": 2.513,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.2625,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples_schema",
+   "condicao": "Generated",
+   "n": 80,
+   "f1": 0.6461,
+   "precisao": 0.6197,
+   "recall_primarias": 0.8167,
+   "fontes_por_consulta": 2.888,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 2,
+   "must_NOT_include_taxa": 0.275,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples_schema",
+   "condicao": "Floor",
+   "n": 80,
+   "f1": 0.5608,
+   "precisao": 0.4723,
+   "recall_primarias": 0.8771,
+   "fontes_por_consulta": 4.475,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 3,
+   "must_NOT_include_taxa": 0.4875,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples_schema_cap3",
+   "condicao": "Curated",
+   "n": 80,
+   "f1": 0.7465,
+   "precisao": 0.7083,
+   "recall_primarias": 0.8906,
+   "fontes_por_consulta": 2.062,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.225,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples_schema_cap3",
+   "condicao": "Curated-synth.",
+   "n": 80,
+   "f1": 0.6403,
+   "precisao": 0.6125,
+   "recall_primarias": 0.799,
+   "fontes_por_consulta": 2.1,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.2375,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples_schema_cap3",
+   "condicao": "Generated",
+   "n": 80,
+   "f1": 0.6611,
+   "precisao": 0.6417,
+   "recall_primarias": 0.7844,
+   "fontes_por_consulta": 1.95,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.2,
+   "erros_timeout": 0
+  },
+  {
+   "variante": "no_examples_schema_cap3",
+   "condicao": "Floor",
+   "n": 80,
+   "f1": 0.5736,
+   "precisao": 0.5062,
+   "recall_primarias": 0.774,
+   "fontes_por_consulta": 2.475,
+   "vazias": 0,
+   "id_invalido_consultas": 0,
+   "com_repetidas": 0,
+   "must_NOT_include_taxa": 0.35,
+   "erros_timeout": 0
+  }
+ ],
+ "selecoes_que_mudaram": {
+  "Curated": [
+   {
+    "id": "Q59",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra",
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.unidades",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "api.distribuicao_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q19",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.4,
+    "orig": [
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "A": [
+     "api.monitoramento_sistema_satelital_list",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "esperado": [
+     "api.monitoramento_sistema_satelital_list"
+    ]
+   },
+   {
+    "id": "Q38",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 1.0,
+    "orig": [
+     "sql.regra"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q34",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.materiais",
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q30",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.75,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.regra",
+     "sql.unidades",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q72",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.4,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q45",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.regra"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q80",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.3333,
+    "f1_A": 1.0,
+    "orig": [
+     "api.distribuicao_list",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list",
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q16",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.4,
+    "orig": [
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q18",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.2857,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.unidades",
+     "sql.materiais",
+     "sql.catalogo"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q17",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "api.monitoramento_sites_sistema_radio_list"
+    ],
+    "A": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q29",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.8,
+    "orig": [
+     "api.distribuicao_list",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q66",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.5,
+    "f1_A": 1.0,
+    "orig": [
+     "api.monitoramento_sistema_hf_list",
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_sistema_hf_list",
+     "api.manutencao_ap_direto_list"
+    ],
+    "esperado": [
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sistema_hf_list"
+    ]
+   },
+   {
+    "id": "Q41",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.4,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra",
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.materiais",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q47",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q50",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 1.0,
+    "f1_A": 0.8,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q15",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.5,
+    "f1_A": 0.3333,
+    "orig": [
+     "spreadsheets.fornecimento",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra"
+    ],
+    "A": [
+     "sql.unidades",
+     "sql.regra",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q53",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q02",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q20",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.8,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "sql.materiais"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q55",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q70",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento",
+     "sql.materiais"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q33",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q69",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q75",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.4,
+    "f1_A": 0.3333,
+    "orig": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra",
+     "sql.unidades",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "sql.regra",
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_materiais_catalogo_un"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q76",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.contratos",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q79",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.5,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra",
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_comparativo_previsto_existente",
+     "api.manutencao_ap_direto_list"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q48",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.5714,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.catalogo",
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.materiais"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q28",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q22",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.2,
+    "orig": [
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "spreadsheets.quadro_importacao",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.materiais",
+     "api.distribuicao_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao"
+    ]
+   },
+   {
+    "id": "Q31",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 1.0,
+    "orig": [
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q36",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.5,
+    "f1_A": 0.8,
+    "orig": [
+     "api.manutencao_ap_direto_list",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "api.manutencao_ap_direto_list",
+     "sql.materiais",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.manutencao_ap_direto_list"
+    ]
+   },
+   {
+    "id": "Q40",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.8,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q10",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.catalogo"
+    ],
+    "A": [
+     "sql.catalogo",
+     "sql.materiais"
+    ],
+    "esperado": [
+     "sql.catalogo"
+    ]
+   },
+   {
+    "id": "Q04",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q27",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q61",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.unidades",
+     "sql.regra"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q58",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.5,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.quadro_importacao",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao"
+    ]
+   },
+   {
+    "id": "Q64",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.8,
+    "f1_A": 0.5714,
+    "orig": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q65",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.2222,
+    "f1_A": 0.5455,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.materiais",
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q32",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 1.0,
+    "orig": [
+     "api.manutencao_ap_direto_list"
+    ],
+    "A": [
+     "api.manutencao_ap_direto_list",
+     "sql.materiais"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q74",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   }
+  ],
+  "Curated-synth.": [
+   {
+    "id": "Q57",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q59",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q24",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q38",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 1.0,
+    "orig": [
+     "sql.regra"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q34",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.materiais",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q30",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q72",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.4,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.catalogo",
+     "sql.regra"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q80",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.5,
+    "f1_A": 1.0,
+    "orig": [
+     "api.distribuicao_list",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list",
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q18",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.4,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.materiais",
+     "sql.catalogo"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q17",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.catalogo",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.regra"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q29",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q66",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.5,
+    "f1_A": 0.5,
+    "orig": [
+     "api.monitoramento_sistema_hf_list",
+     "api.monitoramento_sites_sistema_radio_list"
+    ],
+    "A": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "esperado": [
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sistema_hf_list"
+    ]
+   },
+   {
+    "id": "Q41",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.0,
+    "f1_A": 0.5714,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.regra",
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.materiais",
+     "sql.catalogo",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q77",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 1.0,
+    "orig": [
+     "api.monitoramento_sites_sistema_radio_list"
+    ],
+    "A": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "esperado": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list"
+    ]
+   },
+   {
+    "id": "Q47",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.catalogo",
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q15",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.6667,
+    "f1_A": 0.0,
+    "orig": [
+     "spreadsheets.fornecimento",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.materiais",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q53",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.regra"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q02",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q09",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.unidades",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.unidades"
+    ]
+   },
+   {
+    "id": "Q20",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.8,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "sql.catalogo"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q55",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.6667,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.materiais",
+     "sql.catalogo"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q21",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q70",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "sql.materiais",
+     "sql.catalogo"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q33",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "sql.materiais",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q67",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 1.0,
+    "orig": [
+     "api.monitoramento_sites_sistema_radio_list"
+    ],
+    "A": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "api.monitoramento_sites_sistema_radio_list"
+    ]
+   },
+   {
+    "id": "Q69",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.regra"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q75",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.0,
+    "f1_A": 0.3636,
+    "orig": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q76",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5714,
+    "orig": [
+     "spreadsheets.contratos",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q79",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.0,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.materiais",
+     "sql.catalogo",
+     "api.manutencao_ap_direto_list"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "api.manutencao_ap_direto_list"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q48",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.0,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.regra"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.catalogo"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q05",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q22",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.1667,
+    "orig": [
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "spreadsheets.quadro_importacao",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.unidades",
+     "api.distribuicao_list",
+     "api.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao"
+    ]
+   },
+   {
+    "id": "Q31",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q40",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "sql.materiais",
+     "sql.catalogo"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q46",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.8,
+    "f1_A": 0.5714,
+    "orig": [
+     "sql.materiais",
+     "sql.catalogo",
+     "spreadsheets.fornecimento"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q44",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 1.0,
+    "f1_A": 1.0,
+    "orig": [
+     "api.manutencao_ap_direto_list",
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.manutencao_ap_direto_list"
+    ],
+    "esperado": [
+     "api.manutencao_ap_direto_list"
+    ]
+   },
+   {
+    "id": "Q04",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q27",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q61",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.catalogo",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q58",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao"
+    ]
+   },
+   {
+    "id": "Q64",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.8,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q65",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.25,
+    "f1_A": 0.5714,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "A": [
+     "sql.materiais",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q68",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q32",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "api.manutencao_ap_direto_list"
+    ],
+    "A": [
+     "api.manutencao_ap_direto_list",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q74",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   }
+  ],
+  "Generated": [
+   {
+    "id": "Q57",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.5,
+    "f1_A": 0.1538,
+    "orig": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q59",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.2857,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.materiais",
+     "sql.unidades",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q24",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.6667,
+    "f1_A": 1.0,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q38",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q30",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q72",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.materiais"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q45",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q80",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.5,
+    "f1_A": 0.2222,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_starlink_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao",
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_materiais_catalogo_un"
+    ],
+    "esperado": [
+     "api.distribuicao_list",
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q06",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.fornecimento"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q16",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q18",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.4,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.materiais",
+     "sql.regra"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q56",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.2,
+    "orig": [
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "api.monitoramento_sistema_hf_list"
+    ]
+   },
+   {
+    "id": "Q39",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ]
+   },
+   {
+    "id": "Q41",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.5,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q47",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q15",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q53",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q09",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.unidades",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.unidades"
+    ]
+   },
+   {
+    "id": "Q20",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q21",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.5,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.unidades",
+     "sql.materiais",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q70",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.4,
+    "orig": [
+     "spreadsheets.fornecimento",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q33",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.fornecimento",
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q69",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q75",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.0,
+    "f1_A": 0.3333,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.vw_comparativo_previsto_existente",
+     "api.vw_tipoeqp_previsto_unidades",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q76",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.contratos",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.vw_materiais_catalogo_unidade",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q48",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.0,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q12",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.regra"
+    ]
+   },
+   {
+    "id": "Q01",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.1818,
+    "orig": [
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q28",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.catalogo"
+    ],
+    "A": [
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q22",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "spreadsheets.quadro_importacao",
+     "sql.materiais",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao"
+    ]
+   },
+   {
+    "id": "Q31",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 1.0,
+    "orig": [
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q63",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.75,
+    "orig": [
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "api.monitoramento_sites_sistema_radio_list"
+    ],
+    "A": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_hf_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "api.monitoramento_sites_sistema_radio_list"
+    ]
+   },
+   {
+    "id": "Q36",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "api.manutencao_ap_direto_list"
+    ],
+    "A": [
+     "api.manutencao_ap_direto_list",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "api.manutencao_ap_direto_list"
+    ]
+   },
+   {
+    "id": "Q40",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q46",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 1.0,
+    "orig": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "spreadsheets.fornecimento"
+    ],
+    "A": [
+     "sql.materiais",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q10",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.catalogo"
+    ],
+    "A": [
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.catalogo"
+    ]
+   },
+   {
+    "id": "Q04",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q61",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.5,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q58",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao"
+    ]
+   },
+   {
+    "id": "Q64",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.5714,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q65",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.4,
+    "f1_A": 0.25,
+    "orig": [
+     "spreadsheets.fornecimento",
+     "spreadsheets.contratos",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.regra",
+     "sql.materiais",
+     "sql.unidades"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.materiais",
+     "sql.unidades",
+     "sql.catalogo",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sites_sistema_hf_list"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q32",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 1.0,
+    "orig": [
+     "api.manutencao_ap_direto_list",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.manutencao_ap_direto_list"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   }
+  ],
+  "Floor": [
+   {
+    "id": "Q54",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.4,
+    "orig": [
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "A": [
+     "api.monitoramento_sistema_hf_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "esperado": [
+     "api.monitoramento_sistema_hf_list"
+    ]
+   },
+   {
+    "id": "Q57",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.4,
+    "f1_A": 0.1333,
+    "orig": [
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.vw_materiais_catalogo_unidade",
+     "api.distribuicao_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q59",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.25,
+    "orig": [
+     "sql.regra",
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.unidades",
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "api.distribuicao_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao",
+     "sql.catalogo",
+     "sql.materiais",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q19",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.3333,
+    "orig": [
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "A": [
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.distribuicao_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "esperado": [
+     "api.monitoramento_sistema_satelital_list"
+    ]
+   },
+   {
+    "id": "Q24",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.6667,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q38",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q34",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.8,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.regra",
+     "sql.unidades",
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.unidades",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q35",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.quadro_importacao",
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.quadro_importacao",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao"
+    ]
+   },
+   {
+    "id": "Q30",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q72",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.3333,
+    "f1_A": 0.2857,
+    "orig": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q80",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 1.0,
+    "f1_A": 0.4444,
+    "orig": [
+     "api.distribuicao_list",
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.unidades",
+     "api.distribuicao_list",
+     "api.monitoramento_sistema_satelital_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "api.distribuicao_list",
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q06",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "api.distribuicao_list",
+     "sql.materiais"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q16",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.regra"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q18",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.2857,
+    "f1_A": 0.1429,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "api.distribuicao_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q17",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "api.monitoramento_sites_sistema_radio_list"
+    ],
+    "A": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q56",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.4,
+    "f1_A": 0.125,
+    "orig": [
+     "api.monitoramento_sistema_hf_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao",
+     "sql.materiais",
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.regra"
+    ],
+    "esperado": [
+     "api.monitoramento_sistema_hf_list"
+    ]
+   },
+   {
+    "id": "Q39",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ]
+   },
+   {
+    "id": "Q66",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.3333,
+    "f1_A": 0.3333,
+    "orig": [
+     "api.monitoramento_sistema_hf_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_sistema_hf_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "esperado": [
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sistema_hf_list"
+    ]
+   },
+   {
+    "id": "Q37",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.contratos",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q41",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.materiais",
+     "api.distribuicao_list"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.distribuicao_list",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.regra",
+     "sql.catalogo"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q77",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 1.0,
+    "f1_A": 0.3158,
+    "orig": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "A": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_hf_list",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.catalogo",
+     "sql.unidades",
+     "sql.materiais"
+    ],
+    "esperado": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list"
+    ]
+   },
+   {
+    "id": "Q47",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.catalogo"
+    ],
+    "A": [
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q50",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 1.0,
+    "f1_A": 0.8,
+    "orig": [
+     "spreadsheets.fornecimento",
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.fornecimento",
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q15",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q53",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q02",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.4,
+    "f1_A": 0.3077,
+    "orig": [
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.regra"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.distribuicao_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.catalogo"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q09",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.unidades",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "esperado": [
+     "sql.unidades"
+    ]
+   },
+   {
+    "id": "Q20",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.5,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "sql.catalogo"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q55",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.6667,
+    "f1_A": 0.3333,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.materiais",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_hf_list",
+     "api.distribuicao_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q21",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.2667,
+    "f1_A": 0.25,
+    "orig": [
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao",
+     "api.distribuicao_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.regra",
+     "api.distribuicao_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q70",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.8,
+    "orig": [
+     "api.distribuicao_list",
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q33",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.5,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.materiais",
+     "api.distribuicao_list",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q67",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "api.monitoramento_sites_sistema_radio_list"
+    ],
+    "A": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "esperado": [
+     "api.monitoramento_sites_sistema_radio_list"
+    ]
+   },
+   {
+    "id": "Q69",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 1.0,
+    "f1_A": 0.8,
+    "orig": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   },
+   {
+    "id": "Q76",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.5,
+    "f1_A": 0.3636,
+    "orig": [
+     "sql.materiais",
+     "sql.regra",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.distribuicao_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q79",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.regra",
+     "sql.catalogo",
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q12",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.regra"
+    ]
+   },
+   {
+    "id": "Q01",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.4,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.materiais",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.regra"
+    ],
+    "A": [],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q28",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.6667,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade"
+    ],
+    "A": [
+     "sql.catalogo",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q22",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "sql.materiais",
+     "spreadsheets.quadro_importacao",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao"
+    ]
+   },
+   {
+    "id": "Q26",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.unidades"
+    ],
+    "A": [
+     "sql.unidades",
+     "sql.catalogo",
+     "sql.regra"
+    ],
+    "esperado": [
+     "sql.unidades"
+    ]
+   },
+   {
+    "id": "Q23",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.2857,
+    "orig": [
+     "api.manutencao_ap_direto_list"
+    ],
+    "A": [
+     "api.manutencao_ap_direto_list",
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.materiais",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.manutencao_ap_direto_list"
+    ]
+   },
+   {
+    "id": "Q31",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.8,
+    "orig": [
+     "api.distribuicao_list",
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q63",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.4,
+    "f1_A": 0.75,
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_hf_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "api.monitoramento_sites_sistema_radio_list"
+    ]
+   },
+   {
+    "id": "Q40",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.8,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q46",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.0,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q03",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q04",
+    "dificuldade": "single_source_simples",
+    "f1_orig": 0.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "spreadsheets.quadro_importacao",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ]
+   },
+   {
+    "id": "Q27",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.0,
+    "f1_A": 0.5,
+    "orig": [
+     "spreadsheets.fornecimento",
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list",
+     "sql.materiais"
+    ],
+    "esperado": [
+     "api.distribuicao_list"
+    ]
+   },
+   {
+    "id": "Q61",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 0.4,
+    "f1_A": 0.0,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.regra"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.catalogo",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q58",
+    "dificuldade": "single_source_semantica",
+    "f1_orig": 1.0,
+    "f1_A": 0.0,
+    "orig": [
+     "spreadsheets.quadro_importacao"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao"
+    ]
+   },
+   {
+    "id": "Q64",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.6667,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_comparativo_previsto_existente",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "sql.materiais",
+     "api.distribuicao_list",
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list",
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q65",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.3333,
+    "f1_A": 0.4286,
+    "orig": [
+     "sql.materiais",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.catalogo",
+     "sql.regra",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "api.distribuicao_list",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "spreadsheets.quadro_importacao",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento"
+    ]
+   },
+   {
+    "id": "Q68",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.4,
+    "f1_A": 0.5,
+    "orig": [
+     "sql.regra",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.materiais"
+    ],
+    "A": [
+     "sql.materiais",
+     "sql.regra",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "api.manutencao_ap_direto_list",
+     "api.monitoramento_sistema_hf_list"
+    ],
+    "esperado": [
+     "sql.vw_materiais_catalogo_unidade"
+    ]
+   },
+   {
+    "id": "Q32",
+    "dificuldade": "multi_source_complementar",
+    "f1_orig": 0.0,
+    "f1_A": 0.2667,
+    "orig": [
+     "api.manutencao_ap_direto_list"
+    ],
+    "A": [
+     "api.manutencao_ap_direto_list",
+     "sql.regra",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "sql.materiais",
+     "api.distribuicao_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list",
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "sql.materiais"
+    ]
+   },
+   {
+    "id": "Q73",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 1.0,
+    "f1_A": 0.1818,
+    "orig": [
+     "api.manutencao_ap_direto_list"
+    ],
+    "A": [
+     "api.manutencao_ap_direto_list",
+     "sql.regra",
+     "sql.materiais",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_hf_list",
+     "spreadsheets.contratos",
+     "spreadsheets.fornecimento",
+     "spreadsheets.quadro_importacao"
+    ],
+    "esperado": [
+     "api.manutencao_ap_direto_list"
+    ]
+   },
+   {
+    "id": "Q78",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 0.6667,
+    "f1_A": 0.25,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "A": [
+     "sql.vw_comparativo_previsto_existente",
+     "sql.regra",
+     "sql.materiais",
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_materiais_catalogo_unidade",
+     "sql.catalogo",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "sql.vw_comparativo_previsto_existente"
+    ]
+   },
+   {
+    "id": "Q74",
+    "dificuldade": "discriminacao_fina",
+    "f1_orig": 1.0,
+    "f1_A": 0.6667,
+    "orig": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ],
+    "A": [
+     "sql.vw_tipoeqp_previsto_unidades",
+     "sql.vw_comparativo_previsto_existente"
+    ],
+    "esperado": [
+     "sql.vw_tipoeqp_previsto_unidades"
+    ]
+   }
+  ]
+ },
+ "por_dificuldade": {
+  "Curated": {
+   "single_source_simples": {
+    "n": 20,
+    "mudou": 6,
+    "dF1_medio": -0.105
+   },
+   "single_source_semantica": {
+    "n": 20,
+    "mudou": 11,
+    "dF1_medio": -0.0641
+   },
+   "multi_source_complementar": {
+    "n": 20,
+    "mudou": 14,
+    "dF1_medio": 0.1672
+   },
+   "discriminacao_fina": {
+    "n": 20,
+    "mudou": 11,
+    "dF1_medio": 0.0014
+   }
+  },
+  "Curated-synth.": {
+   "single_source_simples": {
+    "n": 20,
+    "mudou": 6,
+    "dF1_medio": -0.0333
+   },
+   "single_source_semantica": {
+    "n": 20,
+    "mudou": 12,
+    "dF1_medio": -0.0283
+   },
+   "multi_source_complementar": {
+    "n": 20,
+    "mudou": 15,
+    "dF1_medio": 0.0227
+   },
+   "discriminacao_fina": {
+    "n": 20,
+    "mudou": 12,
+    "dF1_medio": 0.1255
+   }
+  },
+  "Generated": {
+   "single_source_simples": {
+    "n": 20,
+    "mudou": 9,
+    "dF1_medio": -0.0742
+   },
+   "single_source_semantica": {
+    "n": 20,
+    "mudou": 11,
+    "dF1_medio": 0.002
+   },
+   "multi_source_complementar": {
+    "n": 20,
+    "mudou": 13,
+    "dF1_medio": 0.0102
+   },
+   "discriminacao_fina": {
+    "n": 20,
+    "mudou": 9,
+    "dF1_medio": 0.0494
+   }
+  },
+  "Floor": {
+   "single_source_simples": {
+    "n": 20,
+    "mudou": 11,
+    "dF1_medio": -0.0879
+   },
+   "single_source_semantica": {
+    "n": 20,
+    "mudou": 17,
+    "dF1_medio": -0.1966
+   },
+   "multi_source_complementar": {
+    "n": 20,
+    "mudou": 18,
+    "dF1_medio": 0.0723
+   },
+   "discriminacao_fina": {
+    "n": 20,
+    "mudou": 12,
+    "dF1_medio": -0.1763
+   }
+  }
+ },
+ "consultas_foco": {
+  "Q03": {
+   "Curated": {
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Curated-synth.": {
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Generated": {
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Floor": {
+    "orig": [
+     "spreadsheets.contratos"
+    ],
+    "A": [
+     "spreadsheets.contratos",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "spreadsheets.contratos"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 0.6667
+   }
+  },
+  "Q07": {
+   "Curated": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Curated-synth.": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Generated": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Floor": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   }
+  },
+  "Q08": {
+   "Curated": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Curated-synth.": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Generated": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Floor": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   }
+  },
+  "Q39": {
+   "Curated": {
+    "orig": [
+     "api.monitoramento_starlink_list",
+     "sql.unidades"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list",
+     "sql.unidades"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Curated-synth.": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 1.0
+   },
+   "Generated": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list",
+     "api.distribuicao_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 0.6667
+   },
+   "Floor": {
+    "orig": [
+     "api.monitoramento_starlink_list"
+    ],
+    "A": [
+     "api.monitoramento_starlink_list",
+     "api.monitoramento_sites_sistema_radio_list",
+     "api.monitoramento_sistema_satelital_list"
+    ],
+    "esperado": [
+     "api.monitoramento_starlink_list"
+    ],
+    "f1_orig": 1.0,
+    "f1_A": 0.5
+   }
+  }
+ }
+}

@@ -1,0 +1,312 @@
+{
+  "gerado_em_utc": "2026-10-30T18:14:42+00:00",
+  "python": "3.12.6",
+  "numpy": "2.2.2",
+  "statsmodels": "0.15.0",
+  "stat_compare": {
+    "path": "C:\\Users\\Usuario\\Documents\\GitHub\\source_context_builder\\analysis\\stat_compare.py",
+    "sha256": "a53c37de22f0807d5a404b81c5ea0a4ce2abc960e4160c7774acc69143326b52"
+  },
+  "input": {
+    "path": "C:\\Users\\Usuario\\AppData\\Local\\Temp\\claude\\C--Users-Usuario-Documents-GitHub-source-context-builder\\30301648-4c2b-4ac1-9454-9498009e9f6d\\scratchpad\\entrada_A",
+    "sha256": null
+  },
+  "parametros": {
+    "n_boot": 10000,
+    "seed": 42,
+    "alpha": 0.05,
+    "holm": "uma familia de 15",
+    "metrica": "f1 por consulta (n=80)",
+    "variantes": {
+      "llama": "compressed",
+      "gpt": "compressed"
+    }
+  },
+  "arquivos_usados": [
+    {
+      "nome": "results_azure_gpt-4o_compressed_catalog_v3.json",
+      "sha256": "9b9bb945e24f6193fa6bfa51aabe74ea3b27b5844065afb33b2a8b942e18bc1b"
+    },
+    {
+      "nome": "results_azure_gpt-4o_compressed_catalog_v3_doc_norm.json",
+      "sha256": "205b7d935ed91a6572266838ed0e57a5288f1441fe9f6d618a85149cc598246b"
+    },
+    {
+      "nome": "results_azure_gpt-4o_compressed_v4_gen_norm.json",
+      "sha256": "e0613527c46ddaf91acc12bbdca1463e4546105ef1f0fd8e31ccd1669b7a5338"
+    },
+    {
+      "nome": "results_azure_gpt-4o_compressed_v4_min.json",
+      "sha256": "ec3b9d59e93f6caeb7f979cb8c5fb6ff39122b08c0b25e2fddeb5add04524c9c"
+    },
+    {
+      "nome": "results_bge-m3_catalog_v3.json",
+      "sha256": "db32b82fd50f644d926c0e936a5acef230eb2e0f1924877c81a208c5ca7b54d2"
+    },
+    {
+      "nome": "results_bge-m3_v3_doc_norm.json",
+      "sha256": "78452f73ea00e1e364f7158127effe1028f9351a6963f32199d78e9e1dcf2c7a"
+    },
+    {
+      "nome": "results_bge-m3_v4_gen_norm.json",
+      "sha256": "95db8293653a5987c9d7db43dcc984b4cab2f73dd09d076dd80d18d7f939640b"
+    },
+    {
+      "nome": "results_bge-m3_v4_min.json",
+      "sha256": "c010cf5c66c80d47f04d4c1585ba5d162619d0f36732354ed0441b0d3e450212"
+    },
+    {
+      "nome": "results_bm25_catalog_v3.json",
+      "sha256": "0066f61ea3d00285ec5315bba781f4ed7d125ee5d6cda796d9581f93370497e5"
+    },
+    {
+      "nome": "results_bm25_v3_doc_norm.json",
+      "sha256": "88686bfb5bb8f47f07d51a01cc9bad64a8a68da37c8bc45aeb11ef81ed0bb4bf"
+    },
+    {
+      "nome": "results_bm25_v4_gen_norm.json",
+      "sha256": "22b09b077dcbe9ca921b21b578641dcebe76e660653035a44705d13d93e85b71"
+    },
+    {
+      "nome": "results_bm25_v4_min.json",
+      "sha256": "0a79ad9961a64991fb8d0bba2d3e2ef0543f16275ee812e7191f0d9a18c04439"
+    },
+    {
+      "nome": "results_minilm_catalog_v3.json",
+      "sha256": "bfcd88fc32d884dc7db0717b2d141473ef33afe771fea6eb10d23ecabb997469"
+    },
+    {
+      "nome": "results_minilm_v3_doc_norm.json",
+      "sha256": "6f47a1a8a85fe9e59145470c96a1a9c6768b043ab0c20e71fc96070bdc7f4910"
+    },
+    {
+      "nome": "results_minilm_v4_gen_norm.json",
+      "sha256": "4f93c7e596243ec0d27fb30ac87e3df99baf0f4c87321f5a2402ea9abb28db74"
+    },
+    {
+      "nome": "results_minilm_v4_min.json",
+      "sha256": "a8249f5307f52bc5d99d31da06b381ce34aa00124d4df8f1c072c4de98f0060d"
+    },
+    {
+      "nome": "results_ollama_llama3.2_latest_compressed_catalog_v3.json",
+      "sha256": "c0662a92873d2f1f73000acadef6fcce8b6a6f00ea257d30aee680fdc05e604a"
+    },
+    {
+      "nome": "results_ollama_llama3.2_latest_compressed_v3_doc_norm.json",
+      "sha256": "df7f1647e4921a8868332f05d809c027560bb849da37a83fb0a19ecf9442583c"
+    },
+    {
+      "nome": "results_ollama_llama3.2_latest_compressed_v4_gen_norm.json",
+      "sha256": "71a742d04dd580b8b4021b7f60294432f52d7420cc95e2888bdb398ac3c5eef2"
+    },
+    {
+      "nome": "results_ollama_llama3.2_latest_compressed_v4_min.json",
+      "sha256": "890e7ddbb47d9c6bac18cf1bd853d896841b2a1d399f13d351c2710a2e80d30a"
+    }
+  ],
+  "conferencia_com_publicado": {
+    "todas_as_celulas_conferem": false,
+    "celulas": [
+      {
+        "modelo": "BM25",
+        "celula": "Form",
+        "calculado": 0.146,
+        "publicado": 0.146,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "BM25",
+        "celula": "Provenance",
+        "calculado": 0.156,
+        "publicado": 0.156,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "BM25",
+        "celula": "Total",
+        "calculado": 0.301,
+        "publicado": 0.301,
+        "valor_ok": true,
+        "asterisco_calculado": true,
+        "asterisco_publicado": true,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "BM25",
+        "celula": "Lat_ms",
+        "calculado": 0.1,
+        "publicado": 0.1,
+        "valor_ok": true,
+        "asterisco_calculado": "",
+        "asterisco_publicado": "",
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "Llama 3.2 3B",
+        "celula": "Form",
+        "calculado": 0.088,
+        "publicado": 0.11,
+        "valor_ok": false,
+        "asterisco_calculado": true,
+        "asterisco_publicado": true,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "Llama 3.2 3B",
+        "celula": "Provenance",
+        "calculado": 0.029,
+        "publicado": 0.004,
+        "valor_ok": false,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "Llama 3.2 3B",
+        "celula": "Total",
+        "calculado": 0.117,
+        "publicado": 0.114,
+        "valor_ok": false,
+        "asterisco_calculado": true,
+        "asterisco_publicado": true,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "Llama 3.2 3B",
+        "celula": "Lat_ms",
+        "calculado": 1245.3,
+        "publicado": 935.4,
+        "valor_ok": false,
+        "asterisco_calculado": "",
+        "asterisco_publicado": "",
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "BGE-M3",
+        "celula": "Form",
+        "calculado": 0.062,
+        "publicado": 0.062,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "BGE-M3",
+        "celula": "Provenance",
+        "calculado": 0.07,
+        "publicado": 0.07,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "BGE-M3",
+        "celula": "Total",
+        "calculado": 0.131,
+        "publicado": 0.131,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "BGE-M3",
+        "celula": "Lat_ms",
+        "calculado": 202.6,
+        "publicado": 202.6,
+        "valor_ok": true,
+        "asterisco_calculado": "",
+        "asterisco_publicado": "",
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "GPT-4o",
+        "celula": "Form",
+        "calculado": 0.014,
+        "publicado": 0.014,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "GPT-4o",
+        "celula": "Provenance",
+        "calculado": 0.08,
+        "publicado": 0.08,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "GPT-4o",
+        "celula": "Total",
+        "calculado": 0.094,
+        "publicado": 0.094,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "GPT-4o",
+        "celula": "Lat_ms",
+        "calculado": 1305.0,
+        "publicado": 1305.0,
+        "valor_ok": true,
+        "asterisco_calculado": "",
+        "asterisco_publicado": "",
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "MiniLM",
+        "celula": "Form",
+        "calculado": -0.027,
+        "publicado": -0.027,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "MiniLM",
+        "celula": "Provenance",
+        "calculado": -0.052,
+        "publicado": -0.052,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "MiniLM",
+        "celula": "Total",
+        "calculado": -0.079,
+        "publicado": -0.079,
+        "valor_ok": true,
+        "asterisco_calculado": false,
+        "asterisco_publicado": false,
+        "asterisco_ok": true
+      },
+      {
+        "modelo": "MiniLM",
+        "celula": "Lat_ms",
+        "calculado": 13.9,
+        "publicado": 13.9,
+        "valor_ok": true,
+        "asterisco_calculado": "",
+        "asterisco_publicado": "",
+        "asterisco_ok": true
+      }
+    ]
+  }
+}

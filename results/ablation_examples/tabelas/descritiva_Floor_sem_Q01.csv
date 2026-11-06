@@ -1,0 +1,2 @@
+comparacao,familia,n_queries,diff,p_raw,p_holm,ci_low,ci_high,significativo_holm
+Floor sem Q01: A - original,descritiva_sem_Q01,79,-0.09330632911392404,0.009,0.009,-0.1624703164556962,-0.023074303797468398,True

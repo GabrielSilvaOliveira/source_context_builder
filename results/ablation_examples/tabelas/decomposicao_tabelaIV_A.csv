@@ -1,0 +1,4 @@
+comparacao,familia,n_queries,diff,p_raw,p_holm,ci_low,ci_high,significativo_holm
+Llama A: forma (Curated - Curated-synth.),decomp_A,80,0.08816625000000002,0.0006,0.0018,0.03566775000000001,0.146591375,True
+Llama A: procedencia (Curated-synth. - Generated),decomp_A,80,0.028761250000000006,0.5144,0.5144,-0.05410431249999998,0.11539787499999989,False
+Llama A: total (Curated - Generated),decomp_A,80,0.1169275,0.002,0.004,0.04107128125000001,0.19692009375,True

@@ -1,0 +1,5 @@
+comparacao,familia,n_queries,diff,p_raw,p_holm,ci_low,ci_high,significativo_holm
+Curated: B2 - A,exploratoria_B2_menos_A,80,-0.0375,0.0938,0.186,-0.0875,0.0,False
+Curated-synth.: B2 - A,exploratoria_B2_menos_A,80,-0.0375,0.093,0.186,-0.0875,0.0,False
+Generated: B2 - A,exploratoria_B2_menos_A,80,-0.075,0.0054,0.0162,-0.1375,-0.025,True
+Floor: B2 - A,exploratoria_B2_menos_A,80,-0.125,0.0,0.0,-0.2,-0.0625,True

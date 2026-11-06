@@ -1,0 +1,17 @@
+variante,condicao,n,f1,precisao,recall_primarias,fontes_por_consulta,vazias,id_invalido_consultas,com_repetidas,must_NOT_include_taxa,erros_timeout
+original,Curated,80,0.7605,0.7704,0.8729,1.95,0,0,0,0.15,0
+original,Curated-synth.,80,0.6506,0.705,0.7104,1.712,0,0,0,0.1375,0
+original,Generated,80,0.6467,0.6682,0.7021,1.562,0,0,0,0.1375,0
+original,Floor,80,0.6452,0.6299,0.8135,2.4,0,0,1,0.1875,0
+no_examples,Curated,80,0.7605,0.7001,0.9521,2.562,0,1,0,0.2625,0
+no_examples,Curated-synth.,80,0.6723,0.6145,0.8729,2.513,0,1,1,0.275,0
+no_examples,Generated,80,0.6435,0.617,0.8135,2.862,0,4,0,0.275,0
+no_examples,Floor,80,0.5481,0.4606,0.8615,4.275,1,2,2,0.475,1
+no_examples_schema,Curated,80,0.7591,0.6992,0.9521,2.638,0,0,1,0.2625,0
+no_examples_schema,Curated-synth.,80,0.6723,0.6145,0.8729,2.513,0,0,0,0.2625,0
+no_examples_schema,Generated,80,0.6461,0.6197,0.8167,2.888,0,0,2,0.275,0
+no_examples_schema,Floor,80,0.5608,0.4723,0.8771,4.475,0,0,3,0.4875,0
+no_examples_schema_cap3,Curated,80,0.7465,0.7083,0.8906,2.062,0,0,0,0.225,0
+no_examples_schema_cap3,Curated-synth.,80,0.6403,0.6125,0.799,2.1,0,0,0,0.2375,0
+no_examples_schema_cap3,Generated,80,0.6611,0.6417,0.7844,1.95,0,0,0,0.2,0
+no_examples_schema_cap3,Floor,80,0.5736,0.5062,0.774,2.475,0,0,0,0.35,0
