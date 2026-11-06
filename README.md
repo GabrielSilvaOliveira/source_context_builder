@@ -6,8 +6,53 @@ downstream LLM. It is evaluated against a lexical baseline (BM25) and several de
 80-query Brazilian-Portuguese logistics benchmark, with stratified 5-fold cross-validation and
 paired-bootstrap + Holm-Bonferroni significance testing.
 
-This repository accompanies the paper *"Semantic Context Builder"* (Gabriel Silva de Oliveira,
-Ricardo Stracianni Puttini), submitted to ACDSA 2027.
+This repository accompanies the paper *"Source Context Builder: Descriptor Provenance in Zero-Shot Source Selection
+under Data Sovereignty"* (Gabriel Silva de Oliveira, Ricardo Stracianni Puttini), ACDSA 2027. It releases the prompts,
+decoding parameters, annotation protocol and per-band values behind the paper's figures, together with the catalogs,
+benchmark, raw results and analysis scripts. Values removed from the catalogs before publication are described in
+[`NOTA_ARTEFATOS.md`](NOTA_ARTEFATOS.md).
+
+## From the paper to the files
+
+| Paper item | Where |
+|---|---|
+| Table I: catalogs of the four conditions | Curated `catalogs/v3/catalog_v3.json`; Curated-synth. `catalogs/v3_doc/catalog_v3_doc_norm.json`; Generated `catalogs/v4/catalog_v4_gen_norm.json`; Floor `catalogs/v4/catalog_v4_min.json` (base for all v4 files: `catalogs/v4/catalog_v4_base.json`) |
+| Benchmark | `benchmark/benchmark_queries_final_v2.json` (80 queries) |
+| Table II: methods and their configuration | [`docs/selectors.md`](docs/selectors.md) (prompts, decoding, thresholds, serialization), `src/`, `benchmark/runners/` |
+| Table III: F1 by method and condition | 20 files in `results/current/resultados_consolidados_fase_e/`: for each condition (`catalog_v3`, `v3_doc_norm`, `v4_gen_norm`, `v4_min`), `results_bm25_*`, `results_minilm_*`, `results_bge-m3_*`, `results_ollama_llama3.2_latest_compressed_*` and `results_azure_gpt-4o_compressed_*` (the list is printed by `analysis/gerar_figuras_scb.py` and checked by `analysis/reproduzir_tabela_IV.py`) |
+| Table IV: decomposition of the curation effect | [`docs/table_IV.md`](docs/table_IV.md); `python analysis/reproduzir_tabela_IV.py --input results/current/resultados_consolidados_fase_e --stat-compare analysis/stat_compare.py --out analysis/table_IV_output`; output in `analysis/table_IV_output/` |
+| Figure 1 (semantic advantage over BM25 by overlap band) | the 8 CSVs in `results/overlap_bands/` (per-band values and the two interaction tests, on the text the models consume); script `analysis/gerar_figuras_scb.py` (see [Figures](#figures)) |
+| Inter-annotator agreement | `annotation/` (protocol in `annotation/PROTOCOL.md`, labels in `annotation/labels.csv`, results in `annotation/results_ABC.json` and `results_ABCD.json`) |
+| Ablation of the prompt examples | `results/ablation_examples/` (pre-registration, amendment, runs, tables, scripts) |
+| Per-fold thresholds of BM25, MiniLM and BGE-M3 | `results/thresholds/thresholds_by_fold.csv`; the 12 reruns that produce them and `reproduction_check.csv` |
+| Integrity of the files | `MANIFEST.sha256` (`sha256sum -c MANIFEST.sha256` from the repository root; the hashes are of the files with LF line endings, as stored by Git, so on Windows use `core.autocrlf=input` or `false`; regenerate with `python analysis/make_manifest.py`) |
+
+### What is history and not a result
+
+These directories document how the method evolved and are **not** results of the paper: `catalogs/v1/`, `catalogs/v2/`,
+the truncation variants `catalogs/v3/trunc_variants/`, `benchmark/previous_versions/`, `benchmark/runners/run_benchmark.py`
+(v1 runner), `src/semantic_context_builder.py` and `src/context_builder.py` (v1 builders), and `results/archive/`.
+Inside `results/current/resultados_consolidados_fase_e/`, only the 20 files of Table III (above) are paper results; the
+rest of that directory (other encoders such as `e5-base`, the `full` serialization, the truncation and Qwen runs) is
+supplementary. `results/current/comparativo_resultados/` and `results/current/tabelas_soltas/` hold earlier analysis
+outputs and the inputs of the examples in the section "Statistical analysis".
+
+### Figures
+
+Figure 1 of the paper (file `fig2_interacao_bandas.pdf`; the script also draws an F1-by-condition figure, which the
+paper does not use) is drawn from the 8 CSVs in `results/overlap_bands/`:
+
+```bash
+python analysis/gerar_figuras_scb.py --results-dir results/current/resultados_consolidados_fase_e     --bandas-dir results/overlap_bands --out-dir figures
+```
+
+The script prints a manifest of the 20 result files it matched and stops if one is missing or ambiguous. The CSVs
+themselves are regenerated from the catalogs and the 20 result files with
+`bash analysis/reproduzir_bandas.sh <output_dir>` (about a minute; it calls `analysis/inter_consumido.py`, which runs
+`analysis/lexical_overlap.py` with the index of the text the models actually consume, `analysis/consumed_index.py`, a
+mirror of `_doc_from_source`). The 8 regenerated files are byte-identical to those in `results/overlap_bands/`.
+The overlap of a query with its gold sources is containment over that consumed text, with bands cut at the terciles of
+each condition (so the band sizes differ across conditions: 18 to 32 queries).
 
 ## Repository structure
 
@@ -38,10 +83,20 @@ source_context_builder/
 │                                         # run_llm_benchmark.py
 ├── analysis/
 │   ├── stat_compare.py                  # paired bootstrap + Holm-Bonferroni
-│   └── lexical_overlap.py               # query×catalog lexical-overlap segmentation and interaction test
+│   ├── lexical_overlap.py               # query×catalog lexical-overlap segmentation and interaction test
+│   ├── reproduzir_tabela_IV.py          # Table IV from the raw result files (+ table_IV_output/)
+│   ├── gerar_figuras_scb.py             # figures of the paper
+│   ├── consumed_index.py, inter_consumido.py, reproduzir_bandas.sh   # overlap on the consumed text (Figure 1 data)
+│   └── make_manifest.py                 # writes MANIFEST.sha256
+├── annotation/                          # inter-annotator agreement study (protocol, labels, scripts)
+├── docs/                                # selectors.md, table_IV.md
 ├── results/
-│   ├── current/                         # results reported in the paper
+│   ├── current/                         # results reported in the paper (see the map above)
+│   ├── ablation_examples/               # ablation of the prompt examples
+│   ├── overlap_bands/                   # per-band CSVs behind Figure 1
+│   ├── thresholds/                      # per-fold thresholds of BM25, MiniLM, BGE-M3
 │   └── archive/                         # exploratory/intermediate runs, kept for provenance
+├── MANIFEST.sha256
 └── requirements.txt
 ```
 
@@ -128,6 +183,18 @@ python run_llm_benchmark.py \
 Each run performs stratified 5-fold cross-validation and writes one `results_<model>.json` per
 model to `--output`, in the schema consumed by `analysis/stat_compare.py`.
 
+### Per-fold thresholds
+
+BM25, MiniLM and BGE-M3 choose their minimum score separately in each fold (grid, criterion and tie rule in
+[`docs/selectors.md`](docs/selectors.md)). The result files in `results/current/` do not store the choice; the
+runners `run_benchmark_v2.py` and `run_benchmark_bm25.py` take `--log-thresholds`, which adds a `threshold_by_fold` key
+(grid, training F1 of every grid point, chosen value) to the output without changing the selection. The 12 reruns
+(3 methods × 4 conditions) are in `results/thresholds/`; `python results/thresholds/verify_and_collect.py` checks that
+each one has the same selection, in the same order, and the same per-query F1 as the published file (80/80 in all 12)
+and writes `thresholds_by_fold.csv`. The published BM25 files have the schema of the dense-encoder runner, not that of
+`run_benchmark_bm25.py`; the rerun used the latter, and it reproduces the same selections. The BGE-M3 rerun takes about
+20 minutes per condition on CPU.
+
 ### 3. Statistical analysis
 
 ```bash
@@ -158,7 +225,7 @@ containment between query and gold-source vocabulary and reruns the same test wi
 
 ```
 @inproceedings{oliveira2027scb,
-  title     = {Semantic Context Builder},
+  title     = {Source Context Builder: Descriptor Provenance in Zero-Shot Source Selection under Data Sovereignty},
   author    = {Silva de Oliveira, Gabriel and Stracianni Puttini, Ricardo},
   booktitle = {Proceedings of ACDSA 2027},
   year      = {2027}

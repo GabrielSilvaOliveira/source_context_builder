@@ -1,0 +1,9 @@
+teste,modelo,estatistica,valor,ci_low,ci_high,p_raw,p_holm,significativo_holm
+inclinacao_continua,bge-m3,slope,-0.456002,-0.988612,0.081382,0.097000,0.388000,False
+inclinacao_continua,gpt4o,slope,-0.109078,-0.601420,0.379106,0.662000,0.662000,False
+inclinacao_continua,llama,slope,-0.276749,-0.739704,0.216310,0.264000,0.604200,False
+inclinacao_continua,minilm,slope,0.291515,-0.169818,0.719390,0.201400,0.604200,False
+did_baixa_vs_alta,bge-m3,DiD,0.176651,-0.083603,0.430604,0.175800,0.703200,False
+did_baixa_vs_alta,gpt4o,DiD,0.089477,-0.166909,0.334519,0.479400,0.958800,False
+did_baixa_vs_alta,llama,DiD,0.141396,-0.105027,0.373843,0.259400,0.778200,False
+did_baixa_vs_alta,minilm,DiD,-0.068977,-0.291874,0.167183,0.548200,0.958800,False

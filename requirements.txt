@@ -5,6 +5,9 @@ pandas
 # Statistical analysis (analysis/stat_compare.py, analysis/lexical_overlap.py)
 statsmodels
 
+# Figures (analysis/gerar_figuras_scb.py)
+matplotlib
+
 # Semantic + lexical source selection (src/)
 sentence-transformers
 rank_bm25
