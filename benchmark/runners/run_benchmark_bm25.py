@@ -68,6 +68,9 @@ def main():
     ap.add_argument("--strategy", default="score_gap", choices=["score_gap", "threshold"])
     ap.add_argument("--min-similarity", type=float, default=0.30,
                     help="Threshold inicial (padrão do BM25ContextBuilder: 0.30)")
+    ap.add_argument("--log-thresholds", action="store_true",
+                    help="Grava a grade, o limiar escolhido e o F1 de treino de cada fold "
+                         "(chave threshold_by_fold). Não altera a seleção.")
     ap.add_argument("--tag", default="bm25",
                     help="Sufixo do arquivo de saída, ex.: bm25_v4gen, bm25_v4min")
     args = ap.parse_args()
@@ -92,14 +95,17 @@ def main():
     )
     cb.rebuild_index(verbose=True)
 
-    fold_metrics_list, all_test_results = [], []
+    fold_metrics_list, all_test_results, threshold_log = [], [], []
 
     for fold_i, test_idx in enumerate(folds):
         train_idx = [i for f, idxs in enumerate(folds) for i in idxs if f != fold_i]
         train_queries = [queries[i] for i in train_idx]
         test_queries = [queries[i] for i in test_idx]
 
-        threshold = calibrate_threshold(cb, train_queries)
+        _trace = {} if args.log_thresholds else None
+        threshold = calibrate_threshold(cb, train_queries, trace=_trace)
+        if _trace is not None:
+            threshold_log.append({"fold": fold_i + 1, **_trace})
         fold_results = evaluate_fold(cb, test_queries, threshold)
         fold_agg = aggregate(fold_results)
 
@@ -121,6 +127,8 @@ def main():
         "summary": summary,
         "per_query": all_test_results,
     }
+    if args.log_thresholds:
+        out["threshold_by_fold"] = threshold_log
     out_path = Path(args.output) / f"results_{args.tag}.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)

@@ -1,0 +1,81 @@
+
+=================================================================
+  BENCHMARK — BM25ContextBuilder (Stratified 5-Fold CV)
+  Catálogo    : ../../catalogs/v3_doc/catalog_v3_doc_norm.json
+  Queries     : 80
+  Estratégia  : score_gap
+=================================================================
+
+--- sql.materiais ---
+Tabela SQL: materiais
+Registro de equipamentos com detalhes sobre seu identificador único (SN), localização (unidade), situação patrimonial e física, além de informações sobre manutenção, descarga e conferência. Permite consultar a disponibilidade, estado e histórico de cada item, facilitando a gestão logística da organização.
+
+--- sql.unidades ---
+Tabela SQL: unidades
+Registro das unidades de uma organização, incluindo código, localização, região, divisão e outros detalhes geográficos e organizacionais. Permite consultar informações relevantes para o planejamento logístico, como localização, cidade, estado, latitude e longitude, além de detalhes organizacionais como divisão e tipo de unidade.
+
+--- sql.catalogo ---
+Tabela SQL: catalogo
+Registro do catálogo de equipamentos com campos como código do equipamento, número de estoque, nome, tipo, modelo, fabricante, rádio, part number, subsistema e grupo. Essa tabela é crucial para gerenciar o inventário e as características dos equipamentos em um contexto logístico, permitindo consultas detalhadas sobre os itens disponíveis ou a serem adquiridos.
+
+--- sql.regra ---
+Tabela SQL: regra
+Descreve a quantidade prevista de diversos tipos de equipamento para cada tipo de unidade, incluindo o nível de completamento, essencial para o planejamento e alocação de recursos logísticos.
+
+--- sql.vw_comparativo_previsto_existente ---
+Tabela SQL: vw_comparativo_previsto_existente
+Registro comparativo entre a quantidade prevista e existente de equipamentos por unidade, incluindo área, região, divisão e sigla. Permite identificar discrepâncias para ações corretivas no planejamento logístico.
+
+--- sql.vw_materiais_catalogo_unidade ---
+Tabela SQL: vw_materiais_catalogo_unidade
+Registro detalhado de equipamentos por unidade, incluindo área, região, divisão e hierarquia organizacional. Fornece informações sobre modelo, fabricante, número de série e disponibilidade, facilitando a gestão de inventário e planejamento logístico. Permite filtros por unidade, região, área e detalhes específicos do equipamento, auxiliando na tomada de decisões sobre distribuição e manutenção.
+
+--- sql.vw_tipoeqp_previsto_unidades ---
+Tabela SQL: vw_tipoeqp_previsto_unidades
+Descreve a quantidade prevista de um tipo de equipamento para todas as unidades da organização, permitindo visualizar a distribuição planejada por área, região, divisão e unidade. Facilita o planejamento logístico e a alocação de recursos, podendo ser consultada por tipo de equipamento, região ou divisão.
+
+--- api.distribuicao_list ---
+API endpoint: distribuicao_list (GET /api/distribuicao/deposito/)
+Itens recebidos no depósito e suas distribuições para as unidades de uma organização, incluindo status de distribuição, quantidade enviada e unidade de destino. Oferece detalhes sobre a movimentação de equipamentos, com campos como ID, status, quantidade e data de chegada no depósito.
+
+--- api.manutencao_ap_direto_list ---
+API endpoint: manutencao_ap_direto_list (GET /api/manutencao/manutencao-apoio-direto/)
+Registra detalhes de manutenção de apoio direto, incluindo diagnóstico, solução aplicada, suprimentos empregados e status final, para cada material. Permite acompanhar o histórico de manutenção e entender as ações realizadas.
+
+--- api.monitoramento_starlink_list ---
+API endpoint: monitoramento_starlink_list (GET /api/monitoramento/terminal-starlink/)
+Detalhes sobre a localização, status e uso dos terminais Starlink, incluindo filtros por status de distribuição, identificadores únicos, capacidade e uso diário, mensal e do mês anterior, além de coordenadas geográficas e status atual. Permite monitorar o desempenho e a utilização dos terminais, identificar problemas e otimizar o uso para garantir conectividade logística.
+
+--- api.monitoramento_sites_sistema_radio_list ---
+API endpoint: monitoramento_sites_sistema_radio_list (GET /api/monitoramento/sites-sistema-radio/)
+Registros detalhados de monitoramento dos sites do sistema de rádio, incluindo localização, características técnicas e status, permitindo o acompanhamento e otimização do desempenho dos sites fixos, táticos e móveis.
+
+--- api.monitoramento_sistema_satelital_list ---
+API endpoint: monitoramento_sistema_satelital_list (GET /api/monitoramento/sistema-satelital/)
+Detalhes sobre a localização, status e disponibilidade dos equipamentos do sistema satelital, permitindo monitorar o desempenho e a utilização dos equipamentos, identificar problemas e garantir a conectividade necessária para as operações logísticas.
+
+--- api.monitoramento_sistema_hf_list ---
+API endpoint: monitoramento_sistema_hf_list (GET /api/monitoramento/sistema-hf/)
+Detalhes sobre a localização, status e disponibilidade dos terminais específicos do sistema HF, incluindo endereço IP, nome, status atual, data da última verificação, e coordenadas geográficas. Permite acompanhar o desempenho e a utilização desses terminais, identificar problemas e garantir a conectividade necessária para as operações logísticas.
+
+--- spreadsheets.contratos ---
+Planilha: contratos.xlsx
+Contratos de aquisição de equipamentos, incluindo ano, número do contrato, empresa contratante, data de assinatura, vigência, aditivos, fundos, itens adquiridos e quantidades. Essa ferramenta é crucial para gerenciamento e acompanhamento dos acordos ao longo dos anos, fornecendo informações essenciais para o planejamento logístico.
+
+--- spreadsheets.fornecimento ---
+Planilha: fornecimento.xlsx
+Registro detalhado do fornecimento de equipamentos, incluindo número do documento, data, material, quantidade, unidades de origem e destino, status e outros campos. Essa planilha é crucial para o acompanhamento e controle dos processos de fornecimento, permitindo monitoramento e tomada de decisões informadas.
+
+--- spreadsheets.quadro_importacao ---
+Planilha: quadro_importacao.xlsx
+Registro das solicitações de materiais para aquisição, incluindo número do quadro de importação, empresa, ata de registro de preço, validade, item, número de peça, nomenclatura, quantidade, valor unitário e total. Essa planilha é crucial para monitorar e tomar decisões informadas sobre a aquisição de materiais.
+[BM25] Índice construído: 16 fontes
+  Fold 1: threshold=0.20  F1=0.396  P=0.479  R=0.469
+  Fold 2: threshold=0.85  F1=0.500  P=0.562  R=0.531
+  Fold 3: threshold=0.20  F1=0.302  P=0.427  R=0.375
+  Fold 4: threshold=0.85  F1=0.625  P=0.781  R=0.656
+  Fold 5: threshold=0.20  F1=0.422  P=0.504  R=0.500
+
+  MÉDIA (±dp entre folds): F1=0.449±0.121  P=0.551±0.138  R=0.506±0.102
+
+[✓] Resultados: ..\..\results\thresholds\v3_doc_norm\results_bm25.json

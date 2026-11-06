@@ -1,0 +1,81 @@
+
+=================================================================
+  BENCHMARK — BM25ContextBuilder (Stratified 5-Fold CV)
+  Catálogo    : ../../catalogs/v4/catalog_v4_gen_norm.json
+  Queries     : 80
+  Estratégia  : score_gap
+=================================================================
+
+--- sql.materiais ---
+Tabela SQL: materiais
+Registro de materiais com identificadores únicos, situação patrimonial, situação física, motivo de indisponibilidade, status de descarga, dependência, estado do material, autorização e homologação. Inclui dados sobre a unidade cautelada, boletim regional, justificativa de exclusão e última atualização.
+
+--- sql.unidades ---
+Tabela SQL: unidades
+Registro de unidades com identificadores únicos, localização geográfica e informações administrativas, incluindo região, divisão, cidade e estado. Contém detalhes sobre o tipo de unidade, unidade superior, endereço e coordenadas geográficas, com classificação por nível e código de regra.
+
+--- sql.catalogo ---
+Tabela SQL: catalogo
+Registro do catálogo com identificadores, nome, tipo (comunicações, eletrônica, informática), modelo, fabricante, rádio (sim/não), número de série, subsistema (SUB01, SUB02, SUB03, SUB04), grupo e tipo de equipamento.
+
+--- sql.regra ---
+Tabela SQL: regra
+Registro de regras com identificador, nível de completamento (completo, ampliado, mínimo) e múltiplos valores categóricos (TEQ003 a TEQ057) numerados de 0 a 142. Permite análise detalhada por tipo de unidade e nível de completamento.
+
+--- sql.vw_comparativo_previsto_existente ---
+Tabela SQL: vw_comparativo_previsto_existente
+Registro comparativo entre a quantidade prevista e existente de equipamentos, agrupados por área, região e divisão. Inclui informações sobre a unidade superior, sigla, nível de completamento e tipo de equipamento, com valores numéricos para quantidade prevista e existente, e a diferença entre elas.
+
+--- sql.vw_materiais_catalogo_unidade ---
+Tabela SQL: vw_materiais_catalogo_unidade
+Registro de materiais em unidades, incluindo área, região, divisão e unidade superior, com detalhes sobre equipamentos como nome, modelo, fabricante e número de série. Fornece informações sobre disponibilidade, situação patrimonial e necessidade de manutenção, atualizadas até agosto de 2026.
+
+--- sql.vw_tipoeqp_previsto_unidades ---
+Tabela SQL: vw_tipoeqp_previsto_unidades
+Registro de equipamentos previstos por área, região e divisão, incluindo a unidade superior, sigla, nível de completamento (mínimo, ampliado, completo), tipo de equipamento e quantidade prevista (faixa 0–300).
+
+--- api.distribuicao_list ---
+API endpoint: distribuicao_list (GET /api/distribuicao/deposito/)
+Registro de distribuição de equipamentos, incluindo informações sobre depósitos, identificadores, contratos, quantidades, tipos de equipamento e detalhes de chegada. Fornece dados sobre a distribuição e status de itens em diferentes regiões e unidades de destino, com previsão para anos 2024, 2025 e 2026.
+
+--- api.manutencao_ap_direto_list ---
+API endpoint: manutencao_ap_direto_list (GET /api/manutencao/manutencao-apoio-direto/)
+Registro de manutenção de equipamentos direto, incluindo informações sobre a cidade, unidade, tipo de manutenção, PN, material, código, solução, estado, nec_descarga, diagnóstico, status final, fabricante, suprimento empregado, região e idmaterial, com opções categóricas e valores numéricos específicos.
+
+--- api.monitoramento_starlink_list ---
+API endpoint: monitoramento_starlink_list (GET /api/monitoramento/terminal-starlink/)
+Registro de monitoramento do Starlink com informações sobre a utilização de capacidade de dados (MB) por site, incluindo timestamp de importação, identificador único, tipo de serviço, tipo de unidade, estado, cidade, latitude e longitude, tipo de embarcação, capacidade máxima de dados, status do site e uso de dados em diferentes períodos.
+
+--- api.monitoramento_sites_sistema_radio_list ---
+API endpoint: monitoramento_sites_sistema_radio_list (GET /api/monitoramento/sites-sistema-radio/)
+Registro de monitoramento de sites de sistema radioelétrico, incluindo identificador, tipo de site, sistema, link, localização, quantidade de canais, versão de lançamento, endereço, latitude, longitude, configuração de canais, informações sobre a antena, tipo de torre, modelo do sistema e grupos de frequência.
+
+--- api.monitoramento_sistema_satelital_list ---
+API endpoint: monitoramento_sistema_satelital_list (GET /api/monitoramento/sistema-satelital/)
+Registro de monitoramento do sistema satelital, incluindo situação (inoperância variada, OK, etc.), disponibilidade (disponível ou indisponível), código (faixa 1–48), código da unidade (120, 213, 322, etc.), e identificador IDU_NMS.
+
+--- api.monitoramento_sistema_hf_list ---
+API endpoint: monitoramento_sistema_hf_list (GET /api/monitoramento/sistema-hf/)
+Registros de monitoramento de sistemas com informações sobre a última verificação, localização geográfica (latitude e longitude) e nome dos pontos de verificação, incluindo status (down, up) dos sistemas monitorados.
+
+--- spreadsheets.contratos ---
+Planilha: contratos.xlsx
+Registro de contratos com detalhes sobre o ano, empresa, vigência, aditivação, fundos envolvidos e entregas previstas. Inclui informações sobre a forma de envio, unidade de estoque, quantidade, status do andamento, garantia e data de chegada no Brasil.
+
+--- spreadsheets.fornecimento ---
+Planilha: fornecimento.xlsx
+Registro do fornecimento com número, data entre 2020 e 2024, contrato, documento de recebimento, PN/NEE, identificação do sistema, nomenclatura, quantidade entre 1 e 2796, unidade e região de origem, unidade e região de destino, ação orçamentária e documentos relacionados.
+
+--- spreadsheets.quadro_importacao ---
+Planilha: quadro_importacao.xlsx
+Registro de importações com detalhes sobre a validade, itens, quantidades e valores unitários e totais para cada item da ata, associados a empresas e números de peça, permitindo a análise e acompanhamento financeiro e quantitativo das importações.
+[BM25] Índice construído: 16 fontes
+  Fold 1: threshold=0.80  F1=0.281  P=0.344  R=0.312
+  Fold 2: threshold=0.75  F1=0.375  P=0.365  R=0.438
+  Fold 3: threshold=0.95  F1=0.250  P=0.365  R=0.250
+  Fold 4: threshold=0.95  F1=0.309  P=0.306  R=0.391
+  Fold 5: threshold=0.80  F1=0.250  P=0.302  R=0.271
+
+  MÉDIA (±dp entre folds): F1=0.293±0.052  P=0.336±0.031  R=0.332±0.080
+
+[✓] Resultados: ..\..\results\thresholds\v4_gen_norm\results_bm25.json

@@ -1,0 +1,81 @@
+
+=================================================================
+  BENCHMARK — BM25ContextBuilder (Stratified 5-Fold CV)
+  Catálogo    : ../../catalogs/v4/catalog_v4_min.json
+  Queries     : 80
+  Estratégia  : score_gap
+=================================================================
+
+--- sql.materiais ---
+Tabela SQL: materiais
+sql.materiais: CODIGO, CODIGO_UNIDADE, CODIGO_CATALOGO, SN, SITUACAOPARTIM, MOTIVOPATRIMONIAL, SITUACAOFISIC, MOTIVOINDISP, HOMOLOGAR, ACAUTELADO, MOTIVOCAUTELADO, UNIDADE_CAUTELADO, OBS, STATUSDESCARGA, DOCREFERENCIA, DATADESCARGA, DATAINCLUSAOCARGA, CONFERIDO, CONFERIDOEM, DEPENDENCIA, PT, TEAM, ESTADOMATERIAL, PARECER, DESTINOMATERIAL, BOLETIMREGIONAL, EXCLUIRMATERIAL, JUSTIFICMATERIAL, AUTORIZADO, DATAAUTORIZADO, HOMOLOGADO, ULTIMAATUALIZACAO, MOTIVOEXCLUIR, motivoreprovacao, nec_mnt, prioridade, usuario_decisao_id
+
+--- sql.unidades ---
+Tabela SQL: unidades
+sql.unidades: CODIGO, CODLOC, SIGLA, REGIAO, AREA, DIVISAO, CIDADEESTADO, CNPJ, Tipo, UNIDADE_SUPERIOR, ENDERECO, CEP, NIVEL, ID, CODREGRA, CIDADE, ESTADO, LATITUDE, LONGITUDE
+
+--- sql.catalogo ---
+Tabela SQL: catalogo
+sql.catalogo: IDEQP, ID_SISTEMA_IDENTIFICACAO, NUMERO_DE_ESTOQUE, NOME, TIPO, MODELO, FABRICANTE, RADIO, PN, SUBSISTEMA, GRUPO, TIPOEQP
+
+--- sql.regra ---
+Tabela SQL: regra
+sql.regra: CODIGO, ID, TIPO_UNIDADE, NIVEL_COMPLETAMENTO, TEQ024, TEQ021, TEQ009, TEQ012, TEQ045, TEQ017, TEQ020, TEQ018, TEQ015, TEQ019, TEQ026, TEQ025, TEQ016, TEQ011, TEQ022, TEQ032, TEQ034, TEQ046, TEQ003, TEQ035, TEQ036, TEQ047, TEQ027, TEQ006, TEQ028, TEQ013, TEQ031, TEQ048, TEQ049, TEQ050, TEQ051, TEQ052, TEQ053, TEQ054, TEQ055, TEQ056, TEQ057
+
+--- sql.vw_comparativo_previsto_existente ---
+Tabela SQL: vw_comparativo_previsto_existente
+sql.vw_comparativo_previsto_existente: AREA, REGIAO, DIVISAO, UNIDADE_SUPERIOR, SIGLA, NIVEL_COMPLETAMENTO, TIPO_EQP, QNT_PREVISTA, QNT_EXISTENTE, DIFERENCA
+
+--- sql.vw_materiais_catalogo_unidade ---
+Tabela SQL: vw_materiais_catalogo_unidade
+sql.vw_materiais_catalogo_unidade: AREA, REGIAO, DIVISAO, UNIDADE_SUPERIOR, SIGLA, IDEQP, NOME, MODELO, FABRICANTE, PN, SUBSISTEMA, GRUPO, TIPOEQP, CODIGO, SN, DISPONIBILIDADE, MOTIVO_INDISPONIVEL, SITUACAO_PATRIMONIAL, MOTIVO_FORA_DE_CARGA, CONFERIDO, DATA_CONFERIDO, ULTIMAATUALIZACAO, EXCLUIR_MATERIAL, NECESSITA_MANUTENCAO, PRIORIDADE_MANUTENCAO
+
+--- sql.vw_tipoeqp_previsto_unidades ---
+Tabela SQL: vw_tipoeqp_previsto_unidades
+sql.vw_tipoeqp_previsto_unidades: AREA, REGIAO, DIVISAO, UNIDADE_SUPERIOR, SIGLA, NIVEL_COMPLETAMENTO, TIPO_EQP, QNT_PREVISTA
+
+--- api.distribuicao_list ---
+API endpoint: distribuicao_list (GET /api/distribuicao/deposito/)
+api.distribuicao_list: deposito, id, contrato, id_sistema_catalogo, numero_item_contrato, pn, qtd, tipoeqp, doc_distribuicao, subsistema, descricao, doc_recebimento, funds, regiao_de_destino, chegada_deposito, status, invoice, unidade_destino, qtd_enviada_unidade, ano, item
+
+--- api.manutencao_ap_direto_list ---
+API endpoint: manutencao_ap_direto_list (GET /api/manutencao/manutencao-apoio-direto/)
+api.manutencao_ap_direto_list: OBS, CIDADE, NEC_CONFIGURACAO, UNIDADE, TIPO_MANUTENCAO, PN, MATERIAL, CODIGO, SOLUCAO, ESTADO, NEC_DESCARGA, DIAGNOSTICO, STATUS_FINAL, FABRICANTE, SUPRIMENTO_EMPREGADO, REGIAO, IDMATERIAL, SN
+
+--- api.monitoramento_starlink_list ---
+API endpoint: monitoramento_starlink_list (GET /api/monitoramento/terminal-starlink/)
+api.monitoramento_starlink_list: import_timestamp, service_count, mmsi, id, site_type, unidade, estado, mtd_usage_mb, usage_previous_month_mb, vessel_type, usage_today_mb, site_capacity_mb, latitude, cidade, longitude, status, imo
+
+--- api.monitoramento_sites_sistema_radio_list ---
+API endpoint: monitoramento_sites_sistema_radio_list (GET /api/monitoramento/sites-sistema-radio/)
+api.monitoramento_sites_sistema_radio_list: id, type, system, link, localization, sysid, qty_ch, release, site, latitude, latitude_decimal, ch_fdma, master_site_l1, longitude_decimal, endereco, ch_tdma, altura_antena_tx_m, altura_antena_rx_m, tipo_torre, modelo, longitude, grupo_freq
+
+--- api.monitoramento_sistema_satelital_list ---
+API endpoint: monitoramento_sistema_satelital_list (GET /api/monitoramento/sistema-satelital/)
+api.monitoramento_sistema_satelital_list: SITUACAO, LOCAL_HOJE, NUMERO_DO_TL, CODIGO, DISPONIBILIDADE, LOCALIDADE_DA_ENTREGA, IDU_NMS, CODIGO_UNIDADE, SN
+
+--- api.monitoramento_sistema_hf_list ---
+API endpoint: monitoramento_sistema_hf_list (GET /api/monitoramento/sistema-hf/)
+api.monitoramento_sistema_hf_list: last_checked, latitude, ip, nome, longitude, status
+
+--- spreadsheets.contratos ---
+Planilha: contratos.xlsx
+spreadsheets.contratos: ID_CONTRATO_ANO, ANO, CONTRATO, EMPRESA, ASS DO CTR, VIGÊNCIA, ADT, Aditivação, FUNDS-1, FUNDS-2, FUNDS-3, FUNDS-4, FUNDS-5, VALOR USD (contrato), ENTREGA 1, ENTREGA 2, ENTREGA 3, ENTREGA 4, ENTREGA 5, ENTREGA 6, FORMA_DE_ENVIO, UNIDADE_ESTOQUE, QI, ITEM QI, ITEM PC, MATERIAL, Quantidade, Invoice, Andamento, Guarantia, Chegada no BR, Inicio da Garantia, Fim da Garantia, DOC_RECEBIMENTO
+
+--- spreadsheets.fornecimento ---
+Planilha: fornecimento.xlsx
+spreadsheets.fornecimento: numero_do_fornecimento, Data, Contrato, Documento_Recebimento, PN / NEE, ID_SISTEMA_IDENTIFICACAO, Nomenclatura, QNT, Unidade de Origem, Regiao de Origem, Unidade de Destino, Regiao de Destino, Ação Orçamentaria, Retifica O DF, Documento autoriza a Distribuição
+
+--- spreadsheets.quadro_importacao ---
+Planilha: quadro_importacao.xlsx
+spreadsheets.quadro_importacao: QI, Empresa, Ata, Validade, Item, Item da Ata, PN, Nomenclatura, Qtde, Valor unit (USD), Valor Total (USD)
+[BM25] Índice construído: 16 fontes
+  Fold 1: threshold=0.55  F1=0.083  P=0.188  R=0.125
+  Fold 2: threshold=0.55  F1=0.417  P=0.406  R=0.500
+  Fold 3: threshold=0.20  F1=0.135  P=0.177  R=0.188
+  Fold 4: threshold=0.60  F1=0.164  P=0.275  R=0.250
+  Fold 5: threshold=0.55  F1=0.174  P=0.223  R=0.229
+
+  MÉDIA (±dp entre folds): F1=0.195±0.129  P=0.254±0.093  R=0.258±0.143
+
+[✓] Resultados: ..\..\results\thresholds\v4_min\results_bm25.json

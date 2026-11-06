@@ -1,0 +1,81 @@
+
+=================================================================
+  BENCHMARK — BM25ContextBuilder (Stratified 5-Fold CV)
+  Catálogo    : ../../catalogs/v3/catalog_v3.json
+  Queries     : 80
+  Estratégia  : score_gap
+=================================================================
+
+--- sql.materiais ---
+Tabela SQL: materiais
+Registro patrimonial de equipamentos individuais: situação física, disponibilidade, cautela, desfazimento, localização e número de série. Fonte de estado e situação operacional de cada equipamento. Vocabulário exclusivo: situação física, cautela, desfazimento, localização patrimonial, estado operacional. Usar para consultar o estado atual e a situação de um equipamento específico.
+
+--- sql.unidades ---
+Tabela SQL: unidades
+informações detalhadas das unidades de uma organização, código da unidade, localização, região, divisão, área, unidade superior, cidade e estado.
+
+--- sql.catalogo ---
+Tabela SQL: catalogo
+Catálogo técnico de referência por tipo de equipamento: registra nome oficial, código NSN, tipo, modelo, fabricante e especificações técnicas de cada categoria de equipamento. Vocabulário exclusivo: código NSN, categoria de equipamento, especificação técnica por tipo, referência normativa técnica. Usar para identificar as especificações de uma categoria de equipamento, independente de itens individuais.
+
+--- sql.regra ---
+Tabela SQL: regra
+Tabela normativa de dotação por tipo de unidade: define a quantidade de equipamentos de cada tipo que cada categoria de unidade deve possuir nos níveis mínimo, ampliado e completo. Vocabulário exclusivo: norma, padrão normativo, regra de alocação, dotação teórica, nível mínimo exigido, categoria de unidade. Usar para consultar qual é a norma aplicável a um tipo de unidade, independente de dados reais.
+
+--- sql.vw_comparativo_previsto_existente ---
+Tabela SQL: vw_comparativo_previsto_existente
+Comparativo entre quantidade PREVISTA e EXISTENTE de equipamentos por unidade: responde se a organização está completamente equipada, quantos equipamentos existem vs quantos deveriam ter, déficit e excesso por tipo de equipamento em cada unidade. Calcula diferença, completamento percentual, nível mínimo atingido e lacunas de inventário. Usar quando a query perguntar sobre completamento, déficit, existentes vs previstos, ou quantos equipamentos faltam para atingir a dotação. Única fonte que cruza dados reais com normativos.
+
+--- sql.vw_materiais_catalogo_unidade ---
+Tabela SQL: vw_materiais_catalogo_unidade
+Consulta integrada de equipamentos com dados técnicos e patrimoniais: fornece em uma única consulta o número de série, fabricante, modelo, situação patrimonial, disponibilidade e unidade de lotação de cada item. Usar quando a pergunta exige simultaneamente dados de identificação técnica (fabricante, modelo) e dados de estado patrimonial (situação, disponibilidade) de um mesmo equipamento. Vocabulário exclusivo: consulta integrada, dados simultâneos, identificação técnica e patrimonial combinadas.
+
+--- sql.vw_tipoeqp_previsto_unidades ---
+Tabela SQL: vw_tipoeqp_previsto_unidades
+Tabela de alocação planejada de equipamentos por tipo e por unidade: registra o planejamento de distribuição futura — quantos equipamentos de cada tipo estão programados para cada unidade segundo o plano vigente. Vocabulário exclusivo: planejamento, alocação planejada, programado, distribuição futura, plano de dotação. Usar para consultar o que está planejado e programado para cada unidade antes da execução.
+
+--- api.distribuicao_list ---
+API endpoint: distribuicao_list (GET /api/distribuicao/deposito/)
+distribuição de equipamentos para unidades, recebimento no depósito, rastreamento de entregas, status de distribuição, itens pendentes a serem distribuídos
+
+--- api.manutencao_ap_direto_list ---
+API endpoint: manutencao_ap_direto_list (GET /api/manutencao/manutencao-apoio-direto/)
+manutenção via apoio direto, registro de manutenção, diagnóstico e solução de problemas, suprimentos empregados, status final do material, tipo de manutenção, observações sobre manutenção.
+
+--- api.monitoramento_starlink_list ---
+API endpoint: monitoramento_starlink_list (GET /api/monitoramento/terminal-starlink/)
+Monitoramento de terminais Starlink: equipamentos de internet via satélite de órbita baixa LEO (Low Earth Orbit), status de conectividade, localização, uso de dados e desempenho dos terminais Starlink. Vocabulário exclusivo: Starlink, LEO, Low Earth Orbit, órbita baixa, internet via satélite LEO, terminal Starlink. Usar para monitorar terminais e links da constelação Starlink.
+
+--- api.monitoramento_sites_sistema_radio_list ---
+API endpoint: monitoramento_sites_sistema_radio_list (GET /api/monitoramento/sites-sistema-radio/)
+Monitoramento de sites do sistema de rádio VHF/UHF: estações físicas de comunicação rádio tática de curto e médio alcance, localização geográfica dos sites, características técnicas, status e desempenho. Vocabulário exclusivo: VHF, UHF, rádio tático, site de comunicação, estação rádio, curto alcance, médio alcance. Usar para monitorar sites e estações do sistema de rádio tático.
+
+--- api.monitoramento_sistema_satelital_list ---
+API endpoint: monitoramento_sistema_satelital_list (GET /api/monitoramento/sistema-satelital/)
+Monitoramento de terminais VSAT geoestacionários: equipamentos de comunicação via satélite geoestacionário com antena fixa, situação, localidade e disponibilidade dos links satelitais convencionais. Vocabulário exclusivo: VSAT, satélite geoestacionário, antena fixa, link satelital convencional, GEO. Usar para monitorar sistemas de comunicação satelital de órbita geoestacionária.
+
+--- api.monitoramento_sistema_hf_list ---
+API endpoint: monitoramento_sistema_hf_list (GET /api/monitoramento/sistema-hf/)
+Monitoramento de terminais HF (High Frequency): rádios de onda curta para comunicação terrestre de longa distância, situação operacional, localidade, disponibilidade e nível de sinal dos terminais HF. Vocabulário exclusivo: HF, High Frequency, onda curta, rádio terrestre, comunicação terrestre, longa distância via rádio. Usar para monitorar terminais e links de comunicação HF.
+
+--- spreadsheets.contratos ---
+Planilha: contratos.xlsx
+relação de contratos de Aquisição, equipamentos adquiridos, detalhes dos contratos, ano do contrato, número do contrato, empresa contratante, data de assinatura, vigência, aditivos, fundos relacionados, item adquirido, quantidade adquirida
+
+--- spreadsheets.fornecimento ---
+Planilha: fornecimento.xlsx
+fornecimento de equipmanentos, detalhes de fornecimento, número do documento de fornecimento, data do fornecimento, material fornecido, quantidade, local de origem, local de destino, status do fornecimento, controle de fornecimento, acompanhamento de fornecimento
+
+--- spreadsheets.quadro_importacao ---
+Planilha: quadro_importacao.xlsx
+quadro de importação, solicitação de material, ata de registro de preço, valor do material, quantidade do material, número do item, descrição do material, controle de aquisição, processo de aquisição
+[BM25] Índice construído: 16 fontes
+  Fold 1: threshold=0.85  F1=0.719  P=0.844  R=0.781
+  Fold 2: threshold=0.90  F1=0.594  P=0.708  R=0.625
+  Fold 3: threshold=0.90  F1=0.562  P=0.562  R=0.625
+  Fold 4: threshold=0.80  F1=0.671  P=0.844  R=0.703
+  Fold 5: threshold=0.85  F1=0.427  P=0.448  R=0.583
+
+  MÉDIA (±dp entre folds): F1=0.595±0.112  P=0.681±0.175  R=0.663±0.079
+
+[✓] Resultados: ..\..\results\thresholds\v3\results_bm25.json

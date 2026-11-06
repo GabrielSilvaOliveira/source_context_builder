@@ -1,0 +1,62 @@
+{
+  "benchmark_metadata": {
+    "version": "2.0",
+    "total_queries": 80,
+    "created_by": "Gabriel Silva de Oliveira",
+    "project": "Framework Agentic AI — Apoio à Decisão Logística",
+    "difficulty_distribution": {
+      "single_source_simples": 20,
+      "single_source_semantica": 20,
+      "multi_source_complementar": 20,
+      "discriminacao_fina": 20
+    },
+    "cluster_distribution": {
+      "inventario_estado_fisico": 10,
+      "planejamento_comparativo": 8,
+      "estrutura_organizacional": 4,
+      "aquisicao_contratos": 9,
+      "distribuicao_logistica": 7,
+      "manutencao_monitoramento": 12
+    }
+  },
+  "evaluation": "Stratified 5-Fold CV",
+  "seed": 42,
+  "top_k": 3,
+  "strategy": "score_gap",
+  "reranker": "none",
+  "reranker_top_k": 5,
+  "models": {
+    "bge-m3": {
+      "precision": 0.6245,
+      "precision_std": 0.105,
+      "recall": 0.675,
+      "recall_std": 0.1139,
+      "f1": 0.5882,
+      "f1_std": 0.1021,
+      "top1_acc": 0.5375,
+      "top1_acc_std": 0.1505,
+      "error_rate": 0.125,
+      "error_rate_std": 0.0442,
+      "ndcg": 0.58,
+      "ndcg_std": 0.1411,
+      "latency_ms": 181.6375,
+      "latency_ms_std": 2.4699
+    },
+    "minilm": {
+      "precision": 0.4966,
+      "precision_std": 0.107,
+      "recall": 0.5219,
+      "recall_std": 0.1114,
+      "f1": 0.4552,
+      "f1_std": 0.0795,
+      "top1_acc": 0.425,
+      "top1_acc_std": 0.0685,
+      "error_rate": 0.1,
+      "error_rate_std": 0.0342,
+      "ndcg": 0.4542,
+      "ndcg_std": 0.0993,
+      "latency_ms": 9.1875,
+      "latency_ms_std": 0.5135
+    }
+  }
+}

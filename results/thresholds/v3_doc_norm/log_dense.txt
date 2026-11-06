@@ -1,0 +1,136 @@
+
+=================================================================
+  BENCHMARK — Semantic Context Builder (Stratified 5-Fold CV)
+  Catálogo    : ../../catalogs/v3_doc/catalog_v3_doc_norm.json
+  Queries     : 80
+  Folds       : 5  (seed=42)
+  Top-K       : 3
+  Estratégia  : score_gap
+  Calibração  : sim (F1 máximo no treino)
+  Reranker    : desabilitado
+  Modelos     : minilm, bge-m3
+=================================================================
+
+  Distribuição dos folds de teste:
+    Fold 1: 16 queries | discrimi=4 | multi so=4 | single s=4 | single s=4
+    Fold 2: 16 queries | discrimi=4 | multi so=4 | single s=4 | single s=4
+    Fold 3: 16 queries | discrimi=4 | multi so=4 | single s=4 | single s=4
+    Fold 4: 16 queries | discrimi=4 | multi so=4 | single s=4 | single s=4
+    Fold 5: 16 queries | discrimi=4 | multi so=4 | single s=4 | single s=4
+
+─────────────────────────────────────────────────────────────────
+  MODELO: minilm (sentence-transformers/all-MiniLM-L6-v2)
+─────────────────────────────────────────────────────────────────
+[SemanticCB] Computando embeddings para 16 fontes com 'minilm'...
+[SemanticCB] Carregando modelo: sentence-transformers/all-MiniLM-L6-v2
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5160.34it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.34it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.34it/s]
+[SemanticCB] Índice construído e salvo. Shape: (16, 384)
+  Índice pronto. Threshold default: 0.30
+
+  Fold 1/5 (threshold=0.20, teste=16 queries)
+    F1=0.5313  P=0.5312  R=0.6250  Top1=0.4375  Err=0.3125  NDCG=0.5576
+
+  Fold 2/5 (threshold=0.20, teste=16 queries)
+    F1=0.5729  P=0.6979  R=0.6250  Top1=0.5625  Err=0.1875  NDCG=0.6066
+
+  Fold 3/5 (threshold=0.20, teste=16 queries)
+    F1=0.4167  P=0.5625  R=0.4375  Top1=0.3750  Err=0.1875  NDCG=0.4087
+
+  Fold 4/5 (threshold=0.20, teste=16 queries)
+    F1=0.4146  P=0.5312  R=0.4688  Top1=0.4375  Err=0.3750  NDCG=0.4675
+
+  Fold 5/5 (threshold=0.20, teste=16 queries)
+    F1=0.5000  P=0.5521  R=0.5833  Top1=0.4375  Err=0.1250  NDCG=0.5138
+
+  ──────────────────────────────────────────────────
+  Resultado CV (5-Fold) — minilm
+  ──────────────────────────────────────────────────
+    f1            : 0.4871 ± 0.0702
+    precision     : 0.5750 ± 0.0700
+    recall        : 0.5479 ± 0.0889
+    top1_acc      : 0.4500 ± 0.0685
+    error_rate    : 0.2375 ± 0.1027
+    ndcg          : 0.5108 ± 0.0769
+    latency_ms    : 10.7625 ± 0.9534
+
+  Por dificuldade:
+    discriminacao_fina                  F1=0.3750  P=0.5583  R=0.4250
+    multi_source_complementar           F1=0.4083  P=0.6083  R=0.4167
+    single_source_semantica             F1=0.4667  P=0.4333  R=0.6000
+    single_source_simples               F1=0.6983  P=0.7000  R=0.7500
+
+  Por cluster:
+    aquisicao_contratos                 F1=0.5490  P=0.7255  R=0.6078
+    distribuicao_logistica              F1=0.5000  P=0.5417  R=0.5000
+    estrutura_organizacional            F1=0.2500  P=0.1666  R=0.5000
+    inventario_estado_fisico            F1=0.5214  P=0.5000  R=0.7143
+    manutencao_monitoramento            F1=0.6067  P=0.7133  R=0.6200
+    planejamento_comparativo            F1=0.1905  P=0.2976  R=0.2143
+
+  [✓] Salvo: ..\..\results\thresholds\v3_doc_norm\results_minilm.json
+
+─────────────────────────────────────────────────────────────────
+  MODELO: bge-m3 (BAAI/bge-m3)
+─────────────────────────────────────────────────────────────────
+[SemanticCB] Computando embeddings para 16 fontes com 'bge-m3'...
+[SemanticCB] Carregando modelo: BAAI/bge-m3
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 25185.02it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:06<00:00,  6.01s/it]Batches: 100%|██████████| 1/1 [00:06<00:00,  6.01s/it]
+[SemanticCB] Índice construído e salvo. Shape: (16, 1024)
+  Índice pronto. Threshold default: 0.50
+
+  Fold 1/5 (threshold=0.20, teste=16 queries)
+    F1=0.5729  P=0.6771  R=0.5938  Top1=0.5625  Err=0.1250  NDCG=0.5984
+
+  Fold 2/5 (threshold=0.20, teste=16 queries)
+    F1=0.6146  P=0.6562  R=0.7188  Top1=0.5625  Err=0.1250  NDCG=0.6041
+
+  Fold 3/5 (threshold=0.20, teste=16 queries)
+    F1=0.5917  P=0.7812  R=0.6250  Top1=0.5000  Err=0.1250  NDCG=0.6325
+
+  Fold 4/5 (threshold=0.20, teste=16 queries)
+    F1=0.7188  P=0.8333  R=0.7812  Top1=0.5625  Err=0.0625  NDCG=0.6628
+
+  Fold 5/5 (threshold=0.20, teste=16 queries)
+    F1=0.5833  P=0.5521  R=0.7292  Top1=0.5000  Err=0.3125  NDCG=0.6602
+
+  ──────────────────────────────────────────────────
+  Resultado CV (5-Fold) — bge-m3
+  ──────────────────────────────────────────────────
+    f1            : 0.6163 ± 0.0593
+    precision     : 0.7000 ± 0.1103
+    recall        : 0.6896 ± 0.0777
+    top1_acc      : 0.5375 ± 0.0342
+    error_rate    : 0.1500 ± 0.0948
+    ndcg          : 0.6316 ± 0.0302
+    latency_ms    : 183.4125 ± 9.0185
+
+  Por dificuldade:
+    discriminacao_fina                  F1=0.5567  P=0.7000  R=0.6750
+    multi_source_complementar           F1=0.5500  P=0.7667  R=0.5833
+    single_source_semantica             F1=0.5250  P=0.5333  R=0.6000
+    single_source_simples               F1=0.8333  P=0.8000  R=0.9000
+
+  Por cluster:
+    aquisicao_contratos                 F1=0.7353  P=0.7941  R=0.8039
+    distribuicao_logistica              F1=0.8958  P=0.9167  R=0.9375
+    estrutura_organizacional            F1=1.0000  P=1.0000  R=1.0000
+    inventario_estado_fisico            F1=0.2833  P=0.2500  R=0.3571
+    manutencao_monitoramento            F1=0.7667  P=0.8733  R=0.8000
+    planejamento_comparativo            F1=0.3214  P=0.5595  R=0.5000
+
+  [✓] Salvo: ..\..\results\thresholds\v3_doc_norm\results_bge-m3.json
+
+
+================================================================================
+  COMPARATIVO FINAL — Stratified 5-Fold CV (média ± std)
+================================================================================
+  Modelo               F1      ±     Prec   Recall     Top1     Err%     NDCG
+  ----------------------------------------------------------------------------
+  bge-m3           0.6163 0.0593   0.7000   0.6896   0.5375   0.1500   0.6316
+  minilm           0.4871 0.0702   0.5750   0.5479   0.4500   0.2375   0.5108
+
+  [✓] Comparativo salvo: ..\..\results\thresholds\v3_doc_norm\comparison_summary.json
+================================================================================
+

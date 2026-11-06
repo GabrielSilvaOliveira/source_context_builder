@@ -1,0 +1,13 @@
+method,condition,n,same_selection_and_order,same_selected_set,same_f1_per_query,cv_f1_published,cv_f1_new,reproduces
+BM25,v3,80,80,80,80,0.5946,0.5946,True
+MiniLM,v3,80,80,80,80,0.4603,0.4603,True
+BGE-M3,v3,80,80,80,80,0.6778,0.6778,True
+BM25,v3_doc_norm,80,80,80,80,0.449,0.449,True
+MiniLM,v3_doc_norm,80,80,80,80,0.4871,0.4871,True
+BGE-M3,v3_doc_norm,80,80,80,80,0.6163,0.6163,True
+BM25,v4_gen_norm,80,80,80,80,0.2931,0.2931,True
+MiniLM,v4_gen_norm,80,80,80,80,0.5392,0.5392,True
+BGE-M3,v4_gen_norm,80,80,80,80,0.5463,0.5463,True
+BM25,v4_min,80,80,80,80,0.1946,0.1946,True
+MiniLM,v4_min,80,80,80,80,0.4552,0.4552,True
+BGE-M3,v4_min,80,80,80,80,0.5882,0.5882,True

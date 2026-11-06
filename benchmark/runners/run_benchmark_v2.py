@@ -198,10 +198,14 @@ def make_stratified_folds(queries: list[dict],
 
 def calibrate_threshold(cb: SemanticContextBuilderV2,
                          train_queries: list[dict],
-                         candidates: list[float] | None = None) -> float:
+                         candidates: list[float] | None = None,
+                         trace: dict | None = None) -> float:
     """
     Encontra o threshold que maximiza F1 no conjunto de treino.
     Testa os valores em `candidates` e retorna o melhor.
+
+    `trace` (opcional): se for um dict, recebe a grade testada, o F1 médio de treino de
+    cada ponto, o limiar escolhido e o F1 de treino dele. Não altera a seleção.
     """
     if candidates is None:
         # Grade de busca: 20 pontos entre 0.20 e 0.95
@@ -212,6 +216,7 @@ def calibrate_threshold(cb: SemanticContextBuilderV2,
 
     original_threshold = cb.min_similarity
 
+    grid_f1 = []
     for threshold in candidates:
         cb.min_similarity = threshold
         f1s = []
@@ -220,11 +225,16 @@ def calibrate_threshold(cb: SemanticContextBuilderV2,
             m = compute_metrics(selected, q)
             f1s.append(m["f1"])
         mean_f1 = sum(f1s) / len(f1s)
+        grid_f1.append(mean_f1)
         if mean_f1 > best_f1:
             best_f1 = mean_f1
             best_threshold = threshold
 
     cb.min_similarity = original_threshold  # restaura para não afetar outros folds
+    if trace is not None:
+        trace.update({"grid": list(candidates), "train_f1_by_threshold": grid_f1,
+                      "chosen_threshold": best_threshold, "train_f1": best_f1,
+                      "n_train_queries": len(train_queries)})
     return best_threshold
 
 
@@ -306,6 +316,9 @@ def main():
                         choices=["score_gap", "threshold"])
     parser.add_argument("--no-calibrate", action="store_true",
                         help="Pula calibração de threshold — usa default do modelo")
+    parser.add_argument("--log-thresholds", action="store_true",
+                        help="Grava em cada results_*.json a grade, o limiar escolhido e o F1 de "
+                             "treino de cada fold (chave threshold_by_fold). Não altera a seleção.")
     parser.add_argument("--reranker",  default=None,
                         choices=["mmarco-minilm", "ms-marco-minilm", "none", None],
                         help="Cross-encoder reranker após o bi-encoder "
@@ -375,6 +388,7 @@ def main():
 
         fold_metrics_list: list[dict] = []
         all_test_results:  list[dict] = []
+        threshold_log:     list[dict] = []
 
         for fold_i, test_idx in enumerate(folds):
             train_idx = [i for f, idxs in enumerate(folds)
@@ -387,7 +401,10 @@ def main():
             if args.no_calibrate:
                 threshold = MODEL_REGISTRY[model_name]["default_min_similarity"]
             else:
-                threshold = calibrate_threshold(cb, train_queries)
+                _trace = {} if args.log_thresholds else None
+                threshold = calibrate_threshold(cb, train_queries, trace=_trace)
+                if _trace is not None:
+                    threshold_log.append({"fold": fold_i + 1, **_trace})
 
             # Avaliação no fold de teste
             cb.min_similarity = threshold
@@ -438,6 +455,8 @@ def main():
             "by_source_role":  by_role,
             "all_results":     all_test_results,
         }
+        if args.log_thresholds:
+            model_output["threshold_by_fold"] = threshold_log
         all_model_summary[model_name] = {
             "cv_metrics":    cv_metrics,
             "by_difficulty": by_diff,
