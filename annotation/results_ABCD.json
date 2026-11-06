@@ -1,0 +1,114 @@
+{
+  "n_consultas": 24,
+  "n_fontes": 16,
+  "anotadores": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "fleiss_3classes": 0.2822,
+  "fleiss_binaria": 0.3274,
+  "pares_anotadores": [
+    {
+      "par": "A×B",
+      "kappa": 0.4919,
+      "bruta": 0.8984,
+      "f1": 0.6788,
+      "f1_primaria": 0.6319
+    },
+    {
+      "par": "A×C",
+      "kappa": 0.2989,
+      "bruta": 0.7969,
+      "f1": 0.4853,
+      "f1_primaria": 0.6438
+    },
+    {
+      "par": "A×D",
+      "kappa": 0.2696,
+      "bruta": 0.8906,
+      "f1": 0.3889,
+      "f1_primaria": 0.3889
+    },
+    {
+      "par": "B×C",
+      "kappa": 0.2631,
+      "bruta": 0.7656,
+      "f1": 0.4522,
+      "f1_primaria": 0.5417
+    },
+    {
+      "par": "B×D",
+      "kappa": 0.2942,
+      "bruta": 0.862,
+      "f1": 0.4313,
+      "f1_primaria": 0.4583
+    },
+    {
+      "par": "C×D",
+      "kappa": 0.1769,
+      "bruta": 0.7656,
+      "f1": 0.3755,
+      "f1_primaria": 0.4583
+    }
+  ],
+  "f1_medio_anotadores": 0.4687,
+  "vs_gabarito": [
+    {
+      "anotador": "A",
+      "kappa": 0.6787,
+      "bruta": 0.9401,
+      "f1": 0.7625,
+      "f1_primaria": 0.8181
+    },
+    {
+      "anotador": "B",
+      "kappa": 0.5222,
+      "bruta": 0.8906,
+      "f1": 0.731,
+      "f1_primaria": 0.6667
+    },
+    {
+      "anotador": "C",
+      "kappa": 0.2815,
+      "bruta": 0.776,
+      "f1": 0.4752,
+      "f1_primaria": 0.6806
+    },
+    {
+      "anotador": "D",
+      "kappa": 0.3593,
+      "bruta": 0.8828,
+      "f1": 0.4819,
+      "f1_primaria": 0.5139
+    }
+  ],
+  "f1_medio_vs_gabarito": 0.6127,
+  "discordancia_por_consulta": {
+    "Q68": 9,
+    "Q32": 9,
+    "Q64": 8,
+    "Q65": 7,
+    "Q16": 7,
+    "Q24": 6,
+    "Q20": 6,
+    "Q07": 6,
+    "Q80": 5,
+    "Q78": 5,
+    "Q77": 5,
+    "Q44": 5,
+    "Q05": 5,
+    "Q75": 4,
+    "Q36": 4,
+    "Q19": 4,
+    "Q17": 4,
+    "Q01": 4,
+    "Q71": 3,
+    "Q66": 2,
+    "Q11": 2,
+    "Q60": 1,
+    "Q13": 1,
+    "Q26": 0
+  }
+}

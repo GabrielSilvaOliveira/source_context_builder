@@ -1,0 +1,85 @@
+{
+  "n_consultas": 24,
+  "n_fontes": 16,
+  "anotadores": [
+    "A",
+    "B",
+    "C"
+  ],
+  "fleiss_3classes": 0.3224,
+  "fleiss_binaria": 0.3849,
+  "pares_anotadores": [
+    {
+      "par": "A×B",
+      "kappa": 0.4919,
+      "bruta": 0.8984,
+      "f1": 0.6788,
+      "f1_primaria": 0.6319
+    },
+    {
+      "par": "A×C",
+      "kappa": 0.2989,
+      "bruta": 0.7969,
+      "f1": 0.4853,
+      "f1_primaria": 0.6438
+    },
+    {
+      "par": "B×C",
+      "kappa": 0.2631,
+      "bruta": 0.7656,
+      "f1": 0.4522,
+      "f1_primaria": 0.5417
+    }
+  ],
+  "f1_medio_anotadores": 0.5388,
+  "vs_gabarito": [
+    {
+      "anotador": "A",
+      "kappa": 0.6787,
+      "bruta": 0.9401,
+      "f1": 0.7625,
+      "f1_primaria": 0.8181
+    },
+    {
+      "anotador": "B",
+      "kappa": 0.5222,
+      "bruta": 0.8906,
+      "f1": 0.731,
+      "f1_primaria": 0.6667
+    },
+    {
+      "anotador": "C",
+      "kappa": 0.2815,
+      "bruta": 0.776,
+      "f1": 0.4752,
+      "f1_primaria": 0.6806
+    }
+  ],
+  "f1_medio_vs_gabarito": 0.6562,
+  "discordancia_por_consulta": {
+    "Q68": 9,
+    "Q64": 8,
+    "Q32": 8,
+    "Q16": 7,
+    "Q20": 6,
+    "Q07": 6,
+    "Q80": 5,
+    "Q77": 5,
+    "Q44": 5,
+    "Q05": 5,
+    "Q65": 4,
+    "Q36": 4,
+    "Q24": 4,
+    "Q19": 4,
+    "Q17": 4,
+    "Q01": 4,
+    "Q78": 3,
+    "Q75": 3,
+    "Q66": 2,
+    "Q11": 2,
+    "Q71": 1,
+    "Q60": 1,
+    "Q13": 1,
+    "Q26": 0
+  }
+}
